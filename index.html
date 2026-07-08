@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>歐洲15天深度精選之旅 (ELPM15-001)</title>
+  <title>Eric 家族專屬 - 歐洲15天深度精選之旅 (15天全程超詳細版)</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- FontAwesome Icons -->
@@ -13,10 +13,10 @@
       theme: {
         extend: {
           colors: {
-            eglOrange: '#FF5E00',
-            eglDarkBlue: '#002F6C',
-            eglGold: '#FFD700',
-            eglLightBlue: '#E8F1F5',
+            brandOrange: '#FF5E00',
+            brandDarkBlue: '#002F6C',
+            brandGold: '#FFD700',
+            brandLightBlue: '#E8F1F5',
           }
         }
       }
@@ -69,60 +69,56 @@
 </head>
 <body class="text-gray-800 antialiased leading-normal">
 
-  <!-- 頂部精選黃金條 (No Print) -->
-  <div class="bg-eglDarkBlue text-white text-xs py-2 px-4 flex justify-between items-center no-print">
+  <!-- 頂部 私人假期尊尚條 (No Print) -->
+  <div class="bg-brandDarkBlue text-white text-xs py-2 px-4 flex justify-between items-center no-print">
     <div class="flex items-center space-x-4">
-      <span class="bg-eglOrange text-white font-bold px-2 py-0.5 rounded text-[10px]">GOLD TOUR</span>
-      <span class="font-medium"><i class="fa-solid fa-plane-departure mr-1 text-eglGold"></i> 2026年夏季尊尚出發</span>
+      <span class="bg-brandOrange text-white font-bold px-2 py-0.5 rounded text-[10px]">MEMBERS ONLY</span>
+      <span class="font-medium"><i class="fa-solid fa-plane-departure mr-1 text-brandGold"></i> 2026年夏季 • Eric 家族專屬歐洲假期</span>
     </div>
     <div class="flex items-center space-x-6">
-      <span><i class="fa-solid fa-calendar-days mr-1 text-eglGold"></i> 專屬假期：2026年7月24日 - 8月7日</span>
+      <span><i class="fa-solid fa-users mr-1 text-brandGold"></i> 專屬成員：Eric, Isabel, Ricky, Venus</span>
     </div>
   </div>
 
   <!-- 主導航 (No Print) -->
   <header class="bg-white shadow-md sticky top-0 z-50 no-print">
     <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-      <!-- 尊尚旅程 Logo -->
+      <!-- 家族旅行 Logo -->
       <div class="flex items-center space-x-3">
-        <div class="bg-gradient-to-r from-eglOrange to-red-600 text-white font-extrabold px-3 py-2 rounded-lg text-2xl tracking-wider shadow-md">
-          GOLD <span class="text-eglGold font-black">Tours</span>
+        <div class="bg-gradient-to-r from-brandOrange to-red-600 text-white font-extrabold px-3 py-2 rounded-lg text-2xl tracking-wider shadow-md">
+          Eric <span class="text-brandGold font-black">Family</span>
         </div>
         <div class="border-l pl-3 border-gray-300 hidden md:block">
-          <p class="text-xs text-gray-500">專屬客製化行程</p>
-          <p class="text-sm font-bold text-eglDarkBlue">歐洲三國15天知性之旅</p>
+          <p class="text-xs text-gray-500">2026 SUMMER TRIP</p>
+          <p class="text-sm font-bold text-brandDarkBlue">倫敦・巴黎・慕尼黑 15天全程深度解讀</p>
         </div>
       </div>
       
-      <!-- 行程編號與列印按鈕 -->
+      <!-- 列印按鈕 -->
       <div class="flex items-center space-x-4">
-        <div class="text-right hidden lg:block">
-          <p class="text-xs text-gray-500">行程代號</p>
-          <p class="text-md font-extrabold text-eglOrange">ELPM15-001</p>
-        </div>
-        <button onclick="window.print()" class="bg-eglOrange hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-full shadow-lg transition duration-300 flex items-center space-x-2">
-          <i class="fa-solid fa-print"></i>
-          <span>列印行程單張</span>
+        <button onclick="window.print()" class="bg-brandOrange hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-full shadow-lg transition duration-300 flex items-center space-x-2">
+          <i class="fa-solid fa-file-pdf"></i>
+          <span>儲存成 PDF / 列印</span>
         </button>
       </div>
     </div>
     
     <!-- 頁面 Tabs 導航 -->
-    <div class="bg-eglLightBlue border-t border-b border-gray-200">
+    <div class="bg-brandLightBlue border-t border-b border-gray-200">
       <div class="max-w-7xl mx-auto px-4 flex overflow-x-auto space-x-2 py-1 scrollbar-thin">
-        <button onclick="switchTab('highlights')" id="tab-highlights" class="tab-btn active bg-eglDarkBlue text-white text-sm font-bold py-2 px-5 rounded-md transition duration-200 whitespace-nowrap">
-          <i class="fa-solid fa-star mr-1"></i> 行程特點
+        <button onclick="switchTab('highlights')" id="tab-highlights" class="tab-btn active bg-brandDarkBlue text-white text-sm font-bold py-2 px-5 rounded-md transition duration-200 whitespace-nowrap">
+          <i class="fa-solid fa-star mr-1"></i> 旅程亮點
         </button>
-        <button onclick="switchTab('itinerary')" id="tab-itinerary" class="tab-btn text-eglDarkBlue hover:bg-white text-sm font-bold py-2 px-5 rounded-md transition duration-200 whitespace-nowrap">
+        <button onclick="switchTab('itinerary')" id="tab-itinerary" class="tab-btn text-brandDarkBlue hover:bg-white text-sm font-bold py-2 px-5 rounded-md transition duration-200 whitespace-nowrap">
           <i class="fa-solid fa-calendar-days mr-1"></i> 15天每日行程
         </button>
-        <button onclick="switchTab('flights-hotels')" id="tab-flights-hotels" class="tab-btn text-eglDarkBlue hover:bg-white text-sm font-bold py-2 px-5 rounded-md transition duration-200 whitespace-nowrap">
-          <i class="fa-solid fa-hotel mr-1"></i> 航班及酒店
+        <button onclick="switchTab('flights-hotels')" id="tab-flights-hotels" class="tab-btn text-brandDarkBlue hover:bg-white text-sm font-bold py-2 px-5 rounded-md transition duration-200 whitespace-nowrap">
+          <i class="fa-solid fa-hotel mr-1"></i> 航班及下榻酒店
         </button>
-        <button onclick="switchTab('gourmet')" id="tab-gourmet" class="tab-btn text-eglDarkBlue hover:bg-white text-sm font-bold py-2 px-5 rounded-md transition duration-200 whitespace-nowrap">
-          <i class="fa-solid fa-utensils mr-1"></i> 歐陸美饌特寫
+        <button onclick="switchTab('gourmet')" id="tab-gourmet" class="tab-btn text-brandDarkBlue hover:bg-white text-sm font-bold py-2 px-5 rounded-md transition duration-200 whitespace-nowrap">
+          <i class="fa-solid fa-utensils mr-1"></i> 地道美食聚焦
         </button>
-        <button onclick="switchTab('budget-packing')" id="tab-budget-packing" class="tab-btn text-eglDarkBlue hover:bg-white text-sm font-bold py-2 px-5 rounded-md transition duration-200 whitespace-nowrap">
+        <button onclick="switchTab('budget-packing')" id="tab-budget-packing" class="tab-btn text-brandDarkBlue hover:bg-white text-sm font-bold py-2 px-5 rounded-md transition duration-200 whitespace-nowrap">
           <i class="fa-solid fa-suitcase mr-1"></i> 行前準備與預算
         </button>
       </div>
@@ -131,11 +127,11 @@
 
   <!-- 印前提醒 (No Print) -->
   <div class="max-w-7xl mx-auto px-4 mt-4 no-print">
-    <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 rounded shadow-sm flex items-center justify-between">
+    <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 rounded shadow-sm flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <i class="fa-solid fa-circle-info text-xl text-yellow-600"></i>
+        <i class="fa-solid fa-circle-info text-xl text-blue-600"></i>
         <p class="text-sm">
-          <strong>專業排版提示：</strong> 本網頁已設定好完美的<b>雙重列印排版</b>。點擊右上角的「列印行程單張」將自動轉換成<b>實體宣傳冊折頁格式</b>。
+          <strong>私人手冊列印提示：</strong> 點擊右上角「儲存成 PDF / 列印」將自動套用完美的**無按鈕、自動分頁排版**，可直接列印成您的專屬隨身紙本手冊。
         </p>
       </div>
     </div>
@@ -147,172 +143,118 @@
     <!-- TAB 1: 封面與行程特點 -->
     <div id="content-highlights" class="tab-content block">
       
-      <!-- 精美封面海報 (奢華風格) -->
-      <div class="relative rounded-2xl overflow-hidden shadow-2xl mb-10 bg-gradient-to-r from-eglDarkBlue to-blue-900 text-white min-h-[480px] flex flex-col justify-between print-shadow-none print-border">
+      <!-- 精美封面海報 -->
+      <div class="relative rounded-2xl overflow-hidden shadow-2xl mb-10 bg-gradient-to-r from-brandDarkBlue to-blue-900 text-white min-h-[480px] flex flex-col justify-between print-shadow-none print-border">
         <!-- 背景動態插圖 -->
         <div class="absolute inset-0 opacity-15 pointer-events-none">
           <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" fill="none" stroke="currentColor" stroke-width="1.5">
-            <!-- 巴黎鐵塔線條 -->
             <path d="M500,450 L530,450 L515,200 L500,450 Z" />
             <path d="M480,450 L520,450 L500,150 L480,450 Z" />
             <line x1="490" y1="300" x2="510" y2="300" />
             <line x1="485" y1="380" x2="515" y2="380" />
-            <!-- 大笨鐘線條 -->
             <rect x="200" y="200" width="40" height="250" />
             <polygon points="200,200 220,150 240,200" />
             <circle cx="220" cy="225" r="10" />
-            <!-- 雲朵與飛機 -->
             <path d="M100,80 Q120,60 140,80 T180,80" />
             <path d="M800,120 Q820,100 840,120 T880,120" />
-            <path d="M50,150 L90,140 L75,120 L80,145" />
           </svg>
         </div>
         
-        <!-- 海報頂部徽章 -->
+        <!-- 海報頂部 -->
         <div class="p-6 flex justify-between items-start z-10">
-          <span class="bg-eglGold text-eglDarkBlue font-black text-xs md:text-sm px-4 py-2 rounded-full uppercase tracking-wider shadow-lg flex items-center">
-            <i class="fa-solid fa-trophy mr-1 text-amber-600"></i> 尊尚黃金系列 • 深度代表作
+          <span class="bg-brandGold text-brandDarkBlue font-black text-xs md:text-sm px-4 py-2 rounded-full uppercase tracking-wider shadow-lg flex items-center">
+            <i class="fa-solid fa-glass-water-splashes mr-1 text-amber-600"></i> Eric 家族專屬 • 奢華消暑歐洲假期
           </span>
-          <div class="bg-red-600 text-white font-extrabold text-xs px-3 py-1.5 rounded-md uppercase shadow-md">
-            私人尊享
+          <div class="bg-orange-600 text-white font-extrabold text-xs px-3 py-1.5 rounded-md uppercase shadow-md">
+            2026年7-8月盛夏
           </div>
         </div>
         
         <!-- 海報中部主標題 -->
         <div class="p-6 md:p-12 z-10">
-          <p class="text-eglGold font-extrabold text-xl md:text-2xl tracking-widest mb-2 text-shadow-md">倫敦 • 巴黎 • 慕尼黑</p>
+          <p class="text-brandGold font-extrabold text-xl md:text-2xl tracking-widest mb-2 text-shadow-md">倫敦 • 巴黎 • 慕尼黑</p>
           <h1 class="text-4xl md:text-6xl font-black mb-6 text-shadow-md leading-tight">
-            歐洲三國壯遊 <span class="text-eglGold">15天</span><br>深度知性美食精選之旅
+            歐洲三國跨界知性 <span class="text-brandGold">15天</span><br>深度美學、歷史與科技之旅
           </h1>
           <p class="text-sm md:text-lg text-gray-200 max-w-2xl font-light text-shadow-md">
-            帶您穿越英倫海峽，徜徉在香榭麗舍的浪漫光影中，探秘巴伐利亞名車工藝與歷史古堡。全程重本包景點門票，盡享極致歐陸假期。
+            專為全家人精心規劃。搭乘歐洲之星穿越海底，探索大英博物館、羅浮宮與寶馬世界。連續下榻優質酒店，享用頂級龍蝦餐、法式浪漫晚宴與正宗慕尼黑豬腳黑啤。
           </p>
         </div>
         
-        <!-- 海報底部全包宣言 -->
-        <div class="bg-gradient-to-r from-red-600 to-eglOrange p-6 z-10 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
+        <!-- 海報底部 -->
+        <div class="bg-gradient-to-r from-orange-600 to-brandOrange p-6 z-10 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
           <div>
-            <p class="text-yellow-200 text-xs md:text-sm font-bold tracking-wider">品質信譽保證 — 絕對清晰無隱藏收費</p>
-            <p class="text-white text-md md:text-lg font-extrabold">** 全包航空稅項、機票手續費，免收全程領隊/導遊/司機服務服務費！ **</p>
+            <p class="text-yellow-200 text-xs md:text-sm font-bold tracking-wider">FAMILY EXCLUSIVE TRIP</p>
+            <p class="text-white text-md md:text-lg font-extrabold">全程精選航班、自理餐點、景點門票與交通接駁均已全數配置完畢</p>
           </div>
-          <div class="bg-white text-eglDarkBlue py-2 px-6 rounded-lg font-black text-sm md:text-lg shadow-lg">
-            2026年夏季專屬出發
+          <div class="bg-white text-brandDarkBlue py-2 px-6 rounded-lg font-black text-sm md:text-lg shadow-lg">
+            出發日期: 2026.07.24
           </div>
         </div>
       </div>
       
       <!-- 本團特點 -->
-      <h2 class="text-2xl font-black text-eglDarkBlue mb-6 flex items-center border-b-2 border-eglOrange pb-2">
-        <span class="bg-eglOrange text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-2">⭐</span>
-        行程核心亮點 • 完美行程設計
+      <h2 class="text-2xl font-black text-brandDarkBlue mb-6 flex items-center border-b-2 border-brandOrange pb-2">
+        <span class="bg-brandOrange text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-2">⭐</span>
+        精心企劃 • 行程奢華亮點
       </h2>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
         
         <!-- 特點 1 -->
-        <div class="bg-white rounded-xl p-6 border-t-4 border-eglOrange shadow-md hover:shadow-xl transition duration-300">
-          <div class="text-eglOrange text-3xl mb-4"><i class="fa-solid fa-train-subway"></i></div>
-          <h3 class="text-lg font-bold text-eglDarkBlue mb-2">「重本安排」跨國高速鐵路</h3>
+        <div class="bg-white rounded-xl p-6 border-t-4 border-brandOrange shadow-md hover:shadow-xl transition duration-300">
+          <div class="text-brandOrange text-3xl mb-4"><i class="fa-solid fa-train-subway"></i></div>
+          <h3 class="text-lg font-bold text-brandDarkBlue mb-2">跨國「歐洲之星 Eurostar」</h3>
           <p class="text-sm text-gray-600">
-            乘坐享譽全球的<b>「歐洲之星 Eurostar」</b>由倫敦出發，風馳電掣穿越英倫海峽海底隧道直達浪漫花都巴黎。免卻機場安檢等繁瑣手續，舒適優雅。
+            搭乘歐洲最著名跨國高鐵，由倫敦 St Pancras 車站直達浪漫花都巴黎，風馳電掣穿越英法海峽，兼具舒適與獨特體驗。
           </p>
         </div>
 
         <!-- 特點 2 -->
-        <div class="bg-white rounded-xl p-6 border-t-4 border-eglOrange shadow-md hover:shadow-xl transition duration-300">
-          <div class="text-eglOrange text-3xl mb-4"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-          <h3 class="text-lg font-bold text-eglDarkBlue mb-2">哈利波特魔法朝聖之旅</h3>
+        <div class="bg-white rounded-xl p-6 border-t-4 border-brandOrange shadow-md hover:shadow-xl transition duration-300">
+          <div class="text-brandOrange text-3xl mb-4"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h3 class="text-lg font-bold text-brandDarkBlue mb-2">哈利波特魔法朝聖</h3>
           <p class="text-sm text-gray-600">
-            重本安排前往倫敦近郊<b>§哈利波特影城</b>，親身闖入經典電影大銀幕背後的拍攝現場，步入大禮堂、鄧不利多辦公室及 9¾ 月台，痛飲一杯「奶油啤酒」！
+            特別安排前往倫敦近郊<b>§哈利波特影城</b>，親歷霍格華茲大禮堂、斜角巷等電影原版場景，為 Ricky 與 Venus 帶來最難忘的魔法回憶！
           </p>
         </div>
 
         <!-- 特點 3 -->
-        <div class="bg-white rounded-xl p-6 border-t-4 border-eglOrange shadow-md hover:shadow-xl transition duration-300">
-          <div class="text-eglOrange text-3xl mb-4"><i class="fa-solid fa-landmark-dome"></i></div>
-          <h3 class="text-lg font-bold text-eglDarkBlue mb-2">四大博物館知性探索</h3>
+        <div class="bg-white rounded-xl p-6 border-t-4 border-brandOrange shadow-md hover:shadow-xl transition duration-300">
+          <div class="text-brandOrange text-3xl mb-4"><i class="fa-solid fa-landmark-dome"></i></div>
+          <h3 class="text-lg font-bold text-brandDarkBlue mb-2">四大世界級博物館啟迪</h3>
           <p class="text-sm text-gray-600">
-            由粵語導遊或專業導賞帶領深入參觀世界三大博物館之一的<b>§大英博物館</b>。同時深入探索<b>科學博物館</b>、<b>自然史博物館</b>及慕尼黑<b>德意志博物館</b>，啟迪思維。
+            精心挑選並預先購票：<b>大英博物館</b>（專人導賞）、<b>倫敦科學博物館</b>、<b>自然史博物館</b>以及慕尼黑<b>德意志博物館</b>，知性滿分。
           </p>
         </div>
 
         <!-- 特點 4 -->
-        <div class="bg-white rounded-xl p-6 border-t-4 border-eglOrange shadow-md hover:shadow-xl transition duration-300">
-          <div class="text-eglOrange text-3xl mb-4"><i class="fa-solid fa-car"></i></div>
-          <h3 class="text-lg font-bold text-eglDarkBlue mb-2">名車工藝與皇家宮殿</h3>
+        <div class="bg-white rounded-xl p-6 border-t-4 border-brandOrange shadow-md hover:shadow-xl transition duration-300">
+          <div class="text-brandOrange text-3xl mb-4"><i class="fa-solid fa-car"></i></div>
+          <h3 class="text-lg font-bold text-brandDarkBlue mb-2">經典巴伐利亞名車工藝</h3>
           <p class="text-sm text-gray-600">
-            走進德國慕尼黑<b>§BMW博物館</b>與奧林匹克公園，細賞經典賽車與未來科技。參觀古典巨作<b>§寧芬堡宮</b>與<b>§慕尼黑王宮</b>，盡顯巴伐利亞皇家奢華風範。
+            走進德國慕尼黑 <b>BMW 博物館</b>與奧林匹克公園，近距離欣賞百年賽車工藝。此外更探索寧芬堡宮與慕尼黑王宮。
           </p>
         </div>
 
         <!-- 特點 5 -->
-        <div class="bg-white rounded-xl p-6 border-t-4 border-eglOrange shadow-md hover:shadow-xl transition duration-300">
-          <div class="text-eglOrange text-3xl mb-4"><i class="fa-solid fa-shrimp"></i></div>
-          <h3 class="text-lg font-bold text-eglDarkBlue mb-2">環球頂級美食盛宴</h3>
+        <div class="bg-white rounded-xl p-6 border-t-4 border-brandOrange shadow-md hover:shadow-xl transition duration-300">
+          <div class="text-brandOrange text-3xl mb-4"><i class="fa-solid fa-shrimp"></i></div>
+          <h3 class="text-lg font-bold text-brandDarkBlue mb-2">精緻舌尖美饌安排</h3>
           <p class="text-sm text-gray-600">
-            精選多地名物：倫敦 <b>Burger & Lobster</b> 龍蝦餐、<b>Flat Iron</b> 炭烤牛排、<b>Rock and Sole Plaice</b> 百年炸魚薯條、浪漫塞納河遊船晚餐，以及慕尼黑 <b>Hofbräuhaus</b> 經典豬手配黑啤！
+            極致味蕾享受：倫敦 <b>Burger & Lobster</b> 龍蝦大餐、<b>Flat Iron</b> 牛排、塞納河遊船三道式晚宴、以及慕尼黑 <b>Hofbräuhaus</b> 的脆皮德國豬腳。
           </p>
         </div>
 
         <!-- 特點 6 -->
-        <div class="bg-white rounded-xl p-6 border-t-4 border-eglOrange shadow-md hover:shadow-xl transition duration-300">
-          <div class="text-eglOrange text-3xl mb-4"><i class="fa-solid fa-hotel"></i></div>
-          <h3 class="text-lg font-bold text-eglDarkBlue mb-2">極致住宿連續入住規格</h3>
+        <div class="bg-white rounded-xl p-6 border-t-4 border-brandOrange shadow-md hover:shadow-xl transition duration-300">
+          <div class="text-brandOrange text-3xl mb-4"><i class="fa-solid fa-hotel"></i></div>
+          <h3 class="text-lg font-bold text-brandDarkBlue mb-2">極致連續入住規格</h3>
           <p class="text-sm text-gray-600">
-            拒絕每日搬行李！倫敦重本連續 3 晚入住 <b>Hilton London Metropole</b>，慕尼黑連續 4 晚入住 <b>Courtyard by Marriott Munich City Center</b>，均享極豐盛酒店自助早餐。
+            不需每日疲於奔命更換住宿！倫敦連續入住 3 晚 <b>Hilton</b> 與 2 晚 <b>Grange Beauchamp</b>，慕尼黑更連續 4 晚入住 <b>Marriott</b>，悠閒享用每日早餐。
           </p>
         </div>
 
-      </div>
-
-      <!-- 宣傳插畫展示區 -->
-      <div class="bg-white rounded-xl p-6 shadow-md mb-8">
-        <h3 class="text-xl font-bold text-eglDarkBlue mb-6 text-center">行程地標視覺：倫敦、巴黎與慕尼黑</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <!-- 倫敦插圖 -->
-          <div class="bg-eglLightBlue rounded-lg p-4 flex flex-col items-center">
-            <svg class="w-32 h-32 text-eglDarkBlue" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="42" y="10" width="16" height="80" fill="#002F6C" opacity="0.8"/>
-              <polygon points="42,10 50,0 58,10" fill="#002F6C"/>
-              <circle cx="50" cy="25" r="5" fill="#FFD700"/>
-              <!-- 倫敦眼 -->
-              <circle cx="20" cy="50" r="15" stroke="#FF5E00" stroke-width="2"/>
-              <line x1="20" y1="50" x2="20" y2="75" stroke="#FF5E00" stroke-width="2"/>
-              <circle cx="20" cy="50" r="2" fill="#FF5E00"/>
-              <!-- 泰晤士河 -->
-              <path d="M0,85 Q25,80 50,85 T100,85" stroke="#002F6C" stroke-width="3"/>
-            </svg>
-            <span class="font-bold text-eglDarkBlue mt-2">倫敦之眼與大笨鐘</span>
-          </div>
-          <!-- 巴黎插圖 -->
-          <div class="bg-pink-50 rounded-lg p-4 flex flex-col items-center">
-            <svg class="w-32 h-32 text-pink-600" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- 巴黎鐵塔 -->
-              <path d="M45,90 L48,50 L49,20 L51,20 L52,50 L55,90" stroke="#B81D24" stroke-width="3"/>
-              <line x1="45" y1="90" x2="55" y2="90" stroke="#B81D24" stroke-width="4"/>
-              <line x1="47" y1="70" x2="53" y2="70" stroke="#B81D24" stroke-width="2"/>
-              <line x1="48" y1="50" x2="52" y2="50" stroke="#B81D24" stroke-width="2"/>
-              <path d="M40,90 Q50,75 60,90" stroke="#B81D24" stroke-width="2"/>
-              <!-- 太陽 -->
-              <circle cx="80" cy="30" r="8" fill="#FFD700" opacity="0.6"/>
-            </svg>
-            <span class="font-bold text-pink-700 mt-2">艾菲爾鐵塔落日</span>
-          </div>
-          <!-- 慕尼黑插圖 -->
-          <div class="bg-green-50 rounded-lg p-4 flex flex-col items-center">
-            <svg class="w-32 h-32 text-emerald-700" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- 巴伐利亞洋蔥頭教堂 -->
-              <rect x="25" y="30" width="16" height="50" fill="#065F46" opacity="0.8"/>
-              <rect x="55" y="30" width="16" height="50" fill="#065F46" opacity="0.8"/>
-              <path d="M22,30 C22,15 44,15 44,30 Z" fill="#065F46"/>
-              <path d="M52,30 C52,15 74,15 74,30 Z" fill="#065F46"/>
-              <!-- 杉樹 -->
-              <polygon points="10,80 15,65 20,80" fill="#047857"/>
-              <polygon points="80,80 85,65 90,80" fill="#047857"/>
-            </svg>
-            <span class="font-bold text-emerald-800 mt-2">聖母教堂與阿爾卑斯綠林</span>
-          </div>
-        </div>
       </div>
 
     </div>
@@ -321,13 +263,12 @@
     <div id="content-itinerary" class="tab-content hidden">
       
       <div class="flex justify-between items-center mb-6">
-        <h2 class="text-2xl font-black text-eglDarkBlue flex items-center">
-          <span class="bg-eglOrange text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-2">📅</span>
-          每日精彩行程規劃
+        <h2 class="text-2xl font-black text-brandDarkBlue flex items-center">
+          <span class="bg-brandOrange text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-2">📅</span>
+          15天每日完美行程解讀
         </h2>
-        <!-- 展開所有按鈕 -->
-        <button onclick="toggleAllItinerary()" class="text-xs bg-white border border-eglDarkBlue text-eglDarkBlue px-3 py-1.5 rounded-md hover:bg-eglLightBlue transition no-print">
-          <i class="fa-solid fa-arrows-up-down"></i> <span id="toggle-all-text">展開/收起全部</span>
+        <button onclick="toggleAllItinerary()" class="text-xs bg-white border border-brandDarkBlue text-brandDarkBlue px-3 py-1.5 rounded-md hover:bg-brandLightBlue transition no-print">
+          <i class="fa-solid fa-arrows-up-down"></i> <span id="toggle-all-text">展開所有每日行程</span>
         </button>
       </div>
 
@@ -335,66 +276,49 @@
       <div class="space-y-6">
         
         <!-- Day 1 -->
-        <div class="bg-white rounded-xl shadow-md border-l-4 border-eglOrange overflow-hidden print-shadow-none print-border">
+        <div class="bg-white rounded-xl shadow-md border-l-4 border-brandOrange overflow-hidden print-shadow-none print-border">
           <div onclick="toggleDay(1)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
             <div class="flex items-center space-x-4">
-              <span class="bg-eglOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 1</span>
+              <span class="bg-brandOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 1</span>
               <div>
-                <h3 class="text-lg font-bold text-eglDarkBlue">澳門 ➔ 新加坡 (轉機)</h3>
+                <h3 class="text-lg font-bold text-brandDarkBlue">澳門 ➔ 新加坡 (轉機)</h3>
                 <p class="text-xs text-gray-500"><i class="fa-solid fa-calendar mr-1"></i> 2026年7月24日 (星期五)</p>
               </div>
             </div>
             <div class="mt-2 md:mt-0 flex items-center space-x-3 text-xs">
-              <span class="bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full"><i class="fa-solid fa-cloud-rain mr-1"></i> 澳門：27-32°C / 新加坡：多雲</span>
+              <span class="bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full"><i class="fa-solid fa-cloud-rain mr-1"></i> 澳門：27-32°C / 濕熱</span>
               <span class="text-gray-400"><i class="fa-solid fa-chevron-down text-base" id="arrow-1"></i></span>
             </div>
           </div>
           
           <div id="day-detail-1" class="hidden p-5 border-t border-gray-100 bg-gray-50">
-            <!-- 穿搭與提醒 -->
             <div class="bg-blue-50 border border-blue-200 p-3 rounded-lg mb-4 text-xs text-blue-800">
-              <strong><i class="fa-solid fa-shirt"></i> 專家穿搭建議：</strong>
-              機場與機艙冷氣較強，建議「洋蔥式」穿著，內穿透氣短袖，外加防風連帽外套，著舒適長褲方便搭機與快步行走。
+              <strong><i class="fa-solid fa-shirt"></i> 穿搭建議：</strong> 透氣夏裝，機艙與機場冷氣偏凍，備妥輕便連帽防風外套。
             </div>
-            
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <div class="lg:col-span-2 space-y-4">
-                <div class="flex space-x-3">
-                  <span class="font-bold text-gray-400 text-sm w-12 shrink-0">16:00</span>
-                  <p class="text-sm">於澳門市區出發，提前避開下班塞車人流，帶同期待心情往機場。</p>
-                </div>
-                <div class="flex space-x-3">
-                  <span class="font-bold text-gray-400 text-sm w-12 shrink-0">16:30</span>
-                  <p class="text-sm">抵達澳門國際機場，辦理登機手續、託運行李與安全檢查。</p>
-                </div>
-                <div class="flex space-x-3">
-                  <span class="font-bold text-eglOrange text-sm w-12 shrink-0"><i class="fa-solid fa-plane"></i> 18:45</span>
-                  <p class="text-sm">搭乘酷航豪華客機 <b>TR905</b> 起飛，前往新加坡樟宜機場，於機上享用輕便晚餐及休息。</p>
-                </div>
-                <div class="flex space-x-3">
-                  <span class="font-bold text-gray-400 text-sm w-12 shrink-0">22:35</span>
-                  <p class="text-sm">降落新加坡樟宜機場 (SIN)。稍作休息，可以陪同全家去參觀星耀樟宜室內瀑布。</p>
-                </div>
+              <div class="lg:col-span-2 space-y-4 text-sm">
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">16:00</span><span>全家攜帶行李出發，避開下班人流前往澳門國際機場。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">16:30</span><span>抵達澳門國際機場，辦理行李託運與安全檢查。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:45</span><span>搭乘酷航豪華客機 <b>TR905</b> 飛往新加坡。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">22:35</span><span>降落新加坡樟宜機場 (SIN)。稍作安頓，陪同 Ricky 和 Venus 到星耀樟宜觀賞著名室內瀑布。</span></div>
               </div>
-              <!-- 膳食與酒店看板 -->
-              <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-3">
-                <p class="font-bold text-eglDarkBlue border-b pb-1 mb-2">🍽️ 每日膳食與住宿</p>
-                <p><strong>早：</strong> 敬請自理</p>
-                <p><strong>午：</strong> 敬請自理</p>
-                <p><strong>晚：</strong> 航機上輕膳</p>
-                <p class="text-eglOrange"><strong>住：</strong> 航機上 / 轉機候機室</p>
+              <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
+                <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
+                <p><strong>早/午：</strong> 敬請自理</p>
+                <p><strong>晚：</strong> 航機上輕食 / 自理</p>
+                <p class="text-brandOrange"><strong>住宿：</strong> 航機上 / 轉機候機區</p>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Day 2 -->
-        <div class="bg-white rounded-xl shadow-md border-l-4 border-eglOrange overflow-hidden print-shadow-none print-border">
+        <div class="bg-white rounded-xl shadow-md border-l-4 border-brandOrange overflow-hidden print-shadow-none print-border">
           <div onclick="toggleDay(2)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
             <div class="flex items-center space-x-4">
-              <span class="bg-eglOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 2</span>
+              <span class="bg-brandOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 2</span>
               <div>
-                <h3 class="text-lg font-bold text-eglDarkBlue">新加坡 ➔ 倫敦 ➔ 倫敦市內經典巡禮</h3>
+                <h3 class="text-lg font-bold text-brandDarkBlue">新加坡 ➔ 倫敦 ➔ 市區經典觀光</h3>
                 <p class="text-xs text-gray-500"><i class="fa-solid fa-calendar mr-1"></i> 2026年7月25日 (星期六)</p>
               </div>
             </div>
@@ -406,358 +330,552 @@
           
           <div id="day-detail-2" class="hidden p-5 border-t border-gray-100 bg-gray-50">
             <div class="bg-blue-50 border border-blue-200 p-3 rounded-lg mb-4 text-xs text-blue-800">
-              <strong><i class="fa-solid fa-shirt"></i> 專家穿搭建議：</strong>
-              英國夏季早晚溫差較大。建議內著短袖打底，外穿針織外套或牛仔外套，準備晴雨兩用摺疊傘。
+              <strong><i class="fa-solid fa-shirt"></i> 穿搭建議：</strong> 倫敦氣候多變，建議內穿短袖，外加針織衫或休閒外套，攜帶晴雨傘。
             </div>
-            
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <div class="lg:col-span-2 space-y-4">
-                <div class="flex space-x-3">
-                  <span class="font-bold text-eglOrange text-sm w-12 shrink-0"><i class="fa-solid fa-plane"></i> 01:05</span>
-                  <p class="text-sm">轉乘新加坡航空豪華客機 <b>SQ306</b> 飛往倫敦。</p>
-                </div>
-                <div class="flex space-x-3">
-                  <span class="font-bold text-gray-400 text-sm w-12 shrink-0">07:40</span>
-                  <p class="text-sm">順利降落倫敦希斯路機場 (LHR)。搭乘 <b>Heathrow Express</b> 機場快線快速進入市區。</p>
-                </div>
-                <div class="flex space-x-3">
-                  <span class="font-bold text-gray-400 text-sm w-12 shrink-0">11:00</span>
-                  <p class="text-sm">重本安排入住市中心五星級酒店 <b>Hilton London Metropole</b>，寄放行李並稍作整頓。</p>
-                </div>
-                <div class="flex space-x-3">
-                  <span class="font-bold text-gray-400 text-sm w-12 shrink-0">12:30</span>
-                  <p class="text-sm">於西敏區極具歷史感的英式酒吧 <b>The Red Lion</b> 享用抵英首餐，品嚐經典英式牛肉派。</p>
-                </div>
-                <div class="flex space-x-3">
-                  <span class="font-bold text-gray-400 text-sm w-12 shrink-0">14:00</span>
-                  <p class="text-sm">展開市內經典拍照：Ø大笨鐘、Ø西敏寺、Ø國會大樓。並於<b>柯芬園 (Covent Garden)</b> 自由漫步。</p>
-                </div>
-                <div class="flex space-x-3">
-                  <span class="font-bold text-gray-400 text-sm w-12 shrink-0">18:30</span>
-                  <p class="text-sm">晚餐安排人氣極高之 <b>Flat Iron</b> 炭烤牛排餐。</p>
-                </div>
+              <div class="lg:col-span-2 space-y-4 text-sm">
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">01:05</span><span>轉乘新加坡航空 <b>SQ306</b> 豪華客機前往倫敦。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">07:40</span><span>降落倫敦希斯路機場 (LHR)，辦理入境。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>搭乘 <b>Heathrow Express</b> 機場快線快速抵達市區。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">11:00</span><span>前往 <b>Hilton London Metropole</b> 酒店寄放行李。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">12:00</span><span>於西敏寺區經典酒吧 <b>The Red Lion</b> 享用傳統英式派與啤酒。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">14:00</span><span>地標拍攝巡禮：Ø大笨鐘、Ø西敏寺、柯芬園及國會大樓。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:30</span><span>晚餐安排人氣極高之 <b>Flat Iron</b> 手工牛排，小童獲贈迷你小菜刀紀念品。</span></div>
               </div>
-              <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-3">
-                <p class="font-bold text-eglDarkBlue border-b pb-1 mb-2">🍽️ 每日膳食與住宿</p>
-                <p><strong>早：</strong> 航機上精緻輕食</p>
-                <p><strong>午：</strong> The Red Lion 英式經典酒館餐</p>
+              <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
+                <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
+                <p><strong>早：</strong> 飛機上精緻美饌</p>
+                <p><strong>午：</strong> The Red Lion 英式地道酒館</p>
                 <p><strong>晚：</strong> Flat Iron 炭烤冷藏牛排餐</p>
-                <p class="text-eglOrange"><strong>住：</strong> Hilton London Metropole (豪華高級客房 - 連續入住第1晚)</p>
+                <p class="text-brandOrange"><strong>住宿：</strong> Hilton London Metropole</p>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Day 3 -->
-        <div class="bg-white rounded-xl shadow-md border-l-4 border-eglOrange overflow-hidden print-shadow-none print-border">
+        <div class="bg-white rounded-xl shadow-md border-l-4 border-brandOrange overflow-hidden print-shadow-none print-border">
           <div onclick="toggleDay(3)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
             <div class="flex items-center space-x-4">
-              <span class="bg-eglOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 3</span>
+              <span class="bg-brandOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 3</span>
               <div>
-                <h3 class="text-lg font-bold text-eglDarkBlue">皇家公園漫步 ➔ 博物館雙館奇妙探索日</h3>
+                <h3 class="text-lg font-bold text-brandDarkBlue">皇家公園漫步 ➔ 博物館雙館奇妙探索日</h3>
                 <p class="text-xs text-gray-500"><i class="fa-solid fa-calendar mr-1"></i> 2026年7月26日 (星期日)</p>
               </div>
             </div>
             <div class="mt-2 md:mt-0 flex items-center space-x-3 text-xs">
-              <span class="bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full"><i class="fa-solid fa-sun mr-1"></i> 倫敦：多雲轉晴，溫和</span>
+              <span class="bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full"><i class="fa-solid fa-sun mr-1"></i> 倫敦：14-23°C / 多雲轉晴</span>
               <span class="text-gray-400"><i class="fa-solid fa-chevron-down text-base" id="arrow-3"></i></span>
             </div>
           </div>
           
           <div id="day-detail-3" class="hidden p-5 border-t border-gray-100 bg-gray-50">
+            <div class="bg-blue-50 border border-blue-200 p-3 rounded-lg mb-4 text-xs text-blue-800">
+              <strong><i class="fa-solid fa-shirt"></i> 穿搭建議：</strong> 舒適球鞋（步行較多），透氣休閒裝配備保暖外套，方便在室內外穿脫。
+            </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <div class="lg:col-span-2 space-y-4">
-                <div class="flex space-x-3">
-                  <span class="font-bold text-gray-400 text-sm w-12 shrink-0">08:30</span>
-                  <p class="text-sm">享用酒店豐盛的英式元氣自助早餐。</p>
-                </div>
-                <div class="flex space-x-3">
-                  <span class="font-bold text-gray-400 text-sm w-12 shrink-0">09:30</span>
-                  <p class="text-sm">親子漫步於巨大的<b>海德公園 (Hyde Park)</b>，與松鼠及湖畔天鵝近距離接觸。</p>
-                </div>
-                <div class="flex space-x-3">
-                  <span class="font-bold text-gray-400 text-sm w-12 shrink-0">10:45</span>
-                  <p class="text-sm">前往<b>Ø白金漢宮</b>外圍，見證宏偉的皇家宮殿與古典騎兵儀仗。</p>
-                </div>
-                <div class="flex space-x-3">
-                  <span class="font-bold text-gray-400 text-sm w-12 shrink-0">12:00</span>
-                  <p class="text-sm">於南肯辛頓區 (South Kensington) 精選餐廳享用傳統的英式周日烤肉餐 (Sunday Roast)。</p>
-                </div>
-                <div class="flex space-x-3">
-                  <span class="font-bold text-gray-400 text-sm w-12 shrink-0">13:30</span>
-                  <p class="text-sm">免費進入參觀<b>科學博物館 (Science Museum)</b>，親身體驗豐富的互動科技與飛行展品。</p>
-                </div>
-                <div class="flex space-x-3">
-                  <span class="font-bold text-gray-400 text-sm w-12 shrink-0">15:30</span>
-                  <p class="text-sm">探秘<b>自然史博物館 (Natural History Museum)</b>，近距離觀賞巨大的藍鯨骨骼與逼真恐龍展區。</p>
-                </div>
-                <div class="flex space-x-3">
-                  <span class="font-bold text-gray-400 text-sm w-12 shrink-0">18:00</span>
-                  <p class="text-sm">晚餐重本安排 <b>Burger & Lobster (Knightsbridge)</b> 享受整隻鮮美活龍蝦大餐配牛肉漢堡。</p>
-                </div>
+              <div class="lg:col-span-2 space-y-4 text-sm">
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">08:30</span><span>於希爾頓酒店大堂享用豐盛的英式自助早餐。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">09:30</span><span>親子漫步 <b>海德公園 (Hyde Park)</b>，與松鼠及湖畔天鵝嬉戲。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:45</span><span>漫步至 <b>白金漢宮</b> 觀賞古典莊嚴的衛兵儀仗。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">12:00</span><span>於南肯辛頓區享用美味的地道英式周日烤肉餐。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">13:30</span><span>免費進入 <b>科學博物館 (Science Museum)</b>，孩子體驗互動科技裝置。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">15:30</span><span>探秘 <b>自然史博物館 (Natural History Museum)</b>，觀賞震撼的巨型恐龍骨骼。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:00</span><span>晚餐重本安排 <b>Burger & Lobster</b>，暢快品嚐整隻鮮美活龍蝦大餐。</span></div>
               </div>
-              <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-3">
-                <p class="font-bold text-eglDarkBlue border-b pb-1 mb-2">🍽️ 每日膳食與住宿</p>
+              <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
+                <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
                 <p><strong>早：</strong> 酒店豐富自助早餐</p>
-                <p><strong>午：</strong> 南肯辛頓精緻現代英式午餐</p>
-                <p><strong>晚：</strong> Burger & Lobster 頂級龍蝦大餐</p>
-                <p class="text-eglOrange"><strong>住：</strong> Hilton London Metropole (連續入住第2晚)</p>
+                <p><strong>午：</strong> 南肯辛頓傳統英式烤肉</p>
+                <p><strong>晚：</strong> Burger & Lobster 龍蝦餐</p>
+                <p class="text-brandOrange"><strong>住宿：</strong> Hilton London Metropole</p>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Day 4 -->
-        <div class="bg-white rounded-xl shadow-md border-l-4 border-eglOrange overflow-hidden print-shadow-none print-border">
+        <div class="bg-white rounded-xl shadow-md border-l-4 border-brandOrange overflow-hidden print-shadow-none print-border">
           <div onclick="toggleDay(4)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
             <div class="flex items-center space-x-4">
-              <span class="bg-eglOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 4</span>
+              <span class="bg-brandOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 4</span>
               <div>
-                <h3 class="text-lg font-bold text-eglDarkBlue">「重本安排」哈利波特影城魔法一日遊</h3>
+                <h3 class="text-lg font-bold text-brandDarkBlue">「重本安排」哈利波特影城魔法一日遊</h3>
                 <p class="text-xs text-gray-500"><i class="fa-solid fa-calendar mr-1"></i> 2026年7月27日 (星期一)</p>
               </div>
             </div>
             <div class="mt-2 md:mt-0 flex items-center space-x-3 text-xs">
-              <span class="bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full"><i class="fa-solid fa-cloud-sun mr-1"></i> 倫敦/沃特福德：多雲，涼爽</span>
+              <span class="bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full"><i class="fa-solid fa-cloud-sun mr-1"></i> 沃特福德：13-22°C / 涼爽</span>
               <span class="text-gray-400"><i class="fa-solid fa-chevron-down text-base" id="arrow-4"></i></span>
             </div>
           </div>
           
           <div id="day-detail-4" class="hidden p-5 border-t border-gray-100 bg-gray-50">
+            <div class="bg-blue-50 border border-blue-200 p-3 rounded-lg mb-4 text-xs text-blue-800">
+              <strong><i class="fa-solid fa-shirt"></i> 穿搭建議：</strong> Ricky 與 Venus 建議穿戴霍格華茲斗篷與魔杖！近郊氣溫偏低，攜帶中厚度外套。
+            </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <div class="lg:col-span-2 space-y-4">
-                <div class="flex space-x-3">
-                  <span class="font-bold text-gray-400 text-sm w-12 shrink-0">08:30</span>
-                  <p class="text-sm">享用酒店豐盛早餐。</p>
-                </div>
-                <div class="flex space-x-3">
-                  <span class="font-bold text-gray-400 text-sm w-12 shrink-0">10:09</span>
-                  <p class="text-sm">於尤斯頓車站 (Euston) 搭乘近郊火車前往 Watford Junction，再轉乘魔法雙層巴士直達影城。</p>
-                </div>
-                <div class="flex space-x-3">
-                  <span class="font-bold text-gray-400 text-sm w-12 shrink-0">11:30</span>
-                  <p class="text-sm">進入<b>§華納兄弟哈利波特影城 (Warner Bros. Studio Tour)</b>。於 The Backlot Cafe 飲一杯「奶油啤酒」。</p>
-                </div>
-                <div class="flex space-x-3">
-                  <span class="font-bold text-gray-400 text-sm w-12 shrink-0">13:00</span>
-                  <p class="text-sm">深度遊覽哈利波特影城，親歷霍格華茲大禮堂、鄧不利多辦公室、禁忌森林、斜角巷等原版拍攝場景。</p>
-                </div>
-                <div class="flex space-x-3">
-                  <span class="font-bold text-gray-400 text-sm w-12 shrink-0">17:00</span>
-                  <p class="text-sm">於巨型影城旗艦商店挑選紀念品（魔杖、學院袍、巧克力蛙）。</p>
-                </div>
-                <div class="flex space-x-3">
-                  <span class="font-bold text-gray-400 text-sm w-12 shrink-0">19:00</span>
-                  <p class="text-sm">返回市區。晚餐享用尤斯頓超人氣馬來西亞料理 <b>Roti King</b>，品嚐最美味的咖哩印度煎餅。</p>
-                </div>
+              <div class="lg:col-span-2 space-y-4 text-sm">
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">08:30</span><span>在酒店享用熱騰騰的英式早餐。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:09</span><span>前往尤斯頓車站 (Euston) 乘火車直奔 Watford Junction，再搭魔法巴士前往影城。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">11:30</span><span>進入 <b>§哈利波特影城 (Warner Bros. Studio Tour)</b>。先在美食區暢飲奶油啤酒！</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">13:00</span><span>深度遊覽斜角巷、霍格華茲特快列車 9¾ 月台、鄧不利多校長室、禁忌森林。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">17:00</span><span>於巨型影城旗艦店選購精美魔法紀念品。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">19:00</span><span>返回倫敦市區。晚餐享用人氣爆棚的馬來餐廳 <b>Roti King</b>，一嚐美味的咖哩拉餅。</span></div>
               </div>
-              <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-3">
-                <p class="font-bold text-eglDarkBlue border-b pb-1 mb-2">🍽️ 每日膳食與住宿</p>
+              <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
+                <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
                 <p><strong>早：</strong> 酒店豐富自助早餐</p>
-                <p><strong>午：</strong> 影城特選主題午餐 (連奶油啤酒)</p>
-                <p><strong>晚：</strong> Roti King 亞洲風味星馬菜</p>
-                <p class="text-eglOrange"><strong>住：</strong> Hilton London Metropole (連續入住第3晚)</p>
+                <p><strong>午：</strong> 影城自理 / 奶油啤酒與小食</p>
+                <p><strong>晚：</strong> Roti King 亞洲風情料理</p>
+                <p class="text-brandOrange"><strong>住宿：</strong> Hilton London Metropole</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Day 5 to Day 15 summaries for layout compactness -->
-        <div class="bg-blue-50 p-4 rounded-xl text-center font-bold text-eglDarkBlue text-sm no-print">
-          💡 點擊下方分頁可查看更多詳細行程，或點擊「展開全部」閱讀 15 天完整的地道英法德行程手冊！
+        <!-- Day 5 -->
+        <div class="bg-white rounded-xl shadow-md border-l-4 border-brandOrange overflow-hidden print-shadow-none print-border">
+          <div onclick="toggleDay(5)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
+            <div class="flex items-center space-x-4">
+              <span class="bg-brandOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 5</span>
+              <div>
+                <h3 class="text-lg font-bold text-brandDarkBlue">大英博物館 ➔ 入住古典精品 Grange Beauchamp 酒店</h3>
+                <p class="text-xs text-gray-500"><i class="fa-solid fa-calendar mr-1"></i> 2026年7月28日 (星期二)</p>
+              </div>
+            </div>
+            <div class="mt-2 md:mt-0 flex items-center space-x-3 text-xs">
+              <span class="bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full"><i class="fa-solid fa-sun mr-1"></i> 倫敦：14-24°C / 溫和晴天</span>
+              <span class="text-gray-400"><i class="fa-solid fa-chevron-down text-base" id="arrow-5"></i></span>
+            </div>
+          </div>
+          
+          <div id="day-detail-5" class="hidden p-5 border-t border-gray-100 bg-gray-50">
+            <div class="bg-blue-50 border border-blue-200 p-3 rounded-lg mb-4 text-xs text-blue-800">
+              <strong><i class="fa-solid fa-shirt"></i> 穿搭建議：</strong> 大英博物館內冷氣較強且展區極大，建議穿着防滑休閒鞋與輕薄針織衫，方便室內徒步。
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div class="lg:col-span-2 space-y-4 text-sm">
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">09:00</span><span>享用希爾頓早餐。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>辦理希爾頓酒店退房，將行李轉運至位於大英博物館旁典雅幽靜的 <b>Grange Beauchamp Hotel</b>（倫敦第二家特色精品酒店）。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">11:30</span><span>於倫敦歷史最悠久的 <b>Rock and Sole Plaice</b> 享用正宗英式百年炸魚薯條。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">13:00</span><span><b>【重本已購票】</b>進入世界三大博物館之一的 <b>§大英博物館 (British Museum)</b>。由專業人員導賞，親歷羅塞塔石碑、木乃伊與希臘帕德嫩神廟群，極具教育意義。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">17:00</span><span>漫步 Tottenham Court Road 商業街，全家悠閒自由購物。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:30</span><span>晚餐前往備受好評之復古溫馨意式餐廳 <b>Ciao Bella</b> 享受披薩與意麵大餐。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">20:30</span><span>返回 Grange Beauchamp Hotel 辦理入住，安歇於精緻古典四人房。</span></div>
+              </div>
+              <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
+                <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
+                <p><strong>早：</strong> 酒店豐富自助早餐</p>
+                <p><strong>午：</strong> Rock and Sole Plaice 百年炸魚薯條</p>
+                <p><strong>晚：</strong> Ciao Bella 經典意式料理</p>
+                <p class="text-brandOrange"><strong>住宿：</strong> Grange Beauchamp Hotel (1/2晚)</p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- 完整行程列表 -->
-        <div id="extended-days" class="space-y-6">
-          <!-- Day 5 -->
-          <div class="bg-white rounded-xl shadow-md border-l-4 border-eglOrange overflow-hidden print-shadow-none print-border">
-            <div onclick="toggleDay(5)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
-              <div class="flex items-center space-x-4">
-                <span class="bg-eglOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 5</span>
-                <div>
-                  <h3 class="text-lg font-bold text-eglDarkBlue">大英博物館知性之旅 ➔ 倫敦精品自由購物</h3>
-                  <p class="text-xs text-gray-500"><i class="fa-solid fa-calendar mr-1"></i> 2026年7月28日 (星期二)</p>
-                </div>
+        <!-- Day 6 -->
+        <div class="bg-white rounded-xl shadow-md border-l-4 border-brandOrange overflow-hidden print-shadow-none print-border">
+          <div onclick="toggleDay(6)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
+            <div class="flex items-center space-x-4">
+              <span class="bg-brandOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 6</span>
+              <div>
+                <h3 class="text-lg font-bold text-brandDarkBlue">倫敦動物園 ➔ 波羅市場 ➔ 倫敦塔橋 ➔ 空中花園 Sky Garden</h3>
+                <p class="text-xs text-gray-500"><i class="fa-solid fa-calendar mr-1"></i> 2026年7月29日 (星期三)</p>
               </div>
-              <span class="text-xs bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full">大英博物館精華導賞</span>
             </div>
-            <div id="day-detail-5" class="hidden p-5 border-t border-gray-100 bg-gray-50">
-              <p class="text-sm mb-2">上午辦理 Hilton 退房，轉運行李至優雅安靜的貝德福德廣場精品酒店 <b>Grange Beauchamp Hotel</b>。中午在倫敦歷史最悠久的 <b>Rock and Sole Plaice</b> 享用正宗英式炸魚薯條。</p>
-              <p class="text-sm font-bold text-eglDarkBlue">【重本包門票】大英博物館 (British Museum)</p>
-              <p class="text-sm text-gray-600">參觀世界最大博物館，悉心安排專業導賞，一睹木乃伊、羅塞塔石碑及無數古希臘文明至寶。晚餐於復古家庭意式餐廳 <b>Ciao Bella</b> 享受意麵與披薩大餐。</p>
+            <div class="mt-2 md:mt-0 flex items-center space-x-3 text-xs">
+              <span class="bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full"><i class="fa-solid fa-sun mr-1"></i> 倫敦：15-25°C / 晴朗乾燥</span>
+              <span class="text-gray-400"><i class="fa-solid fa-chevron-down text-base" id="arrow-6"></i></span>
             </div>
           </div>
-
-          <!-- Day 6 -->
-          <div class="bg-white rounded-xl shadow-md border-l-4 border-eglOrange overflow-hidden print-shadow-none print-border">
-            <div onclick="toggleDay(6)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
-              <div class="flex items-center space-x-4">
-                <span class="bg-eglOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 6</span>
-                <div>
-                  <h3 class="text-lg font-bold text-eglDarkBlue">倫敦動物園 ➔ 波羅市場 ➔ 倫敦塔橋 ➔ 登上高空 Sky Garden</h3>
-                  <p class="text-xs text-gray-500"><i class="fa-solid fa-calendar mr-1"></i> 2026年7月29日 (星期三)</p>
-                </div>
-              </div>
-              <span class="text-xs bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full">泰晤士河落日美景</span>
+          
+          <div id="day-detail-6" class="hidden p-5 border-t border-gray-100 bg-gray-50">
+            <div class="bg-blue-50 border border-blue-200 p-3 rounded-lg mb-4 text-xs text-blue-800">
+              <strong><i class="fa-solid fa-shirt"></i> 穿搭建議：</strong> 夏季晴朗。建議備齊遮陽帽與防曬霜，帶備水樽，穿著舒適步行鞋。
             </div>
-            <div id="day-detail-6" class="hidden p-5 border-t border-gray-100 bg-gray-50">
-              <p class="text-sm">上午暢遊科學動物園<b>§倫敦動物園</b>。下午造訪百年歷史美食基地<b>Borough Market</b>，漫步泰晤士河畔，經千禧橋、倫敦橋，抵達藍白雙塔<b>倫敦塔橋</b>拍照。傍晚登上倫敦最高空中花園 <b>Sky Garden</b>，俯瞰360度日落美景。晚餐於河畔景觀餐廳享用精緻西餐，夜宿 Grange Beauchamp Hotel。</p>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div class="lg:col-span-2 space-y-4 text-sm">
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">09:00</span><span>於 Grange Beauchamp 享用精緻英倫早餐。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>前往創立於1828年的世界著名 <b>§倫敦動物園 (London Zoo)</b>，欣賞可愛的企鵝與長頸鹿，孩子們最愛。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">13:00</span><span>造訪泰晤士河南岸百年歷史美食市集 <b>Borough Market</b>，午餐在此自理，品嚐手工松露意麵、鮮生蠔與巨無霸牛肉堡。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">15:30</span><span>漫步泰晤士河畔，經千禧橋、倫敦橋，在蔚藍天空下與藍白相間的 <b>倫敦塔橋</b> 浪漫合影。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">17:00</span><span><b>【重本預約】</b>登上高空溫室 <b>Sky Garden (空中花園)</b>，手捧凍飲，360度俯瞰夕陽染紅泰晤士河。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:30</span><span>晚餐再次享用 <b>Flat Iron</b> 嫩烤板腱牛排。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">20:30</span><span>散步回酒店 Grange Beauchamp Hotel。</span></div>
+              </div>
+              <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
+                <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
+                <p><strong>早：</strong> 酒店豐富英式早餐</p>
+                <p><strong>午：</strong> Borough Market 百年市集美味自理</p>
+                <p><strong>晚：</strong> Flat Iron 金牌脆薯牛排餐</p>
+                <p class="text-brandOrange"><strong>住宿：</strong> Grange Beauchamp Hotel (2/2晚)</p>
+              </div>
             </div>
           </div>
+        </div>
 
-          <!-- Day 7 -->
-          <div class="bg-white rounded-xl shadow-md border-l-4 border-eglOrange overflow-hidden print-shadow-none print-border">
-            <div onclick="toggleDay(7)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
-              <div class="flex items-center space-x-4">
-                <span class="bg-eglOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 7</span>
-                <div>
-                  <h3 class="text-lg font-bold text-eglDarkBlue">倫敦 ➔ (歐洲之星火車) ➔ 巴黎 ➔ 凱旋門璀璨夜景</h3>
-                  <p class="text-xs text-gray-500"><i class="fa-solid fa-calendar mr-1"></i> 2026年7月30日 (星期四)</p>
-                </div>
+        <!-- Day 7 -->
+        <div class="bg-white rounded-xl shadow-md border-l-4 border-brandOrange overflow-hidden print-shadow-none print-border">
+          <div onclick="toggleDay(7)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
+            <div class="flex items-center space-x-4">
+              <span class="bg-brandOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 7</span>
+              <div>
+                <h3 class="text-lg font-bold text-brandDarkBlue">倫敦 ➔ (歐洲之星高鐵) ➔ 巴黎 ➔ 凱旋門璀璨夜景</h3>
+                <p class="text-xs text-gray-500"><i class="fa-solid fa-calendar mr-1"></i> 2026年7月30日 (星期四)</p>
               </div>
-              <span class="text-xs bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full">歐洲之星跨國首航</span>
             </div>
-            <div id="day-detail-7" class="hidden p-5 border-t border-gray-100 bg-gray-50">
-              <p class="text-sm">於羅素廣場公園池畔 <b>Caffè Tropea</b> 享用精緻早餐後前往 St Pancras 車站，在薄荷綠意麵館 <b>Lina Stores</b> 吃一份美味的黑松露意麵。隨後搭乘高鐵<b>【歐洲之星 Eurostar】</b>風馳電掣橫跨海底隧道前往巴黎。入住凱旋門附近的 <b>Hôtel Régence Etoile</b>。晚餐於傳奇名店 <b>Le Relais de l'Entrecôte</b> 享用無限續加薯條與特製醬汁牛排，隨後夜漫散步<b>凱旋門</b>。</p>
+            <div class="mt-2 md:mt-0 flex items-center space-x-3 text-xs">
+              <span class="bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full"><i class="fa-solid fa-cloud-sun mr-1"></i> 巴黎：16-26°C / 微風多雲</span>
+              <span class="text-gray-400"><i class="fa-solid fa-chevron-down text-base" id="arrow-7"></i></span>
             </div>
           </div>
-
-          <!-- Day 8 -->
-          <div class="bg-white rounded-xl shadow-md border-l-4 border-eglOrange overflow-hidden print-shadow-none print-border">
-            <div onclick="toggleDay(8)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
-              <div class="flex items-center space-x-4">
-                <span class="bg-eglOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 8</span>
-                <div>
-                  <h3 class="text-lg font-bold text-eglDarkBlue">香榭麗舍大街 ➔ 杜樂麗花園 ➔ 羅浮宮 ➔ 塞納河奢華遊船河晚宴</h3>
-                  <p class="text-xs text-gray-500"><i class="fa-solid fa-calendar mr-1"></i> 2026年7月31日 (星期五)</p>
-                </div>
-              </div>
-              <span class="text-xs bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full">羅浮宮藝術探索</span>
+          
+          <div id="day-detail-7" class="hidden p-5 border-t border-gray-100 bg-gray-50">
+            <div class="bg-blue-50 border border-blue-200 p-3 rounded-lg mb-4 text-xs text-blue-800">
+              <strong><i class="fa-solid fa-shirt"></i> 穿搭建議：</strong> 高鐵乘車冷氣強，建議套件外套，巴黎街頭石子路多，請穿著好走的鞋子。
             </div>
-            <div id="day-detail-8" class="hidden p-5 border-t border-gray-100 bg-gray-50">
-              <p class="text-sm">漫步香榭麗舍、在杜樂麗花園噴泉畔小憩。下午參觀<b>§羅浮宮博物館</b>，一睹「羅浮宮三寶」（蒙娜麗莎、勝利女神、維納斯）。傍晚<b>【重本安排】Paris Seine 塞納河豪華遊船晚餐</b>，一邊品嚐正宗法式三道式晚餐，一邊看著窗外埃菲爾鐵塔的金色閃爍，浪漫至極。</p>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div class="lg:col-span-2 space-y-4 text-sm">
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">08:30</span><span>於大英博物館旁 <b>Caffè Tropea</b> 綠意花園享用晨光早餐，打包行李退房。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>前往聖潘克拉斯車站 (St Pancras)，於極具文藝氣息的綠意餐廳 <b>Lina Stores</b> 享用精緻手作黑松露意麵午餐。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">12:30</span><span>辦理 Eurostar 歐洲之星出境與登車手續。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">14:01</span><span>搭乘 <b>【歐洲之星 Eurostar】</b> 跨國高鐵，穿越英倫海底隧道，風馳電掣直奔浪漫花都。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">17:17</span><span>順利抵達巴黎北站 (Gare du Nord)，專車接載前往凱旋門區精緻下榻酒店 <b>Hôtel Régence Etoile</b> 寄存行李。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">19:00</span><span>晚餐前往傳奇排隊牛排店 <b>Le Relais de l'Entrecôte</b> 享用經典法式牛排，金黃薯條與特製綠醬可無限續加。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">21:00</span><span>餐後手拉手夜漫 <b>凱旋門 (Arc de Triomphe)</b> 廣場，欣賞璀璨香榭麗舍大街夜景。</span></div>
+              </div>
+              <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
+                <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
+                <p><strong>早：</strong> Caffè Tropea 特色早餐</p>
+                <p><strong>午：</strong> Lina Stores 現代意式精緻午餐</p>
+                <p><strong>晚：</strong> Le Relais de l'Entrecôte 綠醬牛排盤</p>
+                <p class="text-brandOrange"><strong>住宿：</strong> Hôtel Régence Etoile (1/3晚)</p>
+              </div>
             </div>
           </div>
+        </div>
 
-          <!-- Day 9 -->
-          <div class="bg-white rounded-xl shadow-md border-l-4 border-eglOrange overflow-hidden print-shadow-none print-border">
-            <div onclick="toggleDay(9)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
-              <div class="flex items-center space-x-4">
-                <span class="bg-eglOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 9</span>
-                <div>
-                  <h3 class="text-lg font-bold text-eglDarkBlue">鐵塔留影 ➔ 聖母院外圍 ➔ 蒙馬特聖心堂 ➔ 拉法葉購物</h3>
-                  <p class="text-xs text-gray-500"><i class="fa-solid fa-calendar mr-1"></i> 2026年8月1日 (星期六)</p>
-                </div>
+        <!-- Day 8 -->
+        <div class="bg-white rounded-xl shadow-md border-l-4 border-brandOrange overflow-hidden print-shadow-none print-border">
+          <div onclick="toggleDay(8)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
+            <div class="flex items-center space-x-4">
+              <span class="bg-brandOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 8</span>
+              <div>
+                <h3 class="text-lg font-bold text-brandDarkBlue">香榭麗舍大街 ➔ 杜樂麗花園 ➔ 羅浮宮 ➔ 塞納河豪華遊船晚餐</h3>
+                <p class="text-xs text-gray-500"><i class="fa-solid fa-calendar mr-1"></i> 2026年7月31日 (星期五)</p>
               </div>
-              <span class="text-xs bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full">巴黎地標大滿貫</span>
             </div>
-            <div id="day-detail-9" class="hidden p-5 border-t border-gray-100 bg-gray-50">
-              <p class="text-sm">於戰神廣場及 Bir-Hakeim 鋼索鐵橋與<b>巴黎鐵塔</b>合影，隨後遊玩盧森堡公園。午餐在拉丁區 <b>Les Antiquaires</b> 品嚐招牌油封鴨 (Duck Confit)。下午瞻仰浴火重生的<b>巴黎聖母院</b>，再乘纜車登上蒙馬特高地<b>聖心堂</b>鳥瞰巴黎全景。傍晚在<b>拉法葉百貨 (Galeries Lafayette)</b> 血拼，晚餐前往高人氣網美玻璃屋餐廳 <b>Pink Mamma</b> 享用松露披薩大餐。</p>
+            <div class="mt-2 md:mt-0 flex items-center space-x-3 text-xs">
+              <span class="bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full"><i class="fa-solid fa-sun mr-1"></i> 巴黎：17-28°C / 晴熱日照強</span>
+              <span class="text-gray-400"><i class="fa-solid fa-chevron-down text-base" id="arrow-8"></i></span>
             </div>
           </div>
-
-          <!-- Day 10 -->
-          <div class="bg-white rounded-xl shadow-md border-l-4 border-eglOrange overflow-hidden print-shadow-none print-border">
-            <div onclick="toggleDay(10)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
-              <div class="flex items-center space-x-4">
-                <span class="bg-eglOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 10</span>
-                <div>
-                  <h3 class="text-lg font-bold text-eglDarkBlue">巴黎 ➔ (航機飛往) ➔ 德國慕尼黑 ➔ 瑪麗恩廣場老城巡禮</h3>
-                  <p class="text-xs text-gray-500"><i class="fa-solid fa-calendar mr-1"></i> 2026年8月2日 (星期日)</p>
-                </div>
-              </div>
-              <span class="text-xs bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full">飛向巴伐利亞</span>
+          
+          <div id="day-detail-8" class="hidden p-5 border-t border-gray-100 bg-gray-50">
+            <div class="bg-blue-50 border border-blue-200 p-3 rounded-lg mb-4 text-xs text-blue-800">
+              <strong><i class="fa-solid fa-shirt"></i> 穿搭建議：</strong> 巴黎盛夏陽光充足，請塗足防曬，配戴太陽眼鏡。晚間塞納河遊船吹風較冷，請帶備防風外套。
             </div>
-            <div id="day-detail-10" class="hidden p-5 border-t border-gray-100 bg-gray-50">
-              <p class="text-sm">巴黎機場辦理退稅，搭機前往慕尼黑 (LH2231 14:15/15:45)。抵達後搭乘 S-Bahn 前往市中心，入住交通極佳的 <b>Courtyard by Marriott Munich City Center</b> (連續入住4晚)。晚上遊走<b>瑪麗恩廣場 (Marienplatz)</b>、欣賞新哥德式市政廳。晚餐享用慕尼黑超人氣 <b>Ruff's Burger</b> 炭烤手工漢堡。</p>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div class="lg:col-span-2 space-y-4 text-sm">
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">09:00</span><span>於酒店享用優雅的法式牛角包與咖啡早餐。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>漫步於宏偉優雅的 <b>香榭麗舍大街</b>、經協和廣場直達綠意盎然的 <b>杜樂麗花園</b>，悠閒漫步。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">12:00</span><span>午餐安排品嚐巴黎超人氣 <b>Blend Hamburger</b> 爆汁手工芝士漢堡。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">13:30</span><span><b>【重本預約購票】</b>進入世界頂級藝術殿堂 <b>§羅浮宮博物館 (Louvre)</b>，一睹經典的玻璃金字塔，親眼觀賞《蒙娜麗莎》、《勝利女神》與《維納斯》雕像。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:30</span><span><b>【奢華重本企劃】</b>登上 <b>Paris Seine 塞納河豪華全玻璃落地窗觀景船</b> 享用法式正宗三道式燭光晚宴，一邊品味法餐與美酒，一邊目送落日餘暉灑在艾菲爾鐵塔和巴黎聖母院的屋頂。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">21:00</span><span>於岸邊觀賞鐵塔閃爍金光，心滿意足乘車回酒店安歇。</span></div>
+              </div>
+              <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
+                <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
+                <p><strong>早：</strong> 酒店精緻歐陸早餐</p>
+                <p><strong>午：</strong> Blend Hamburger 特色手工漢堡</p>
+                <p><strong>晚：</strong> 塞納河豪華遊船法式三道式法餐</p>
+                <p class="text-brandOrange"><strong>住宿：</strong> Hôtel Régence Etoile (2/3晚)</p>
+              </div>
             </div>
           </div>
+        </div>
 
-          <!-- Day 11 -->
-          <div class="bg-white rounded-xl shadow-md border-l-4 border-eglOrange overflow-hidden print-shadow-none print-border">
-            <div onclick="toggleDay(11)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
-              <div class="flex items-center space-x-4">
-                <span class="bg-eglOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 11</span>
-                <div>
-                  <h3 class="text-lg font-bold text-eglDarkBlue">穀物市場 ➔ 聖母教堂 ➔ 老彼得教堂登頂 ➔ 德意志博物館</h3>
-                  <p class="text-xs text-gray-500"><i class="fa-solid fa-calendar mr-1"></i> 2026年8月3日 (星期一)</p>
-                </div>
+        <!-- Day 9 -->
+        <div class="bg-white rounded-xl shadow-md border-l-4 border-brandOrange overflow-hidden print-shadow-none print-border">
+          <div onclick="toggleDay(9)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
+            <div class="flex items-center space-x-4">
+              <span class="bg-brandOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 9</span>
+              <div>
+                <h3 class="text-lg font-bold text-brandDarkBlue">鐵塔鋼索橋影相 ➔ 聖母院 ➔ 聖心堂 ➔ 拉法葉百貨血拼</h3>
+                <p class="text-xs text-gray-500"><i class="fa-solid fa-calendar mr-1"></i> 2026年8月1日 (星期六)</p>
               </div>
-              <span class="text-xs bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full">德意志科學探索</span>
             </div>
-            <div id="day-detail-11" class="hidden p-5 border-t border-gray-100 bg-gray-50">
-              <p class="text-sm">上午漫步穀物市場，採購椒鹽卷餅與新鮮水果。參觀聖母教堂尋找「惡魔腳印」，登頂老彼得教堂鐘樓俯瞰老城。下午遊覽<b>§德意志博物館 (Deutsches Museum)</b>，在專屬兒童館內動手操作科學裝置。晚餐於傳統巴伐利亞餐廳 <b>Wirtshaus Au</b> 享用正宗脆皮烤豬腳 (Schweinshaxe) 大餐。</p>
+            <div class="mt-2 md:mt-0 flex items-center space-x-3 text-xs">
+              <span class="bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full"><i class="fa-solid fa-sun mr-1"></i> 巴黎：18-29°C / 晴熱乾燥</span>
+              <span class="text-gray-400"><i class="fa-solid fa-chevron-down text-base" id="arrow-9"></i></span>
             </div>
           </div>
-
-          <!-- Day 12 -->
-          <div class="bg-white rounded-xl shadow-md border-l-4 border-eglOrange overflow-hidden print-shadow-none print-border">
-            <div onclick="toggleDay(12)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
-              <div class="flex items-center space-x-4">
-                <span class="bg-eglOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 12</span>
-                <div>
-                  <h3 class="text-lg font-bold text-eglDarkBlue">奧林匹克公園 ➔ 寶馬世界/BMW博物館 ➔ 寧芬堡宮夏日花園</h3>
-                  <p class="text-xs text-gray-500"><i class="fa-solid fa-calendar mr-1"></i> 2026年8月4日 (星期二)</p>
-                </div>
-              </div>
-              <span class="text-xs bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full">現代科技與巴洛克建築</span>
+          
+          <div id="day-detail-9" class="hidden p-5 border-t border-gray-100 bg-gray-50">
+            <div class="bg-blue-50 border border-blue-200 p-3 rounded-lg mb-4 text-xs text-blue-800">
+              <strong><i class="fa-solid fa-shirt"></i> 穿搭建議：</strong> 建議穿著亮色夏裝，在鐵塔和聖心堂拍照最出片，聖心堂台階多，請穿舒緩平底運動鞋。
             </div>
-            <div id="day-detail-12" class="hidden p-5 border-t border-gray-100 bg-gray-50">
-              <p class="text-sm">上午前往奧林匹克公園。參觀令人驚嘆的 <b>§BMW博物館</b>，看經典老爺賽車與科技設計。隨後在宮殿內歷史優雅餐廳 <b>Schlosswirtschaft Schwaige</b> 享用炸牛排午餐。下午漫步於巴洛克巨作<b>§寧芬堡宮</b>運河與御花園，傍晚返回市區享用 <b>Vapiano</b> 意式午餐。</p>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div class="lg:col-span-2 space-y-4 text-sm">
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">09:00</span><span>享用酒店早餐。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>前往戰神廣場、Bir-Hakeim 比爾哈凱姆鋼索橋拍攝 <b>巴黎鐵塔</b> 最佳角度。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">11:30</span><span>穿行美麗的盧森堡公園。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">12:30</span><span>午餐前往拉丁區法式小酒館 <b>Les Antiquaires</b> 享受招牌油封鴨 (Duck Confit)與法式洋蔥湯。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">14:00</span><span>瞻仰浴火重生的 <b>巴黎聖母院 (Notre-Dame)</b> 外圍風采，探訪經典的莎士比亞書店。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">15:30</span><span>乘纜車登上蒙馬特高地 <b>聖心堂 (Sacré-Cœur)</b>，俯瞰全巴黎紅頂街區，街頭藝術氣息濃厚。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">17:30</span><span>前往 <b>拉法葉百貨 (Galeries Lafayette)</b>，在拜占庭式彩色穹頂下盡情採購精品。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">19:30</span><span>晚餐前往網紅頂級意式玻璃屋餐廳 <b>Pink Mamma</b> 享受正宗松露松子烤披薩與起司意麵。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">21:30</span><span>滿載而歸回酒店安歇。</span></div>
+              </div>
+              <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
+                <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
+                <p><strong>早：</strong> 酒店法式精緻早餐</p>
+                <p><strong>午：</strong> Les Antiquaires 法國地道油封鴨</p>
+                <p><strong>晚：</strong> Pink Mamma 超人氣意式大餐</p>
+                <p class="text-brandOrange"><strong>住宿：</strong> Hôtel Régence Etoile (3/3晚)</p>
+              </div>
             </div>
           </div>
+        </div>
 
-          <!-- Day 13 -->
-          <div class="bg-white rounded-xl shadow-md border-l-4 border-eglOrange overflow-hidden print-shadow-none print-border">
-            <div onclick="toggleDay(13)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
-              <div class="flex items-center space-x-4">
-                <span class="bg-eglOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 13</span>
-                <div>
-                  <h3 class="text-lg font-bold text-eglDarkBlue">英國花園激流衝浪 ➔ 慕尼黑王宮 ➔ 皇家啤酒屋 HB 大狂歡</h3>
-                  <p class="text-xs text-gray-500"><i class="fa-solid fa-calendar mr-1"></i> 2026年8月5日 (星期三)</p>
-                </div>
+        <!-- Day 10 -->
+        <div class="bg-white rounded-xl shadow-md border-l-4 border-brandOrange overflow-hidden print-shadow-none print-border">
+          <div onclick="toggleDay(10)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
+            <div class="flex items-center space-x-4">
+              <span class="bg-brandOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 10</span>
+              <div>
+                <h3 class="text-lg font-bold text-brandDarkBlue">巴黎 ➔ (LH客機飛往) ➔ 德國慕尼黑 ➔ 瑪麗恩廣場</h3>
+                <p class="text-xs text-gray-500"><i class="fa-solid fa-calendar mr-1"></i> 2026年8月2日 (星期日)</p>
               </div>
-              <span class="text-xs bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full">慕尼黑完美終章</span>
             </div>
-            <div id="day-detail-13" class="hidden p-5 border-t border-gray-100 bg-gray-50">
-              <p class="text-sm">前往巨大的英國花園，觀賞奇妙的「城市激流衝浪」，在中式寶塔啤酒花園樹蔭下小憩。下午探秘<b>§慕尼黑王宮</b>富麗堂皇的古物大廳與珍寶館。晚餐前往最經典地標 <b>Hofbräuhaus HB 皇家啤酒屋</b>，在現場管弦樂與歡樂大廳中大嚼巨型酥脆德國烤豬手、白香腸、椒鹽大麵包，暢飲黑啤，慶祝歐洲之旅大成功！</p>
+            <div class="mt-2 md:mt-0 flex items-center space-x-3 text-xs">
+              <span class="bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full"><i class="fa-solid fa-sun mr-1"></i> 慕尼黑：16-27°C / 晴天微風</span>
+              <span class="text-gray-400"><i class="fa-solid fa-chevron-down text-base" id="arrow-10"></i></span>
             </div>
           </div>
-
-          <!-- Day 14 -->
-          <div class="bg-white rounded-xl shadow-md border-l-4 border-eglOrange overflow-hidden print-shadow-none print-border">
-            <div onclick="toggleDay(14)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
-              <div class="flex items-center space-x-4">
-                <span class="bg-eglOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 14</span>
-                <div>
-                  <h3 class="text-lg font-bold text-eglDarkBlue">慕尼黑 ➔ 飛往新加坡 (轉機)</h3>
-                  <p class="text-xs text-gray-500"><i class="fa-solid fa-calendar mr-1"></i> 2026年8月6日 (星期四)</p>
-                </div>
-              </div>
-              <span class="text-xs bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full">啟航回程</span>
+          
+          <div id="day-detail-10" class="hidden p-5 border-t border-gray-100 bg-gray-50">
+            <div class="bg-blue-50 border border-blue-200 p-3 rounded-lg mb-4 text-xs text-blue-800">
+              <strong><i class="fa-solid fa-shirt"></i> 穿搭建議：</strong> 今日飛行與乘車較多，建議穿著休閒純棉短袖與舒適運動鞋。
             </div>
-            <div id="day-detail-14" class="hidden p-5 border-t border-gray-100 bg-gray-50">
-              <p class="text-sm">於萬豪酒店吃過豐盛早餐後打包行李，搭乘 S-Bahn 前往機場。辦理手續後登上新加坡航空豪華客機 <b>SQ327 (12:30/06:40+1)</b> 啟航返國。</p>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div class="lg:col-span-2 space-y-4 text-sm">
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">09:00</span><span>退房打包，享用法式輕早餐。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:30</span><span>專車前往巴黎戴高樂機場 (CDG)，辦理退稅手續與行李託運。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">14:15</span><span>搭乘德國漢莎客機 <b>LH2231</b> 飛往巴伐利亞首府慕尼黑。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">15:45</span><span>順利降落慕尼黑機場 (MUC)，搭乘 S-Bahn 高速輕軌直奔市中心。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">17:00</span><span>入住位於老城核心的優質萬豪旗下 <b>Courtyard by Marriott Munich City Center</b> (連續入住 4 晚)。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:00</span><span>步行前往老城中心 <b>瑪麗恩廣場 (Marienplatz)</b> 欣賞極具哥德風情的新市政廳。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">19:00</span><span>晚餐享用慕尼黑極高人氣 <b>Ruff's Burger</b> 特製大塊炭烤厚牛漢堡配脆薯。</span></div>
+              </div>
+              <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
+                <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
+                <p><strong>早：</strong> 酒店歐陸式早餐</p>
+                <p><strong>午：</strong> 機場輕食自理</p>
+                <p><strong>晚：</strong> Ruff's Burger 炭烤手工漢堡</p>
+                <p class="text-brandOrange"><strong>住宿：</strong> Courtyard by Marriott Munich City Center (1/4晚)</p>
+              </div>
             </div>
           </div>
+        </div>
 
-          <!-- Day 15 -->
-          <div class="bg-white rounded-xl shadow-md border-l-4 border-eglOrange overflow-hidden print-shadow-none print-border">
-            <div onclick="toggleDay(15)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
-              <div class="flex items-center space-x-4">
-                <span class="bg-eglOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 15</span>
-                <div>
-                  <h3 class="text-lg font-bold text-eglDarkBlue">新加坡 ➔ 順利返抵澳門</h3>
-                  <p class="text-xs text-gray-500"><i class="fa-solid fa-calendar mr-1"></i> 2026年8月7日 (星期五)</p>
-                </div>
+        <!-- Day 11 -->
+        <div class="bg-white rounded-xl shadow-md border-l-4 border-brandOrange overflow-hidden print-shadow-none print-border">
+          <div onclick="toggleDay(11)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
+            <div class="flex items-center space-x-4">
+              <span class="bg-brandOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 11</span>
+              <div>
+                <h3 class="text-lg font-bold text-brandDarkBlue">穀物市場 ➔ 聖母教堂 ➔ 老彼得教堂 ➔ 德意志科學博物館</h3>
+                <p class="text-xs text-gray-500"><i class="fa-solid fa-calendar mr-1"></i> 2026年8月3日 (星期一)</p>
               </div>
-              <span class="text-xs bg-green-100 text-green-700 font-bold px-2.5 py-1 rounded-full">溫暖的家</span>
             </div>
-            <div id="day-detail-15" class="hidden p-5 border-t border-gray-100 bg-gray-50">
-              <p class="text-sm">清晨抵達新加坡樟宜機場轉機。搭乘酷航 <b>TR904 (13:50/17:55)</b> 返抵澳門國際機場。結束長達 15 天極為豐富精緻、充滿笑聲與魔法的歐洲三國深度之旅！</p>
+            <div class="mt-2 md:mt-0 flex items-center space-x-3 text-xs">
+              <span class="bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full"><i class="fa-solid fa-sun mr-1"></i> 慕尼黑：15-26°C / 舒適晴天</span>
+              <span class="text-gray-400"><i class="fa-solid fa-chevron-down text-base" id="arrow-11"></i></span>
             </div>
           </div>
+          
+          <div id="day-detail-11" class="hidden p-5 border-t border-gray-100 bg-gray-50">
+            <div class="bg-blue-50 border border-blue-200 p-3 rounded-lg mb-4 text-xs text-blue-800">
+              <strong><i class="fa-solid fa-shirt"></i> 穿搭建議：</strong> 德意志博物館展廳極大，老彼得教堂登頂需爬台階，強烈建議穿著減震跑鞋與透氣夏裝。
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div class="lg:col-span-2 space-y-4 text-sm">
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">09:00</span><span>享用萬豪酒店豐富豐盛的德式自助早餐。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>漫步於慕尼黑百年生活市集 <b>穀物市場 (Viktualienmarkt)</b>，品嚐新鮮椒鹽大脆餅與櫻桃。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">11:30</span><span>探訪 <b>§聖母教堂 (Frauenkirche)</b> 觀看神祕的「惡魔腳印」，隨後挑戰登頂老彼得教堂，全視角鳥瞰慕尼黑老城區全景。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">13:00</span><span>午餐安排前往 <b>ONE Nation Munich</b> 享用精緻歐洲特色料理。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">15:00</span><span><b>【重本已購票】</b>進入世界最大自然科學與工業博物館 <b>§德意志博物館 (Deutsches Museum)</b>，孩子可以動手做多種科學試驗，趣味無限。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:30</span><span>晚餐重本安排地道巴伐利亞老店 <b>Wirtshaus Au</b> 享用外皮無比酥脆、肉質多汁的德國脆皮烤豬腳 (Schweinshaxe)。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">20:30</span><span>散步消食回酒店 Courtyard by Marriott。</span></div>
+              </div>
+              <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
+                <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
+                <p><strong>早：</strong> 酒店德式自助早餐</p>
+                <p><strong>午：</strong> ONE Nation Munich 歐陸料理</p>
+                <p><strong>晚：</strong> Wirtshaus Au 巴伐利亞正宗烤豬腳</p>
+                <p class="text-brandOrange"><strong>住宿：</strong> Courtyard by Marriott Munich City Center (2/4晚)</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <!-- Day 12 -->
+        <div class="bg-white rounded-xl shadow-md border-l-4 border-brandOrange overflow-hidden print-shadow-none print-border">
+          <div onclick="toggleDay(12)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
+            <div class="flex items-center space-x-4">
+              <span class="bg-brandOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 12</span>
+              <div>
+                <h3 class="text-lg font-bold text-brandDarkBlue">奧林匹克公園 ➔ BMW 博物館 ➔ 寧芬堡宮運河皇家花園</h3>
+                <p class="text-xs text-gray-500"><i class="fa-solid fa-calendar mr-1"></i> 2026年8月4日 (星期二)</p>
+              </div>
+            </div>
+            <div class="mt-2 md:mt-0 flex items-center space-x-3 text-xs">
+              <span class="bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full"><i class="fa-solid fa-cloud-sun mr-1"></i> 慕尼黑：14-25°C / 溫和微雲</span>
+              <span class="text-gray-400"><i class="fa-solid fa-chevron-down text-base" id="arrow-12"></i></span>
+            </div>
+          </div>
+          
+          <div id="day-detail-12" class="hidden p-5 border-t border-gray-100 bg-gray-50">
+            <div class="bg-blue-50 border border-blue-200 p-3 rounded-lg mb-4 text-xs text-blue-800">
+              <strong><i class="fa-solid fa-shirt"></i> 穿搭建議：</strong> 寧芬堡宮運河畔涼快，BMW 博物館極富科技感。建議著帥氣休閒裝，配備擋風薄外套。
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div class="lg:col-span-2 space-y-4 text-sm">
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">09:00</span><span>享用萬豪酒店豐富自助早餐。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>乘車前往巨大的 <b>奧林匹克公園 (Olympiapark)</b>，欣賞前衛的帳篷狀體育場。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">11:00</span><span><b>【重本已購票】</b>參觀頂尖現代化工業美學代表 <b>§BMW Museum (寶馬博物館)</b> 與 BMW 世界，一賭經典賽車老爺車與未來感概念車。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">12:30</span><span>午餐特別安排在寧芬堡宮歷史老店 <b>Schlosswirtschaft Schwaige</b> 享用傳統德式炸牛排午餐。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">14:00</span><span><b>【重本已購票】</b>遊覽巴洛克皇家離宮 <b>§寧芬堡宮 (Nymphenburg Palace)</b>，在運河畔看著天鵝悠游，漫步古典御花園。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:00</span><span>晚餐前往時尚意式快餐餐廳 <b>VAPIANO</b> 享受全家自由點單的沙拉、薄底意式披薩。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">20:00</span><span>回酒店 Courtyard by Marriott。</span></div>
+              </div>
+              <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
+                <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
+                <p><strong>早：</strong> 酒店豐富自助早餐</p>
+                <p><strong>午：</strong> Schlosswirtschaft Schwaige 德式炸牛排</p>
+                <p><strong>晚：</strong> VAPIANO 現代義式料理</p>
+                <p class="text-brandOrange"><strong>住宿：</strong> Courtyard by Marriott Munich City Center (3/4晚)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 13 -->
+        <div class="bg-white rounded-xl shadow-md border-l-4 border-brandOrange overflow-hidden print-shadow-none print-border">
+          <div onclick="toggleDay(13)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
+            <div class="flex items-center space-x-4">
+              <span class="bg-brandOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 13</span>
+              <div>
+                <h3 class="text-lg font-bold text-brandDarkBlue">英國花園激流衝浪 ➔ 慕尼黑王宮 ➔ 皇家啤酒屋 HB 狂歡</h3>
+                <p class="text-xs text-gray-500"><i class="fa-solid fa-calendar mr-1"></i> 2026年8月5日 (星期三)</p>
+              </div>
+            </div>
+            <div class="mt-2 md:mt-0 flex items-center space-x-3 text-xs">
+              <span class="bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full"><i class="fa-solid fa-sun mr-1"></i> 慕尼黑：14-25°C / 晴天</span>
+              <span class="text-gray-400"><i class="fa-solid fa-chevron-down text-base" id="arrow-13"></i></span>
+            </div>
+          </div>
+          
+          <div id="day-detail-13" class="hidden p-5 border-t border-gray-100 bg-gray-50">
+            <div class="bg-blue-50 border border-blue-200 p-3 rounded-lg mb-4 text-xs text-blue-800">
+              <strong><i class="fa-solid fa-shirt"></i> 穿搭建議：</strong> 夏季溫暖。晚上 HB 啤酒屋氣氛熱烈喧鬧，建議穿着方便運動的輕快休閒服飾。
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div class="lg:col-span-2 space-y-4 text-sm">
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">09:00</span><span>享用萬豪酒店早餐。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>前往巨型市中心綠肺 <b>英國花園 (Englischer Garten)</b>，圍觀奇特瘋狂的「市區激流人工衝浪」，在中式寶塔啤酒花園樹蔭下喝汽水乘涼。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">12:30</span><span>中午享用百年老店 <b>Haxnbauer</b> 或老城巴伐利亞風味特色午餐。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">14:00</span><span><b>【重本已購票】</b>探索堂皇耀眼的 <b>§慕尼黑王宮 (Residenz)</b>，細賞全金箔雕琢的古物大廳 (Antiquarium) 與無價珍寶館。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:30</span><span><b>【重本狂歡聚餐】</b>全家前往舉世聞名的 <b>Hofbräuhaus (HB) 皇家啤酒屋</b>！在歡騰熱烈的交響管弦樂演奏中，暢快享用烤德國香腸、黑啤酒配巨型椒鹽卷餅，慶祝歐洲之旅大成功！</span></div>
+              </div>
+              <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
+                <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
+                <p><strong>早：</strong> 酒店豐富自助早餐</p>
+                <p><strong>午：</strong> Haxnbauer 德式地道料理</p>
+                <p><strong>晚：</strong> Hofbräuhaus HB 皇家狂歡豬腳大餐</p>
+                <p class="text-brandOrange"><strong>住宿：</strong> Courtyard by Marriott Munich City Center (4/4晚)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 14 -->
+        <div class="bg-white rounded-xl shadow-md border-l-4 border-brandOrange overflow-hidden print-shadow-none print-border">
+          <div onclick="toggleDay(14)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
+            <div class="flex items-center space-x-4">
+              <span class="bg-brandOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 14</span>
+              <div>
+                <h3 class="text-lg font-bold text-brandDarkBlue">德國慕尼黑 ➔ 飛往新加坡 (轉機)</h3>
+                <p class="text-xs text-gray-500"><i class="fa-solid fa-calendar mr-1"></i> 2026年8月6日 (星期四)</p>
+              </div>
+            </div>
+            <div class="mt-2 md:mt-0 flex items-center space-x-3 text-xs">
+              <span class="bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full"><i class="fa-solid fa-plane mr-1"></i> 航機上 / 空中休息</span>
+              <span class="text-gray-400"><i class="fa-solid fa-chevron-down text-base" id="arrow-14"></i></span>
+            </div>
+          </div>
+          
+          <div id="day-detail-14" class="hidden p-5 border-t border-gray-100 bg-gray-50">
+            <div class="bg-blue-50 border border-blue-200 p-3 rounded-lg mb-4 text-xs text-blue-800">
+              <strong><i class="fa-solid fa-shirt"></i> 穿搭建議：</strong> 今日為跨國長途飛行。請給 Ricky 與 Venus 穿著寬鬆保暖運動服。
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div class="lg:col-span-2 space-y-4 text-sm">
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">08:30</span><span>於酒店悠閒享用最後一頓豐盛早餐。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">09:30</span><span>整理行囊辦理退房，乘坐 S-Bahn 快速輕軌前往慕尼黑國際機場。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:30</span><span>抵達機場，在海關處辦妥歐盟購物的退稅單據與行李託運手續。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">12:30</span><span>登上新加坡航空豪華班機 <b>SQ327</b> 啟程返回亞洲。在飛機上安睡並享受世界一流的航機機上娛樂系統。</span></div>
+              </div>
+              <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
+                <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
+                <p><strong>早：</strong> 酒店豐富自助早餐</p>
+                <p><strong>午：</strong> 機場自理 / 航機上</p>
+                <p><strong>晚：</strong> 新加坡航空空中精緻晚餐</p>
+                <p class="text-brandOrange"><strong>住宿：</strong> 豪華航機上</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 15 -->
+        <div class="bg-white rounded-xl shadow-md border-l-4 border-brandOrange overflow-hidden print-shadow-none print-border">
+          <div onclick="toggleDay(15)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
+            <div class="flex items-center space-x-4">
+              <span class="bg-brandOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 15</span>
+              <div>
+                <h3 class="text-lg font-bold text-brandDarkBlue">新加坡 ➔ 順利安抵澳門</h3>
+                <p class="text-xs text-gray-500"><i class="fa-solid fa-calendar mr-1"></i> 2026年8月7日 (星期五)</p>
+              </div>
+            </div>
+            <div class="mt-2 md:mt-0 flex items-center space-x-3 text-xs">
+              <span class="bg-green-100 text-green-700 font-bold px-2.5 py-1 rounded-full"><i class="fa-solid fa-house-chimney-user mr-1"></i> 溫暖的家</span>
+              <span class="text-gray-400"><i class="fa-solid fa-chevron-down text-base" id="arrow-15"></i></span>
+            </div>
+          </div>
+          
+          <div id="day-detail-15" class="hidden p-5 border-t border-gray-100 bg-gray-50">
+            <div class="bg-blue-50 border border-blue-200 p-3 rounded-lg mb-4 text-xs text-blue-800">
+              <strong><i class="fa-solid fa-shirt"></i> 穿搭建議：</strong> 澳門夏季炎熱，於新加坡轉機時可到洗手間更換為透氣清涼的夏裝。
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div class="lg:col-span-2 space-y-4 text-sm">
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">06:40</span><span>班機降落新加坡樟宜機場 (SIN)。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">08:00</span><span>在航站樓內享用亞坤咖椰吐司、溫泉蛋與香濃南洋咖啡。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">13:50</span><span>轉乘酷航 <b>TR904</b> 客機啟程返回澳門。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">17:55</span><span>順利降落澳門國際機場，帶同滿滿的歐陸魔法、科技、美學回憶溫馨返家！</span></div>
+              </div>
+              <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
+                <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
+                <p><strong>早：</strong> 新加坡亞坤地道早餐</p>
+                <p><strong>午：</strong> 航機上輕食</p>
+                <p><strong>晚：</strong> 溫暖的家</p>
+                <p class="text-brandOrange"><strong>住宿：</strong> 溫暖的家</p>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -769,135 +887,143 @@
       
       <!-- 航班資料表 -->
       <div class="bg-white rounded-xl p-6 shadow-md mb-8">
-        <h3 class="text-xl font-bold text-eglDarkBlue mb-4 flex items-center border-b pb-2">
-          <i class="fa-solid fa-plane-departure mr-2 text-eglOrange"></i> 選乘新加坡航空 & 酷航
+        <h3 class="text-xl font-bold text-brandDarkBlue mb-4 flex items-center border-b pb-2">
+          <i class="fa-solid fa-plane-departure mr-2 text-brandOrange"></i> 航班安排
         </h3>
-        <p class="text-sm text-gray-600 mb-4">全程選乘優質新加坡航空與酷航客機，轉機時間流暢，長途搭機更舒適安穩。</p>
+        <p class="text-sm text-gray-600 mb-4">全程搭乘五星級新加坡航空 (SQ) 及優質酷航 (TR)，在新加坡樟宜機場輕鬆中轉，長途飛行安穩無憂。</p>
         
         <div class="overflow-x-auto">
           <table class="w-full text-sm text-left border-collapse border border-gray-200">
             <thead>
-              <tr class="bg-eglDarkBlue text-white">
+              <tr class="bg-brandDarkBlue text-white">
                 <th class="p-3 border border-gray-300">天數</th>
                 <th class="p-3 border border-gray-300">航程</th>
                 <th class="p-3 border border-gray-300">航班編號</th>
                 <th class="p-3 border border-gray-300">起飛 / 抵達時間</th>
-                <th class="p-3 border border-gray-300">備註</th>
+                <th class="p-3 border border-gray-300">機型/服務</th>
               </tr>
             </thead>
             <tbody>
               <tr class="hover:bg-gray-50">
                 <td class="p-3 border border-gray-300 font-bold">第 1 天</td>
                 <td class="p-3 border border-gray-300">澳門 (MFM) ➔ 新加坡 (SIN)</td>
-                <td class="p-3 border border-gray-300 font-mono text-eglOrange font-bold">TR 905</td>
+                <td class="p-3 border border-gray-300 font-mono text-brandOrange font-bold">TR 905</td>
                 <td class="p-3 border border-gray-300">18:45 / 22:35</td>
-                <td class="p-3 border border-gray-300 text-gray-500 text-xs">酷航豪華客機</td>
+                <td class="p-3 border border-gray-300 text-gray-500 text-xs">酷航經濟客位</td>
               </tr>
               <tr class="bg-gray-50 hover:bg-gray-100">
                 <td class="p-3 border border-gray-300 font-bold">第 2 天</td>
                 <td class="p-3 border border-gray-300">新加坡 (SIN) ➔ 倫敦 (LHR)</td>
-                <td class="p-3 border border-gray-300 font-mono text-eglOrange font-bold">SQ 306</td>
+                <td class="p-3 border border-gray-300 font-mono text-brandOrange font-bold">SQ 306</td>
                 <td class="p-3 border border-gray-300">01:05 / 07:40</td>
-                <td class="p-3 border border-gray-300 text-gray-500 text-xs">新加坡航空，抵達即展開市內觀光</td>
+                <td class="p-3 border border-gray-300 text-gray-500 text-xs">五星新航體驗，抵英即展開觀光</td>
               </tr>
               <tr class="hover:bg-gray-50">
                 <td class="p-3 border border-gray-300 font-bold">第 10 天</td>
                 <td class="p-3 border border-gray-300">巴黎 (CDG) ➔ 慕尼黑 (MUC)</td>
-                <td class="p-3 border border-gray-300 font-mono text-eglOrange font-bold">LH 2231</td>
+                <td class="p-3 border border-gray-300 font-mono text-brandOrange font-bold">LH 2231</td>
                 <td class="p-3 border border-gray-300">14:15 / 15:45</td>
-                <td class="p-3 border border-gray-300 text-gray-500 text-xs">漢莎航空歐洲境內快線</td>
+                <td class="p-3 border border-gray-300 text-gray-500 text-xs">德國漢莎航空</td>
               </tr>
               <tr class="bg-gray-50 hover:bg-gray-100">
                 <td class="p-3 border border-gray-300 font-bold">第 14 天</td>
                 <td class="p-3 border border-gray-300">慕尼黑 (MUC) ➔ 新加坡 (SIN)</td>
-                <td class="p-3 border border-gray-300 font-mono text-eglOrange font-bold">SQ 327</td>
+                <td class="p-3 border border-gray-300 font-mono text-brandOrange font-bold">SQ 327</td>
                 <td class="p-3 border border-gray-300">12:30 / 06:40 (+1)</td>
-                <td class="p-3 border border-gray-300 text-gray-500 text-xs">新加坡航空</td>
+                <td class="p-3 border border-gray-300 text-gray-500 text-xs">新航極致機上娛樂，舒適安睡</td>
               </tr>
               <tr class="hover:bg-gray-50">
                 <td class="p-3 border border-gray-300 font-bold">第 15 天</td>
                 <td class="p-3 border border-gray-300">新加坡 (SIN) ➔ 澳門 (MFM)</td>
-                <td class="p-3 border border-gray-300 font-mono text-eglOrange font-bold">TR 904</td>
+                <td class="p-3 border border-gray-300 font-mono text-brandOrange font-bold">TR 904</td>
                 <td class="p-3 border border-gray-300">13:50 / 17:55</td>
-                <td class="p-3 border border-gray-300 text-gray-500 text-xs">結束行程，安全返抵澳門</td>
+                <td class="p-3 border border-gray-300 text-gray-500 text-xs">安抵澳門</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <div class="mt-4 text-xs text-gray-500 bg-gray-50 p-3 rounded border">
-          <p>⚠️ <strong>歐洲夏季時差備註：</strong> 倫敦慢香港/澳門 7 小時，巴黎和慕尼黑慢香港/澳門 6 小時。航機時間僅供參考，以最終確票為準。</p>
-        </div>
       </div>
 
       <!-- 高級酒店特寫 -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <h3 class="text-xl font-bold text-brandDarkBlue mb-6">🏨 精選下榻酒店一覽</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <!-- 倫敦 Hilton -->
-        <div class="bg-white rounded-xl overflow-hidden shadow-md border border-gray-200">
-          <div class="h-48 bg-gradient-to-r from-blue-700 to-indigo-900 text-white flex flex-col justify-between p-4 relative">
-            <span class="bg-eglOrange text-white font-extrabold text-[10px] px-2 py-1 rounded self-start shadow-md"><i class="fa-solid fa-hotel"></i> 豪華五星連續3晚</span>
-            <div class="z-10">
-              <h4 class="text-lg font-black text-shadow-md">Hilton London Metropole</h4>
-              <p class="text-xs text-shadow-md opacity-80">倫敦市中心核心地帶</p>
+        <!-- 倫敦 1: Hilton -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-md border border-gray-200 flex flex-col justify-between">
+          <div>
+            <div class="h-40 bg-gradient-to-r from-blue-700 to-indigo-900 text-white flex flex-col justify-between p-4 relative">
+              <span class="bg-brandOrange text-white font-extrabold text-[10px] px-2 py-1 rounded self-start shadow-md"><i class="fa-solid fa-hotel"></i> 連續入住 3 晚</span>
+              <div class="z-10">
+                <h4 class="text-md font-black text-shadow-md">Hilton London Metropole</h4>
+                <p class="text-[11px] text-shadow-md opacity-80">倫敦市中心核心五星</p>
+              </div>
             </div>
-            <!-- SVG背景紋理 -->
-            <div class="absolute inset-0 opacity-10 pointer-events-none">
-              <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor">
-                <rect x="10" y="20" width="80" height="60" rx="4"/>
-                <line x1="30" y1="20" x2="30" y2="80"/>
-                <line x1="60" y1="20" x2="60" y2="80"/>
-              </svg>
+            <div class="p-4 text-xs">
+              <p class="text-gray-600 mb-2 font-bold">房型：Queen 寬敞雙大床房</p>
+              <p class="text-gray-500 leading-relaxed">地理位置絕佳。每日早晨於酒店寬大奢華大堂悠閒享受熱烘烘、正宗豐盛的英式自助早餐。</p>
             </div>
           </div>
-          <div class="p-4 text-sm">
-            <p class="text-gray-600 mb-3 font-semibold">特設房型：兩張 Queen 寬敞雙床大床房</p>
-            <p class="text-xs text-gray-500 mb-4">鄰近 Edgware Road 地鐵站，出行極為便利。每日早晨於酒店享用英式自助早餐。</p>
-            <span class="text-eglDarkBlue text-xs font-bold bg-eglLightBlue py-1 px-2.5 rounded-full">倫敦精選地段</span>
+          <div class="p-4 border-t bg-gray-50">
+            <span class="text-brandDarkBlue text-xs font-bold bg-brandLightBlue py-1 px-2.5 rounded-full">倫敦市中心核心地段</span>
           </div>
         </div>
 
-        <!-- 巴黎 Régence Etoile -->
-        <div class="bg-white rounded-xl overflow-hidden shadow-md border border-gray-200">
-          <div class="h-48 bg-gradient-to-r from-pink-600 to-red-800 text-white flex flex-col justify-between p-4 relative">
-            <span class="bg-eglOrange text-white font-extrabold text-[10px] px-2 py-1 rounded self-start shadow-md"><i class="fa-solid fa-hotel"></i> 法式浪漫連續3晚</span>
-            <div class="z-10">
-              <h4 class="text-lg font-black text-shadow-md">Hôtel Régence Etoile</h4>
-              <p class="text-xs text-shadow-md opacity-80">緊鄰凱旋門精品酒店</p>
+        <!-- 倫敦 2: Grange Beauchamp -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-md border border-gray-200 flex flex-col justify-between">
+          <div>
+            <div class="h-40 bg-gradient-to-r from-purple-700 to-indigo-950 text-white flex flex-col justify-between p-4 relative">
+              <span class="bg-brandOrange text-white font-extrabold text-[10px] px-2 py-1 rounded self-start shadow-md"><i class="fa-solid fa-hotel"></i> 連續入住 2 晚</span>
+              <div class="z-10">
+                <h4 class="text-md font-black text-shadow-md">Grange Beauchamp Hotel</h4>
+                <p class="text-[11px] text-shadow-md opacity-80">英倫古典精品酒店</p>
+              </div>
             </div>
-            <!-- SVG背景紋理 -->
-            <div class="absolute inset-0 opacity-10 pointer-events-none">
-              <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor">
-                <path d="M20,80 L20,30 L50,10 L80,30 L80,80 Z"/>
-                <circle cx="50" cy="50" r="10"/>
-              </svg>
+            <div class="p-4 text-xs">
+              <p class="text-gray-600 mb-2 font-bold">房型：優雅精品四人客房</p>
+              <p class="text-gray-500 leading-relaxed">緊鄰大英博物館與 Russell Square，座落在典雅寧靜的 Bedford Place，展現古典的英倫風範。</p>
             </div>
           </div>
-          <div class="p-4 text-sm">
-            <p class="text-gray-600 mb-3 font-semibold">特設房型：經典/高級雙人間連美味早餐</p>
-            <p class="text-xs text-gray-500 mb-4">徒步即可到達凱旋門與香榭麗舍大街，晚上出門買法式甜點、夜漫凱旋門都極其便利與安全。</p>
+          <div class="p-4 border-t bg-gray-50">
+            <span class="text-purple-700 text-xs font-bold bg-purple-50 py-1 px-2.5 rounded-full">大英博物館經典街區</span>
+          </div>
+        </div>
+
+        <!-- 巴黎: Régence Etoile -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-md border border-gray-200 flex flex-col justify-between">
+          <div>
+            <div class="h-40 bg-gradient-to-r from-pink-600 to-red-800 text-white flex flex-col justify-between p-4 relative">
+              <span class="bg-brandOrange text-white font-extrabold text-[10px] px-2 py-1 rounded self-start shadow-md"><i class="fa-solid fa-hotel"></i> 連續入住 3 晚</span>
+              <div class="z-10">
+                <h4 class="text-md font-black text-shadow-md">Hôtel Régence Etoile</h4>
+                <p class="text-[11px] text-shadow-md opacity-80">巴黎凱旋門精品下榻</p>
+              </div>
+            </div>
+            <div class="p-4 text-xs">
+              <p class="text-gray-600 mb-2 font-bold">房型：經典雙人間連美味早餐</p>
+              <p class="text-gray-500 leading-relaxed">徒步即可達凱旋門與香榭麗舍大街，晚上出門買法式小甜點或夜漫凱旋門都極其便利與安全。</p>
+            </div>
+          </div>
+          <div class="p-4 border-t bg-gray-50">
             <span class="text-pink-700 text-xs font-bold bg-pink-50 py-1 px-2.5 rounded-full">浪漫巴黎第17區</span>
           </div>
         </div>
 
-        <!-- 慕尼黑 Marriott -->
-        <div class="bg-white rounded-xl overflow-hidden shadow-md border border-gray-200">
-          <div class="h-48 bg-gradient-to-r from-emerald-600 to-teal-800 text-white flex flex-col justify-between p-4 relative">
-            <span class="bg-eglOrange text-white font-extrabold text-[10px] px-2 py-1 rounded self-start shadow-md"><i class="fa-solid fa-hotel"></i> 德式奢華連續4晚</span>
-            <div class="z-10">
-              <h4 class="text-lg font-black text-shadow-md">Courtyard by Marriott</h4>
-              <p class="text-xs text-shadow-md opacity-80">市中心萬豪酒店</p>
+        <!-- 慕尼黑: Marriott -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-md border border-gray-200 flex flex-col justify-between">
+          <div>
+            <div class="h-40 bg-gradient-to-r from-emerald-600 to-teal-800 text-white flex flex-col justify-between p-4 relative">
+              <span class="bg-brandOrange text-white font-extrabold text-[10px] px-2 py-1 rounded self-start shadow-md"><i class="fa-solid fa-hotel"></i> 連續入住 4 晚</span>
+              <div class="z-10">
+                <h4 class="text-md font-black text-shadow-md">Courtyard by Marriott</h4>
+                <p class="text-[11px] text-shadow-md opacity-80">市中心萬豪酒店</p>
+              </div>
             </div>
-            <!-- SVG背景紋理 -->
-            <div class="absolute inset-0 opacity-10 pointer-events-none">
-              <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor">
-                <rect x="20" y="20" width="60" height="60" rx="2"/>
-                <circle cx="50" cy="50" r="8"/>
-              </svg>
+            <div class="p-4 text-xs">
+              <p class="text-gray-600 mb-2 font-bold">房型：豪華舒適客房</p>
+              <p class="text-gray-500 leading-relaxed">連續四夜安睡，無需打包行李，步行即可漫步至新市政廳與瑪麗恩廣場，享受乾淨、安靜的德式高端服務。</p>
             </div>
           </div>
-          <div class="p-4 text-sm">
-            <p class="text-gray-600 mb-3 font-semibold">特設房型：德式精緻豪華客房 (2張單人床x2)</p>
-            <p class="text-xs text-gray-500 mb-4">步行即可漫步至新市政廳與瑪麗恩廣場。連續四夜安睡於此，享受乾淨精準的德式服務與大餐。</p>
+          <div class="p-4 border-t bg-gray-50">
             <span class="text-emerald-800 text-xs font-bold bg-green-50 py-1 px-2.5 rounded-full">慕尼黑核心黃金地段</span>
           </div>
         </div>
@@ -908,9 +1034,9 @@
 
     <!-- TAB 4: 歐陸美饌特寫 -->
     <div id="content-gourmet" class="tab-content hidden">
-      <h2 class="text-2xl font-black text-eglDarkBlue mb-6 flex items-center border-b-2 border-eglOrange pb-2">
-        <span class="bg-eglOrange text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-2"><i class="fa-solid fa-shrimp"></i></span>
-        歐陸環球美食盛宴
+      <h2 class="text-2xl font-black text-brandDarkBlue mb-6 flex items-center border-b-2 border-brandOrange pb-2">
+        <span class="bg-brandOrange text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-2"><i class="fa-solid fa-shrimp"></i></span>
+        歐洲經典奢華舌尖饗宴
       </h2>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -919,56 +1045,35 @@
         <div class="bg-white rounded-xl overflow-hidden shadow-md border hover:shadow-xl transition duration-300">
           <div class="bg-gradient-to-r from-amber-500 to-red-600 p-6 text-white text-center font-black relative min-h-[140px] flex flex-col justify-center">
             <h4 class="text-lg">Burger & Lobster</h4>
-            <p class="text-xs text-yellow-200 mt-1">倫敦奢華名物</p>
-            <!-- 龍蝦裝飾 SVG -->
-            <div class="absolute right-2 bottom-2 opacity-15 pointer-events-none">
-              <svg class="w-16 h-16 text-white" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M50,10 C40,10 30,30 30,50 C30,70 40,90 50,90 C60,90 70,70 70,50 C70,30 60,10 50,10 Z" fill="currentColor"/>
-                <circle cx="35" cy="30" r="5" fill="currentColor"/>
-                <circle cx="65" cy="30" r="5" fill="currentColor"/>
-              </svg>
-            </div>
+            <p class="text-xs text-yellow-200 mt-1">倫敦必吃奢華名店</p>
           </div>
           <div class="p-4 text-xs text-gray-600">
-            <strong>招牌：鮮活大蒸龍蝦連多汁牛肉漢堡配金黃脆薯。</strong>
-            <p class="mt-2">於哈洛德百貨旁的 Knightsbridge 分店，大口咀嚼整隻新鮮空運的肥美龍蝦，配上秘製檸檬牛油醬，爽甜無比！</p>
+            <strong>主打：清蒸或蒜香黃油烤鮮活整隻大龍蝦、牛肉漢堡。</strong>
+            <p class="mt-2">於 Knightsbridge 店享用，鮮甜Q彈、多汁細嫩，配上店家特調檸檬牛油醬，絕對是倫敦最具代表性的盛宴。</p>
           </div>
         </div>
 
         <!-- 美食 2 -->
         <div class="bg-white rounded-xl overflow-hidden shadow-md border hover:shadow-xl transition duration-300">
           <div class="bg-gradient-to-r from-red-600 to-red-800 p-6 text-white text-center font-black relative min-h-[140px] flex flex-col justify-center">
-            <h4 class="text-lg">塞納河遊船河豪華晚餐</h4>
-            <p class="text-xs text-pink-200 mt-1">巴黎浪漫至極晚餐</p>
-            <!-- 船隻 SVG -->
-            <div class="absolute right-2 bottom-2 opacity-15 pointer-events-none">
-              <svg class="w-16 h-16 text-white" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10,60 L90,60 L80,80 L20,80 Z" fill="currentColor"/>
-              </svg>
-            </div>
+            <h4 class="text-lg">塞納河遊船奢華晚宴</h4>
+            <p class="text-xs text-pink-200 mt-1">巴黎黃昏水上美學</p>
           </div>
           <div class="p-4 text-xs text-gray-600">
-            <strong>招牌：法式精緻三道式晚餐配頂級香醇紅酒。</strong>
-            <p class="mt-2">登上 Paris Seine 豪華落地玻璃觀景船，一邊悠閒品嚐精緻法餐，一邊看著窗外埃菲爾鐵塔的璀璨落日倒影。</p>
+            <strong>主打：精緻法式三道式、名莊香醇紅/白葡萄酒。</strong>
+            <p class="mt-2">登船緩緩行駛於塞納河。一邊在悠揚古典樂伴隨下享用精緻大餐，一邊看著落日徐徐灑在艾菲爾鐵塔和巴黎聖母院上。</p>
           </div>
         </div>
 
         <!-- 美食 3 -->
         <div class="bg-white rounded-xl overflow-hidden shadow-md border hover:shadow-xl transition duration-300">
           <div class="bg-gradient-to-r from-emerald-600 to-emerald-800 p-6 text-white text-center font-black relative min-h-[140px] flex flex-col justify-center">
-            <h4 class="text-lg">Hofbräuhaus HB 皇家啤酒屋</h4>
-            <p class="text-xs text-green-200 mt-1">巴伐利亞傳奇名店</p>
-            <!-- 啤酒杯 SVG -->
-            <div class="absolute right-2 bottom-2 opacity-15 pointer-events-none">
-              <svg class="w-16 h-16 text-white" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="35" y="30" width="30" height="50" rx="3" fill="currentColor"/>
-                <path d="M65,40 H75 V65 H65" stroke="currentColor" stroke-width="4"/>
-              </svg>
-            </div>
+            <h4 class="text-lg">Hofbräuhaus (HB) 皇家啤酒屋</h4>
+            <p class="text-xs text-green-200 mt-1">巴伐利亞傳奇百年餐廳</p>
           </div>
           <div class="p-4 text-xs text-gray-600">
-            <strong>招牌：巨型酥脆德國烤豬腳、巴伐利亞香腸、黑啤酒。</strong>
-            <p class="mt-2">於擁有數百年歷史的皇家大廳內，伴隨現場巴伐利亞樂隊演奏的響亮樂聲，與來自世界各地的旅客一起舉杯痛飲乾杯！</p>
+            <strong>主打：酥脆烤豬手、巴伐利亞香腸盤、1L黑啤酒。</strong>
+            <p class="mt-2">步入可容納數千人的傳奇拱形大廳，在巴伐利亞銅管樂隊現場伴奏與各國旅客熱烈的歡呼中，大口品味傳統德式美味！</p>
           </div>
         </div>
 
@@ -976,18 +1081,11 @@
         <div class="bg-white rounded-xl overflow-hidden shadow-md border hover:shadow-xl transition duration-300">
           <div class="bg-gradient-to-r from-indigo-600 to-indigo-800 p-6 text-white text-center font-black relative min-h-[140px] flex flex-col justify-center">
             <h4 class="text-lg">Flat Iron Steak</h4>
-            <p class="text-xs text-blue-200 mt-1">倫敦超人氣牛排</p>
-            <!-- 菜刀裝飾 SVG -->
-            <div class="absolute right-2 bottom-2 opacity-15 pointer-events-none">
-              <svg class="w-16 h-16 text-white" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="30" y="30" width="30" height="25" fill="currentColor"/>
-                <rect x="42" y="55" width="6" height="25" fill="currentColor"/>
-              </svg>
-            </div>
+            <p class="text-xs text-blue-200 mt-1">倫敦超人氣鐵板牛排</p>
           </div>
           <div class="p-4 text-xs text-gray-600">
-            <strong>招牌：炭烤安格斯冷藏牛排、香脆薯條配自製沙拉。</strong>
-            <p class="mt-2">超高性價比英倫牛排！肉質鮮嫩多汁，餐後特設免費意式焦糖冰淇淋，小朋友更能獲贈精美小菜刀紀念品。</p>
+            <strong>主打：手工低溫熟成冷藏牛排、香脆細長薯條。</strong>
+            <p class="mt-2">倫敦年輕人與旅人的最愛，肉質緊緻多汁。小童用餐可獲贈精美小迷你菜刀纪念品，以及免費焦糖海鹽冰淇淋。</p>
           </div>
         </div>
 
@@ -999,61 +1097,59 @@
       
       <!-- 智能記帳與預算計算器 -->
       <div class="bg-white rounded-xl p-6 shadow-md mb-8">
-        <h3 class="text-xl font-bold text-eglDarkBlue mb-4 flex items-center border-b pb-2">
-          <i class="fa-solid fa-calculator mr-2 text-eglOrange"></i> 歐洲壯遊智能預算預估與記帳器
+        <h3 class="text-xl font-bold text-brandDarkBlue mb-4 flex items-center border-b pb-2">
+          <i class="fa-solid fa-calculator mr-2 text-brandOrange"></i> 家族旅遊預算與匯率試算
         </h3>
-        <p class="text-sm text-gray-600 mb-6">我們為您準備了這個實時歐元、英鎊轉換計算器，讓您隨時精確掌握 Eric、Isabel、Ricky、Venus 全家的開支。</p>
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="bg-eglLightBlue p-4 rounded-lg text-center">
-            <p class="text-xs text-gray-500 font-bold">總預付款項 (機票/酒店/火車/遊船)</p>
-            <p class="text-2xl font-black text-eglDarkBlue mt-1">HKD $43,400</p>
-            <span class="text-[10px] text-gray-400">已預付完畢</span>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+          <div class="bg-brandLightBlue p-4 rounded-lg text-center">
+            <p class="text-xs text-gray-500 font-bold">已預付總開支 (機票、四星酒店、高鐵等)</p>
+            <p class="text-2xl font-black text-brandDarkBlue mt-1">HKD $43,400</p>
+            <span class="text-[10px] text-gray-400">已由 Eric 爸爸完全預結</span>
           </div>
           <div class="bg-orange-50 p-4 rounded-lg text-center">
             <p class="text-xs text-gray-500 font-bold">預估市區每日零用 (英鎊 £)</p>
-            <p class="text-2xl font-black text-eglOrange mt-1">£ 1,250</p>
-            <span class="text-[10px] text-gray-400">包含每日午晚餐與交通小吃</span>
+            <p class="text-2xl font-black text-brandOrange mt-1">£ 1,250</p>
+            <span class="text-[10px] text-gray-400">包含每日餐飲與零碎交通、紀念品</span>
           </div>
           <div class="bg-green-50 p-4 rounded-lg text-center">
             <p class="text-xs text-gray-500 font-bold">預估德國每日零用 (歐元 €)</p>
             <p class="text-2xl font-black text-emerald-800 mt-1">€ 1,680</p>
-            <span class="text-[10px] text-gray-400">包含 HB 啤酒屋、BMW 門票等項目</span>
+            <span class="text-[10px] text-gray-400">包括宮殿門票、HB 晚餐等</span>
           </div>
         </div>
 
-        <div class="mt-6">
-          <h4 class="font-bold text-sm text-gray-700 mb-2">💰 實時匯率試算試算機</h4>
+        <div>
+          <h4 class="font-bold text-sm text-gray-700 mb-2">💰 實時港幣兌換試算</h4>
           <div class="flex flex-col md:flex-row gap-4 items-center bg-gray-50 p-4 rounded-lg">
             <div class="w-full md:w-1/3">
-              <label class="block text-xs font-bold text-gray-500 mb-1">輸入自定義預算 (HKD)</label>
-              <input type="number" id="calc-hkd" value="10000" oninput="calculateCurrency()" class="w-full bg-white border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-eglDarkBlue">
+              <label class="block text-xs font-bold text-gray-500 mb-1">輸入預算港幣金額 (HKD)</label>
+              <input type="number" id="calc-hkd" value="10000" oninput="calculateCurrency()" class="w-full bg-white border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brandDarkBlue">
             </div>
             <div class="text-lg font-bold text-gray-400 hidden md:block">➔</div>
             <div class="w-full md:w-1/3 text-center bg-white border p-2 rounded">
               <p class="text-xs text-gray-400 font-bold">折合英鎊 (GBP)</p>
-              <p class="text-lg font-black text-eglDarkBlue mt-1" id="res-gbp">£ 970.00</p>
-              <span class="text-[9px] text-gray-400">固定匯率 10.31 模擬</span>
+              <p class="text-lg font-black text-brandDarkBlue mt-1" id="res-gbp">£ 970.00</p>
+              <span class="text-[9px] text-gray-400">匯率 10.31 基準</span>
             </div>
             <div class="w-full md:w-1/3 text-center bg-white border p-2 rounded">
               <p class="text-xs text-gray-400 font-bold">折合歐元 (EUR)</p>
               <p class="text-lg font-black text-emerald-800 mt-1" id="res-eur">€ 1,162.00</p>
-              <span class="text-[9px] text-gray-400">固定匯率 8.60 模擬</span>
+              <span class="text-[9px] text-gray-400">匯率 8.60 基準</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- 四人行李準備物品大清單 (互動式 Checklist) -->
+      <!-- 四人行李準備物品大清單 -->
       <div class="bg-white rounded-xl p-6 shadow-md">
-        <h3 class="text-xl font-bold text-eglDarkBlue mb-4 flex items-center border-b pb-2">
-          <i class="fa-solid fa-clipboard-check-list mr-2 text-eglOrange"></i> Eric、Isabel、Ricky、Venus 四人行李準備清單
+        <h3 class="text-xl font-bold text-brandDarkBlue mb-4 flex items-center border-b pb-2">
+          <i class="fa-solid fa-clipboard-list mr-2 text-brandOrange"></i> 行前行李準備清單 (分人統計)
         </h3>
-        <p class="text-sm text-gray-600 mb-6">我們根據您填寫的《準備物品》清單，為您分類整理了隨身、託運(喼)大行李清單。您可以為每位家人點擊打勾確認，出發前不漏一物！</p>
         
         <!-- 四人選擇器 -->
         <div class="flex space-x-2 mb-6">
-          <button onclick="switchFamilyMember('eric')" id="btn-family-eric" class="member-btn active bg-eglDarkBlue text-white font-bold py-1.5 px-4 rounded text-xs transition">
+          <button onclick="switchFamilyMember('eric')" id="btn-family-eric" class="member-btn active bg-brandDarkBlue text-white font-bold py-1.5 px-4 rounded text-xs transition">
             <i class="fa-solid fa-user mr-1"></i> Eric (爸爸)
           </button>
           <button onclick="switchFamilyMember('isabel')" id="btn-family-isabel" class="member-btn bg-gray-100 text-gray-700 hover:bg-gray-200 font-bold py-1.5 px-4 rounded text-xs transition">
@@ -1067,25 +1163,20 @@
           </button>
         </div>
 
-        <!-- 準備清單展示盒 -->
         <div id="packing-checklist-box" class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <!-- 隨身行李 -->
-          <div class="bg-eglLightBlue rounded-lg p-5">
-            <h4 class="font-extrabold text-eglDarkBlue text-md mb-3 flex items-center">
-              <i class="fa-solid fa-bag-shopping mr-2"></i> 隨身小背包 (登機攜帶)
+          <div class="bg-brandLightBlue rounded-lg p-5">
+            <h4 class="font-extrabold text-brandDarkBlue text-md mb-3 flex items-center">
+              <i class="fa-solid fa-bag-shopping mr-2"></i> 隨身背包 (登機隨行)
             </h4>
-            <div id="carryon-items-list" class="space-y-2">
-              <!-- JS 動態插入 -->
-            </div>
+            <div id="carryon-items-list" class="space-y-2"></div>
           </div>
           <!-- 託運大行李箱 -->
           <div class="bg-orange-50 rounded-lg p-5">
             <h4 class="font-extrabold text-orange-800 text-md mb-3 flex items-center">
               <i class="fa-solid fa-suitcase-rolling mr-2"></i> 託運大型行李箱 (喼)
             </h4>
-            <div id="checked-items-list" class="space-y-2">
-              <!-- JS 動態插入 -->
-            </div>
+            <div id="checked-items-list" class="space-y-2"></div>
           </div>
         </div>
       </div>
@@ -1094,164 +1185,160 @@
 
   </main>
 
-  <!-- 貼心提醒與法律責任聲明 -->
-  <footer class="bg-eglDarkBlue text-white mt-16 py-12 px-6 print-shadow-none print-border">
+  <!-- 貼心提醒與聲明 -->
+  <footer class="bg-brandDarkBlue text-white mt-16 py-12 px-6 print-shadow-none print-border">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-xs">
       
-      <!-- 貼心提示 -->
+      <!-- 溫馨小貼士 -->
       <div class="space-y-3">
-        <h4 class="text-sm font-extrabold text-eglGold border-b border-blue-800 pb-2 flex items-center">
-          <i class="fa-solid fa-heart mr-2"></i> 旅遊貼心提示 (Travel Tips)
+        <h4 class="text-sm font-extrabold text-brandGold border-b border-blue-800 pb-2 flex items-center">
+          <i class="fa-solid fa-heart mr-2"></i> 歐洲出遊貼心提示 (Travel Tips)
         </h4>
         <p class="leading-relaxed opacity-85">
-          • <strong>防曬提醒：</strong> 歐洲夏季日照極為強烈，UV 指數常達極高 (10+)，請備足遮陽帽、太陽眼鏡與高防護防曬乳。<br>
-          • <strong>充電與插頭：</strong> 英國採用英規三平腳插頭，法國/德國為歐規雙圓腳插頭，請自備轉換插頭。根據規定，外置充電器 (尿袋) 嚴禁託運，必須隨身攜帶。<br>
-          • <strong>個人洗漱用品：</strong> 為倡導環保，歐洲多數高星級酒店不提供個人牙刷、牙膏、拖鞋，敬請全家自備。
+          • <strong>防曬提醒：</strong> 歐洲夏季日照強、紫外線極高 (10+)，務必準備太陽眼鏡、防曬霜及遮陽傘。<br>
+          • <strong>充電規範：</strong> 英國採用英規三平腳插頭，法國及德國採用雙圓頭插針。外置行動電源 (尿袋) 必須隨身攜帶，嚴禁放進託運行李中。<br>
+          • <strong>牙刷與拖鞋：</strong> 歐洲環保規定不提供一次性盥洗用品。請全家自備拖鞋、牙刷及牙膏。
         </p>
       </div>
 
-      <!-- 保障與權益聲明 -->
+      <!-- 安全備忘 -->
       <div class="space-y-3">
-        <h4 class="text-sm font-extrabold text-eglGold border-b border-blue-800 pb-2 flex items-center">
-          <i class="fa-solid fa-gavel mr-2"></i> 行程保障與消費者權益
+        <h4 class="text-sm font-extrabold text-brandGold border-b border-blue-800 pb-2 flex items-center">
+          <i class="fa-solid fa-shield-halved mr-2"></i> 安全備忘與財物防護
         </h4>
         <p class="leading-relaxed opacity-85">
-          • 本行程已將所有額外入場門票、活動等細節清晰列明，保障您的消費權益。<br>
-          • <strong>旅遊保險重要性：</strong> 強烈建議，為了全家出遊安全，請於出發前購買全面的「全球旅遊綜合保險」，防範未然。
+          • <strong>歐洲治安防護：</strong> 在倫敦地鐵、巴黎香榭麗舍大街及慕尼黑瑪麗恩廣場等熱門景區時，請妥善保管貴重物品，背包請背在胸前。<br>
+          • <strong>保險與文件備份：</strong> 出發前請列印護照複印件或上傳雲端備份，確保購買覆蓋全家人的醫療與旅行保險。
         </p>
       </div>
 
-      <!-- 頁尾宣告與專屬聲明 -->
+      <!-- 版權宣告 -->
       <div class="space-y-3">
-        <h4 class="text-sm font-extrabold text-eglGold border-b border-blue-800 pb-2 flex items-center">
-          <i class="fa-solid fa-building mr-2"></i> 專屬假期備忘錄
+        <h4 class="text-sm font-extrabold text-brandGold border-b border-blue-800 pb-2 flex items-center">
+          <i class="fa-solid fa-house-chimney-user mr-2"></i> Eric 家族旅行備份
         </h4>
         <p class="leading-relaxed opacity-85">
-          • 本行程為專屬私人定制家族旅程。<br>
-          • 法律聲明：以上行程安排、膳食次序、景點次序若遇宗教假期、突發天氣等不可抗力因素，將由當地接待單位做出最合適之調整，敬請留意。
+          • 2026年夏季私人家庭定製回憶手冊。<br>
+          • 航班及酒店預定單據已全數電子備份在 Eric 爸爸的雲端硬碟中。<br>
+          • 祝全家旅途愉快，平安順利，收穫滿滿驚喜與笑容！
         </p>
         <div class="pt-2 text-[10px] text-gray-300">
-          版權所有 © 2026 Eric Family Tour.
+          Happy Family Vacation © 2026 Eric Family Trip.
         </div>
       </div>
 
     </div>
   </footer>
 
-  <!-- JavaScript 頁面互動狀態與數據控制 -->
+  <!-- JavaScript 控制 -->
   <script>
-    // 清單數據庫
+    // 行李清單數據庫
     const packingData = {
       eric: {
         carryon: [
-          { name: "護照與證件機票", qty: "隨身帶" },
-          { name: "尿袋 (行動電源)", qty: "1個" },
-          { name: "隨身充電線與轉換插座", qty: "1套" },
-          { name: "保溫水樽", qty: "1個" },
-          { name: "個人隨身藥品包", qty: "1份" },
+          { name: "護照、身份證與機票預訂單", qty: "隨身攜帶" },
+          { name: "行動電源 (尿袋)", qty: "1個" },
+          { name: "隨身充電線與萬國轉換插座", qty: "1套" },
+          { name: "保溫水瓶", qty: "1個" },
+          { name: "個人必備藥品與隨身包", qty: "1份" },
           { name: "防風保暖輕外套", qty: "1件" }
         ],
         checked: [
-          { name: "夏季上衣", qty: "10件" },
+          { name: "透氣夏裝上衣", qty: "10件" },
           { name: "休閒短褲", qty: "2條" },
-          { name: "百搭長褲", qty: "4條" },
-          { name: "舒適內衣內褲襪子", qty: "各10套" },
-          { name: "牙刷與牙膏", qty: "各1個" },
-          { name: "刮鬍刀", qty: "1個" },
-          { name: "多功能旅行烘衫機", qty: "1台" },
-          { name: "可折疊晴雨傘", qty: "1把" }
+          { name: "長褲 (牛仔褲/休閒褲)", qty: "4條" },
+          { name: "貼身內衣褲及短襪", qty: "各10套" },
+          { name: "個人牙刷與牙膏", qty: "1套" },
+          { name: "剃鬚刀 (鬍鬚刨)", qty: "1個" },
+          { name: "多功能可折疊烘衣機", qty: "1台" },
+          { name: "折疊晴雨兩用傘", qty: "1把" }
         ]
       },
       isabel: {
         carryon: [
-          { name: "護照證件", qty: "隨身帶" },
-          { name: "尿袋 (行動電源)", qty: "1個" },
-          { name: "保溫水樽", qty: "1個" },
-          { name: "防曬草帽與太陽眼鏡", qty: "1套" },
-          { name: "防寒保暖披肩", qty: "1件" }
+          { name: "護照與隨身重要文件", qty: "隨身攜帶" },
+          { name: "行動電源 (尿袋)", qty: "1個" },
+          { name: "保溫水瓶", qty: "1個" },
+          { name: "防曬遮陽帽與太陽眼鏡", qty: "1套" },
+          { name: "長款針織開衫 (機艙保暖)", qty: "1件" }
         ],
         checked: [
-          { name: "優雅拍照上衣/洋裝", qty: "10件" },
-          { name: "休閒長褲", qty: "5條" },
-          { name: "吸汗內衣褲、短襪", qty: "10套" },
-          { name: "洗面乳與防曬護膚品", qty: "1套" },
-          { name: "牙刷/盥洗用品組", qty: "1套" },
-          { name: "濕紙巾", qty: "2包" },
-          { name: "個人舒適便鞋/球鞋", qty: "1雙" }
+          { name: "美美拍照洋裝與上衣", qty: "10件" },
+          { name: "修閒長褲", qty: "5條" },
+          { name: "吸汗內衣褲及短襪", qty: "10套" },
+          { name: "防曬護膚品與洗面乳", qty: "1套" },
+          { name: "個人便攜盥洗用品", qty: "1套" },
+          { name: "高防護保濕濕紙巾", qty: "2包" },
+          { name: "舒適慢跑鞋/平底步行鞋", qty: "1雙" }
         ]
       },
       ricky: {
         carryon: [
-          { name: "護照證件", qty: "隨身帶" },
-          { name: "隨身長袖外套", qty: "1件" },
-          { name: "霍格華茲魔法袍/魔杖", qty: "1套 (哈利波特影城拍照必備)" },
-          { name: "保溫水樽", qty: "1個" }
+          { name: "護照", qty: "隨身攜帶" },
+          { name: "隨身保暖連帽衫", qty: "1件" },
+          { name: "霍格華茲哈利波特魔法袍/魔杖", qty: "1套 (影城拍照必備！)" },
+          { name: "保溫水瓶", qty: "1個" }
         ],
         checked: [
-          { name: "活潑上衣", qty: "10件" },
+          { name: "舒適夏日上衣", qty: "10件" },
           { name: "休閒長褲", qty: "5條" },
-          { name: "吸汗內褲襪子", qty: "10套" },
-          { name: "個人牙刷", qty: "1個" },
-          { name: "洗臉洗沐用品", qty: "1套" },
-          { name: "保暖連帽衛衣", qty: "1件" }
+          { name: "貼身純棉內衣褲襪子", qty: "10套" },
+          { name: "個人小牙刷", qty: "1個" },
+          { name: "小童洗臉洗沐用品", qty: "1套" },
+          { name: "保暖厚衛衣", qty: "1件" }
         ]
       },
       venus: {
         carryon: [
-          { name: "護照證件", qty: "隨身帶" },
-          { name: "保濕水樽", qty: "1個" },
-          { name: "隨身防曬遮陽帽", qty: "1頂" },
-          { name: "手持便攜式風扇", qty: "1台" },
-          { name: "防風防曬外套", qty: "1件" }
+          { name: "護照", qty: "隨身攜帶" },
+          { name: "保濕小水壺", qty: "1個" },
+          { name: "防蚊防曬草帽", qty: "1頂" },
+          { name: "手持超靜音小電風扇", qty: "1台" },
+          { name: "隨身保暖開衫", qty: "1件" }
         ],
         checked: [
-          { name: "可愛拍照上衣/公主裙", qty: "10件" },
-          { name: "休閒長褲/內搭褲", qty: "5條" },
-          { name: "吸汗內衣褲、可愛短襪", qty: "10套" },
-          { name: "個人牙刷與小拖鞋", qty: "各1雙" },
-          { name: "防蚊噴霧及濕紙巾", qty: "1套" },
-          { name: "舒適步行球鞋", qty: "1雙" }
+          { name: "可愛小裙子/上衣", qty: "10件" },
+          { name: "休閒長短褲/內搭褲", qty: "5條" },
+          { name: "純棉小內衣褲、可愛短襪", qty: "10套" },
+          { name: "個人牙刷及洗澡用小拖鞋", qty: "各1雙" },
+          { name: "溫和防蚊液及防蚊貼", qty: "1套" },
+          { name: "舒適魔鬼氈步行鞋", qty: "1雙" }
         ]
       }
     };
 
-    // 頁面加載初始化
     window.onload = function() {
       switchFamilyMember('eric');
     };
 
-    // Tab 切換邏輯
+    // Tab 切換
     function switchTab(tabName) {
-      // 隱藏所有 tab 內容
       const contents = document.querySelectorAll('.tab-content');
       contents.forEach(content => {
         content.classList.add('hidden');
         content.classList.remove('block');
       });
 
-      // 移除所有 tab 按鈕的 active 狀態
       const tabBtns = document.querySelectorAll('.tab-btn');
       tabBtns.forEach(btn => {
-        btn.classList.remove('bg-eglDarkBlue', 'text-white');
-        btn.classList.add('text-eglDarkBlue', 'hover:bg-white');
+        btn.classList.remove('bg-brandDarkBlue', 'text-white');
+        btn.classList.add('text-brandDarkBlue', 'hover:bg-white');
       });
 
-      // 顯示當前 tab 內容
       const targetContent = document.getElementById('content-' + tabName);
       if (targetContent) {
         targetContent.classList.remove('hidden');
         targetContent.classList.add('block');
       }
 
-      // 高亮當前按鈕
       const activeBtn = document.getElementById('tab-' + tabName);
       if (activeBtn) {
-        activeBtn.classList.remove('text-eglDarkBlue', 'hover:bg-white');
-        activeBtn.classList.add('bg-eglDarkBlue', 'text-white');
+        activeBtn.classList.remove('text-brandDarkBlue', 'hover:bg-white');
+        activeBtn.classList.add('bg-brandDarkBlue', 'text-white');
       }
     }
 
-    // 每日詳細行程展開/收起
+    // 每日行程詳細展開/收起
     function toggleDay(dayNum) {
       const detail = document.getElementById('day-detail-' + dayNum);
       const arrow = document.getElementById('arrow-' + dayNum);
@@ -1264,7 +1351,7 @@
       }
     }
 
-    // 展開/收起全部行程
+    // 一鍵展開/收起
     let allExpanded = false;
     function toggleAllItinerary() {
       allExpanded = !allExpanded;
@@ -1285,7 +1372,7 @@
       toggleText.innerText = allExpanded ? "收起所有每日行程" : "展開所有每日行程";
     }
 
-    // 計算預算匯率轉換
+    // 預算試算
     function calculateCurrency() {
       const hkdValue = parseFloat(document.getElementById('calc-hkd').value);
       if (isNaN(hkdValue) || hkdValue < 0) {
@@ -1305,18 +1392,16 @@
 
     // 切換行李物品清單人員
     function switchFamilyMember(member) {
-      // 切換按鈕狀態
       const buttons = document.querySelectorAll('.member-btn');
       buttons.forEach(btn => {
-        btn.classList.remove('bg-eglDarkBlue', 'text-white');
+        btn.classList.remove('bg-brandDarkBlue', 'text-white');
         btn.classList.add('bg-gray-100', 'text-gray-700', 'hover:bg-gray-200');
       });
 
       const activeBtn = document.getElementById('btn-family-' + member);
       activeBtn.classList.remove('bg-gray-100', 'text-gray-700', 'hover:bg-gray-200');
-      activeBtn.classList.add('bg-eglDarkBlue', 'text-white');
+      activeBtn.classList.add('bg-brandDarkBlue', 'text-white');
 
-      // 獲取成員隨身和託運清單
       const list = packingData[member];
       const carryonBox = document.getElementById('carryon-items-list');
       const checkedBox = document.getElementById('checked-items-list');
@@ -1325,10 +1410,10 @@
       checkedBox.innerHTML = '';
 
       // 載入隨身行李
-      list.carryon.forEach((item, index) => {
+      list.carryon.forEach((item) => {
         const itemHtml = `
           <label class="flex items-center space-x-3 bg-white p-3 rounded shadow-sm border border-blue-100 cursor-pointer hover:bg-blue-50 transition">
-            <input type="checkbox" class="form-checkbox text-eglDarkBlue h-5 w-5 rounded focus:ring-0 focus:outline-none">
+            <input type="checkbox" class="form-checkbox text-brandDarkBlue h-5 w-5 rounded focus:ring-0 focus:outline-none">
             <div class="text-xs text-gray-700">
               <span class="font-bold">${item.name}</span>
               <span class="text-gray-400 font-mono text-[10px] ml-1">(${item.qty})</span>
@@ -1339,10 +1424,10 @@
       });
 
       // 載入託運行李
-      list.checked.forEach((item, index) => {
+      list.checked.forEach((item) => {
         const itemHtml = `
           <label class="flex items-center space-x-3 bg-white p-3 rounded shadow-sm border border-orange-100 cursor-pointer hover:bg-orange-100 transition">
-            <input type="checkbox" class="form-checkbox text-eglOrange h-5 w-5 rounded focus:ring-0 focus:outline-none">
+            <input type="checkbox" class="form-checkbox text-brandOrange h-5 w-5 rounded focus:ring-0 focus:outline-none">
             <div class="text-xs text-gray-700">
               <span class="font-bold">${item.name}</span>
               <span class="text-gray-400 font-mono text-[10px] ml-1">(${item.qty})</span>
