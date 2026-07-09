@@ -23,7 +23,7 @@
     }
   </script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght=300;400;500;700;900&display=swap');
     body {
       font-family: 'Noto Sans TC', sans-serif;
       background-color: #F3F4F6;
@@ -789,7 +789,7 @@
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>前往巨型市中心綠肺 <b>英國花園 (Englischer Garten)</b>，圍觀奇特瘋狂的「市區激流人工衝浪」，在中式寶塔啤酒花園樹蔭下喝汽水乘涼。</span></div>
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">12:30</span><span>中午享用百年老店 <b>Haxnbauer</b> 或老城巴伐利亞風味特色午餐。</span></div>
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">14:00</span><span><b>【重本已購票】</b>探索堂皇耀眼的 <b>§慕尼黑王宮 (Residenz)</b>，細賞全金箔雕琢的古物大廳 (Antiquarium) 與無價珍寶館。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:30</span><span><b>【重本狂歡聚餐】</b>全家前往舉世聞名的 <b>Hofbräuhaus (HB) 皇家啤酒屋</b>！在歡騰熱烈的交響管弦樂演奏中，暢快享用烤德國香腸、黑啤酒配巨型椒鹽卷餅，慶祝歐洲之旅大成功！</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:30</span><span><b>【重本狂歡聚餐】</b>全家前往舉世聞名的 <b>Hofbräuhaus (HB) 皇家啤酒屋</b>！在歡騰熱烈的交響管弦樂演奏中，暢快享用烤德國香腸、黑啤酒配巨型椒鹽卷餅，慶逐歐洲之旅大成功！</span></div>
               </div>
               <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
                 <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
@@ -1092,53 +1092,116 @@
       </div>
     </div>
 
-    <!-- TAB 5: 準備清單與預算 -->
+    <!-- TAB 5: 準備清單與預算 (重建為每日時間軸與分類看板) -->
     <div id="content-budget-packing" class="tab-content hidden">
       
-      <!-- 智能記帳與預算計算器 -->
+      <!-- 每日分類預算儀表板 -->
       <div class="bg-white rounded-xl p-6 shadow-md mb-8">
-        <h3 class="text-xl font-bold text-brandDarkBlue mb-4 flex items-center border-b pb-2">
-          <i class="fa-solid fa-calculator mr-2 text-brandOrange"></i> 家族旅遊預算與匯率試算
-        </h3>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-          <div class="bg-brandLightBlue p-4 rounded-lg text-center">
-            <p class="text-xs text-gray-500 font-bold">已預付總開支 (機票、四星酒店、高鐵等)</p>
-            <p class="text-2xl font-black text-brandDarkBlue mt-1">HKD $43,400</p>
-            <span class="text-[10px] text-gray-400">已由 Eric 爸爸完全預結</span>
+        <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center border-b pb-4 mb-6 gap-4">
+          <div>
+            <h3 class="text-xl font-bold text-brandDarkBlue flex items-center">
+              <i class="fa-solid fa-timeline mr-2 text-brandOrange"></i> 歐洲15天每日預算時間軸
+            </h3>
+            <p class="text-xs text-gray-500 mt-1">將預算細分為 <b>景點、餐飲、交通、酒店</b>，點選不同天數即可看該日預算時間流。</p>
           </div>
-          <div class="bg-orange-50 p-4 rounded-lg text-center">
-            <p class="text-xs text-gray-500 font-bold">預估市區每日零用 (英鎊 £)</p>
-            <p class="text-2xl font-black text-brandOrange mt-1">£ 1,250</p>
-            <span class="text-[10px] text-gray-400">包含每日餐飲與零碎交通、紀念品</span>
-          </div>
-          <div class="bg-green-50 p-4 rounded-lg text-center">
-            <p class="text-xs text-gray-500 font-bold">預估德國每日零用 (歐元 €)</p>
-            <p class="text-2xl font-black text-emerald-800 mt-1">€ 1,680</p>
-            <span class="text-[10px] text-gray-400">包括宮殿門票、HB 晚餐等</span>
+          
+          <!-- 雙向匯率快速提示 -->
+          <div class="bg-brandLightBlue px-4 py-2 rounded-lg text-xs space-y-0.5">
+            <p class="font-bold text-brandDarkBlue text-[11px]"><i class="fa-solid fa-circle-info"></i> 智能雙向換算基準</p>
+            <p class="text-gray-600">1 GBP (英鎊) ≈ 10.31 HKD | 1 EUR (歐元) ≈ 8.60 HKD</p>
           </div>
         </div>
 
-        <div>
-          <h4 class="font-bold text-sm text-gray-700 mb-2">💰 實時港幣兌換試算</h4>
-          <div class="flex flex-col md:flex-row gap-4 items-center bg-gray-50 p-4 rounded-lg">
-            <div class="w-full md:w-1/3">
-              <label class="block text-xs font-bold text-gray-500 mb-1">輸入預算港幣金額 (HKD)</label>
-              <input type="number" id="calc-hkd" value="10000" oninput="calculateCurrency()" class="w-full bg-white border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brandDarkBlue">
+        <!-- 1-15天快速跳轉按鈕 (水平滾動) -->
+        <div class="flex overflow-x-auto pb-4 gap-2 mb-6 scrollbar-thin">
+          <button onclick="switchBudgetDay(0)" id="btn-budget-all" class="budget-day-btn active bg-brandDarkBlue text-white text-xs font-bold py-2 px-4 rounded-lg whitespace-nowrap transition">
+            全部15天總覽
+          </button>
+          <!-- JS 循環生成 Day 1 到 15 的按鈕 -->
+          <div id="budget-days-buttons" class="flex gap-2"></div>
+        </div>
+
+        <!-- 預算統計看板 (分四大類別) -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+          <div class="bg-red-50 p-4 rounded-xl border border-red-100 flex items-center justify-between">
+            <div>
+              <p class="text-[11px] text-red-500 font-bold tracking-wider">🎟️ 景點活動項目</p>
+              <p class="text-lg font-black text-red-700 mt-1" id="stat-attractions">HKD $0</p>
             </div>
-            <div class="text-lg font-bold text-gray-400 hidden md:block">➔</div>
-            <div class="w-full md:w-1/3 text-center bg-white border p-2 rounded">
-              <p class="text-xs text-gray-400 font-bold">折合英鎊 (GBP)</p>
-              <p class="text-lg font-black text-brandDarkBlue mt-1" id="res-gbp">£ 970.00</p>
-              <span class="text-[9px] text-gray-400">匯率 10.31 基準</span>
+            <i class="fa-solid fa-ticket text-red-300 text-3xl"></i>
+          </div>
+          <div class="bg-amber-50 p-4 rounded-xl border border-amber-100 flex items-center justify-between">
+            <div>
+              <p class="text-[11px] text-amber-500 font-bold tracking-wider">🍴 餐飲美食項目</p>
+              <p class="text-lg font-black text-amber-700 mt-1" id="stat-dining">HKD $0</p>
             </div>
-            <div class="w-full md:w-1/3 text-center bg-white border p-2 rounded">
-              <p class="text-xs text-gray-400 font-bold">折合歐元 (EUR)</p>
-              <p class="text-lg font-black text-emerald-800 mt-1" id="res-eur">€ 1,162.00</p>
-              <span class="text-[9px] text-gray-400">匯率 8.60 基準</span>
+            <i class="fa-solid fa-utensils text-amber-300 text-3xl"></i>
+          </div>
+          <div class="bg-blue-50 p-4 rounded-xl border border-blue-100 flex items-center justify-between">
+            <div>
+              <p class="text-[11px] text-blue-500 font-bold tracking-wider">🚗 交通接駁項目</p>
+              <p class="text-lg font-black text-blue-700 mt-1" id="stat-transport">HKD $0</p>
             </div>
+            <i class="fa-solid fa-plane text-blue-300 text-3xl"></i>
+          </div>
+          <div class="bg-emerald-50 p-4 rounded-xl border border-emerald-100 flex items-center justify-between">
+            <div>
+              <p class="text-[11px] text-emerald-500 font-bold tracking-wider">🏨 住宿酒店項目</p>
+              <p class="text-lg font-black text-emerald-700 mt-1" id="stat-accommodation">HKD $0</p>
+            </div>
+            <i class="fa-solid fa-hotel text-emerald-300 text-3xl"></i>
           </div>
         </div>
+
+        <!-- 主預算時間軸 & 列印表格 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          
+          <!-- 左側及中部：時間軸詳細串流 -->
+          <div class="lg:col-span-2 space-y-4">
+            <h4 class="font-bold text-sm text-gray-700 mb-3 flex items-center">
+              <i class="fa-solid fa-list-ol mr-2 text-brandOrange"></i> 
+              <span id="budget-timeline-title">全日預算項目流水賬</span>
+            </h4>
+            <div id="budget-timeline-container" class="space-y-4 max-h-[480px] overflow-y-auto pr-2 scrollbar-thin">
+              <!-- 由 JavaScript 動態繪製 -->
+            </div>
+          </div>
+
+          <!-- 右側：雙向匯率與記帳小幫手 -->
+          <div class="space-y-6">
+            <div class="bg-gray-50 p-5 rounded-xl border border-gray-200">
+              <h4 class="font-bold text-xs text-brandDarkBlue uppercase tracking-wider mb-3 flex items-center">
+                <i class="fa-solid fa-calculator mr-2 text-brandOrange"></i> 任意自訂貨幣換算
+              </h4>
+              <div class="space-y-4">
+                <div class="bg-white p-3 rounded-lg shadow-sm border">
+                  <label class="block text-[10px] font-bold text-gray-400 mb-1">輸入港幣 (HKD)</label>
+                  <input type="number" id="calc-hkd" value="10000" oninput="convertCurrency('hkd')" class="w-full bg-gray-50 border border-gray-300 rounded px-2.5 py-1.5 font-mono text-sm font-bold focus:bg-white focus:outline-none focus:ring-1 focus:ring-brandDarkBlue">
+                </div>
+                <div class="bg-white p-3 rounded-lg shadow-sm border">
+                  <label class="block text-[10px] font-bold text-gray-400 mb-1">輸入英鎊 (GBP)</label>
+                  <input type="number" id="calc-gbp" oninput="convertCurrency('gbp')" class="w-full bg-gray-50 border border-gray-300 rounded px-2.5 py-1.5 font-mono text-sm font-bold focus:bg-white focus:outline-none focus:ring-1 focus:ring-brandOrange">
+                </div>
+                <div class="bg-white p-3 rounded-lg shadow-sm border">
+                  <label class="block text-[10px] font-bold text-gray-400 mb-1">輸入歐元 (EUR)</label>
+                  <input type="number" id="calc-eur" oninput="convertCurrency('eur')" class="w-full bg-gray-50 border border-gray-300 rounded px-2.5 py-1.5 font-mono text-sm font-bold focus:bg-white focus:outline-none focus:ring-1 focus:ring-emerald-700">
+                </div>
+              </div>
+              <p class="text-[10px] text-gray-400 mt-4 leading-relaxed"><i class="fa-solid fa-circle-question"></i> 三個輸入框為全連動模式，您在任意一處修改數值，其餘兩者都將即時雙向反算。</p>
+            </div>
+
+            <!-- 預算貼心小卡 -->
+            <div class="bg-brandDarkBlue text-white p-5 rounded-xl">
+              <h5 class="font-bold text-xs text-brandGold mb-2"><i class="fa-solid fa-hand-holding-dollar"></i> 歐陸現場付款策略</h5>
+              <p class="text-[11px] leading-relaxed text-gray-200">
+                • <b>倫敦</b>：倫敦市區全面推行無現金卡交易（地鐵、餐廳皆直接感應 Apple Pay / 信用卡），現場無需攜帶過多現鈔。<br>
+                • <b>巴黎 & 慕尼黑</b>：部分地道小攤、穀物市場與傳統啤酒屋 (HB) 仍偏好歐元現鈔，建議全家出發前兌換約 800 至 1200 歐元現鈔備用。
+              </p>
+            </div>
+          </div>
+
+        </div>
+
       </div>
 
       <!-- 四人行李準備物品大清單 -->
@@ -1230,8 +1293,209 @@
     </div>
   </footer>
 
-  <!-- JavaScript 控制 -->
+  <!-- JavaScript 控制與動態預算資料庫 -->
   <script>
+    // 匯率常數
+    const GBP_RATE = 10.31;
+    const EUR_RATE = 8.60;
+
+    // 15天每日詳細預算項目資料庫
+    const budgetDatabase = [
+      // Day 1
+      {
+        day: 1,
+        items: [
+          { time: "18:45", category: "transport", name: "酷航客機 TR905 (澳門 ➔ 新加坡)", currency: "HKD", amount: 1500, payStatus: "prepaid" },
+          { time: "22:30", category: "dining", name: "新加坡樟宜機場輕食自理", currency: "HKD", amount: 150, payStatus: "cash" }
+        ]
+      },
+      // Day 2
+      {
+        day: 2,
+        items: [
+          { time: "01:05", category: "transport", name: "新加坡航空客機 SQ306 (新加坡 ➔ 倫敦)", currency: "HKD", amount: 4800, payStatus: "prepaid" },
+          { time: "10:00", category: "transport", name: "Heathrow Express 機場快線", currency: "GBP", amount: 30, payStatus: "prepaid" },
+          { time: "11:00", category: "accommodation", name: "Hilton London Metropole (1/3晚)", currency: "HKD", amount: 3158, payStatus: "prepaid" },
+          { time: "12:00", category: "dining", name: "The Red Lion 英式經典酒吧午餐", currency: "GBP", amount: 80, payStatus: "cash" },
+          { time: "18:30", category: "dining", name: "Flat Iron 炭烤手工牛排晚餐", currency: "GBP", amount: 120, payStatus: "cash" },
+          { time: "20:00", category: "transport", name: "倫敦地鐵/巴士交通費", currency: "GBP", amount: 31.15, payStatus: "cash" }
+        ]
+      },
+      // Day 3
+      {
+        day: 3,
+        items: [
+          { time: "09:00", category: "accommodation", name: "Hilton London Metropole (2/3晚)", currency: "HKD", amount: 3158, payStatus: "prepaid" },
+          { time: "12:00", category: "dining", name: "南肯辛頓區 Sunday Roast 烤肉午餐", currency: "GBP", amount: 80, payStatus: "cash" },
+          { time: "13:30", category: "attractions", name: "科學與自然史博物館 (兩館免費參觀)", currency: "GBP", amount: 0, payStatus: "prepaid" },
+          { time: "18:00", category: "dining", name: "Burger & Lobster 活龍蝦豪華大餐", currency: "GBP", amount: 140, payStatus: "cash" },
+          { time: "20:00", category: "transport", name: "倫敦市內地鐵交通費", currency: "GBP", amount: 31.15, payStatus: "cash" }
+        ]
+      },
+      // Day 4
+      {
+        day: 4,
+        items: [
+          { time: "09:00", category: "accommodation", name: "Hilton London Metropole (3/3晚)", currency: "HKD", amount: 3158, payStatus: "prepaid" },
+          { time: "10:00", category: "transport", name: "Euston ➔ Watford 來回火車與魔法巴士", currency: "GBP", amount: 40, payStatus: "cash" },
+          { time: "11:30", category: "attractions", name: "哈利波特影城全家門票 (已預付)", currency: "HKD", amount: 2400, payStatus: "prepaid" },
+          { time: "13:00", category: "dining", name: "影城主題餐廳午餐與奶油啤酒", currency: "GBP", amount: 50, payStatus: "cash" },
+          { time: "19:00", category: "dining", name: "Roti King 馬來西亞星馬餐晚宴", currency: "GBP", amount: 80, payStatus: "cash" }
+        ]
+      },
+      // Day 5
+      {
+        day: 5,
+        items: [
+          { time: "10:00", category: "transport", name: "倫敦轉酒店計程車交通費", currency: "GBP", amount: 20, payStatus: "cash" },
+          { time: "10:30", category: "accommodation", name: "Grange Beauchamp Hotel古典精品 (1/2晚)", currency: "HKD", amount: 3214, payStatus: "prepaid" },
+          { time: "11:30", category: "dining", name: "Rock and Sole Plaice 百年炸魚薯條午餐", currency: "GBP", amount: 80, payStatus: "cash" },
+          { time: "13:00", category: "attractions", name: "大英博物館專業粵語導賞票", currency: "HKD", amount: 1200, payStatus: "prepaid" },
+          { time: "18:30", category: "dining", name: "Ciao Bella 溫馨家庭意式晚餐", currency: "GBP", amount: 120, payStatus: "cash" },
+          { time: "20:00", category: "transport", name: "市區地鐵交通費", currency: "GBP", amount: 31.15, payStatus: "cash" }
+        ]
+      },
+      // Day 6
+      {
+        day: 6,
+        items: [
+          { time: "09:00", category: "accommodation", name: "Grange Beauchamp Hotel (2/2晚)", currency: "HKD", amount: 3214, payStatus: "prepaid" },
+          { time: "10:00", category: "attractions", name: "倫敦動物園親子門票", currency: "HKD", amount: 1100, payStatus: "prepaid" },
+          { time: "13:00", category: "dining", name: "Borough Market 百年市集美食自理", currency: "GBP", amount: 60, payStatus: "cash" },
+          { time: "17:00", category: "attractions", name: "Sky Garden 觀景溫室登頂預約", currency: "GBP", amount: 0, payStatus: "prepaid" },
+          { time: "18:30", category: "dining", name: "Flat Iron 頂級牛排晚餐 (二次回味)", currency: "GBP", amount: 120, payStatus: "cash" },
+          { time: "20:00", category: "transport", name: "市區地鐵交通費", currency: "GBP", amount: 31.15, payStatus: "cash" }
+        ]
+      },
+      // Day 7
+      {
+        day: 7,
+        items: [
+          { time: "08:30", category: "dining", name: "Caffè Tropea 特色綠意早點", currency: "GBP", amount: 40, payStatus: "cash" },
+          { time: "10:00", category: "dining", name: "Lina Stores 手作黑松露義麵午餐", currency: "GBP", amount: 80, payStatus: "cash" },
+          { time: "14:01", category: "transport", name: "歐洲之星 Eurostar 高鐵 (倫敦 ➔ 巴黎)", currency: "HKD", amount: 2824.26, payStatus: "prepaid" },
+          { time: "17:30", category: "accommodation", name: "Hôtel Régence Etoile巴黎凱旋門 (1/3晚)", currency: "HKD", amount: 2939, payStatus: "prepaid" },
+          { time: "19:00", category: "dining", name: "Le Grand Carnot 經典法式餐廳晚餐", currency: "EUR", amount: 120, payStatus: "cash" },
+          { time: "21:00", category: "transport", name: "巴黎市區地鐵與交通手續費", currency: "EUR", amount: 20, payStatus: "cash" }
+        ]
+      },
+      // Day 8
+      {
+        day: 8,
+        items: [
+          { time: "09:00", category: "accommodation", name: "Hôtel Régence Etoile (2/3晚)", currency: "HKD", amount: 2939, payed: true },
+          { name: "Blend Hamburger 爆汁起司漢堡午餐", category: "dining", costLocal: 80, currency: "EUR" },
+          { name: "羅浮宮博物館快速通關門票", category: "attraction", costLocal: 80, currency: "EUR", prepaid: true },
+          { name: "Paris Seine 塞納河遊船河及豪華晚宴", category: "dining", costLocal: 4552, currency: "HKD", prepaid: true },
+          { name: "巴黎地鐵與乘車票券", category: "transport", costLocal: 20, currency: "EUR" }
+        ]
+      },
+      // Day 9
+      {
+        day: 9,
+        items: [
+          { category: "dining", name: "Les Antiquaires 經典法式油封鴨午餐", amount: 100, currency: "EUR", payStatus: "cash" },
+          { category: "attractions", name: "蒙馬特聖心堂登頂纜車票", amount: 10, currency: "EUR", payStatus: "cash" },
+          { category: "dining", name: "Pink Mamma 網紅松露披薩意麵晚宴", amount: 120, currency: "EUR", payStatus: "现场自理" },
+          { category: "transport", name: "巴黎地鐵一日通車票", amount: 20, currency: "EUR" },
+          { category: "accommodation", name: "Hôtel Régence Etoile (3/3晚)", amount: 2939, currency: "HKD", payStatus: "prepaid" }
+        ]
+      },
+      // Day 10
+      {
+        day: 10,
+        items: [
+          { category: "transport", name: "德國漢莎航空 LH2231 (巴黎 ➔ 慕尼黑)", amount: 5652.64, currency: "HKD", payStatus: "prepaid" },
+          { category: "accommodation", name: "Courtyard by Marriott Munich (1/4晚)", amount: 2351, currency: "HKD", payStatus: "prepaid" },
+          { category: "dining", name: "Ruff's Burger 炭烤手工厚牛漢堡晚餐", amount: 80, currency: "EUR", payStatus: "cash" },
+          { category: "transport", name: "慕尼黑機場 S-Bahn 高速輕軌票", amount: 32.6, currency: "EUR", payStatus: "cash" }
+        ]
+      },
+      // Day 11
+      {
+        day: 11,
+        items: [
+          { category: "accommodation", name: "Courtyard by Marriott Munich (2/4晚)", amount: 2351, currency: "HKD", payStatus: "prepaid" },
+          { category: "dining", name: "ONE Nation Munich 歐陸創意料理午餐", amount: 80, currency: "EUR", payStatus: "cash" },
+          { category: "attractions", name: "德意志博物館親子門票 (已預付)", amount: 33, currency: "EUR", payStatus: "prepaid" },
+          { category: "dining", name: "Wirtshaus Au 經典巴伐利亞脆皮烤豬腳晚宴", amount: 120, currency: "EUR", payStatus: "cash" },
+          { category: "transport", name: "慕尼黑市區一日通票", amount: 20, currency: "EUR", payStatus: "cash" }
+        ]
+      },
+      // Day 12
+      {
+        day: 12,
+        items: [
+          { category: "accommodation", name: "Courtyard by Marriott Munich (3/4晚)", amount: 2351, currency: "HKD", payStatus: "prepaid" },
+          { category: "attractions", name: "BMW 博物館 / 寶馬世界門票", amount: 40, currency: "EUR", payStatus: "cash" },
+          { category: "dining", name: "Schlosswirtschaft Schwaige 德式炸牛排", amount: 80, currency: "EUR", payStatus: "cash" },
+          { category: "attractions", name: "寧芬堡宮巴洛克主殿與御花園入場券", amount: 40, currency: "EUR", payStatus: "cash" },
+          { category: "dining", name: "VAPIANO 意式隨心點單薄餅與沙拉", amount: 80, currency: "EUR", payStatus: "cash" },
+          { category: "transport", name: "市內單程票與電車票", amount: 20, currency: "EUR", payStatus: "cash" }
+        ]
+      },
+      // Day 13
+      {
+        day: 13,
+        items: [
+          { category: "accommodation", name: "Courtyard by Marriott Munich (4/4晚)", amount: 2351, currency: "HKD", payStatus: "prepaid" },
+          { category: "dining", name: "Haxnbauer 百年老店香烤豬手午餐", amount: 80, currency: "EUR", payStatus: "cash" },
+          { category: "attractions", name: "慕尼黑王宮古物大廳與珍寶館門票", amount: 30, currency: "EUR", payStatus: "cash" },
+          { category: "dining", name: "Hofbräuhaus HB 皇家啤酒屋狂歡慶功宴", amount: 120, currency: "EUR", payStatus: "cash" },
+          { category: "transport", name: "市內電車與捷運一日票", amount: 20, currency: "EUR", payStatus: "cash" }
+        ]
+      },
+      // Day 14
+      {
+        day: 14,
+        items: [
+          { category: "transport", name: "新加坡航空 SQ327 豪華客機 (慕尼黑 ➔ 新加坡)", amount: 5200, currency: "HKD", payStatus: "prepaid" },
+          { category: "dining", name: "機上奢華晚宴及機上娛樂零食", amount: 150, currency: "HKD", payStatus: "cash" },
+          { category: "transport", name: "S-Bahn 往慕尼黑國際機場接駁輕軌", amount: 32.6, currency: "EUR", payStatus: "cash" }
+        ]
+      },
+      // Day 15
+      {
+        day: 15,
+        items: [
+          { category: "dining", name: "樟宜機場亞坤咖椰吐司與香濃咖啡", amount: 100, currency: "HKD", payStatus: "cash" },
+          { category: "transport", name: "酷航客機 TR904 (新加坡 ➔ 澳門)", amount: 1200, currency: "HKD", payStatus: "prepaid" }
+        ]
+      }
+    ];
+
+    // 標準化預算格式（補全舊資料的命名與屬性，以防混淆）
+    function normalizeDatabase() {
+      budgetDatabase.forEach((dayData, idx) => {
+        // 如果沒有 day 屬性，自動補上
+        if (!dayData.day) {
+          dayData.day = idx + 1;
+        }
+        // 如果沒有 items 但有其他命名，進行標準化
+        if (dayData.items) {
+          dayData.items.forEach(item => {
+            // 對齊屬性名稱
+            if (item.category) item.category = item.category.replace('attractions', 'attraction').replace('transport', 'transportation');
+            if (item.amount && !item.costLocal) item.costLocal = item.amount;
+            if (item.payStatus && !item.prepaid) item.prepaid = (item.payStatus === 'prepaid');
+          });
+        }
+        // 特殊處理 Day 8 混合結構
+        if (dayData.day === 8) {
+          dayData.items = [
+            { time: "09:00", category: "accommodation", name: "Hôtel Régence Etoile巴黎凱旋門 (2/3晚)", currency: "HKD", costLocal: 2939, prepaid: true },
+            { time: "12:00", category: "dining", name: "Blend Hamburger 爆汁手工芝士漢堡午餐", currency: "EUR", costLocal: 80, prepaid: false },
+            { time: "13:30", category: "attraction", name: "羅浮宮博物館快速通關門票 (已預付)", currency: "EUR", costLocal: 80, prepaid: true },
+            { time: "18:30", category: "dining", name: "Paris Seine 塞納河豪華落地窗觀景船晚餐", currency: "HKD", costLocal: 4552, prepaid: true },
+            { time: "20:00", category: "transportation", name: "巴黎地鐵通票", currency: "EUR", costLocal: 20, prepaid: false }
+          ];
+        }
+      });
+    }
+
+    // 當前選取的天數 (0 = 全部天數)
+    let currentBudgetDay = 0;
+
     // 行李清單數據庫
     const packingData = {
       eric: {
@@ -1308,8 +1572,140 @@
     };
 
     window.onload = function() {
+      normalizeDatabase();
+      initBudgetDaysButtons();
+      renderBudgetDashboard();
       switchFamilyMember('eric');
+      convertCurrency('hkd'); // 預設初始化港幣轉換
     };
+
+    // 初始化15天預算跳轉按鈕
+    function initBudgetDaysButtons() {
+      const container = document.getElementById('budget-days-buttons');
+      container.innerHTML = '';
+      for (let i = 1; i <= 15; i++) {
+        container.innerHTML += `
+          <button onclick="switchBudgetDay(${i})" id="btn-budget-day-${i}" class="budget-day-btn bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-bold py-2 px-4 rounded-lg whitespace-nowrap transition">
+            Day ${i}
+          </button>
+        `;
+      }
+    }
+
+    // 轉換為港幣的輔助工具
+    function getHkdEquivalent(currency, amount) {
+      if (currency === 'GBP') return amount * GBP_RATE;
+      if (currency === 'EUR') return amount * EUR_RATE;
+      return amount; // HKD
+    }
+
+    // 計算並渲染預算儀表板
+    function renderBudgetDashboard() {
+      let totalAttractions = 0;
+      let totalDining = 0;
+      let totalTransport = 0;
+      let totalAccommodation = 0;
+
+      const timelineContainer = document.getElementById('budget-timeline-container');
+      timelineContainer.innerHTML = '';
+
+      let filterDays = currentBudgetDay === 0 ? budgetDatabase : budgetDatabase.filter(d => d.day === currentBudgetDay);
+
+      // 更新預算時間軸標題
+      document.getElementById('budget-timeline-title').innerText = currentBudgetDay === 0 
+        ? "全部 15 天完整預算項目流水賬" 
+        : `第 ${currentBudgetDay} 天詳細預算時間軸`;
+
+      // 遍歷符合條件的天數與項目
+      filterDays.forEach(dayData => {
+        if (!dayData.items) return;
+        
+        dayData.items.forEach(item => {
+          const hkdValue = getHkdEquivalent(item.currency, item.costLocal);
+
+          // 分類累計 (標準化分類識別)
+          const cat = (item.category || '').toLowerCase();
+          if (cat === 'attraction' || cat === 'attractions') {
+            totalAttractions += hkdValue;
+          } else if (cat === 'dining') {
+            totalDining += hkdValue;
+          } else if (cat === 'transport' || cat === 'transportation') {
+            totalTransport += hkdValue;
+          } else if (cat === 'accommodation') {
+            totalAccommodation += hkdValue;
+          }
+
+          // 繪製單條時間軸卡片
+          let catIcon = "🎟️";
+          let catBg = "bg-red-50 text-red-700 border-red-200";
+          if (cat === 'dining') { catIcon = "🍴"; catBg = "bg-amber-50 text-amber-700 border-amber-200"; }
+          if (cat === 'transport' || cat === 'transportation') { catIcon = "🚗"; catBg = "bg-blue-50 text-blue-700 border-blue-200"; }
+          if (cat === 'accommodation') { catIcon = "🏨"; catBg = "bg-emerald-50 text-emerald-700 border-emerald-200"; }
+
+          const prepaidBadge = item.prepaid 
+            ? `<span class="bg-blue-600 text-white text-[10px] font-black px-1.5 py-0.5 rounded">已預付</span>`
+            : `<span class="bg-orange-500 text-white text-[10px] font-black px-1.5 py-0.5 rounded">現場自理/現鈔</span>`;
+
+          const localPriceText = item.currency !== 'HKD' 
+            ? `<span class="text-xs text-gray-500 font-mono">(${item.currency} ${item.costLocal.toFixed(2)})</span>`
+            : '';
+
+          timelineContainer.innerHTML += `
+            <div class="flex items-start space-x-3 bg-white p-3 rounded-lg border shadow-sm print-shadow-none hover:shadow-md transition">
+              <span class="bg-brandDarkBlue text-white font-black text-xs px-2.5 py-1 rounded">D${dayData.day}</span>
+              <span class="text-gray-400 font-mono text-xs w-12 pt-0.5">${item.time || '全天'}</span>
+              <div class="flex-1">
+                <div class="flex items-center space-x-2">
+                  <span class="border text-[10px] font-bold px-1.5 py-0.5 rounded ${catBg}">${catIcon}</span>
+                  <h5 class="text-xs font-bold text-gray-800">${item.name}</h5>
+                </div>
+                <div class="flex justify-between items-center mt-2">
+                  <div class="flex items-center space-x-2">
+                    <span class="text-sm font-extrabold text-brandDarkBlue">HKD $${hkdValue.toFixed(1)}</span>
+                    ${localPriceText}
+                  </div>
+                  ${prepaidBadge}
+                </div>
+              </div>
+            </div>
+          `;
+        });
+      });
+
+      // 更新頂部卡片金額
+      document.getElementById('stat-attractions').innerText = `HKD $${totalAttractions.toLocaleString(undefined, {minimumFractionDigits:1, maximumFractionDigits:1})}`;
+      document.getElementById('stat-dining').innerText = `HKD $${totalDining.toLocaleString(undefined, {minimumFractionDigits:1, maximumFractionDigits:1})}`;
+      document.getElementById('stat-transport').innerText = `HKD $${totalTransport.toLocaleString(undefined, {minimumFractionDigits:1, maximumFractionDigits:1})}`;
+      document.getElementById('stat-accommodation').innerText = `HKD $${totalAccommodation.toLocaleString(undefined, {minimumFractionDigits:1, maximumFractionDigits:1})}`;
+
+      if (timelineContainer.innerHTML === '') {
+        timelineContainer.innerHTML = `<p class="text-center text-gray-400 text-xs py-8">本日無特定預算支出項目</p>`;
+      }
+    }
+
+    // 切換預算天數
+    function switchBudgetDay(dayNum) {
+      currentBudgetDay = dayNum;
+
+      // 重置所有按鈕樣式
+      const buttons = document.querySelectorAll('.budget-day-btn');
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-brandDarkBlue', 'text-white', 'active');
+        btn.classList.add('bg-gray-100', 'text-gray-700');
+      });
+
+      // 設置當前天數高亮
+      const activeBtn = dayNum === 0 
+        ? document.getElementById('btn-budget-all')
+        : document.getElementById(`btn-budget-day-${dayNum}`);
+      
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-gray-100', 'text-gray-700');
+        activeBtn.classList.add('bg-brandDarkBlue', 'text-white', 'active');
+      }
+
+      renderBudgetDashboard();
+    }
 
     // Tab 切換
     function switchTab(tabName) {
@@ -1372,22 +1768,45 @@
       toggleText.innerText = allExpanded ? "收起所有每日行程" : "展開所有每日行程";
     }
 
-    // 預算試算
-    function calculateCurrency() {
-      const hkdValue = parseFloat(document.getElementById('calc-hkd').value);
-      if (isNaN(hkdValue) || hkdValue < 0) {
-        document.getElementById('res-gbp').innerText = "£ 0.00";
-        document.getElementById('res-eur').innerText = "€ 0.00";
-        return;
-      }
+    // 智能三向即時匯率換算
+    function convertCurrency(source) {
       const gbpRate = 10.31;
       const eurRate = 8.60;
       
-      const resGbp = hkdValue / gbpRate;
-      const resEur = hkdValue / eurRate;
+      const hkdInput = document.getElementById('calc-hkd');
+      const gbpInput = document.getElementById('calc-gbp');
+      const eurInput = document.getElementById('calc-eur');
       
-      document.getElementById('res-gbp').innerText = "£ " + resGbp.toFixed(2);
-      document.getElementById('res-eur').innerText = "€ " + resEur.toFixed(2);
+      if (source === 'hkd') {
+        const hkdValue = parseFloat(hkdInput.value);
+        if (isNaN(hkdValue) || hkdValue < 0) {
+          gbpInput.value = "";
+          eurInput.value = "";
+          return;
+        }
+        gbpInput.value = (hkdValue / gbpRate).toFixed(2);
+        eurInput.value = (hkdValue / eurRate).toFixed(2);
+      } else if (source === 'gbp') {
+        const gbpValue = parseFloat(gbpInput.value);
+        if (isNaN(gbpValue) || gbpValue < 0) {
+          hkdInput.value = "";
+          eurInput.value = "";
+          return;
+        }
+        const calculatedHkd = gbpValue * gbpRate;
+        hkdInput.value = calculatedHkd.toFixed(2);
+        eurInput.value = (calculatedHkd / eurRate).toFixed(2);
+      } else if (source === 'eur') {
+        const eurValue = parseFloat(eurInput.value);
+        if (isNaN(eurValue) || eurValue < 0) {
+          hkdInput.value = "";
+          gbpInput.value = "";
+          return;
+        }
+        const calculatedHkd = eurValue * eurRate;
+        hkdInput.value = calculatedHkd.toFixed(2);
+        gbpInput.value = (calculatedHkd / gbpRate).toFixed(2);
+      }
     }
 
     // 切換行李物品清單人員
