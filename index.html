@@ -125,18 +125,6 @@
     </div>
   </header>
 
-  <!-- 印前提醒 (No Print) -->
-  <div class="max-w-7xl mx-auto px-4 mt-4 no-print">
-    <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 rounded shadow-sm flex items-center justify-between">
-      <div class="flex items-center space-x-3">
-        <i class="fa-solid fa-circle-info text-xl text-blue-600"></i>
-        <p class="text-sm">
-          <strong>私人手冊列印提示：</strong> 點擊右上角「儲存成 PDF / 列印」將自動套用完美的**無按鈕、自動分頁排版**，可直接列印成您的專屬隨身紙本手冊。
-        </p>
-      </div>
-    </div>
-  </div>
-
   <!-- 主要內容包裹器 -->
   <main class="max-w-7xl mx-auto px-4 py-6 md:py-8">
 
@@ -163,7 +151,7 @@
         <!-- 海報頂部 -->
         <div class="p-6 flex justify-between items-start z-10">
           <span class="bg-brandGold text-brandDarkBlue font-black text-xs md:text-sm px-4 py-2 rounded-full uppercase tracking-wider shadow-lg flex items-center">
-            <i class="fa-solid fa-glass-water-splashes mr-1 text-amber-600"></i> Eric 家族專屬 • 奢華消暑歐洲假期
+            <i class="fa-solid :fa-glass-water-splashes mr-1 text-amber-600"></i> Eric 家族專屬 • 奢華消暑歐洲假期
           </span>
           <div class="bg-orange-600 text-white font-extrabold text-xs px-3 py-1.5 rounded-md uppercase shadow-md">
             2026年7-8月盛夏
@@ -286,7 +274,7 @@
               </div>
             </div>
             <div class="mt-2 md:mt-0 flex items-center space-x-3 text-xs">
-              <span class="bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full"><i class="fa-solid fa-cloud-rain mr-1"></i> 澳門：27-32°C / 濕熱</span>
+              <span class="bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full"><i class="fa-solid fa-cloud-rain mr-1"></i> 澳門：27-32°C / 濕熱雷雨</span>
               <span class="text-gray-400"><i class="fa-solid fa-chevron-down text-base" id="arrow-1"></i></span>
             </div>
           </div>
@@ -381,7 +369,7 @@
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">12:00</span><span>於南肯辛頓區享用美味的地道英式周日烤肉餐。</span></div>
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">13:30</span><span>免費進入 <b>科學博物館 (Science Museum)</b>，孩子體驗互動科技裝置。</span></div>
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">15:30</span><span>探秘 <b>自然史博物館 (Natural History Museum)</b>，觀賞震撼的巨型恐龍骨骼。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:00</span><span>晚餐重本安排 <b>Burger & Lobster</b>，暢快品嚐整隻鮮美活龍蝦大餐。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:00</span><span>晚餐安排 <b>Burger & Lobster</b>，暢快品嚐整隻鮮美活龍蝦大餐。</span></div>
               </div>
               <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
                 <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
@@ -405,7 +393,7 @@
               </div>
             </div>
             <div class="mt-2 md:mt-0 flex items-center space-x-3 text-xs">
-              <span class="bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full"><i class="fa-solid fa-cloud-sun mr-1"></i> 沃特福德：13-22°C / 涼爽</span>
+              <span class="bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full"><i class="fa-solid fa-cloud-sun mr-1"></i> 沃特福德：13-22°C / 涼爽微風</span>
               <span class="text-gray-400"><i class="fa-solid fa-chevron-down text-base" id="arrow-4"></i></span>
             </div>
           </div>
@@ -434,7 +422,7 @@
           </div>
         </div>
 
-        <!-- Day 5 (DETAILED) -->
+        <!-- Day 5 -->
         <div class="bg-white rounded-xl shadow-md border-l-4 border-brandOrange overflow-hidden print-shadow-none print-border">
           <div onclick="toggleDay(5)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
             <div class="flex items-center space-x-4">
@@ -452,30 +440,30 @@
           
           <div id="day-detail-5" class="hidden p-5 border-t border-gray-100 bg-gray-50">
             <div class="bg-blue-50 border border-blue-200 p-3 rounded-lg mb-4 text-xs text-blue-800">
-              <strong><i class="fa-solid fa-shirt"></i> 穿搭建議：</strong> 大英博物館內冷氣較強且展區極大，建議穿着防滑休閒鞋與輕薄針織衫，方便室內徒步。
+              <strong><i class="fa-solid fa-shirt"></i> 穿搭建議：</strong> 大英博物館內展區極大，建議穿着防滑休閒鞋與輕薄針織衫，方便室內徒步。
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
               <div class="lg:col-span-2 space-y-4 text-sm">
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">09:00</span><span>享用希爾頓酒店英式早餐。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>辦理希爾頓酒店退房，將行李轉運至位於大英博物館旁典雅幽靜的 <b>Grange Beauchamp Hotel</b>（倫敦第二家特色精品酒店）。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>辦理希爾頓酒店退房，將行李轉運至位於大英博物館旁典雅幽靜的 <b>Grange Beauchamp Hotel</b>。</span></div>
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">11:30</span><span>於倫敦歷史最悠久的 <b>Rock and Sole Plaice</b> 享用正宗英式百年炸魚薯條。</span></div>
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">13:00</span><span><b>【重本已購票】</b>進入世界三大博物館之一的 <b>§大英博物館 (British Museum)</b>。由專業人員導賞，親歷羅塞塔石碑、木乃伊與希臘帕德嫩神廟群，極具教育意義。</span></div>
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">17:00</span><span>漫步 Tottenham Court Road 商業街，全家悠閒自由購物。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">19:00</span><span>晚餐特別安排於復古家庭意式餐廳 <b>Ciao Bella</b> 或 <b>Burger & Lobster - Bond Street</b> 享受頂級美味晚餐。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">19:00</span><span>晚餐特別安排於復古家庭意式餐廳 <b>Ciao Bella</b> 享受頂級美味意麵。</span></div>
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">21:00</span><span>返回 Grange Beauchamp Hotel 辦理入住，安歇於精緻古典客房。</span></div>
               </div>
               <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
                 <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
                 <p><strong>早：</strong> 酒店豐富自助早餐</p>
                 <p><strong>午：</strong> Rock and Sole Plaice 百年炸魚薯條</p>
-                <p><strong>晚：</strong> Ciao Bella 溫馨意式 / Burger & Lobster Bond Street</p>
+                <p><strong>晚：</strong> Ciao Bella 溫馨意式料理</p>
                 <p class="text-brandOrange"><strong>住宿：</strong> Grange Beauchamp Hotel</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Day 6 (DETAILED) -->
+        <!-- Day 6 -->
         <div class="bg-white rounded-xl shadow-md border-l-4 border-brandOrange overflow-hidden print-shadow-none print-border">
           <div onclick="toggleDay(6)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
             <div class="flex items-center space-x-4">
@@ -516,7 +504,7 @@
           </div>
         </div>
 
-        <!-- Day 7 (DETAILED) -->
+        <!-- Day 7 -->
         <div class="bg-white rounded-xl shadow-md border-l-4 border-brandOrange overflow-hidden print-shadow-none print-border">
           <div onclick="toggleDay(7)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
             <div class="flex items-center space-x-4">
@@ -557,7 +545,7 @@
           </div>
         </div>
 
-        <!-- Day 8 (DETAILED) -->
+        <!-- Day 8 -->
         <div class="bg-white rounded-xl shadow-md border-l-4 border-brandOrange overflow-hidden print-shadow-none print-border">
           <div onclick="toggleDay(8)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
             <div class="flex items-center space-x-4">
@@ -597,7 +585,7 @@
           </div>
         </div>
 
-        <!-- Day 9 (DETAILED) -->
+        <!-- Day 9 -->
         <div class="bg-white rounded-xl shadow-md border-l-4 border-brandOrange overflow-hidden print-shadow-none print-border">
           <div onclick="toggleDay(9)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
             <div class="flex items-center space-x-4">
@@ -638,7 +626,7 @@
           </div>
         </div>
 
-        <!-- Day 10 (DETAILED) -->
+        <!-- Day 10 -->
         <div class="bg-white rounded-xl shadow-md border-l-4 border-brandOrange overflow-hidden print-shadow-none print-border">
           <div onclick="toggleDay(10)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
             <div class="flex items-center space-x-4">
@@ -680,7 +668,7 @@
           </div>
         </div>
 
-        <!-- Day 11 (DETAILED) -->
+        <!-- Day 11 -->
         <div class="bg-white rounded-xl shadow-md border-l-4 border-brandOrange overflow-hidden print-shadow-none print-border">
           <div onclick="toggleDay(11)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
             <div class="flex items-center space-x-4">
@@ -720,7 +708,7 @@
           </div>
         </div>
 
-        <!-- Day 12 (DETAILED) -->
+        <!-- Day 12 -->
         <div class="bg-white rounded-xl shadow-md border-l-4 border-brandOrange overflow-hidden print-shadow-none print-border">
           <div onclick="toggleDay(12)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
             <div class="flex items-center space-x-4">
@@ -741,7 +729,7 @@
               <strong><i class="fa-solid fa-shirt"></i> 穿搭建議：</strong> 寧芬堡宮運河畔涼快，BMW 博物館極富科技感。建議著帥氣休閒裝，配備擋風薄外套。
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <div class="lg:col-span-2 space-y-4 text-sm">
+              <div class="grid lg:col-span-2 space-y-4 text-sm">
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">09:00</span><span>享用萬豪酒店豐富自助早餐。</span></div>
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>乘車前往巨大的 <b>奥林匹克公園 (Olympiapark)</b>，欣賞前衛的帳篷狀體育場。</span></div>
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">11:00</span><span><b>【重本已購票】</b>參觀頂尖現代化工業美學代表 <b>§BMW Museum (寶馬博物館)</b> 與 BMW 世界。</span></div>
@@ -760,7 +748,7 @@
           </div>
         </div>
 
-        <!-- Day 13 (DETAILED) -->
+        <!-- Day 13 -->
         <div class="bg-white rounded-xl shadow-md border-l-4 border-brandOrange overflow-hidden print-shadow-none print-border">
           <div onclick="toggleDay(13)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
             <div class="flex items-center space-x-4">
@@ -799,7 +787,7 @@
           </div>
         </div>
 
-        <!-- Day 14 (DETAILED) -->
+        <!-- Day 14 -->
         <div class="bg-white rounded-xl shadow-md border-l-4 border-brandOrange overflow-hidden print-shadow-none print-border">
           <div onclick="toggleDay(14)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
             <div class="flex items-center space-x-4">
@@ -810,7 +798,7 @@
               </div>
             </div>
             <div class="mt-2 md:mt-0 flex items-center space-x-3 text-xs">
-              <span class="bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full"><i class="fa-solid fa-plane mr-1"></i> 航機上 / 空中休息</span>
+              <span class="bg-blue-100 text-blue-700 font-bold px-2.5 py-1 rounded-full"><i class="fa-solid fa-cloud-sun mr-1"></i> 慕尼黑：13-24°C / 晴時多雲</span>
               <span class="text-gray-400"><i class="fa-solid fa-chevron-down text-base" id="arrow-14"></i></span>
             </div>
           </div>
@@ -831,13 +819,13 @@
                 <p><strong>早：</strong> 酒店豐富自助早餐</p>
                 <p><strong>午：</strong> 機場自理 / 航機上</p>
                 <p><strong>晚：</strong> 新加坡航空空中精緻晚餐</p>
-                <p class="text-brandOrange"><strong>住宿：</strong> 豪華航機上</p>
+                <p class="text-brandOrange"><strong>住宿：</strong> 航機上 / 轉機候機區</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Day 15 (DETAILED) -->
+        <!-- Day 15 -->
         <div class="bg-white rounded-xl shadow-md border-l-4 border-brandOrange overflow-hidden print-shadow-none print-border">
           <div onclick="toggleDay(15)" class="p-5 flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer hover:bg-gray-50 transition">
             <div class="flex items-center space-x-4">
@@ -848,14 +836,14 @@
               </div>
             </div>
             <div class="mt-2 md:mt-0 flex items-center space-x-3 text-xs">
-              <span class="bg-green-100 text-green-700 font-bold px-2.5 py-1 rounded-full"><i class="fa-solid fa-house-chimney-user mr-1"></i> 溫暖的家</span>
+              <span class="bg-green-100 text-green-700 font-bold px-2.5 py-1 rounded-full"><i class="fa-solid fa-house-chimney-user mr-1"></i> 新加坡：26-32°C / 澳門：28-33°C 炎熱潮濕</span>
               <span class="text-gray-400"><i class="fa-solid fa-chevron-down text-base" id="arrow-15"></i></span>
             </div>
           </div>
           
           <div id="day-detail-15" class="hidden p-5 border-t border-gray-100 bg-gray-50">
             <div class="bg-blue-50 border border-blue-200 p-3 rounded-lg mb-4 text-xs text-blue-800">
-              <strong><i class="fa-solid fa-shirt"></i> 穿搭建議：</strong> 澳門夏季炎熱，於新加坡轉機時可到洗手間更換為透氣清涼的夏裝。
+              <strong><i class="fa-solid fa-shirt"></i> 穿搭建議：</strong> 澳門與新加坡夏季炎熱潮濕，轉機時可至洗手間更換為透氣清涼的夏裝。
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
               <div class="lg:col-span-2 space-y-4 text-sm">
@@ -869,7 +857,7 @@
                 <p><strong>早：</strong> 新加坡亞坤地道早餐</p>
                 <p><strong>午：</strong> 航機上輕食</p>
                 <p><strong>晚：</strong> 溫暖的家</p>
-                <p class="text-brandOrange"><strong>住宿：</strong> 溫暖的家</p>
+                <p class="text-brandOrange"><strong>住宿：</strong> 溫溫暖的家</p>
               </div>
             </div>
           </div>
@@ -1045,7 +1033,7 @@
 
     </div>
 
-    <!-- TAB 4: 歐陸美饌特寫 (完全重構，列出所有更新餐廳，包含地圖與詳細配圖) -->
+    <!-- TAB 4: 歐陸美饌特寫 -->
     <div id="content-gourmet" class="tab-content hidden">
       <h2 class="text-2xl font-black text-brandDarkBlue mb-6 flex items-center border-b-2 border-brandOrange pb-2">
         <span class="bg-brandOrange text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-2"><i class="fa-solid fa-shrimp"></i></span>
@@ -1593,8 +1581,8 @@
             <div class="bg-brandDarkBlue text-white p-5 rounded-xl">
               <h5 class="font-bold text-xs text-brandGold mb-2"><i class="fa-solid fa-hand-holding-dollar"></i> 歐陸現場付款策略</h5>
               <p class="text-[11px] leading-relaxed text-gray-200">
-                • <b>倫敦</b>：倫敦市區全面推行無現金卡交易（地鐵、餐廳皆直接感應 Apple Pay / 信用卡），現場無需攜帶過多現鈔。<br>
-                • <b>巴黎 & 慕尼黑</b>：部分地道小攤、穀物市場與傳統啤酒屋 (HB) 仍偏好歐元現鈔，建議全家出發前兌換約 800 至 1200 歐元現鈔備用。
+                • <strong>倫敦</strong>：倫敦市區全面推行無現金卡交易（地鐵、餐廳皆直接感應 Apple Pay / 信用卡），現場無需攜帶過多現鈔。<br>
+                • <strong>巴黎 & 慕尼黑</strong>：部分地道小攤、穀物市場與傳統啤酒屋 (HB) 仍偏好歐元現鈔，建議全家出發前兌換約 800 至 1200 歐元現鈔備用。
               </p>
             </div>
           </div>
@@ -1705,7 +1693,7 @@
         day: 1,
         items: [
           { time: "18:45", category: "transport", name: "酷航客機 TR905 (澳門 ➔ 新加坡)", currency: "HKD", amount: 1500, payStatus: "prepaid" },
-          { time: "22:30", category: "dining", name: "新加坡樟宜機場輕食自理", currency: "HKD", amount: 150, payStatus: "cash" }
+          { time: "22:30", category: "dining", name: "星耀樟宜亞坤 / 機場小吃自理", currency: "HKD", amount: 120, payStatus: "cash" }
         ]
       },
       // Day 2
@@ -1750,7 +1738,7 @@
           { time: "10:30", category: "accommodation", name: "Grange Beauchamp Hotel (1/2晚)", currency: "HKD", amount: 3214, payStatus: "prepaid" },
           { time: "11:30", category: "dining", name: "Rock and Sole Plaice 百年炸魚薯條午餐", currency: "GBP", amount: 80, payStatus: "cash" },
           { time: "13:00", category: "attractions", name: "大英博物館專業粵語導賞票", currency: "HKD", amount: 1200, payStatus: "prepaid" },
-          { time: "19:00", category: "dining", name: "Ciao Bella / Burger & Lobster Bond St 晚餐", currency: "GBP", amount: 120, payStatus: "cash" },
+          { time: "19:00", category: "dining", name: "Ciao Bella 家庭風義式晚餐", currency: "GBP", amount: 120, payStatus: "cash" },
           { time: "20:00", category: "transport", name: "市區地鐵交通費", currency: "GBP", amount: 31.15, payStatus: "cash" }
         ]
       },
@@ -2188,9 +2176,9 @@
           eurInput.value = "";
           return;
         }
-        const calculatedHkd = gbpValue * gbpRate;
-        hkdInput.value = calculatedHkd.toFixed(2);
-        eurInput.value = (calculatedHkd / eurRate).toFixed(2);
+        const hkdValue = gbpValue * gbpRate;
+        hkdInput.value = hkdValue.toFixed(2);
+        eurInput.value = (hkdValue / eurRate).toFixed(2);
       } else if (source === 'eur') {
         const eurValue = parseFloat(eurInput.value);
         if (isNaN(eurValue) || eurValue < 0) {
@@ -2198,9 +2186,9 @@
           gbpInput.value = "";
           return;
         }
-        const calculatedHkd = eurValue * eurRate;
-        hkdInput.value = calculatedHkd.toFixed(2);
-        gbpInput.value = (calculatedHkd / gbpRate).toFixed(2);
+        const hkdValue = eurValue * eurRate;
+        hkdInput.value = hkdValue.toFixed(2);
+        gbpInput.value = (hkdValue / gbpRate).toFixed(2);
       }
     }
 
