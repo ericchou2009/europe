@@ -23,7 +23,7 @@
     }
   </script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght=300;400;500;700;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
     body {
       font-family: 'Noto Sans TC', sans-serif;
       background-color: #F3F4F6;
@@ -151,7 +151,7 @@
         <!-- 海報頂部 -->
         <div class="p-6 flex justify-between items-start z-10">
           <span class="bg-brandGold text-brandDarkBlue font-black text-xs md:text-sm px-4 py-2 rounded-full uppercase tracking-wider shadow-lg flex items-center">
-            <i class="fa-solid :fa-glass-water-splashes mr-1 text-amber-600"></i> Eric 家族專屬 • 奢華消暑歐洲假期
+            <i class="fa-solid fa-glass-water-splashes mr-1 text-amber-600"></i> Eric 家族專屬 • 奢華消暑歐洲假期
           </span>
           <div class="bg-orange-600 text-white font-extrabold text-xs px-3 py-1.5 rounded-md uppercase shadow-md">
             2026年7-8月盛夏
@@ -250,6 +250,23 @@
     <!-- TAB 2: 15天詳細行程 -->
     <div id="content-itinerary" class="tab-content hidden">
       
+      <!-- Emojis 視覺分類對照表 (Legend) -->
+      <div class="bg-brandLightBlue border border-blue-200 rounded-xl p-4 mb-6 shadow-sm">
+        <h4 class="font-bold text-xs text-brandDarkBlue uppercase tracking-wider mb-2.5 flex items-center">
+          <i class="fa-solid fa-eye mr-2"></i> 景點與地標分類圖標對照表 (Emoji Legend)
+        </h4>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+          <span class="flex items-center space-x-1.5 font-medium"><span class="text-sm">🏰</span> <span class="text-gray-600">皇宮・古堡・王室</span></span>
+          <span class="flex items-center space-x-1.5 font-medium"><span class="text-sm">🏛️</span> <span class="text-gray-600">博物館・展館・美學</span></span>
+          <span class="flex items-center space-x-1.5 font-medium"><span class="text-sm">🌳</span> <span class="text-gray-600">公園・自然・動物園</span></span>
+          <span class="flex items-center space-x-1.5 font-medium"><span class="text-sm">⛪</span> <span class="text-gray-600">歷史教堂・宗教聖地</span></span>
+          <span class="flex items-center space-x-1.5 font-medium"><span class="text-sm">🗼</span> <span class="text-gray-600">歷史地標・景觀橋樑</span></span>
+          <span class="flex items-center space-x-1.5 font-medium"><span class="text-sm">🛍️</span> <span class="text-gray-600">生活市集・繁華購物</span></span>
+          <span class="flex items-center space-x-1.5 font-medium"><span class="text-sm">🚇</span> <span class="text-gray-600">車站・機場交通節點</span></span>
+          <span class="flex items-center space-x-1.5 font-medium"><span class="text-sm">🍽️</span> <span class="text-gray-600">餐廳・咖啡廳・地道餐</span></span>
+        </div>
+      </div>
+
       <div class="flex justify-between items-center mb-6">
         <h2 class="text-2xl font-black text-brandDarkBlue flex items-center">
           <span class="bg-brandOrange text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-2">📅</span>
@@ -285,10 +302,10 @@
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
               <div class="lg:col-span-2 space-y-4 text-sm">
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">16:00</span><span>全家攜帶行李出發，避開下班人流前往澳門國際機場。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">16:30</span><span>抵達澳門國際機場，辦理行李託運與安全檢查。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">16:00</span><span>全家攜帶行李出發，避開下班人流前往 <a href="https://maps.google.com/?q=Macau+International+Airport" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🚇</span> 澳門國際機場</a>。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">16:30</span><span>抵達機場，辦理行李託運與安全檢查。</span></div>
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:45</span><span>搭乘酷航豪華客機 <b>TR905</b> 飛往新加坡。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">22:35</span><span>降落新加坡樟宜機場 (SIN)。稍作安頓，陪同 Ricky 和 Venus 到星耀樟宜觀賞著名室內瀑布。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">22:35</span><span>降落 <a href="https://maps.google.com/?q=Singapore+Changi+Airport" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🚇</span> 新加坡樟宜機場 (SIN)</a>。稍作安頓，陪同 Ricky 和 Venus 到 <a href="https://maps.google.com/?q=Jewel+Changi+Airport" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🌳</span> 星耀樟宜 (Jewel Changi)</a> 觀賞著名室內瀑布。</span></div>
               </div>
               <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
                 <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
@@ -323,18 +340,18 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
               <div class="lg:col-span-2 space-y-4 text-sm">
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">01:05</span><span>轉乘新加坡航空 <b>SQ306</b> 豪華客機前往倫敦。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">07:40</span><span>降落倫敦希斯路機場 (LHR)，辦理入境。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>搭乘 <b>Heathrow Express</b> 機場快線快速抵達市區。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">11:00</span><span>前往 <b>Hilton London Metropole</b> 酒店寄放行李。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">12:00</span><span>於西敏寺區經典酒吧 <b>The Red Lion</b> 享用傳統英式派與啤酒。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">14:00</span><span>地標拍攝巡禮：Ø大笨鐘、Ø西敏寺、柯芬園及國會大樓。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:30</span><span>晚餐安排人氣極高之 <b>Flat Iron</b> 手工牛排，小童獲贈迷你小菜刀紀念品。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">07:40</span><span>降落 <a href="https://maps.google.com/?q=London+Heathrow+Airport" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🚇</span> 倫敦希斯路機場 (LHR)</a>，辦理入境。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>搭乘 <a href="https://maps.google.com/?q=Heathrow+Express+Paddington" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🚇</span> Heathrow Express</a> 機場快線快速抵達市區。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">11:00</span><span>前往 <a href="https://maps.google.com/?q=Hilton+London+Metropole+225+Edgware+Rd" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🏨</span> Hilton London Metropole</a> 酒店寄放行李。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">12:00</span><span>於西敏寺區經典酒吧 <a href="https://maps.google.com/?q=The+Red+Lion+48+Parliament+St+London" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🍽️</span> The Red Lion</a> 享用傳統英式派與啤酒。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">14:00</span><span>地標拍攝巡禮：Ø<a href="https://maps.google.com/?q=Big+Ben+London" target="_blank" class="text-blue-600 underline"><span class="text-sm">🗼</span> 大笨鐘</a>、Ø<a href="https://maps.google.com/?q=Westminster+Abbey+London" target="_blank" class="text-blue-600 underline"><span class="text-sm">⛪</span> 西敏寺</a>、<a href="https://maps.google.com/?q=Covent+Garden+London" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🛍️</span> 柯芬園 (Covent Garden)</a> 及國會大樓。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:30</span><span>晚餐安排極致意式手工薄餅連鎖名店 <a href="https://maps.google.com/?q=Franco+Manca+39+Maiden+Ln+London" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🍽️</span> Franco Manca (Covent Garden)</a>。</span></div>
               </div>
               <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
                 <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
                 <p><strong>早：</strong> 飛機上精緻美饌</p>
                 <p><strong>午：</strong> The Red Lion 英式地道酒館</p>
-                <p><strong>晚：</strong> Flat Iron 炭烤冷藏牛排餐</p>
+                <p><strong>晚：</strong> Franco Manca 窯烤意式薄餅</p>
                 <p class="text-brandOrange"><strong>住宿：</strong> Hilton London Metropole</p>
               </div>
             </div>
@@ -363,13 +380,13 @@
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
               <div class="lg:col-span-2 space-y-4 text-sm">
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">08:30</span><span>於希爾頓酒店大堂享用豐盛的英式自助早餐。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">09:30</span><span>親子漫步 <b>海德公園 (Hyde Park)</b>，與松鼠及湖畔天鵝嬉戲。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:45</span><span>漫步至 <b>白金漢宮</b> 觀賞古典莊嚴的衛兵儀仗。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">12:00</span><span>於南肯辛頓區享用美味的地道英式周日烤肉餐。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">13:30</span><span>免費進入 <b>科學博物館 (Science Museum)</b>，孩子體驗互動科技裝置。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">15:30</span><span>探秘 <b>自然史博物館 (Natural History Museum)</b>，觀賞震撼的巨型恐龍骨骼。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:00</span><span>晚餐安排 <b>Burger & Lobster</b>，暢快品嚐整隻鮮美活龍蝦大餐。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">08:30</span><span>於 <a href="https://maps.google.com/?q=Hilton+London+Metropole+225+Edgware+Rd" target="_blank" class="text-blue-600 underline"><span class="text-sm">🏨</span> 希爾頓酒店</a> 大堂享用豐盛的英式自助早餐。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">09:30</span><span>親子漫步 <a href="https://maps.google.com/?q=Hyde+Park+London" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🌳</span> 海德公園 (Hyde Park)</a>，與松鼠及湖畔天鵝嬉戲。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:45</span><span>漫步至 <a href="https://maps.google.com/?q=Buckingham+Palace+London" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🏰</span> 白金漢宮 (Buckingham Palace)</a> 觀賞古典莊嚴的衛兵儀仗。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">12:00</span><span>於南肯辛頓區享用美味的地道英式烤肉餐。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">13:30</span><span>免費進入 <a href="https://maps.google.com/?q=Science+Museum+London" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🏛️</span> 科學博物館 (Science Museum)</a>，孩子體驗互動科技裝置。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">15:30</span><span>探秘 <a href="https://maps.google.com/?q=Natural+History+Museum+London" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🏛️</span> 自然史博物館 (Natural History Museum)</a>，觀賞震撼的巨型恐龍骨骼。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:00</span><span>晚餐安排 <a href="https://maps.google.com/?q=Burger+and+Lobster+Knightsbridge+London" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🍽️</span> Burger & Lobster (Knightsbridge)</a>，暢快品嚐整隻鮮美活龍蝦大餐。</span></div>
               </div>
               <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
                 <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
@@ -405,16 +422,16 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
               <div class="lg:col-span-2 space-y-4 text-sm">
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">08:30</span><span>在酒店享用熱騰騰的英式早餐。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:09</span><span>前往尤斯頓車站 (Euston) 乘火車直奔 Watford Junction，再搭魔法巴士前往影城。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">11:30</span><span>進入 <b>§哈利波特影城 (Warner Bros. Studio Tour)</b>。先在美食區暢飲奶油啤酒！</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:09</span><span>前往 <a href="https://maps.google.com/?q=Euston+Station+London" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🚇</span> 尤斯頓車站 (Euston)</a> 乘火車直奔 <a href="https://maps.google.com/?q=Watford+Junction+Station" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🚇</span> Watford Junction</a>，再搭魔法巴士前往影城。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">11:30</span><span>進入 <b>§<a href="https://maps.google.com/?q=Warner+Bros+Studio+Tour+London" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🎪</span> 哈利波特影城 (Warner Bros. Studio Tour)</a></b>。先在美食區 The Food Hall 暢飲奶油啤酒！</span></div>
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">13:00</span><span>深度遊覽斜角巷、霍格華茲特快列車 9¾ 月台、鄧不利多校長室、禁忌森林。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">17:00</span><span>於巨型影城旗艦店選購精美魔法紀念品。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">19:00</span><span>返回倫敦市區。晚餐享用人氣爆棚的馬來餐廳 <b>Roti King</b>，一嚐美味的咖哩拉餅。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">17:00</span><span>於大禮堂與巨型影城旗艦店選購精美魔法紀念品。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">19:00</span><span>返回倫敦市區。晚餐享用人氣爆棚的馬來餐廳 <a href="https://maps.google.com/?q=Roti+King+Doric+Way+London" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🍽️</span> Roti King</a>，一嚐美味的咖哩拉餅。</span></div>
               </div>
               <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
                 <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
                 <p><strong>早：</strong> 酒店豐富自助早餐</p>
-                <p><strong>午：</strong> 影城自理 / 奶油啤酒與小食</p>
+                <p><strong>午：</strong> 影城 The Food Hall 奶油啤酒與小食</p>
                 <p><strong>晚：</strong> Roti King 亞洲風情料理</p>
                 <p class="text-brandOrange"><strong>住宿：</strong> Hilton London Metropole</p>
               </div>
@@ -445,11 +462,11 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
               <div class="lg:col-span-2 space-y-4 text-sm">
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">09:00</span><span>享用希爾頓酒店英式早餐。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>辦理希爾頓酒店退房，將行李轉運至位於大英博物館旁典雅幽靜的 <b>Grange Beauchamp Hotel</b>。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">11:30</span><span>於倫敦歷史最悠久的 <b>Rock and Sole Plaice</b> 享用正宗英式百年炸魚薯條。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">13:00</span><span><b>【重本已購票】</b>進入世界三大博物館之一的 <b>§大英博物館 (British Museum)</b>。由專業人員導賞，親歷羅塞塔石碑、木乃伊與希臘帕德嫩神廟群，極具教育意義。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">17:00</span><span>漫步 Tottenham Court Road 商業街，全家悠閒自由購物。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">19:00</span><span>晚餐特別安排於復古家庭意式餐廳 <b>Ciao Bella</b> 享受頂級美味意麵。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>辦理希爾頓酒店退房，將行李轉運至位於大英博物館旁典雅幽靜的 <a href="https://maps.google.com/?q=Grange+Beauchamp+Hotel+24-27+Bedford+Place" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🏨</span> Grange Beauchamp Hotel</a>。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">11:30</span><span>於倫敦歷史最悠久的 <a href="https://maps.google.com/?q=Rock+and+Sole+Plaice+47+Endell+St" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🍽️</span> Rock and Sole Plaice</a> 享用正宗英式百年炸魚薯條。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">13:00</span><span><b>【重本已購票】</b>進入世界三大博物館之一的 <b>§<a href="https://maps.google.com/?q=British+Museum+London" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🏛️</span> 大英博物館 (British Museum)</b></a>。由專業人員導賞，親歷羅塞塔石碑、木乃伊與希臘帕德嫩神廟群。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">17:00</span><span>漫步 <a href="https://maps.google.com/?q=Tottenham+Court+Road+London" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🛍️</span> Tottenham Court Road</a> 商業街，全家悠閒自由購物。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">19:00</span><span>晚餐特別安排於復古家庭意式餐廳 <a href="https://maps.google.com/?q=Ciao+Bella+86-90+Lambs+Conduit+St+London" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🍽️</span> Ciao Bella Restaurant</a> 享受頂級美味意麵。另可隨心選購 <a href="https://maps.google.com/?q=Burger+and+Lobster+26+Binney+St+London" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🍽️</span> Burger & Lobster (Bond St)</a>。</span></div>
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">21:00</span><span>返回 Grange Beauchamp Hotel 辦理入住，安歇於精緻古典客房。</span></div>
               </div>
               <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
@@ -469,7 +486,7 @@
             <div class="flex items-center space-x-4">
               <span class="bg-brandOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 6</span>
               <div>
-                <h3 class="text-lg font-bold text-brandDarkBlue">倫敦動物園 ➔ 波羅市場 ➔ 倫敦塔橋 ➔ 空中花園 Sky Garden</h3>
+                <h3 class="text-lg font-bold text-brandDarkBlue">國家美術館 ➔ 波羅市場 ➔ 倫敦塔橋 ➔ 空中花園 Sky Garden</h3>
                 <p class="text-xs text-gray-500"><i class="fa-solid fa-calendar mr-1"></i> 2026年7月29日 (星期三)</p>
               </div>
             </div>
@@ -485,12 +502,12 @@
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
               <div class="lg:col-span-2 space-y-4 text-sm">
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">09:00</span><span>於 <b>The Moon Under Water - JD Wetherspoon</b> 享用傳統英式豐盛早餐。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>前往創立於1828年的世界著名 <b>§倫敦動物園 (ZSL London Zoo)</b>，欣賞可愛的企鵝與長頸鹿。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">13:00</span><span>造訪泰晤士河南岸百年歷史美食市集 <b>Borough Market</b>，午餐在此自理，品嚐新鮮生蠔與各種特色小吃。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">14:30</span><span>漫步泰晤士河畔，拍攝 <b>Tower Bridge 倫敦塔橋</b>、倫敦橋及千禧橋 (Millennium Bridge)。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">17:00</span><span><b>【重本預約】</b>登上高空溫室 <b>Sky Garden (空中花園)</b>，360度俯瞰夕陽染紅泰晤士河。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:30</span><span>晚餐安排享用 <b>Flat Iron Borough</b> 嫩烤板腱牛排。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">09:00</span><span>於 <a href="https://maps.google.com/?q=The+Moon+Under+Water+JD+Wetherspoon+London" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🍽️</span> The Moon Under Water - JD Wetherspoon</a> 享用傳統英式豐盛早餐。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>前往特拉法加廣場參觀偉大的 <a href="https://maps.google.com/?q=National+Gallery+London" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🏛️</span> 國家美術館 (National Gallery)</a>，欣賞梵高名畫。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">13:00</span><span>造訪泰晤士河南岸百年歷史美食市集 <a href="https://maps.google.com/?q=Borough+Market+11+Clink+St+London" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🛍️</span> Borough Market</a>，品嚐新鮮生蠔與各種特色小吃。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">14:30</span><span>漫步泰晤士河畔，拍攝 <a href="https://maps.google.com/?q=Tower+Bridge+London" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🗼</span> Tower Bridge 倫敦塔橋</a>、<a href="https://maps.google.com/?q=London+Bridge" target="_blank" class="text-blue-600 underline"><span class="text-sm">🗼</span> 倫敦橋</a>、<a href="https://maps.google.com/?q=Millennium+Bridge+London" target="_blank" class="text-blue-600 underline"><span class="text-sm">🗼</span> 千禧橋</a> 及參觀外部的 <a href="https://maps.google.com/?q=Tate+Modern+London" target="_blank" class="text-blue-600 underline"><span class="text-sm">🏛️</span> 泰特現代美術館 (Tate Modern)</a>。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">17:00</span><span><b>【重本預約】</b>登上高空溫室 <a href="https://maps.google.com/?q=Sky+Garden+London" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🗼</span> Sky Garden (空中花園)</a>，360度俯瞰泰晤士河夕陽美景。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:30</span><span>晚餐安排享用 <a href="https://maps.google.com/?q=Flat+Iron+11+Clink+St+London" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🍽️</span> Flat Iron Borough</a> 嫩烤板腱牛排。</span></div>
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">20:30</span><span>散步回酒店 Grange Beauchamp Hotel。</span></div>
               </div>
               <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
@@ -526,13 +543,13 @@
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
               <div class="lg:col-span-2 space-y-4 text-sm">
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">08:30</span><span>於 Russell Square 的 <b>Caffè Tropea</b> 綠意花園享用晨光早餐，打包行李退房。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>前往聖潘克拉斯車站 (St Pancras)，於極具文藝氣息的 <b>Lina Stores</b> 享用精緻意麵午餐。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">08:30</span><span>於 Russell Square 的 <a href="https://maps.google.com/?q=Caffe+Tropea+Russell+Sq+London" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🍽️</span> Caffè Tropea</a> 綠意花園享用晨光早餐，打包行李退房。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>前往 <a href="https://maps.google.com/?q=St+Pancras+International+Station" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🚇</span> 聖潘克拉斯車站 (St Pancras)</a>，於極具文藝氣息的 <a href="https://maps.google.com/?q=Lina+Stores+St+Pancras+London" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🍽️</span> Lina Stores</a> 享用精緻意麵午餐。</span></div>
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">12:30</span><span>辦理 Eurostar 歐洲之星出閘與登車手續。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">14:01</span><span>搭乘 <b>【歐洲之星 Eurostar】</b> 跨國高鐵，穿越海底隧道，風馳電掣直奔巴黎。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">17:17</span><span>順利抵達巴黎北站 (Gare du Nord)，前往凱旋門區下榻精品酒店 <b>Hôtel Régence Etoile</b> 寄存行李。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">19:00</span><span>晚餐前往凱旋門附近的 <b>Le Grand Carnot</b> 享用經典法式牛排與當地美饌。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">21:00</span><span>餐後夜漫 <b>凱旋門 (Arc de Triomphe)</b> 廣場，欣賞香榭麗舍大街夜景。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">14:01</span><span>搭乘 <b>【歐洲之星 Eurostar】</b> 跨國高鐵，穿越海底鐵路，風馳電掣直奔巴黎。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">17:17</span><span>順利抵達 <a href="https://maps.google.com/?q=Gare+du+Nord+Paris" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🚇</span> 巴黎北站 (Gare du Nord)</a>，前往凱旋門區下榻精品酒店 <a href="https://maps.google.com/?q=Hotel+Regence+Etoile+24+Av+Carnot+Paris" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🏨</span> Hôtel Régence Etoile</a> 寄存行李。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">19:00</span><span>晚餐前往凱旋門附近的 <a href="https://maps.google.com/?q=Le+Grand+Carnot+32+Av+Carnot+Paris" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🍽️</span> Le Grand Carnot</a> 享用經典法式牛排與當地美饌。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">21:00</span><span>餐後夜漫 <a href="https://maps.google.com/?q=Arc+de+Triomphe+Paris" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🗼</span> 凱旋門 (Arc de Triomphe)</a> 廣場，欣賞 <a href="https://maps.google.com/?q=Champs-Elysees+Paris" target="_blank" class="text-blue-600 underline"><span class="text-sm">🛍️</span> 香榭麗舍大街夜景</a>。</span></div>
               </div>
               <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
                 <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
@@ -568,11 +585,11 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
               <div class="lg:col-span-2 space-y-4 text-sm">
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">09:00</span><span>於酒店享用美味早餐。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>漫步於 <b>香榭麗舍大街</b>、協和廣場及綠意盎然的 <b>杜樂麗花園 (Jardin des Tuileries)</b>。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">12:00</span><span>午餐品嚐巴黎人氣 <b>Blend Hamburger Madeleine</b> 爆汁手工芝士漢堡或特色薄餅 <b>Creperie Parisienne</b>。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">13:30</span><span><b>【重本預約購票】</b>進入世界頂級藝術殿堂 <b>§羅浮宮博物館 (Louvre)</b>，一睹經典的玻璃金字塔，週圍留影拍照。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">17:00</span><span>下午茶特別享用 <b>L’Eclair de Génie (la Fabrique)</b> 傳奇閃電泡芙。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:30</span><span><b>【奢華重本企劃】</b>登上 <b>Paris Seine 塞納河豪華全玻璃落地窗觀景船</b> 享用法式正宗三道式日落晚餐。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>漫步於 <a href="https://maps.google.com/?q=Champs-Elysees+Paris" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🛍️</span> 香榭麗舍大街</a>、協和廣場及綠意盎然的 <a href="https://maps.google.com/?q=Jardin+des+Tuileries+Paris" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🌳</span> 杜樂麗花園 (Jardin des Tuileries)</a>。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">12:00</span><span>午餐品嚐巴黎人氣 <a href="https://maps.google.com/?q=Blend+Hamburger+18+Rue+Duphot+Paris" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🍽️</span> Blend Hamburger Madeleine</a> 爆汁手工芝士漢堡或特色薄餅 <a href="https://maps.google.com/?q=Creperie+Parisienne+Paris" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🍽️</span> Creperie Parisienne</a>。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">13:30</span><span><b>【重本預約購票】</b>進入世界頂級藝術殿堂 <b>§<a href="https://maps.google.com/?q=Louvre+Museum+Paris" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🏛️</span> 羅浮宮博物館 (Louvre)</a></b>，一睹經典的玻璃金字塔，週圍留影拍照。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">17:00</span><span>下午茶特別享用 <a href="https://maps.google.com/?q=L+Eclair+de+Genie+32+Rue+Notre+Dame+des+Victoires+Paris" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🍽️</span> L’Eclair de Génie (la Fabrique)</a> 傳奇閃電泡芙。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:30</span><span><b>【奢華重本企劃】</b>登上 <a href="https://maps.google.com/?q=Paris+Seine+Port+de+la+Bourdonnais+Paris" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🍽️</span> Paris Seine (塞納河豪華全玻璃落地窗觀景船)</a> 享用法式正宗三道式日落晚餐。</span></div>
               </div>
               <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
                 <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
@@ -603,22 +620,22 @@
           
           <div id="day-detail-9" class="hidden p-5 border-t border-gray-100 bg-gray-50">
             <div class="bg-blue-50 border border-blue-200 p-3 rounded-lg mb-4 text-xs text-blue-800">
-              <strong><i class="fa-solid fa-shirt"></i> 穿搭建議：</strong> 建議穿著亮色夏裝，在鐵塔和聖心堂拍照最出片，聖心堂台階多，請穿舒緩平底運動鞋。
+              <strong><i class="fa-solid fa-shirt"></i> 穿搭建議：</strong> 建議穿著亮色夏裝，在鐵塔 and 聖心堂拍照最出片，聖心堂台階多，請穿舒緩平底運動鞋。
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
               <div class="lg:col-span-2 space-y-4 text-sm">
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">09:00</span><span>享用酒店早餐。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>前往戰神廣場、Bir-Hakeim 比爾哈凱姆鋼索橋拍攝 <b>巴黎鐵塔</b> 最佳角度。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">11:30</span><span>穿行美麗的 <b>盧森堡公園 (Jardin du Luxembourg)</b>。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">12:00</span><span>午餐前往拉丁區品嚐超人氣 <b>Kodawari Ramen (Yokochō)</b> 特色主題拉麵或 <b>Les Antiquaires</b> 法式油封鴨。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">14:00</span><span>瞻仰 <b>巴黎聖母院 (Notre-Dame)</b> 外圍風采與蒙馬特高地 <b>聖心堂 (Sacré-Cœur)</b>。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">17:00</span><span>前往 <b>拉法葉百貨 (Galeries Lafayette Haussmann)</b> 自由購物。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:30</span><span>晚餐於 <b>Galeries Lafayette Le Gourmet</b> 享用精緻多國料理。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>前往戰神廣場、比爾哈凱姆鋼索橋拍攝 <a href="https://maps.google.com/?q=Eiffel+Tower+Paris" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🗼</span> 巴黎鐵塔 (Eiffel Tower)</a> 最佳角度。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">11:30</span><span>穿行美麗的 <a href="https://maps.google.com/?q=Jardin+du+Luxembourg+Paris" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🌳</span> 盧森堡公園 (Jardin du Luxembourg)</a>。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">12:00</span><span>午餐前往拉丁區品嚐超人氣 <a href="https://maps.google.com/?q=Kodawari+Ramen+Yokocho+29+Rue+Mazarine+Paris" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🍽️</span> Kodawari Ramen (Yokochō)</a> 特色主題拉麵。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">14:00</span><span>瞻仰 <a href="https://maps.google.com/?q=Cathédrale+Notre-Dame+de+Paris" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">⛪</span> 巴黎聖母院 (Notre-Dame)</a> 外圍風采與蒙馬特高地 <a href="https://maps.google.com/?q=Sacré-Coeur+Paris" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">⛪</span> 聖心堂 (Sacré-Cœur)</a>。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">17:00</span><span>前往 <a href="https://maps.google.com/?q=Galeries+Lafayette+Haussmann+Paris" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🛍️</span> 拉法葉百貨 (Galeries Lafayette Haussmann)</a> 自由購物。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:30</span><span>晚餐於 <a href="https://maps.google.com/?q=Galeries+Lafayette+Le+Gourmet+Paris" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🍽️</span> Galeries Lafayette Le Gourmet</a> 享用精緻多國料理。</span></div>
               </div>
               <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
                 <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
                 <p><strong>早:</strong> 酒店早餐</p>
-                <p><strong>午:</strong> Kodawari Ramen (Yokochō) / Les Antiquaires</p>
+                <p><strong>午:</strong> Kodawari Ramen (Yokochō)</p>
                 <p><strong>晚:</strong> Galeries Lafayette Le Gourmet</p>
                 <p class="text-brandOrange"><strong>住宿:</strong> Hôtel Régence Etoile</p>
               </div>
@@ -649,13 +666,13 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
               <div class="lg:col-span-2 space-y-4 text-sm">
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">09:00</span><span>退房打包，享用法式輕早餐。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:30</span><span>專車前往巴黎戴高樂機場 (CDG)，辦理退稅手續與行李託運。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:30</span><span>專車前往 <a href="https://maps.google.com/?q=Charles+de+Gaulle+Airport+Paris" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🚇</span> 巴黎戴高樂機場 (CDG)</a>，辦理退稅手續與行李託運。</span></div>
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">12:00</span><span>於 CDG 機場享用簡便午餐。</span></div>
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">14:15</span><span>搭乘德國漢莎客機 <b>LH2231</b> 飛往巴伐利亞首府慕尼黑。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">15:45</span><span>順利降落慕尼黑機場 (MUC)，搭乘 S-Bahn (S1/S8) 高速輕軌直奔市中心。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">17:00</span><span>入住位於老城核心的萬豪旗下 <b>Courtyard by Marriott Munich City Center</b>。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:00</span><span>步行前往老城中心 <b>瑪麗恩廣場 (Marienplatz)</b> 欣賞哥德風新市政廳。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">19:00</span><span>晚餐享用慕尼黑高人氣 <b>Ruff's burger</b> 炭烤手工厚牛漢堡配脆薯。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">15:45</span><span>順利降落 <a href="https://maps.google.com/?q=Munich+Airport" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🚇</span> 慕尼黑機場 (MUC)</a>，搭乘 S-Bahn (S1/S8) 高速輕軌直奔市中心。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">17:00</span><span>入住位於老城核心的萬豪旗下 <a href="https://maps.google.com/?q=Courtyard+by+Marriott+Munich+City+Center" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🏨</span> Courtyard by Marriott Munich City Center</a>。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:00</span><span>步行前往老城中心 <a href="https://maps.google.com/?q=Marienplatz+Munich" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🗼</span> 瑪麗恩廣場 (Marienplatz)</a> 欣賞哥德風新市政廳。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">19:00</span><span>晚餐享用慕尼黑高人氣 <a href="https://maps.google.com/?q=Ruffs+burger+Munich+Germany" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🍽️</span> Ruff's burger</a> 炭烤手工厚牛漢堡配脆薯。</span></div>
               </div>
               <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
                 <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
@@ -691,17 +708,17 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
               <div class="lg:col-span-2 space-y-4 text-sm">
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">09:00</span><span>享用萬豪酒店豐盛的德式自助早餐。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>漫步於慕尼黑百年生活市集 <b>穀物市場 (Viktualienmarkt)</b>。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">11:30</span><span>探訪 <b>Frauenkirche 聖母教堂</b> 觀看「惡魔腳印」，隨後挑戰登頂 <b>St. Peters Kirche 老彼得教堂</b>，鳥瞰老城全景。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">13:00</span><span>午餐安排前往 <b>ONE Nation Munich</b> 享用精緻歐洲創意特色料理。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">15:00</span><span><b>【重本已購票】</b>進入世界最大自然科學與工業博物館 <b>§德意志博物館 (Deutsches Museum)</b>，豐富有趣的科學實驗。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:30</span><span>晚餐重本安排地道巴伐利亞脆皮烤豬腳晚宴。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>漫步於慕尼黑百年生活市集 <a href="https://maps.google.com/?q=Viktualienmarkt+Munich" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🛍️</span> 穀物市場 (Viktualienmarkt)</a>。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">11:30</span><span>探訪 <a href="https://maps.google.com/?q=Frauenkirche+Munich" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">⛪</span> Frauenkirche 聖母教堂</a> 觀看「惡魔腳印」，隨後挑戰登頂 <a href="https://maps.google.com/?q=St+Peters+Church+Munich" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">⛪</span> St. Peters Kirche 老彼得教堂</a>，鳥瞰老城全景。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">13:00</span><span>午餐安排前往 <a href="https://maps.google.com/?q=ONE+Nation+Munich" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🍽️</span> ONE Nation Munich</a> 享用精緻歐洲創意特色料理。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">15:00</span><span><b>【重本已購票】</b>進入世界最大自然科學與工業博物館 <b>§<a href="https://maps.google.com/?q=Deutsches+Museum+Munich" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🏛️</span> 德意志博物館 (Deutsches Museum)</a></b>，豐富有趣的科學實驗。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:30</span><span>晚餐重本安排地道巴伐利亞脆皮烤豬腳晚宴於經典名店 <a href="https://maps.google.com/?q=Wirtshaus+in+der+Au+Munich" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🍽️</span> Wirtshaus in der Au</a>。</span></div>
               </div>
               <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
                 <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
                 <p><strong>早：</strong> 酒店德式自助早餐</p>
                 <p><strong>午：</strong> ONE Nation Munich 歐陸料理</p>
-                <p><strong>晚：</strong> 德式地道脆皮豬手晚餐</p>
+                <p><strong>晚：</strong> Wirtshaus in der Au 德式地道脆皮豬手晚餐</p>
                 <p class="text-brandOrange"><strong>住宿：</strong> Courtyard by Marriott Munich City Center</p>
               </div>
             </div>
@@ -731,11 +748,11 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
               <div class="grid lg:col-span-2 space-y-4 text-sm">
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">09:00</span><span>享用萬豪酒店豐富自助早餐。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>乘車前往巨大的 <b>奥林匹克公園 (Olympiapark)</b>，欣賞前衛的帳篷狀體育場。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">11:00</span><span><b>【重本已購票】</b>參觀頂尖現代化工業美學代表 <b>§BMW Museum (寶馬博物館)</b> 與 BMW 世界。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">12:00</span><span>午餐特別安排在寧芬堡宮歷史老店 <b>Schlosswirtschaft Schwaige</b> 享用傳統德式炸牛排。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">14:00</span><span><b>【重本已購票】</b>遊覽巴洛克皇家離宮 <b>§寧芬堡宮 (Schloß Nymphenburg)</b>，漫步古典御花園。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:00</span><span>晚餐前往時尚意式餐廳 <b>VAPIANO</b> 享受全家自由點單的沙拉與薄底意式披薩。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>乘車前往巨大的 <a href="https://maps.google.com/?q=Olympiapark+Munich" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🌳</span> 奥林匹克公園 (Olympiapark)</a>，欣賞前衛的帳篷狀體育場。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">11:00</span><span><b>【重本已購票】</b>參觀頂尖現代化工業美學代表 <b>§<a href="https://maps.google.com/?q=BMW+Museum+Munich" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🏛️</span> BMW Museum (寶馬博物館)</a></b> 與 BMW 世界。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">12:00</span><span>午餐特別安排在寧芬堡宮歷史老店 <a href="https://maps.google.com/?q=Schlosswirtschaft+Schwaige+Munich" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🍽️</span> Schlosswirtschaft Schwaige</a> 享用傳統德式炸牛排。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">14:00</span><span><b>【重本已購票】</b>遊覽巴洛克皇家離宮 <b>§<a href="https://maps.google.com/?q=Nymphenburg+Palace+Munich" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🏰</span> 寧芬堡宮 (Schloß Nymphenburg)</a></b>，漫步古典御花園。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:00</span><span>晚餐前往時尚意式餐廳 <a href="https://maps.google.com/?q=Vapiano+Theatinerstrasse+15+Munich" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🍽️</span> VAPIANO</a> 享受全家自由點單的沙拉與薄底意式披薩。</span></div>
               </div>
               <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
                 <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
@@ -755,7 +772,7 @@
               <span class="bg-brandOrange text-white font-black text-lg py-2 px-4 rounded-lg">Day 13</span>
               <div>
                 <h3 class="text-lg font-bold text-brandDarkBlue">英國花園激流衝浪 ➔ 慕尼黑王宮 ➔ 皇家啤酒屋 HB 狂歡</h3>
-                <p class="text-xs text-gray-500"><i class="fa-solid fa-calendar mr-1"></i> 2026年8月5日 (星期三)</p>
+                <p class="text-xs text-gray-500"><i class="fa-solid fa-calendar mr-1"></i> 2026年8月5日 (星期Wednesday)</p>
               </div>
             </div>
             <div class="mt-2 md:mt-0 flex items-center space-x-3 text-xs">
@@ -771,10 +788,10 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
               <div class="lg:col-span-2 space-y-4 text-sm">
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">09:00</span><span>享用萬豪酒店早餐。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>前往巨型市中心綠肺 <b>英國花園 (Englischer Garten)</b>，圍觀「市區激流人工衝浪」並到 <b>Chinesischer Turm 中式寶塔啤酒花園</b> 喝汽水乘涼。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>前往市中心綠肺 <a href="https://maps.google.com/?q=Englischer+Garten+Munich" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🌳</span> 英國花園 (Englischer Garten)</a> 觀賞激流衝浪，並前往 <a href="https://maps.google.com/?q=Chinesischer+Turm+Munich" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🗼</span> 中式寶塔啤酒花園 (Chinesischer Turm)</a>。</span></div>
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">12:30</span><span>中午享用百年老店巴伐利亞風味特色午餐。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">14:00</span><span><b>【重本已購票】</b>探索堂皇耀眼的 <b>§慕尼黑王宮 (Residenz)</b>，細賞古物大廳與無價珍寶館。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:30</span><span><b>【重本狂歡聚餐】</b>全家前往舉世聞名的 <b>Hofbräuhaus München (HB) 皇家啤酒屋</b>！暢快享用烤德國香腸、黑啤酒配巨型椒鹽卷餅，慶祝歐洲之行圓滿成功！</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">14:00</span><span><b>【重本已購票】</b>探索堂皇耀眼的 <b>§<a href="https://maps.google.com/?q=Munich+Residenz" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🏰</span> 慕尼黑王宮 (Residenz)</a></b>，細賞古物大廳與無價珍寶館。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">18:30</span><span><b>【重本狂歡聚餐】</b>全家前往舉世聞名的 <b>§<a href="https://maps.google.com/?q=Hofbräuhaus+Munich" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🍽️</span> Hofbräuhaus (HB) 皇家啤酒屋</a></b>！暢快享用烤德國香腸、黑啤酒配巨型椒鹽卷餅，慶祝歐洲之行圓滿成功！</span></div>
               </div>
               <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm text-sm space-y-2">
                 <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
@@ -810,7 +827,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
               <div class="lg:col-span-2 space-y-4 text-sm">
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">08:00</span><span>於酒店悠閒享用最後一頓豐盛德式早餐。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">09:00</span><span>整理行囊辦理退房，乘坐 S-Bahn 快速輕軌前往慕尼黑國際機場。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">09:00</span><span>整理行囊辦理退房，乘坐 S-Bahn 快速輕軌前往 <a href="https://maps.google.com/?q=Munich+Airport" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🚇</span> 慕尼黑國際機場 (MUC)</a>。</span></div>
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">10:00</span><span>抵達機場，在海關處辦妥歐盟購物的退稅單據與行李託運手續。</span></div>
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">12:30</span><span>登上新加坡航空豪華班機 <b>SQ327</b> 啟程返回亞洲。在飛機上安睡並享受世界一流的航機娛樂系統。</span></div>
               </div>
@@ -848,7 +865,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
               <div class="lg:col-span-2 space-y-4 text-sm">
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">06:40</span><span>班機降落新加坡樟宜機場 (SIN)。</span></div>
-                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">08:00</span><span>在航站樓內享用亞坤咖椰吐司、溫泉蛋與香濃南洋咖啡。</span></div>
+                <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">08:00</span><span>在航站樓內享用 <a href="https://maps.google.com/?q=Ya+Kun+Kaya+Toast+Changi+Airport+Singapore" target="_blank" class="text-blue-600 underline font-bold"><span class="text-sm">🍽️</span> 亞坤咖椰吐司 (Ya Kun Kaya Toast)</a>、溫泉蛋與香濃南洋咖啡。</span></div>
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">13:50</span><span>轉乘酷航 <b>TR904</b> 客機啟程返回澳門。</span></div>
                 <div class="flex space-x-3"><span class="font-bold text-brandOrange w-16">17:55</span><span>順利降落澳門國際機場，帶同滿滿的歐陸魔法、科技、美學回憶溫馨返家！</span></div>
               </div>
@@ -856,8 +873,8 @@
                 <p class="font-bold text-brandDarkBlue border-b pb-1">🍽️ 膳食與住宿</p>
                 <p><strong>早：</strong> 新加坡亞坤地道早餐</p>
                 <p><strong>午：</strong> 航機上輕食</p>
-                <p><strong>晚：</strong> 溫暖的家</p>
-                <p class="text-brandOrange"><strong>住宿：</strong> 溫溫暖的家</p>
+                <p><strong>晚：</strong> 溫慢的家</p>
+                <p class="text-brandOrange"><strong>住宿：</strong> 溫暖的家</p>
               </div>
             </div>
           </div>
@@ -952,14 +969,14 @@
             </div>
             <div class="p-4 text-xs">
               <p class="text-gray-600 mb-2 font-bold">房型：Queen 寬敞雙大床房</p>
-              <p class="text-gray-500 leading-relaxed mb-3">地理位置絕佳。每日早晨於酒店寬大奢華大堂悠閒享受熱烘烘、正宗豐盛的英式自助早餐。</p>
+              <p class="text-gray-500 leading-relaxed mb-3">地理位置絕佳。每日早晨於酒店寬大奢華大堂裝配享用熱烘烘、正宗豐盛的英式自助早餐。</p>
               <p class="text-gray-400 font-mono text-[10px]">地址: 225 Edgware Rd, London W2 1JU</p>
             </div>
           </div>
           <div class="p-4 border-t bg-gray-50 flex justify-between items-center">
             <span class="text-brandDarkBlue text-xs font-bold bg-brandLightBlue py-1 px-2.5 rounded-full">倫敦市中心核心地段</span>
             <a href="https://maps.google.com/?q=Hilton+London+Metropole+225+Edgware+Rd+London+W2+1JU" target="_blank" class="text-brandOrange hover:text-orange-600 font-bold text-xs flex items-center space-x-1">
-              <i class="fa-solid fa-map-location-dot"></i> <span>地圖</span>
+              <i class="fa-solid fa-map-location-dot"></i> <span>地圖導航</span>
             </a>
           </div>
         </div>
@@ -983,7 +1000,7 @@
           <div class="p-4 border-t bg-gray-50 flex justify-between items-center">
             <span class="text-purple-700 text-xs font-bold bg-purple-50 py-1 px-2.5 rounded-full">大英博物館經典街區</span>
             <a href="https://maps.google.com/?q=Grange+Beauchamp+Hotel+24-27+Bedford+Place+London+WC1B+5JH" target="_blank" class="text-brandOrange hover:text-orange-600 font-bold text-xs flex items-center space-x-1">
-              <i class="fa-solid fa-map-location-dot"></i> <span>地圖</span>
+              <i class="fa-solid fa-map-location-dot"></i> <span>地圖導航</span>
             </a>
           </div>
         </div>
@@ -1000,14 +1017,14 @@
             </div>
             <div class="p-4 text-xs">
               <p class="text-gray-600 mb-2 font-bold">房型：經典雙人間連美味早餐</p>
-              <p class="text-gray-500 leading-relaxed mb-3">徒步即可達凱旋門與香榭麗舍大街，晚上出門買法式小甜點或夜漫凱旋門都極其便利與安全。</p>
+              <p class="text-gray-500 leading-relaxed mb-3">徒步即可達凱旋門與香榭麗舍大街，晚上出門買法式小甜點 or 夜漫凱旋門都極其便利與安全。</p>
               <p class="text-gray-400 font-mono text-[10px]">地址: 24 Av. Carnot, 75017 Paris, France</p>
             </div>
           </div>
           <div class="p-4 border-t bg-gray-50 flex justify-between items-center">
             <span class="text-pink-700 text-xs font-bold bg-pink-50 py-1 px-2.5 rounded-full">浪漫巴黎第17區</span>
             <a href="https://maps.google.com/?q=Hotel+Regence+Etoile+24+Av+Carnot+75017+Paris+France" target="_blank" class="text-brandOrange hover:text-orange-600 font-bold text-xs flex items-center space-x-1">
-              <i class="fa-solid fa-map-location-dot"></i> <span>地圖</span>
+              <i class="fa-solid fa-map-location-dot"></i> <span>地圖導航</span>
             </a>
           </div>
         </div>
@@ -1031,7 +1048,7 @@
           <div class="p-4 border-t bg-gray-50 flex justify-between items-center">
             <span class="text-emerald-800 text-xs font-bold bg-green-50 py-1 px-2.5 rounded-full">慕尼黑核心黃金地段</span>
             <a href="https://maps.google.com/?q=Courtyard+by+Marriott+Munich+City+Center+Schwanthalerstr+37+Munich+80336" target="_blank" class="text-brandOrange hover:text-orange-600 font-bold text-xs flex items-center space-x-1">
-              <i class="fa-solid fa-map-location-dot"></i> <span>地圖</span>
+              <i class="fa-solid fa-map-location-dot"></i> <span>地圖導航</span>
             </a>
           </div>
         </div>
@@ -1071,18 +1088,18 @@
             </div>
           </div>
 
-          <!-- Flat Iron -->
+          <!-- Franco Manca -->
           <div class="bg-white rounded-xl shadow border p-5 flex flex-col justify-between hover:shadow-lg transition">
             <div>
               <div class="flex justify-between items-start mb-2">
-                <h4 class="font-extrabold text-md text-brandDarkBlue">Flat Iron (Covent Garden)</h4>
-                <span class="bg-blue-50 text-blue-800 text-[10px] font-bold px-2 py-0.5 rounded">冷藏炭烤板腱牛排</span>
+                <h4 class="font-extrabold text-md text-brandDarkBlue">Franco Manca (Covent Garden)</h4>
+                <span class="bg-blue-50 text-blue-800 text-[10px] font-bold px-2 py-0.5 rounded">傳統窯烤意式薄餅</span>
               </div>
-              <p class="text-xs text-gray-500 mb-3 leading-relaxed">倫敦超高人氣牛排排隊名店，肉質細嫩多汁。小童用餐可獲贈精美迷你小菜刀紀念品以及免費焦糖冰淇淋！</p>
+              <p class="text-xs text-gray-500 mb-3 leading-relaxed">倫敦享譽盛名的酸種披薩名店，麵皮煙韌有嚼勁。位於柯芬園梅登巷，為全家人帶來性價比極高的意式盛宴。</p>
             </div>
             <div class="border-t pt-3 flex justify-between items-center text-xs">
-              <span class="text-gray-400 font-mono text-[10px]">Henrietta St</span>
-              <a href="https://maps.google.com/?q=Flat+Iron+Covent+Garden+London" target="_blank" class="text-brandOrange hover:text-orange-600 font-bold flex items-center space-x-1">
+              <span class="text-gray-400 font-mono text-[10px]">39 Maiden Ln</span>
+              <a href="https://maps.google.com/?q=Franco+Manca+39+Maiden+Ln+London+WC2E+7LJ" target="_blank" class="text-brandOrange hover:text-orange-600 font-bold flex items-center space-x-1">
                 <i class="fa-solid fa-location-dot"></i> <span>Google Map</span>
               </a>
             </div>
@@ -1095,7 +1112,7 @@
                 <h4 class="font-extrabold text-md text-brandDarkBlue">Burger & Lobster</h4>
                 <span class="bg-blue-50 text-blue-800 text-[10px] font-bold px-2 py-0.5 rounded">整隻鮮活大龍蝦</span>
               </div>
-              <p class="text-xs text-gray-500 mb-3 leading-relaxed">全家人重本享用！清蒸或蒜香黃油烤活龍蝦，鮮美Q彈多汁，佐以獨家檸檬奶油醬與香脆薯條。</p>
+              <p class="text-xs text-gray-500 mb-3 leading-relaxed">全家人重本享用！清蒸或飾大蒜牛油烤活龍蝦，鮮美Q彈多汁，佐以獨家檸檬奶油醬與香脆薯條。</p>
             </div>
             <div class="border-t pt-3 flex justify-between items-center text-xs">
               <span class="text-gray-400 font-mono text-[10px]">Knightsbridge</span>
@@ -1258,7 +1275,7 @@
                 <h4 class="font-extrabold text-md text-brandDarkBlue">Le Grand Carnot</h4>
                 <span class="bg-pink-50 text-pink-800 text-[10px] font-bold px-2 py-0.5 rounded">正宗凱旋門法餐</span>
               </div>
-              <p class="text-xs text-gray-500 mb-3 leading-relaxed">緊鄰凱旋門的高雅法式餐廳，為全家提供經典煎鴨胸、法式洋蔥湯、香草蝸牛配上法國名莊美酒，盡顯浪漫。</p>
+              <p class="text-xs text-gray-500 mb-3 leading-relaxed">傳統經典的巴黎凱旋門高檔餐，為您準備了極佳的煎烤鴨胸、香草蝸牛、經典焗烤法餐洋蔥湯及波爾多紅酒。</p>
             </div>
             <div class="border-t pt-3 flex justify-between items-center text-xs">
               <span class="text-gray-400 font-mono text-[10px]">32 Av. Carnot</span>
@@ -1693,7 +1710,7 @@
     const GBP_RATE = 10.31;
     const EUR_RATE = 8.60;
 
-    // 15天每日詳細預算項目資料庫 (已完全匹配與更新每日行程和餐廳開支)
+    // 15天每日詳細預算項目資料庫
     const budgetDatabase = [
       // Day 1
       {
@@ -1711,7 +1728,7 @@
           { time: "10:00", category: "transport", name: "Heathrow Express 機場快線", currency: "GBP", amount: 30, payStatus: "prepaid" },
           { time: "11:00", category: "accommodation", name: "Hilton London Metropole (1/3晚)", currency: "HKD", amount: 3158, payStatus: "prepaid" },
           { time: "12:00", category: "dining", name: "The Red Lion 英式經典酒吧午餐", currency: "GBP", amount: 80, payStatus: "cash" },
-          { time: "18:30", category: "dining", name: "Flat Iron 炭烤手工牛排晚餐", currency: "GBP", amount: 120, payStatus: "cash" },
+          { time: "18:30", category: "dining", name: "Franco Manca (Covent Garden) 窯烤薄餅", currency: "GBP", amount: 120, payStatus: "cash" },
           { time: "20:00", category: "transport", name: "倫敦地鐵/巴士交通費", currency: "GBP", amount: 31.15, payStatus: "cash" }
         ]
       },
@@ -1745,7 +1762,7 @@
           { time: "10:30", category: "accommodation", name: "Grange Beauchamp Hotel (1/2晚)", currency: "HKD", amount: 3214, payStatus: "prepaid" },
           { time: "11:30", category: "dining", name: "Rock and Sole Plaice 百年炸魚薯條午餐", currency: "GBP", amount: 80, payStatus: "cash" },
           { time: "13:00", category: "attractions", name: "大英博物館專業粵語導賞票", currency: "HKD", amount: 1200, payStatus: "prepaid" },
-          { time: "19:00", category: "dining", name: "Ciao Bella 家庭風義式晚餐", currency: "GBP", amount: 120, payStatus: "cash" },
+          { time: "19:00", category: "dining", name: "Ciao Bella 家庭風意式晚餐", currency: "GBP", amount: 120, payStatus: "cash" },
           { time: "20:00", category: "transport", name: "市區地鐵交通費", currency: "GBP", amount: 31.15, payStatus: "cash" }
         ]
       },
@@ -1754,7 +1771,7 @@
         day: 6,
         items: [
           { time: "09:00", category: "dining", name: "JD Wetherspoon 傳統英式早餐", currency: "GBP", amount: 40, payStatus: "cash" },
-          { time: "10:00", category: "attractions", name: "倫敦動物園親子門票", currency: "HKD", amount: 1100, payStatus: "prepaid" },
+          { time: "10:00", category: "attractions", name: "國家美術館參觀", currency: "GBP", amount: 0, payStatus: "prepaid" },
           { time: "13:00", category: "dining", name: "Borough Market 百年市集美食自理", currency: "GBP", amount: 60, payStatus: "cash" },
           { time: "17:00", category: "attractions", name: "Sky Garden 觀景溫室登頂預約", currency: "GBP", amount: 0, payStatus: "prepaid" },
           { time: "18:30", category: "dining", name: "Flat Iron Borough 頂級牛排晚餐", currency: "GBP", amount: 120, payStatus: "cash" },
@@ -1767,7 +1784,7 @@
         day: 7,
         items: [
           { time: "08:30", category: "dining", name: "Caffè Tropea 特色綠意早點", currency: "GBP", amount: 40, payStatus: "cash" },
-          { time: "10:00", category: "dining", name: "Lina Stores 手作黑松露義麵午餐", currency: "GBP", amount: 80, payStatus: "cash" },
+          { time: "10:00", category: "dining", name: "Lina Stores 手作黑松露意麵午餐", currency: "GBP", amount: 80, payStatus: "cash" },
           { time: "14:01", category: "transport", name: "歐洲之星 Eurostar 高鐵 (倫敦 ➔ 巴黎)", currency: "HKD", amount: 2824.26, payStatus: "prepaid" },
           { time: "17:30", category: "accommodation", name: "Hôtel Régence Etoile (1/3晚)", currency: "HKD", amount: 2939, payStatus: "prepaid" },
           { time: "19:00", category: "dining", name: "Le Grand Carnot 經典法式餐廳晚餐", currency: "EUR", amount: 120, payStatus: "cash" },
@@ -1815,7 +1832,7 @@
           { time: "09:00", category: "accommodation", name: "Courtyard by Marriott Munich (2/4晚)", currency: "HKD", amount: 2351, payStatus: "prepaid" },
           { time: "13:00", category: "dining", name: "ONE Nation Munich 歐陸創意料理午餐", currency: "EUR", amount: 80, payStatus: "cash" },
           { time: "15:00", category: "attractions", name: "德意志博物館親子門票 (已預付)", currency: "EUR", amount: 33, payStatus: "prepaid" },
-          { time: "18:30", category: "dining", name: "Wirtshaus Au 經典巴伐利亞脆皮烤豬腳晚宴", currency: "EUR", amount: 120, payStatus: "cash" },
+          { time: "18:30", category: "dining", name: "Wirtshaus in der Au 經典巴伐利亞脆皮烤豬腳晚宴", currency: "EUR", amount: 120, payStatus: "cash" },
           { time: "20:00", category: "transport", name: "慕尼黑市區一日通票", currency: "EUR", amount: 20, payStatus: "cash" }
         ]
       },
@@ -1836,7 +1853,7 @@
         day: 13,
         items: [
           { time: "09:00", category: "accommodation", name: "Courtyard by Marriott Munich (4/4晚)", currency: "HKD", amount: 2351, payStatus: "prepaid" },
-          { time: "12:30", category: "dining", name: "Haxnbauer 百年老店香烤豬手午餐", currency: "EUR", amount: 80, payStatus: "cash" },
+          { time: "12:30", category: "dining", name: "慕尼黑巴伐利亞風味特色午餐", currency: "EUR", amount: 80, payStatus: "cash" },
           { time: "14:00", category: "attractions", name: "慕尼黑王宮古物大廳與珍寶館門票", currency: "EUR", amount: 30, payStatus: "cash" },
           { time: "18:30", category: "dining", name: "Hofbräuhaus HB 皇家啤酒屋狂歡慶功宴", currency: "EUR", amount: 120, payStatus: "cash" },
           { time: "20:00", category: "transport", name: "市內電車與捷運一日票", currency: "EUR", amount: 20, payStatus: "cash" }
