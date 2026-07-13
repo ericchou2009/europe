@@ -356,30 +356,125 @@
         // Exchange rates default setting
         const RATES = { GBP_TO_HKD: 10.2, EUR_TO_HKD: 8.5 };
 
-        // Preloaded Itinerary
+        // Preloaded Itinerary (Full 14-day comprehensive mission layout)
         let itineraryData = [
-            { date: "2026/07/24", dayLabel: "Fri, 07/24/2026", time: "16:00", item: "出發", location: "澳門", budgetHKD: 20, budgetGBP: "", budgetEUR: "", remark1: "開始神奇旅程", remark2: "溫度: 27-32°C\n體感: 31-37°C\n穿搭: 輕便夏裝、攜帶雨具", city: "新加坡聯絡站" },
-            { date: "2026/07/24", dayLabel: "Fri, 07/24/2026", time: "18:45", item: "起飛 (TR905)", location: "澳門機場 -> 新加坡", budgetHKD: 31432, budgetGBP: "", budgetEUR: "", remark1: "酷航 TR905", remark2: "機上戰術整備", city: "新加坡聯絡站" },
-            { date: "2026/07/25", dayLabel: "Sat, 07/25/2026", time: "01:05", item: "起飛 (SQ306)", location: "新加坡 -> 倫敦希斯路", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "新加坡航空 SQ306", remark2: "跨洋洲航線飛行", city: "倫敦大本營" },
-            { date: "2026/07/25", dayLabel: "Sat, 07/25/2026", time: "07:40", item: "降落倫敦", location: "希斯路機場 (LHR)", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "抵達英國希斯路", remark2: "辦理入境並提取裝備", city: "倫敦大本營" },
-            { date: "2026/07/25", dayLabel: "Sat, 07/25/2026", time: "10:00", item: "出機場交通", location: "希斯路機場", budgetHKD: "", budgetGBP: 30, budgetEUR: "", remark1: "Heathrow Express", remark2: "快速鐵路前往市區", city: "倫敦大本營" },
-            { date: "2026/07/25", dayLabel: "Sat, 07/25/2026", time: "11:00", item: "辦理酒店登記入住", location: "Hilton London Metropole", budgetHKD: 9475, budgetGBP: "", budgetEUR: "", remark1: "225 Edgware Rd, W2 1JU", remark2: "建立前線作戰司令部", city: "倫敦大本營" },
-            { date: "2026/07/25", dayLabel: "Sat, 07/25/2026", time: "12:00", item: "午餐能量補充", location: "The Red Lion (Parliament Street)", budgetHKD: "", budgetGBP: 80, budgetEUR: "", remark1: "48 Parliament St, London SW1A 2NH", remark2: "品嚐道地英式英皇紅獅炸魚薯條", city: "倫敦大本營" },
-            { date: "2026/08/03", dayLabel: "Mon, 08/03/2026", time: "18:00", item: "晚餐 (德式餐風味餐)", location: "Wirtshaus in der Au", budgetHKD: "", budgetGBP: "", budgetEUR: 120, remark1: "Lilienstraße 51, 81669 München", remark2: "品嚐巴伐利亞脆皮豬腳、啤酒", city: "慕尼黑分部" },
-            { date: "2026/08/03", dayLabel: "Mon, 08/03/2026", time: "20:00", item: "入住酒店", location: "Courtyard by Marriott Munich City Center", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "Schwanthalerstraße 37", remark2: "宿慕尼黑市中心萬怡", city: "慕尼黑分部" },
-            { date: "2026/08/04", dayLabel: "Tue, 08/04/2026", time: "09:00", item: "早餐", location: "慕尼黑早餐小站", budgetHKD: "", budgetGBP: "", budgetEUR: 30, remark1: "法式麵包與咖啡", remark2: "溫度: 14-25°C\n穿搭: 薄外套配短袖，防強紫外線", city: "慕尼黑分部" },
-            { date: "2026/08/04", dayLabel: "Tue, 08/04/2026", time: "10:00", item: "Olympiapark 奧林匹克公園", location: "Spiridon-Louis-Ring 21", budgetHKD: "", budgetGBP: "", budgetEUR: 40, remark1: "1972奧運會原址建築群", remark2: "體驗流線型現代帳篷設計", city: "慕尼黑分部" },
-            { date: "2026/08/04", dayLabel: "Tue, 08/04/2026", time: "11:00", item: "BMW Museum 寶馬博物館", location: "Am Olympiapark 2", budgetHKD: "", budgetGBP: "", budgetEUR: 40, remark1: "參觀寶馬傳奇歷史與未來跑車展", remark2: "鋼鐵人科技研究", city: "慕尼黑分部" },
-            { date: "2026/08/04", dayLabel: "Tue, 08/04/2026", time: "14:00", item: "寧芬堡宮", location: "Schloß Nymphenburg 1", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "巴洛克式皇家宮殿與園林花園", remark2: "漫步參觀，感受巴伐利亞選帝侯官邸", city: "慕尼黑分部" },
-            { date: "2026/08/04", dayLabel: "Tue, 08/04/2026", time: "18:00", item: "晚餐 (經典義式料理)", location: "VAPIANO München Theatiner Straße", budgetHKD: "", budgetGBP: "", budgetEUR: 120, remark1: "Theatinerstraße 15, 80333 München", remark2: "自選新鮮現做義大利麵、窯烤披薩", city: "慕尼黑分部" }
+            // Day 1: 07/24 Fri (Macau to Singapore)
+            { date: "2026/07/24", dayLabel: "Day 1 - Fri, 07/24/2026", time: "16:00", item: "特工集合出發", location: "澳門市區 -> 澳門機場", budgetHKD: 100, budgetGBP: "", budgetEUR: "", remark1: "準備啟動復仇者聯盟任務：歐洲2026", remark2: "穿搭: 輕便夏裝\n提示: 建議提早2小時到達機場辦理登機", city: "新加坡聯絡站" },
+            { date: "2026/07/24", dayLabel: "Day 1 - Fri, 07/24/2026", time: "18:45", item: "飛往新加坡 (TR905)", location: "澳門機場 (MFM) -> 新加坡樟宜機場 (SIN)", budgetHKD: 31432, budgetGBP: "", budgetEUR: "", remark1: "酷航 TR905 航班。預計 22:35 抵達", remark2: "機上戰術整備與休息", city: "新加坡聯絡站" },
+            
+            // Day 2: 07/25 Sat (Singapore to London)
+            { date: "2026/07/25", dayLabel: "Day 2 - Sat, 07/25/2026", time: "01:05", item: "跨洋洲飛行 (SQ306)", location: "新加坡樟宜機場 (SIN) -> 倫敦希斯路 (LHR)", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "新加坡航空 SQ306，於新加坡過境後起飛", remark2: "跨洋飛行，提供長途航線精緻飛機餐", city: "倫敦大本營" },
+            { date: "2026/07/25", dayLabel: "Day 2 - Sat, 07/25/2026", time: "07:40", item: "抵達倫敦希斯路", location: "希斯路機場 (LHR) Terminal 2", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "通關並提取作戰行李與裝備", remark2: "倫敦氣溫約 15-22°C\n穿搭: 長袖/防風外套", city: "倫敦大本營" },
+            { date: "2026/07/25", dayLabel: "Day 2 - Sat, 07/25/2026", time: "10:00", item: "機場快線交通", location: "Heathrow Express -> 帕丁頓車站", budgetHKD: "", budgetGBP: 30, budgetEUR: "", remark1: "搭乘希斯路機場快線快速前往倫敦市中心", remark2: "車程約 15 分鐘，直達市區", city: "倫敦大本營" },
+            { date: "2026/07/25", dayLabel: "Day 2 - Sat, 07/25/2026", time: "11:00", item: "登記入住 Hilton Metropole", location: "Hilton London Metropole (225 Edgware Rd)", budgetHKD: 9475, budgetGBP: "", budgetEUR: "", remark1: "建立前線作戰司令部。預訂房型：高級雙床房含早餐", remark2: "辦理行李寄放或提前入住", city: "倫敦大本營" },
+            { date: "2026/07/25", dayLabel: "Day 2 - Sat, 07/25/2026", time: "12:00", item: "午餐 (英式炸魚薯條)", location: "The Red Lion (48 Parliament St)", budgetHKD: "", budgetGBP: 80, budgetEUR: "", remark1: "品嚐經典英皇紅獅道地炸魚薯條，為任務補充體力", remark2: "近大笨鐘，景色絕佳", city: "倫敦大本營" },
+            { date: "2026/07/25", dayLabel: "Day 2 - Sat, 07/25/2026", time: "14:00", item: "倫敦地標巡禮", location: "Big Ben & Westminster Abbey", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "漫步參觀大笨鐘、國會大廈、西敏寺外觀", remark2: "防強風與偶發陣雨", city: "倫敦大本營" },
+            { date: "2026/07/25", dayLabel: "Day 2 - Sat, 07/25/2026", time: "16:00", item: "科芬園探險", location: "Covent Garden 廣場", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "漫步市集，欣賞街頭藝人表演與英倫工藝", remark2: "人流密集，請特工注意保管隨身財物", city: "倫敦大本營" },
+            { date: "2026/07/25", dayLabel: "Day 2 - Sat, 07/25/2026", time: "19:00", item: "晚餐 (Franco Manca 披薩)", location: "Franco Manca Covent Garden (39 Maiden Ln)", budgetHKD: "", budgetGBP: 120, budgetEUR: "", remark1: "享用美味的酸種拿坡里窯烤披薩", remark2: "預算充足，可加點特色飲品", city: "倫敦大本營" },
+            { date: "2026/07/25", dayLabel: "Day 2 - Sat, 07/25/2026", time: "21:00", item: "戰術一日交通總計", location: "倫敦市區交通", budgetHKD: "", budgetGBP: 31.15, budgetEUR: "", remark1: "地鐵與巴士感應信用卡刷卡扣款", remark2: "使用 Oyster 卡或無接觸感應", city: "倫敦大本營" },
+
+            // Day 3: 07/26 Sun (London Museums & Parks)
+            { date: "2026/07/26", dayLabel: "Day 3 - Sun, 07/26/2026", time: "08:30", item: "飯店能量早餐", location: "Hilton London Metropole", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "享用精緻英式自助早餐", remark2: "儲備今日健行體力", city: "倫敦大本營" },
+            { date: "2026/07/26", dayLabel: "Day 3 - Sun, 07/26/2026", time: "10:00", item: "海德公園晨散", location: "Hyde Park & Buckingham Palace", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "散步至海德公園與白金漢宮，欣賞英倫綠意", remark2: "上午可能有衛兵交接儀式", city: "倫敦大本營" },
+            { date: "2026/07/26", dayLabel: "Day 3 - Sun, 07/26/2026", time: "13:00", item: "午餐能量補充", location: "南肯辛頓區特色美食", budgetHKD: "", budgetGBP: 60, budgetEUR: "", remark1: "於博物館區周邊輕食餐廳用餐", remark2: "穿搭: 舒適健走鞋", city: "倫敦大本營" },
+            { date: "2026/07/26", dayLabel: "Day 3 - Sun, 07/26/2026", time: "14:00", item: "科學與自然歷史探索", location: "Science Museum & Natural History Museum", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "免費參觀倫敦頂級科學館與世界知名恐龍骨骼展", remark2: "需提前線上預約免費入場門票", city: "倫敦大本營" },
+            { date: "2026/07/26", dayLabel: "Day 3 - Sun, 07/26/2026", time: "19:00", item: "晚餐 (經典龍蝦餐)", location: "Burger & Lobster Knightsbridge", budgetHKD: "", budgetGBP: 140, budgetEUR: "", remark1: "享用美味的豪華龍蝦與漢堡大餐", remark2: "近哈洛德百貨 (Harrods)", city: "倫敦大本營" },
+
+            // Day 4: 07/27 Mon (Harry Potter Studio)
+            { date: "2026/07/27", dayLabel: "Day 4 - Mon, 07/27/2026", time: "08:00", item: "出發往哈利波特片場", location: "Euston Station -> Watford Junction", budgetHKD: "", budgetGBP: 25, budgetEUR: "", remark1: "自尤斯頓車站搭乘西海岸鐵路前往 Watford 站，再轉乘接駁巴士", remark2: "魔法任務啟動！帶上您的魔杖", city: "倫敦大本營" },
+            { date: "2026/07/27", dayLabel: "Day 4 - Mon, 07/27/2026", time: "10:00", item: "華納兄弟哈利波特影城巡禮", location: "Warner Bros. Studio Tour London", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "參觀斜角巷、霍格華茲大禮堂及豐富電影道具", remark2: "必喝經典奶油啤酒 (Butterbeer)", city: "倫敦大本營" },
+            { date: "2026/07/27", dayLabel: "Day 4 - Mon, 07/27/2026", time: "13:00", item: "午餐 (片場美食廣場)", location: "The Food Hall", budgetHKD: "", budgetGBP: 50, budgetEUR: "", remark1: "於影城內美食區品嚐魔法限定套餐", remark2: "稍作休息後繼續後半程拍照", city: "倫敦大本營" },
+            { date: "2026/07/27", dayLabel: "Day 4 - Mon, 07/27/2026", time: "16:30", item: "撤離片場返回市區", location: "Watford Junction -> Euston Station", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "搭乘接駁車返回火車站，返回倫敦中心", remark2: "車程順暢，預計18:00前抵達市區", city: "倫敦大本營" },
+            { date: "2026/07/27", dayLabel: "Day 4 - Mon, 07/27/2026", time: "18:30", item: "晚餐 (馬來西亞風味 Roti)", location: "Roti King (Euston)", budgetHKD: "", budgetGBP: 60, budgetEUR: "", remark1: "全倫敦最棒的香脆印度拋餅配惹味咖哩牛/雞", remark2: "超人氣排隊名店，座位稍顯緊湊", city: "倫敦大本營" },
+
+            // Day 5: 07/28 Tue (Hotel Transfer & British Museum)
+            { date: "2026/07/28", dayLabel: "Day 5 - Tue, 07/28/2026", time: "10:00", item: "戰略轉移至新酒店", location: "Grange Beauchamp Hotel", budgetHKD: 6428, budgetGBP: "", budgetEUR: "", remark1: "退房並轉往大英博物館旁的溫馨莊園酒店", remark2: "地址：24-27 Bedford Place, WC1B 5JH", city: "倫敦大本營" },
+            { date: "2026/07/28", dayLabel: "Day 5 - Tue, 07/28/2026", time: "11:00", item: "午餐 (百年炸魚薯條)", location: "Rock and Sole Plaice (47 Endell St)", budgetHKD: "", budgetGBP: 80, budgetEUR: "", remark1: "創立於1871年的倫敦最古老炸魚薯條店之一", remark2: "外脆內嫩，提供經典大鱈魚", city: "倫敦大本營" },
+            { date: "2026/07/28", dayLabel: "Day 5 - Tue, 07/28/2026", time: "13:00", item: "大英博物館奇幻行", location: "British Museum (Great Russell St)", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "特工知性時間：探尋羅塞塔石碑與古埃及木乃伊歷史", remark2: "免費入場，人流多需提早預約", city: "倫敦大本營" },
+            { date: "2026/07/28", dayLabel: "Day 5 - Tue, 07/28/2026", time: "17:00", item: "購物戰術採購", location: "Tottenham Court Road", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "漫步購物街、電器與家居設計店", remark2: "買點英倫伴手禮", city: "倫敦大本營" },
+            { date: "2026/07/28", dayLabel: "Day 5 - Tue, 07/28/2026", time: "19:00", item: "晚餐 (龍蝦漢堡/意麵)", location: "Burger & Lobster or Ciao Bella Restaurant", budgetHKD: "", budgetGBP: 130, budgetEUR: "", remark1: "可選邦德街奢華龍蝦或羅素廣場旁的平民義大利麵 (Ciao Bella)", remark2: "Ciao Bella 有超大份量的經典墨魚麵", city: "倫敦大本營" },
+            { date: "2026/07/28", dayLabel: "Day 5 - Tue, 07/28/2026", time: "21:30", item: "戰術交通總計", location: "地鐵/火車", budgetHKD: "", budgetGBP: 31.15, budgetEUR: "", remark1: "一日卡封頂扣款", remark2: "儲值備用", city: "倫敦大本營" },
+
+            // Day 6: 07/29 Wed (South Bank & Sky Garden)
+            { date: "2026/07/29", dayLabel: "Day 6 - Wed, 07/29/2026", time: "08:30", item: "英式豐富早餐", location: "The Moon Under Water - JD Wetherspoon", budgetHKD: "", budgetGBP: 40, budgetEUR: "", remark1: "傳統超平價英式大早餐、茄汁黃豆、香腸與煎蛋", remark2: "高性價比英倫連鎖酒吧早餐", city: "倫敦大本營" },
+            { date: "2026/07/29", dayLabel: "Day 6 - Wed, 07/29/2026", time: "10:00", item: "國家美術館巡禮", location: "National Gallery (Trafalgar Square)", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "參觀梵谷《向日葵》及達文西等大師真跡展", remark2: "館內宏偉，適合拍照", city: "倫敦大本營" },
+            { date: "2026/07/29", dayLabel: "Day 6 - Wed, 07/29/2026", time: "12:00", item: "午餐 (博羅市場小吃街)", location: "Borough Market (Southwark)", budgetHKD: "", budgetGBP: 60, budgetEUR: "", remark1: "品嚐手工卡利起司吐司、巨無霸烤生蠔與松露蘑菇意麵", remark2: "全倫敦歷史最悠久的美食集市", city: "倫敦大本營" },
+            { date: "2026/07/29", dayLabel: "Day 6 - Wed, 07/29/2026", time: "14:30", item: "倫敦塔橋 & 地標漫步", location: "Tower Bridge & London Bridge", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "沿泰晤士河南岸散步，欣賞塔橋雄姿與南華克大教堂", remark2: "風大請攜帶薄防風外套", city: "倫敦大本營" },
+            { date: "2026/07/29", dayLabel: "Day 6 - Wed, 07/29/2026", time: "16:00", item: "空中花園高空觀景", location: "Sky Garden (1 Sky Garden Walk)", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "預約登上「對講機大樓」頂層，俯瞰360度倫敦震撼全景", remark2: "必須提前3-4週預約免費門票", city: "倫敦大本營" },
+            { date: "2026/07/29", dayLabel: "Day 6 - Wed, 07/29/2026", time: "17:30", item: "千禧橋 & 泰特現代美術館", location: "Millennium Bridge & Tate Modern", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "漫步食死徒襲擊的千禧橋，參觀舊發電廠改建的現代藝術殿堂", remark2: "頂樓觀景台亦十分迷人", city: "倫敦大本營" },
+            { date: "2026/07/29", dayLabel: "Day 6 - Wed, 07/29/2026", time: "19:00", item: "晚餐 (Flat Iron 鐵板牛排)", location: "Flat Iron Borough (Bankside)", budgetHKD: "", budgetGBP: 120, budgetEUR: "", remark1: "只要 14 鎊起就能享用超鮮嫩煎羽毛牛排，送美味太妃糖冰淇淋", remark2: "配菜推薦奶油菠菜與重蒜薯條", city: "倫敦大本營" },
+
+            // Day 7: 07/30 Thu (London to Paris Eurostar)
+            { date: "2026/07/30", dayLabel: "Day 7 - Thu, 07/30/2026", time: "08:30", item: "整理戰術背包 & 退房", location: "Grange Beauchamp Hotel", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "清點裝備，退房出發", remark2: "今天將前往浪漫法國巴黎！", city: "倫敦大本營" },
+            { date: "2026/07/30", dayLabel: "Day 7 - Thu, 07/30/2026", time: "09:30", item: "前往聖潘克拉斯國際火車站", location: "St Pancras International Station", budgetHKD: "", budgetGBP: 15, budgetEUR: "", remark1: "搭乘地鐵前往歐洲之星起點站", remark2: "人流多，務必提早1.5小時抵達辦理出境", city: "巴黎分部" },
+            { date: "2026/07/30", dayLabel: "Day 7 - Thu, 07/30/2026", time: "11:30", item: "搭乘歐洲之星前往巴黎 (Eurostar)", location: "倫敦聖潘克拉斯 -> 巴黎北站 (Gare du Nord)", budgetHKD: 2824, budgetGBP: "", budgetEUR: "", remark1: "跨越英法海底隧道高鐵，預計車程 2 小時 15 分鐘", remark2: "機上戰術整備與跨國通訊切換", city: "巴黎分部" },
+            { date: "2026/07/30", dayLabel: "Day 7 - Thu, 07/30/2026", time: "15:00", item: "抵達巴黎北站 & 酒店入住", location: "Hôtel Régence Etoile (24 Av. Carnot)", budgetHKD: 8817, budgetGBP: "", budgetEUR: "", remark1: "建立巴黎作戰司令部。經典近凱旋門高檔精緻酒店，包早餐", remark2: "辦理登記入住，稍作休息", city: "巴黎分部" },
+            { date: "2026/07/30", dayLabel: "Day 7 - Thu, 07/30/2026", time: "18:30", item: "晚餐 (道地巴黎小酒館)", location: "Le Grand Carnot (32 Av. Carnot)", budgetHKD: "", budgetGBP: "", budgetEUR: 120, remark1: "近酒店的法式餐館，享用油封鴨配紅酒與烤蝸牛", remark2: "體驗法式熱情招待與優雅晚膳", city: "巴黎分部" },
+            { date: "2026/07/30", dayLabel: "Day 7 - Thu, 07/30/2026", time: "21:00", item: "巴黎交通週票辦理", location: "巴黎市區地鐵站", budgetHKD: "", budgetGBP: "", budgetEUR: 32.6, remark1: "購買 Navigo 交通卡以便接下來幾日通行無阻", remark2: "地鐵1號線直達多個熱門作戰區", city: "巴黎分部" },
+
+            // Day 8: 07/31 Fri (Paris Icons & Seine River Cruise)
+            { date: "2026/07/31", dayLabel: "Day 8 - Fri, 07/31/2026", time: "09:00", item: "法式烘焙早餐", location: "Hôtel Régence Etoile 餐廳", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "享用香脆可頌、絲滑法式奶油及優格咖啡", remark2: "穿搭: 時尚休閒裝配墨鏡", city: "巴黎分部" },
+            { date: "2026/07/31", dayLabel: "Day 8 - Fri, 07/31/2026", time: "10:00", item: "凱旋門與香榭大道漫步", location: "Arc de Triomphe & Champs-Élysées", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "攀登凱旋門俯瞰放射狀巴黎街道，隨後漫步名牌大道與協和廣場", remark2: "防強紫外線，注意高溫", city: "巴黎分部" },
+            { date: "2026/07/31", dayLabel: "Day 8 - Fri, 07/31/2026", time: "12:30", item: "午餐 (美式法風漢堡)", location: "Blend Hamburger Madeleine (18 Rue Duphot)", budgetHKD: "", budgetGBP: "", budgetEUR: 80, remark1: "號稱全巴黎最棒的美式手工芝士牛肉漢堡，配現炸紅薯條", remark2: "法式融合漢堡口味驚豔", city: "巴黎分部" },
+            { date: "2026/07/31", dayLabel: "Day 8 - Fri, 07/31/2026", time: "14:00", item: "杜樂麗花園與羅浮宮巡禮", location: "Jardin des Tuileries & Musée du Louvre", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "杜樂麗花園放鬆曬太陽，隨後前往往玻璃金字塔，尋訪《蒙娜麗莎》", remark2: "週五羅浮宮夜間開放，可以避開最擠人潮", city: "巴黎分部" },
+            { date: "2026/07/31", dayLabel: "Day 8 - Fri, 07/31/2026", time: "17:30", item: "法式法點泡芙下午茶", location: "L'Eclair de Génie (32 Rue Notre Dame)", budgetHKD: "", budgetGBP: "", budgetEUR: 30, remark1: "品嚐驚豔巴黎的閃電泡芙與精品巧克力甜點", remark2: "為接下來的遊船活動儲備體力", city: "巴黎分部" },
+            { date: "2026/07/31", dayLabel: "Day 8 - Fri, 07/31/2026", time: "19:30", item: "豪華塞納河遊船晚餐 (Paris Seine)", location: "Paris Seine 遊船碼頭", budgetHKD: 4552, budgetGBP: "", budgetEUR: "", remark1: "一邊享用精緻法式三道菜配香檳，一邊在黃昏日落中看巴黎鐵塔閃耀點燈", remark2: "着裝要求：正式休閒 (Smart Casual)", city: "巴黎分部" },
+
+            // Day 9: 08/01 Sat (Paris Tower & Shopping)
+            { date: "2026/08/01", dayLabel: "Day 9 - Sat, 08/01/2026", time: "09:00", item: "酒店美式早餐", location: "Hôtel Régence Etoile", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "享用活力早餐", remark2: "巴黎今日氣候晴朗，高溫 26°C", city: "巴黎分部" },
+            { date: "2026/08/01", dayLabel: "Day 9 - Sat, 08/01/2026", time: "10:00", item: "巴黎鐵塔與比爾哈凱姆橋", location: "Eiffel Tower & Pont de Bir-Hakeim", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "漫步《全面啟動》電影場景折疊橋，以最佳角度拍攝巴黎鐵塔", remark2: "非常著名的網美拍照地", city: "巴黎分部" },
+            { date: "2026/08/01", dayLabel: "Day 9 - Sat, 08/01/2026", time: "11:30", item: "盧森堡公園午後悠閒", location: "Jardin du Luxembourg", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "坐在綠色鐵椅上曬太陽、看水池小船，體驗正宗巴黎慢生活", remark2: "公園景致如畫", city: "巴黎分部" },
+            { date: "2026/08/01", dayLabel: "Day 9 - Sat, 08/01/2026", time: "12:30", item: "午餐 (Kodawari 概念拉麵店)", location: "Kodawari Ramen Yokochō (29 Rue Mazarine)", budgetHKD: "", budgetGBP: "", budgetEUR: 80, remark1: "全裝潢打造成東京昭和風魚市場的概念地道拉麵，超濃郁黑鱈魚高湯拉麵", remark2: "極具話題性，須提早現場排隊", city: "巴黎分部" },
+            { date: "2026/08/01", dayLabel: "Day 9 - Sat, 08/01/2026", time: "14:30", item: "巴黎聖母院與聖心堂", location: "Notre-Dame & Sacré-Cœur", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "瞻仰浴火重生的聖母院，隨後搭車前往蒙馬特高地俯瞰巴黎紅屋頂與參觀純白聖心堂", remark2: "聖心堂台階人多，請防備簽名黨或手繩騙局", city: "巴黎分部" },
+            { date: "2026/08/01", dayLabel: "Day 9 - Sat, 08/01/2026", time: "17:00", item: "老佛爺百貨大採購", location: "Galeries Lafayette Haussmann", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "參觀拜占庭式彩色玻璃穹頂，採購免稅精品及法式伴手禮", remark2: "可至頂樓露台免費俯瞰巴黎歌劇院與鐵塔", city: "巴黎分部" },
+            { date: "2026/08/01", dayLabel: "Day 9 - Sat, 08/01/2026", time: "19:00", item: "晚餐 (老佛爺美食廣場)", location: "Galeries Lafayette Le Gourmet", budgetHKD: "", budgetGBP: "", budgetEUR: 120, remark1: "在精品級美食街享用各式各樣的高檔熟食與精緻點心", remark2: "包含世界知名馬卡龍大牌", city: "巴黎分部" },
+
+            // Day 10: 08/02 Sun (Paris to Munich)
+            { date: "2026/08/02", dayLabel: "Day 10 - Sun, 08/02/2026", time: "08:30", item: "整理戰術行囊退房", location: "Hôtel Régence Etoile", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "辦理退房，準備向德國慕尼黑進軍", remark2: "將搭乘漢莎航空或法航", city: "慕尼黑分部" },
+            { date: "2026/08/02", dayLabel: "Day 10 - Sun, 08/02/2026", time: "09:30", item: "乘車前往戴高樂機場", location: "巴黎市區 -> CDG Airport", budgetHKD: "", budgetGBP: "", budgetEUR: 50, remark1: "搭乘機場接駁巴士或計程車", remark2: "預留充足時間辦理歐盟跨國內進口托運", city: "慕尼黑分部" },
+            { date: "2026/08/02", dayLabel: "Day 10 - Sun, 08/02/2026", time: "11:55", item: "飛往慕尼黑 (LH2230)", location: "巴黎戴高樂 (CDG) -> 慕尼黑機場 (MUC)", budgetHKD: 5652, budgetGBP: "", budgetEUR: "", remark1: "漢莎航空 LH2230 航班。預計 13:30 降落巴伐利亞", remark2: "德國境內戰術調整", city: "慕尼黑分部" },
+            { date: "2026/08/02", dayLabel: "Day 10 - Sun, 08/02/2026", time: "14:30", item: "機場快軌至市中心", location: "MUC 機場 -> S-Bahn S1/S8", budgetHKD: "", budgetGBP: "", budgetEUR: 32.6, remark1: "搭乘城市鐵路前往慕尼黑中央火車站", remark2: "購買團體一日券極划算", city: "慕尼黑分部" },
+            { date: "2026/08/02", dayLabel: "Day 10 - Sun, 08/02/2026", time: "15:30", item: "萬怡酒店辦理入住", location: "Courtyard by Marriott Munich City Center", budgetHKD: 9404, budgetGBP: "", budgetEUR: "", remark1: "建立慕尼黑前線要塞。房型：豪華客房，近中央車站交通樞紐", remark2: "稍息整理，儲備活力", city: "慕尼黑分部" },
+            { date: "2026/08/02", dayLabel: "Day 10 - Sun, 08/02/2026", time: "17:00", item: "瑪麗恩廣場與新市政廳", location: "Marienplatz 廣場", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "遊覽哥德式鐘琴報時秀，漫步步行街", remark2: "慕尼黑氣溫約 14-25°C\n穿搭: 薄外套", city: "慕尼黑分部" },
+            { date: "2026/08/02", dayLabel: "Day 10 - Sun, 08/02/2026", time: "19:00", item: "晚餐 (Ruff's 鋪滿肉汁漢堡)", location: "Ruff's Burger Marienplatz", budgetHKD: "", budgetGBP: "", budgetEUR: 80, remark1: "巴伐利亞超人氣手工安格斯黑牛漢堡，肉汁濃郁配手切松露薯條", remark2: "享受德式漢堡的狂野", city: "慕尼黑分部" },
+
+            // Day 11: 08/03 Mon (Munich Old Town & Pork Knuckle)
+            { date: "2026/08/03", dayLabel: "Day 11 - Mon, 08/03/2026", time: "09:00", item: "穀物市場品早餐", location: "Viktualienmarkt 穀物市場", budgetHKD: "", budgetGBP: "", budgetEUR: 40, remark1: "漫步在當地露天市集，享用起司、扭結麵包 (Pretzel) 與溫熱咖啡", remark2: "非常道地的巴伐利亞體驗", city: "慕尼黑分部" },
+            { date: "2026/08/03", dayLabel: "Day 11 - Mon, 08/03/2026", time: "10:30", item: "雙塔聖母教堂與老彼得教堂", location: "Frauenkirche & St. Peters Kirche", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "瞻仰慕尼黑地標「綠洋蔥雙塔」，登頂老彼得教堂俯瞰紅瓦老城", remark2: "登頂需攀爬狹窄木梯，需注意安全", city: "慕尼黑分部" },
+            { date: "2026/08/03", dayLabel: "Day 11 - Mon, 08/03/2026", time: "12:30", item: "午餐 (巴伐利亞小吃)", location: "ONE Nation Munich / Market Food", budgetHKD: "", budgetGBP: "", budgetEUR: 80, remark1: "於市集或特色商場享用德國大香腸配酸菜", remark2: "美味且充沛熱量", city: "慕尼黑分部" },
+            { date: "2026/08/03", dayLabel: "Day 11 - Mon, 08/03/2026", time: "14:00", item: "德意志科技博物館探索", location: "Deutsches Museum (Museumsinsel)", budgetHKD: "", budgetGBP: "", budgetEUR: 33, remark1: "特工科技研發：參觀全球最大、歷史最悠久的科學與技術博物館", remark2: "展品涵蓋航空、造船及物理科技，內容驚人", city: "慕尼黑分部" },
+            { date: "2026/08/03", dayLabel: "Day 11 - Mon, 08/03/2026", time: "18:00", item: "晚餐 (Wirtshaus 脆皮豬腳)", location: "Wirtshaus in der Au (Lilienstraße 51)", budgetHKD: "", budgetGBP: "", budgetEUR: 120, remark1: "品嚐巴伐利亞傳奇名菜：超巨大脆皮烤豬腳配馬鈴薯丸子、黑啤酒", remark2: "氣氛熱烈，體驗正宗巴伐利亞式熱情", city: "慕尼黑分部" },
+
+            // Day 12: 08/04 Tue (Olympic Park & BMW World)
+            { date: "2026/08/04", dayLabel: "Day 12 - Tue, 08/04/2026", time: "09:00", item: "德式悠閒早餐", location: "酒店餐廳", budgetHKD: "", budgetGBP: "", budgetEUR: 30, remark1: "享用香煎德式香腸、各式乳酪與黑麥麵包", remark2: "今日主攻現代鋼鐵科技！", city: "慕尼黑分部" },
+            { date: "2026/08/04", dayLabel: "Day 12 - Tue, 08/04/2026", time: "10:00", item: "奧林匹克運動公園健行", location: "Olympiapark (Spiridon-Louis-Ring 21)", budgetHKD: "", budgetGBP: "", budgetEUR: 40, remark1: "遊覽1972奧運會傳奇流線型帳篷鋼索建築群，登高眺望慕尼黑市景", remark2: "空氣清新，心曠神怡", city: "慕尼黑分部" },
+            { date: "2026/08/04", dayLabel: "Day 12 - Tue, 08/04/2026", time: "11:00", item: "BMW 博物館 & 跑車研發", location: "BMW Museum (Am Olympiapark 2)", budgetHKD: "", budgetGBP: "", budgetEUR: 40, remark1: "親臨寶馬全球總部「四汽缸大樓」，參觀傳奇經典老車、未來科技概念車與重機", remark2: "鋼鐵人 Tony Stark 的科技靈感庫", city: "慕尼黑分部" },
+            { date: "2026/08/04", dayLabel: "Day 12 - Tue, 08/04/2026", time: "14:00", item: "寧芬堡宮夏日避暑", location: "Schloß Nymphenburg 1", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "漫步參觀巴洛克式皇家宮殿與天鵝成群的護城運河、法式御花園", remark2: "選帝侯官邸景致清幽", city: "慕尼黑分部" },
+            { date: "2026/08/04", dayLabel: "Day 12 - Tue, 08/04/2026", time: "18:00", item: "晚餐 (精品義式現做披薩)", location: "VAPIANO München Theatiner Straße", budgetHKD: "", budgetGBP: "", budgetEUR: 120, remark1: "自選現做的手擀薄皮窯烤披薩、松露燉飯與特製義大利麵", remark2: "優雅放鬆的用餐空間", city: "慕尼黑分部" },
+
+            // Day 13: 08/05 Wed (Royal Palace & Beer Hall Departure)
+            { date: "2026/08/05", dayLabel: "Day 13 - Wed, 08/05/2026", time: "09:00", item: "英國花園看河道衝浪", location: "Englischer Garten (Munich)", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "前往公園觀看著名的 Eisbachwelle 冰溪逆流衝浪，喝杯咖啡", remark2: "都市中的森林公園", city: "慕尼黑分部" },
+            { date: "2026/08/05", dayLabel: "Day 13 - Wed, 08/05/2026", time: "11:00", item: "慕尼黑皇宮探秘", location: "Residenz München (Residenzstraße 1)", budgetHKD: "", budgetGBP: "", budgetEUR: 80, remark1: "參觀金碧輝煌的巴伐利亞王室主宮殿、無比震撼的巴洛克文物大廳與珍寶館", remark2: "奢華金雕令人驚嘆", city: "慕尼黑分部" },
+            { date: "2026/08/05", dayLabel: "Day 13 - Wed, 08/05/2026", time: "13:00", item: "午餐 (中式寶塔啤酒花園)", location: "Chinesischer Turm Beer Garden", budgetHKD: "", budgetGBP: "", budgetEUR: 50, remark1: "在公園內五層木造中式寶塔下，喝公升黑啤、啃烤雞與椒鹽捲餅", remark2: "體驗最極致的戶外啤酒文化", city: "慕尼黑分部" },
+            { date: "2026/08/05", dayLabel: "Day 13 - Wed, 08/05/2026", time: "15:00", item: "皇家大啤酒屋朝聖", location: "Hofbräuhaus München (Platzl 9)", budgetHKD: "", budgetGBP: "", budgetEUR: 120, remark1: "在400年歷史的 HB 大廳享用起司香腸盤，聽傳統巴伐利亞銅管樂隊演奏", remark2: "氛圍極度歡樂喧囂", city: "慕尼黑分部" },
+            { date: "2026/08/05", dayLabel: "Day 13 - Wed, 08/05/2026", time: "18:00", item: "前往慕尼黑機場 & 退稅", location: "MUC Airport Terminal 2", budgetHKD: "", budgetGBP: "", budgetEUR: 20, remark1: "退房清點物資，搭乘快軌前往機場辦理行李海關退稅", remark2: "買精品者請預留1小時以上蓋章退稅", city: "新加坡聯絡站" },
+            { date: "2026/08/05", dayLabel: "Day 13 - Wed, 08/05/2026", time: "22:00", item: "登機飛返亞洲 (SQ327)", location: "MUC -> 新加坡樟宜 (SIN)", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "新航 SQ327 航班起飛。長途夜宿飛行，養精蓄銳", remark2: "夜航機上休息", city: "新加坡聯絡站" },
+
+            // Day 14: 08/06 Thu (Singapore Back to Macau)
+            { date: "2026/08/06", dayLabel: "Day 14 - Thu, 08/06/2026", time: "06:40", item: "過境新加坡樟宜機場", location: "Changi Airport (SIN) Terminal 3", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "安全著陸，前往轉機大樓", remark2: "感受全球最美綠意機場", city: "新加坡聯絡站" },
+            { date: "2026/08/06", dayLabel: "Day 14 - Thu, 08/06/2026", time: "08:00", item: "新加坡特色椰漿飯早餐", location: "樟宜機場美食街", budgetHKD: 100, budgetGBP: "", budgetEUR: "", remark1: "品嚐斑蘭葉椰漿飯、南洋咖椰吐司配半熟蛋、拉茶", remark2: "超美味的亞洲味道！", city: "新加坡聯絡站" },
+            { date: "2026/08/06", dayLabel: "Day 14 - Thu, 08/06/2026", time: "13:50", item: "最後航段起飛 (TR904)", location: "新加坡 (SIN) -> 澳門 (MFM)", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "酷航 TR904。預計 17:55 降落澳門，任務凱旋圓滿！", remark2: "收拾歐洲作戰回憶與豐富戰利品", city: "新加坡聯絡站" },
+            { date: "2026/08/06", dayLabel: "Day 14 - Thu, 08/06/2026", time: "17:55", item: "任務圓滿凱旋！澳門降落", location: "澳門國際機場 (MFM)", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "安全著陸，提取特工大箱與紀念品，解散回歸家園！", remark2: "任務圓滿落幕。歡迎期待下一次復仇者集結！", city: "新加坡聯絡站" }
         ];
 
-        // Preloaded Flights
+        // Preloaded Flights (Comprehensive checklist covering all flight decks)
         let flightData = [
             { id: "FL-101", date: "2026/07/24", route: "MFM ✈ SIN", code: "TR905 (Scoot)", time: "18:45 - 22:35", status: "READY" },
             { id: "FL-102", date: "2026/07/25", route: "SIN ✈ LHR", code: "SQ306 (SIA)", time: "01:05 - 07:40", status: "READY" },
-            { id: "FL-103", date: "2026/08/01", route: "Paris 🚄 London", code: "Eurostar 9013", time: "12:02 - 13:30", status: "STANDEE" },
-            { id: "FL-104", date: "2026/08/03", route: "MUC ✈ CDG", code: "LH2230 (Lufthansa)", time: "11:55 - 13:30", status: "READY" }
+            { id: "FL-103", date: "2026/07/30", route: "London 🚄 Paris", code: "Eurostar 9013", time: "11:30 - 14:45", status: "READY" },
+            { id: "FL-104", date: "2026/08/02", route: "CDG ✈ MUC", code: "LH2230 (Lufthansa)", time: "11:55 - 13:30", status: "READY" },
+            { id: "FL-105", date: "2026/08/05", route: "MUC ✈ SIN", code: "SQ327 (SIA)", time: "22:00 - 06:40+1", status: "READY" },
+            { id: "FL-106", date: "2026/08/06", route: "SIN ✈ MFM", code: "TR904 (Scoot)", time: "13:50 - 17:55", status: "READY" }
         ];
 
         // Preloaded Packing items
