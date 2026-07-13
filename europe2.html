@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVENGERS INITIATIVE: LONDON 2026</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Montserrat for clean action typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', 'Microsoft JhengHei', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        /* Marvel Red theme color */
+        .marvel-red { background-color: #ED1D24; }
+        .text-marvel-red { color: #ED1D24; }
+        .border-marvel-red { border-color: #ED1D24; }
+        
+        /* Dark HUD Theme styling */
+        .theme-dark {
+            background-color: #0c0c0e;
+            color: #f3f4f6;
+        }
+        .theme-dark .hud-card {
+            background: rgba(20, 20, 25, 0.8);
+            border: 1px solid rgba(237, 29, 36, 0.3);
+            box-shadow: 0 0 15px rgba(237, 29, 36, 0.1);
+        }
+        .theme-dark .hud-card:hover {
+            border-color: rgba(237, 29, 36, 0.8);
+            box-shadow: 0 0 20px rgba(237, 29, 36, 0.25);
+        }
+        .theme-dark .hud-accent {
+            color: #00D8FF;
+            text-shadow: 0 0 8px rgba(0, 216, 255, 0.5);
+        }
+        .theme-dark .hud-border-cyan {
+            border-color: rgba(0, 216, 255, 0.3);
+        }
+
+        /* Light S.H.I.E.L.D. Theme styling */
+        .theme-light {
+            background-color: #f4f6f9;
+            color: #1f2937;
+        }
+        .theme-light .hud-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .theme-light .hud-card:hover {
+            border-color: #ED1D24;
+            box-shadow: 0 10px 15px -3px rgba(237, 29, 36, 0.1), 0 4px 6px -2px rgba(237, 29, 36, 0.05);
+        }
+        .theme-light .hud-accent {
+            color: #1e3a8a;
+        }
+        .theme-light .hud-border-cyan {
+            border-color: #cbd5e1;
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        .theme-dark ::-webkit-scrollbar-thumb { background: #ED1D24; border-radius: 3px; }
+        .theme-light ::-webkit-scrollbar-thumb { background: #9ca3af; border-radius: 3px; }
+    </style>
+</head>
+<body class="theme-dark min-h-screen pb-20 md:pb-5">
+
+    <!-- TOP HEADER -->
+    <header class="relative overflow-hidden border-b-4 border-marvel-red py-4 px-4 md:px-8 bg-black text-white">
+        <!-- Stark HUD grid background -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center relative z-10 gap-4">
+            <!-- Marvel Logo Design -->
+            <div class="flex items-center gap-4">
+                <div class="bg-[#ED1D24] text-white font-black text-2xl md:text-4xl px-4 py-1 tracking-tighter uppercase inline-block select-none transform -skew-x-12">
+                    MARVEL
+                </div>
+                <div class="text-left">
+                    <h1 class="text-lg md:text-xl font-bold tracking-widest text-gray-100">LONDON & EUROPE 2026</h1>
+                    <p class="text-xs text-cyan-400 font-mono tracking-wider uppercase">S.H.I.E.L.D. Mission Briefing Hub</p>
+                </div>
+            </div>
+
+            <!-- Mode Selector / Theme Controls -->
+            <div class="flex items-center gap-3">
+                <button onclick="toggleTheme('dark')" id="darkBtn" class="flex items-center gap-2 px-3 py-1.5 rounded-md text-xs font-mono font-bold tracking-wider transition bg-[#ED1D24] text-white ring-2 ring-red-500">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    JARVIS HUD (深色)
+                </button>
+                <button onclick="toggleTheme('light')" id="lightBtn" class="flex items-center gap-2 px-3 py-1.5 rounded-md text-xs font-mono font-bold tracking-wider transition bg-gray-800 text-gray-300 hover:bg-gray-700">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m2.828 9.9a5 5 0 111.06 1.06l2.828-2.829z"></path></svg>
+                    FRIDAY OS (淺色)
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="max-w-7xl mx-auto p-4 md:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- COLUMN LEFT: MISSION RUNTIME & STATS (4 COLS) -->
+        <section class="lg:col-span-4 flex flex-col gap-6">
+            
+            <!-- MISSION COUNTDOWN CARD -->
+            <div class="hud-card rounded-lg p-5 relative overflow-hidden">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-sm font-bold tracking-wider text-marvel-red uppercase">Mission Launch Countdown</h3>
+                    <span class="text-xs bg-red-900/40 text-red-400 border border-red-500 px-2 py-0.5 rounded font-mono">T-MINUS</span>
+                </div>
+                <div class="grid grid-cols-4 gap-2 text-center" id="countdown">
+                    <div class="p-2 bg-black/40 rounded border border-gray-700/50">
+                        <div class="text-2xl font-black font-mono text-marvel-red" id="cd-days">00</div>
+                        <div class="text-[10px] text-gray-400 uppercase">Days</div>
+                    </div>
+                    <div class="p-2 bg-black/40 rounded border border-gray-700/50">
+                        <div class="text-2xl font-black font-mono text-marvel-red" id="cd-hours">00</div>
+                        <div class="text-[10px] text-gray-400 uppercase">Hrs</div>
+                    </div>
+                    <div class="p-2 bg-black/40 rounded border border-gray-700/50">
+                        <div class="text-2xl font-black font-mono text-marvel-red" id="cd-mins">00</div>
+                        <div class="text-[10px] text-gray-400 uppercase">Mins</div>
+                    </div>
+                    <div class="p-2 bg-black/40 rounded border border-gray-700/50">
+                        <div class="text-2xl font-black font-mono text-marvel-red" id="cd-secs">00</div>
+                        <div class="text-[10px] text-gray-400 uppercase">Secs</div>
+                    </div>
+                </div>
+                <div class="mt-4 text-center text-xs font-mono text-gray-400">
+                    🚀 目標出發：2026/07/24 18:45 (澳門 MFM)
+                </div>
+            </div>
+
+            <!-- ACTIVE AGENTS (ACTIVE TEAM MEMBERS WITH MARVEL CODENAMES) -->
+            <div class="hud-card rounded-lg p-5">
+                <h3 class="text-sm font-bold tracking-wider text-marvel-red uppercase mb-4">Active S.H.I.E.L.D. Agents</h3>
+                <div class="grid grid-cols-2 gap-3">
+                    <div onclick="selectAgent('Eric')" id="agentCard-Eric" class="cursor-pointer p-3 rounded border border-red-500/30 hover:border-red-500 bg-red-950/10 transition flex items-center gap-3">
+                        <span class="text-xl">🔴</span>
+                        <div>
+                            <div class="font-bold text-sm">Eric</div>
+                            <div class="text-[10px] text-red-400 font-mono">Iron Man / 領隊</div>
+                        </div>
+                    </div>
+                    <div onclick="selectAgent('Isabel')" id="agentCard-Isabel" class="cursor-pointer p-3 rounded border border-gray-600/30 hover:border-red-500 bg-gray-950/10 transition flex items-center gap-3">
+                        <span class="text-xl">🕷️</span>
+                        <div>
+                            <div class="font-bold text-sm">Isabel</div>
+                            <div class="text-[10px] text-purple-400 font-mono">Black Widow / 協調</div>
+                        </div>
+                    </div>
+                    <div onclick="selectAgent('Ricky')" id="agentCard-Ricky" class="cursor-pointer p-3 rounded border border-gray-600/30 hover:border-red-500 bg-gray-950/10 transition flex items-center gap-3">
+                        <span class="text-xl">⚡</span>
+                        <div>
+                            <div class="font-bold text-sm">Ricky</div>
+                            <div class="text-[10px] text-blue-400 font-mono">Thor / 重裝防禦</div>
+                        </div>
+                    </div>
+                    <div onclick="selectAgent('Venus')" id="agentCard-Venus" class="cursor-pointer p-3 rounded border border-gray-600/30 hover:border-red-500 bg-gray-950/10 transition flex items-center gap-3">
+                        <span class="text-xl">💫</span>
+                        <div>
+                            <div class="font-bold text-sm">Venus</div>
+                            <div class="text-[10px] text-yellow-400 font-mono">Captain Marvel / 領航</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INTELLIGENCE HUB (CSV DROPZONE) -->
+            <div class="hud-card rounded-lg p-5">
+                <div class="flex justify-between items-center mb-3">
+                    <h3 class="text-sm font-bold tracking-wider text-marvel-red uppercase">Data Core Intelligence</h3>
+                    <span class="text-[10px] bg-green-900/30 text-green-400 border border-green-500/50 px-2 py-0.5 rounded font-mono">OFFLINE</span>
+                </div>
+                <p class="text-xs text-gray-400 mb-4 leading-relaxed">
+                    可隨時在此拖入或上傳您的戰術 CSV 檔案（行程、消費紀錄、機票、準備物品），系統將完全在您的瀏覽器端進行離線解密與渲染。
+                </p>
+                <div class="border-2 border-dashed border-red-500/40 rounded-lg p-4 text-center hover:border-red-500/80 transition cursor-pointer relative" id="dropzone">
+                    <input type="file" id="csvFileInput" multiple accept=".csv" class="absolute inset-0 opacity-0 cursor-pointer" onchange="handleFileSelect(event)" />
+                    <svg class="w-8 h-8 text-marvel-red mx-auto mb-2 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+                    <span class="text-xs font-mono font-bold text-gray-300">上傳或拖曳戰術 CSV 至此</span>
+                </div>
+                <div id="fileUploadLogs" class="mt-3 text-[10px] font-mono text-cyan-400 space-y-1"></div>
+            </div>
+
+            <!-- FLIGHT DECK CARD -->
+            <div class="hud-card rounded-lg p-5">
+                <h3 class="text-sm font-bold tracking-wider text-marvel-red uppercase mb-4">S.H.I.E.L.D. Flight Deck</h3>
+                <div class="space-y-4 text-xs font-mono" id="flightDeckContainer">
+                    <!-- Flights populated by script -->
+                </div>
+            </div>
+
+        </section>
+
+        <!-- COLUMN CENTER/RIGHT: MISSION SCHEDULE & GEAR PREP (8 COLS) -->
+        <section class="lg:col-span-8 flex flex-col gap-6">
+            
+            <!-- TABS FOR LARGE SCREEN / DYNAMIC INTERACTION -->
+            <div class="flex border-b border-gray-700/50 gap-2 overflow-x-auto pb-1">
+                <button onclick="switchTab('schedule')" id="tabBtn-schedule" class="px-5 py-2.5 font-bold tracking-wider uppercase text-sm border-b-2 border-marvel-red text-marvel-red whitespace-nowrap transition">
+                    ⚔️ 戰術日程 Timeline
+                </button>
+                <button onclick="switchTab('gear')" id="tabBtn-gear" class="px-5 py-2.5 font-bold tracking-wider uppercase text-sm text-gray-400 hover:text-marvel-red border-b-2 border-transparent whitespace-nowrap transition">
+                    🛡️ 特工裝備庫 Gear
+                </button>
+                <button onclick="switchTab('ledger')" id="tabBtn-ledger" class="px-5 py-2.5 font-bold tracking-wider uppercase text-sm text-gray-400 hover:text-marvel-red border-b-2 border-transparent whitespace-nowrap transition">
+                    💰 斯塔克賬目 Ledger
+                </button>
+            </div>
+
+            <!-- TAB 1: SCHEDULE CONTENT -->
+            <div id="tabContent-schedule" class="space-y-6">
+                <!-- City Filter -->
+                <div class="flex flex-wrap items-center gap-2" id="dayFilters">
+                    <!-- JS will populate day/city quick-jump tags here -->
+                </div>
+
+                <!-- Timeline Container -->
+                <div class="relative pl-6 border-l-2 border-marvel-red/40 space-y-8" id="timelineContainer">
+                    <!-- Timeline items will be injected by script -->
+                </div>
+            </div>
+
+            <!-- TAB 2: GEAR CONTENT -->
+            <div id="tabContent-gear" class="hidden hud-card rounded-lg p-6">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+                    <div>
+                        <h3 class="text-lg font-bold text-marvel-red uppercase tracking-wider">Agent Personal Gear Stockpile</h3>
+                        <p class="text-xs text-gray-400 font-mono">裝備儲備與隨身武器/行李箱配置</p>
+                    </div>
+                    <!-- Selected Agent Highlight -->
+                    <div class="bg-marvel-red/20 border border-marvel-red px-4 py-2 rounded text-right">
+                        <div class="text-xs font-mono text-gray-300">目前檢視特工：</div>
+                        <div class="text-sm font-black text-white uppercase" id="gearActiveAgentName">Eric</div>
+                    </div>
+                </div>
+
+                <!-- Checklist Table -->
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs font-mono">
+                        <thead>
+                            <tr class="border-b border-gray-700/50 pb-2 text-marvel-red">
+                                <th class="py-2">任務物資</th>
+                                <th class="py-2 text-center">類別</th>
+                                <th class="py-2 text-center">隨身攜帶 (Pocket)</th>
+                                <th class="py-2 text-center">行李箱 (Suitcase)</th>
+                                <th class="py-2 text-right">狀態</th>
+                            </tr>
+                        </thead>
+                        <tbody id="gearTableBody" class="divide-y divide-gray-800/50">
+                            <!-- Populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- TAB 3: LEDGER CONTENT -->
+            <div id="tabContent-ledger" class="hidden hud-card rounded-lg p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <div>
+                        <h3 class="text-lg font-bold text-marvel-red uppercase tracking-wider">Stark Industries Financial Ledger</h3>
+                        <p class="text-xs text-gray-400 font-mono font-bold">戰略開支實時匯總</p>
+                    </div>
+                    <button onclick="resetExpenses()" class="text-xs bg-red-950/40 hover:bg-red-900 border border-red-500/50 px-3 py-1.5 rounded font-mono text-red-300 transition">
+                        重設數據
+                    </button>
+                </div>
+
+                <!-- Exchange rate info -->
+                <div class="grid grid-cols-3 gap-4 mb-6 text-center font-mono text-xs">
+                    <div class="p-3 bg-black/40 rounded border border-gray-800">
+                        <div class="text-gray-400">總體支出 (HKD)</div>
+                        <div class="text-lg font-bold text-yellow-400 mt-1" id="totalSpentHKD">HK$ 0</div>
+                    </div>
+                    <div class="p-3 bg-black/40 rounded border border-gray-800">
+                        <div class="text-gray-400">總體支出 (GBP)</div>
+                        <div class="text-lg font-bold text-cyan-400 mt-1" id="totalSpentGBP">£ 0</div>
+                    </div>
+                    <div class="p-3 bg-black/40 rounded border border-gray-800">
+                        <div class="text-gray-400">總體支出 (EUR)</div>
+                        <div class="text-lg font-bold text-purple-400 mt-1" id="totalSpentEUR">€ 0</div>
+                    </div>
+                </div>
+
+                <!-- Input form for quick offline expense note -->
+                <div class="bg-black/20 p-4 rounded-lg border border-gray-800 mb-6">
+                    <h4 class="text-xs font-bold uppercase text-marvel-red mb-3">記錄一筆新戰略開支</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-3">
+                        <input id="expItem" type="text" placeholder="項目名稱 (例如: 午餐)" class="bg-black/50 border border-gray-700 rounded px-3 py-2 text-xs focus:ring-1 focus:ring-red-500 outline-none text-white" />
+                        <input id="expCost" type="number" placeholder="金額 (數字)" class="bg-black/50 border border-gray-700 rounded px-3 py-2 text-xs focus:ring-1 focus:ring-red-500 outline-none text-white" />
+                        <select id="expCurrency" class="bg-black/50 border border-gray-700 rounded px-3 py-2 text-xs focus:ring-1 focus:ring-red-500 outline-none text-white">
+                            <option value="HKD">HKD (港幣)</option>
+                            <option value="GBP">GBP (英鎊)</option>
+                            <option value="EUR">EUR (歐元)</option>
+                        </select>
+                        <button onclick="addExpense()" class="bg-marvel-red hover:bg-red-700 text-white text-xs font-bold rounded py-2 transition tracking-wider uppercase">
+                            加入帳目
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Ledger List -->
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs font-mono">
+                        <thead>
+                            <tr class="border-b border-gray-700/50 pb-2 text-marvel-red">
+                                <th class="py-2">消費項目</th>
+                                <th class="py-2 text-center">貨幣代碼</th>
+                                <th class="py-2 text-right">金額</th>
+                                <th class="py-2 text-right">折合 HKD</th>
+                                <th class="py-2 text-center">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ledgerTableBody" class="divide-y divide-gray-800/50">
+                            <!-- Dinamically loaded -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- CUSTOM TOAST NOTIFICATION -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="bg-black border-2 border-marvel-red text-white px-5 py-3 rounded-lg shadow-xl flex items-center gap-3">
+            <span class="text-marvel-red font-black text-sm select-none transform -skew-x-12 bg-red-950 px-2 py-0.5 border border-red-500">S.H.I.E.L.D.</span>
+            <span id="toastMsg" class="text-xs font-mono">系統指令已成功執行。</span>
+        </div>
+    </div>
+
+    <!-- MOBILE BOTTOM NAVIGATION -->
+    <nav class="lg:hidden fixed bottom-0 inset-x-0 bg-black border-t-2 border-marvel-red z-40 flex justify-around py-2 text-[10px] uppercase font-mono tracking-wider">
+        <button onclick="switchTab('schedule')" class="flex flex-col items-center gap-1 text-marvel-red" id="mobTab-schedule">
+            <span>⚔️</span>
+            <span>日程</span>
+        </button>
+        <button onclick="switchTab('gear')" class="flex flex-col items-center gap-1 text-gray-400" id="mobTab-gear">
+            <span>🛡️</span>
+            <span>裝備</span>
+        </button>
+        <button onclick="switchTab('ledger')" class="flex flex-col items-center gap-1 text-gray-400" id="mobTab-ledger">
+            <span>💰</span>
+            <span>賬目</span>
+        </button>
+    </nav>
+
+    <!-- JS MODULE -->
+    <script>
+        // Exchange rates default setting
+        const RATES = { GBP_TO_HKD: 10.2, EUR_TO_HKD: 8.5 };
+
+        // Preloaded Itinerary
+        let itineraryData = [
+            { date: "2026/07/24", dayLabel: "Fri, 07/24/2026", time: "16:00", item: "出發", location: "澳門", budgetHKD: 20, budgetGBP: "", budgetEUR: "", remark1: "開始神奇旅程", remark2: "溫度: 27-32°C\n體感: 31-37°C\n穿搭: 輕便夏裝、攜帶雨具", city: "新加坡聯絡站" },
+            { date: "2026/07/24", dayLabel: "Fri, 07/24/2026", time: "18:45", item: "起飛 (TR905)", location: "澳門機場 -> 新加坡", budgetHKD: 31432, budgetGBP: "", budgetEUR: "", remark1: "酷航 TR905", remark2: "機上戰術整備", city: "新加坡聯絡站" },
+            { date: "2026/07/25", dayLabel: "Sat, 07/25/2026", time: "01:05", item: "起飛 (SQ306)", location: "新加坡 -> 倫敦希斯路", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "新加坡航空 SQ306", remark2: "跨洋洲航線飛行", city: "倫敦大本營" },
+            { date: "2026/07/25", dayLabel: "Sat, 07/25/2026", time: "07:40", item: "降落倫敦", location: "希斯路機場 (LHR)", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "抵達英國希斯路", remark2: "辦理入境並提取裝備", city: "倫敦大本營" },
+            { date: "2026/07/25", dayLabel: "Sat, 07/25/2026", time: "10:00", item: "出機場交通", location: "希斯路機場", budgetHKD: "", budgetGBP: 30, budgetEUR: "", remark1: "Heathrow Express", remark2: "快速鐵路前往市區", city: "倫敦大本營" },
+            { date: "2026/07/25", dayLabel: "Sat, 07/25/2026", time: "11:00", item: "辦理酒店登記入住", location: "Hilton London Metropole", budgetHKD: 9475, budgetGBP: "", budgetEUR: "", remark1: "225 Edgware Rd, W2 1JU", remark2: "建立前線作戰司令部", city: "倫敦大本營" },
+            { date: "2026/07/25", dayLabel: "Sat, 07/25/2026", time: "12:00", item: "午餐能量補充", location: "The Red Lion (Parliament Street)", budgetHKD: "", budgetGBP: 80, budgetEUR: "", remark1: "48 Parliament St, London SW1A 2NH", remark2: "品嚐道地英式英皇紅獅炸魚薯條", city: "倫敦大本營" },
+            { date: "2026/08/03", dayLabel: "Mon, 08/03/2026", time: "18:00", item: "晚餐 (德式餐風味餐)", location: "Wirtshaus in der Au", budgetHKD: "", budgetGBP: "", budgetEUR: 120, remark1: "Lilienstraße 51, 81669 München", remark2: "品嚐巴伐利亞脆皮豬腳、啤酒", city: "慕尼黑分部" },
+            { date: "2026/08/03", dayLabel: "Mon, 08/03/2026", time: "20:00", item: "入住酒店", location: "Courtyard by Marriott Munich City Center", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "Schwanthalerstraße 37", remark2: "宿慕尼黑市中心萬怡", city: "慕尼黑分部" },
+            { date: "2026/08/04", dayLabel: "Tue, 08/04/2026", time: "09:00", item: "早餐", location: "慕尼黑早餐小站", budgetHKD: "", budgetGBP: "", budgetEUR: 30, remark1: "法式麵包與咖啡", remark2: "溫度: 14-25°C\n穿搭: 薄外套配短袖，防強紫外線", city: "慕尼黑分部" },
+            { date: "2026/08/04", dayLabel: "Tue, 08/04/2026", time: "10:00", item: "Olympiapark 奧林匹克公園", location: "Spiridon-Louis-Ring 21", budgetHKD: "", budgetGBP: "", budgetEUR: 40, remark1: "1972奧運會原址建築群", remark2: "體驗流線型現代帳篷設計", city: "慕尼黑分部" },
+            { date: "2026/08/04", dayLabel: "Tue, 08/04/2026", time: "11:00", item: "BMW Museum 寶馬博物館", location: "Am Olympiapark 2", budgetHKD: "", budgetGBP: "", budgetEUR: 40, remark1: "參觀寶馬傳奇歷史與未來跑車展", remark2: "鋼鐵人科技研究", city: "慕尼黑分部" },
+            { date: "2026/08/04", dayLabel: "Tue, 08/04/2026", time: "14:00", item: "寧芬堡宮", location: "Schloß Nymphenburg 1", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "巴洛克式皇家宮殿與園林花園", remark2: "漫步參觀，感受巴伐利亞選帝侯官邸", city: "慕尼黑分部" },
+            { date: "2026/08/04", dayLabel: "Tue, 08/04/2026", time: "18:00", item: "晚餐 (經典義式料理)", location: "VAPIANO München Theatiner Straße", budgetHKD: "", budgetGBP: "", budgetEUR: 120, remark1: "Theatinerstraße 15, 80333 München", remark2: "自選新鮮現做義大利麵、窯烤披薩", city: "慕尼黑分部" }
+        ];
+
+        // Preloaded Flights
+        let flightData = [
+            { id: "FL-101", date: "2026/07/24", route: "MFM ✈ SIN", code: "TR905 (Scoot)", time: "18:45 - 22:35", status: "READY" },
+            { id: "FL-102", date: "2026/07/25", route: "SIN ✈ LHR", code: "SQ306 (SIA)", time: "01:05 - 07:40", status: "READY" },
+            { id: "FL-103", date: "2026/08/01", route: "Paris 🚄 London", code: "Eurostar 9013", time: "12:02 - 13:30", status: "STANDEE" },
+            { id: "FL-104", date: "2026/08/03", route: "MUC ✈ CDG", code: "LH2230 (Lufthansa)", time: "11:55 - 13:30", status: "READY" }
+        ];
+
+        // Preloaded Packing items
+        let packingData = [
+            { item: "上衣", category: "戰鬥服飾", Eric: { pocket: 0, suitcase: 10, checked: false }, Isabel: { pocket: 0, suitcase: 10, checked: false }, Ricky: { pocket: 0, suitcase: 10, checked: false }, Venus: { pocket: 0, suitcase: 10, checked: false } },
+            { item: "長褲", category: "戰鬥服飾", Eric: { pocket: 0, suitcase: 4, checked: false }, Isabel: { pocket: 0, suitcase: 5, checked: false }, Ricky: { pocket: 0, suitcase: 5, checked: false }, Venus: { pocket: 0, suitcase: 5, checked: false } },
+            { item: "內衣褲", category: "戰鬥服飾", Eric: { pocket: 0, suitcase: 10, checked: false }, Isabel: { pocket: 0, suitcase: 10, checked: false }, Ricky: { pocket: 0, suitcase: 10, checked: false }, Venus: { pocket: 0, suitcase: 10, checked: false } },
+            { item: "戰術防風外套", category: "戰鬥服飾", Eric: { pocket: 1, suitcase: 0, checked: false }, Isabel: { pocket: 1, suitcase: 0, checked: false }, Ricky: { pocket: 1, suitcase: 0, checked: false }, Venus: { pocket: 1, suitcase: 0, checked: false } },
+            { item: "牙刷組", category: "野戰洗漱", Eric: { pocket: 0, suitcase: 1, checked: false }, Isabel: { pocket: 0, suitcase: 1, checked: false }, Ricky: { pocket: 0, suitcase: 1, checked: false }, Venus: { pocket: 0, suitcase: 1, checked: false } },
+            { item: "量子能量源 (尿袋)", category: "戰術裝備", Eric: { pocket: 1, suitcase: 0, checked: false }, Isabel: { pocket: 1, suitcase: 0, checked: false }, Ricky: { pocket: 1, suitcase: 0, checked: false }, Venus: { pocket: 1, suitcase: 0, checked: false } },
+            { item: "快充插頭", category: "通訊電力", Eric: { pocket: 1, suitcase: 2, checked: false }, Isabel: { pocket: 0, suitcase: 0, checked: false }, Ricky: { pocket: 0, suitcase: 0, checked: false }, Venus: { pocket: 1, suitcase: 0, checked: false } },
+            { item: "防身折疊傘", category: "日常裝備", Eric: { pocket: 0, suitcase: 0, checked: false }, Isabel: { pocket: 1, suitcase: 0, checked: false }, Ricky: { pocket: 0, suitcase: 0, checked: false }, Venus: { pocket: 1, suitcase: 0, checked: false } },
+            { item: "備用醫療藥盒", category: "戰地補給", Eric: { pocket: 0, suitcase: 1, checked: false }, Isabel: { pocket: 0, suitcase: 1, checked: false }, Ricky: { pocket: 0, suitcase: 1, checked: false }, Venus: { pocket: 0, suitcase: 1, checked: false } }
+        ];
+
+        // Custom extra expenses added by user
+        let customExpenses = [];
+
+        // Global State Variables
+        let currentTheme = 'dark';
+        let currentActiveAgent = 'Eric';
+        let currentActiveTab = 'schedule';
+        let filterCity = 'ALL';
+
+        // Initialize App
+        window.onload = function() {
+            // Load custom stored elements if any
+            if(localStorage.getItem('customExpenses')) {
+                customExpenses = JSON.parse(localStorage.getItem('customExpenses'));
+            }
+            if(localStorage.getItem('packingCheckedState')) {
+                const checkedState = JSON.parse(localStorage.getItem('packingCheckedState'));
+                // map back to packingData
+                packingData.forEach((item, index) => {
+                    if(checkedState[index] !== undefined) {
+                        item.Eric.checked = checkedState[index].Eric;
+                        item.Isabel.checked = checkedState[index].Isabel;
+                        item.Ricky.checked = checkedState[index].Ricky;
+                        item.Venus.checked = checkedState[index].Venus;
+                    }
+                });
+            }
+
+            startMissionCountdown();
+            renderFlightDeck();
+            renderItinerary();
+            renderPackingList();
+            renderLedger();
+            showToast("JARVIS 戰術系統引導完畢，預備出擊！");
+        };
+
+        // Mission Launch countdown timer (Target: July 24, 2026, 18:45)
+        function startMissionCountdown() {
+            const targetDate = new Date("2026/07/24 18:45:00").getTime();
+            
+            function updateTimer() {
+                const now = new Date().getTime();
+                const difference = targetDate - now;
+
+                if (difference <= 0) {
+                    document.getElementById("countdown").innerHTML = "<div class='col-span-4 text-emerald-400 font-bold uppercase py-2'>MISSION IN PROGRESS 🚀</div>";
+                    return;
+                }
+
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                document.getElementById("cd-days").innerText = String(days).padStart(2, '0');
+                document.getElementById("cd-hours").innerText = String(hours).padStart(2, '0');
+                document.getElementById("cd-mins").innerText = String(minutes).padStart(2, '0');
+                document.getElementById("cd-secs").innerText = String(seconds).padStart(2, '0');
+            }
+            updateTimer();
+            setInterval(updateTimer, 1000);
+        }
+
+        // Switch App Themes
+        function toggleTheme(theme) {
+            currentTheme = theme;
+            const body = document.body;
+            const darkBtn = document.getElementById("darkBtn");
+            const lightBtn = document.getElementById("lightBtn");
+
+            if (theme === 'dark') {
+                body.className = "theme-dark min-h-screen pb-20 md:pb-5";
+                darkBtn.className = "flex items-center gap-2 px-3 py-1.5 rounded-md text-xs font-mono font-bold tracking-wider transition bg-[#ED1D24] text-white ring-2 ring-red-500";
+                lightBtn.className = "flex items-center gap-2 px-3 py-1.5 rounded-md text-xs font-mono font-bold tracking-wider transition bg-gray-800 text-gray-300 hover:bg-gray-700";
+                showToast("賈維斯極黑戰術主題啟動。");
+            } else {
+                body.className = "theme-light min-h-screen pb-20 md:pb-5";
+                lightBtn.className = "flex items-center gap-2 px-3 py-1.5 rounded-md text-xs font-mono font-bold tracking-wider transition bg-[#ED1D24] text-white ring-2 ring-red-500";
+                darkBtn.className = "flex items-center gap-2 px-3 py-1.5 rounded-md text-xs font-mono font-bold tracking-wider transition bg-gray-200 text-gray-700 hover:bg-gray-300";
+                showToast("星期五高反差戰術主題啟動。");
+            }
+        }
+
+        // Switch Core Tabs
+        function switchTab(tabId) {
+            currentActiveTab = tabId;
+            const tabs = ['schedule', 'gear', 'ledger'];
+            tabs.forEach(t => {
+                const content = document.getElementById(`tabContent-${t}`);
+                const btn = document.getElementById(`tabBtn-${t}`);
+                const mobBtn = document.getElementById(`mobTab-${t}`);
+                
+                if (t === tabId) {
+                    content.classList.remove('hidden');
+                    btn.className = "px-5 py-2.5 font-bold tracking-wider uppercase text-sm border-b-2 border-marvel-red text-marvel-red whitespace-nowrap transition";
+                    if (mobBtn) mobBtn.className = "flex flex-col items-center gap-1 text-marvel-red";
+                } else {
+                    content.classList.add('hidden');
+                    btn.className = "px-5 py-2.5 font-bold tracking-wider uppercase text-sm text-gray-400 hover:text-marvel-red border-b-2 border-transparent whitespace-nowrap transition";
+                    if (mobBtn) mobBtn.className = "flex flex-col items-center gap-1 text-gray-400";
+                }
+            });
+        }
+
+        // Select Active Agent (S.H.I.E.L.D. Character profiles)
+        function selectAgent(agentName) {
+            currentActiveAgent = agentName;
+            
+            // Highlight Agent Cards
+            const agents = ['Eric', 'Isabel', 'Ricky', 'Venus'];
+            agents.forEach(a => {
+                const card = document.getElementById(`agentCard-${a}`);
+                if (a === agentName) {
+                    card.className = "cursor-pointer p-3 rounded border border-red-500 bg-red-950/20 transition flex items-center gap-3 shadow-md shadow-red-500/20 scale-105 transform";
+                } else {
+                    card.className = "cursor-pointer p-3 rounded border border-gray-600/30 hover:border-red-500 bg-gray-950/10 transition flex items-center gap-3";
+                }
+            });
+
+            // Update Gear checklist active agent indicator
+            document.getElementById("gearActiveAgentName").innerText = agentName;
+            renderPackingList();
+            showToast(`已鎖定特工：${agentName} 的戰術指引。`);
+        }
+
+        // Render S.H.I.E.L.D. Flight Deck List
+        function renderFlightDeck() {
+            const container = document.getElementById("flightDeckContainer");
+            container.innerHTML = "";
+
+            flightData.forEach(flight => {
+                const statusColor = flight.status === 'READY' ? 'text-green-400 border-green-500' : 'text-yellow-400 border-yellow-500';
+                const html = `
+                    <div class="border border-gray-800 p-3 rounded bg-black/30 hover:bg-black/50 transition">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="font-bold text-marvel-red">${flight.route}</span>
+                            <span class="text-[9px] border px-1.5 py-0.5 rounded ${statusColor}">${flight.status}</span>
+                        </div>
+                        <div class="flex justify-between items-center text-gray-400 text-[11px]">
+                            <span>代號: ${flight.code}</span>
+                            <span>時間: ${flight.time}</span>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += html;
+            });
+        }
+
+        // Render Mission Itinerary Schedule
+        function renderItinerary() {
+            const container = document.getElementById("timelineContainer");
+            const filterContainer = document.getElementById("dayFilters");
+            container.innerHTML = "";
+            filterContainer.innerHTML = "";
+
+            // Collect unique cities
+            const cities = ['ALL', ...new Set(itineraryData.map(item => item.city).filter(Boolean))];
+            cities.forEach(city => {
+                const activeClass = filterCity === city ? 'bg-marvel-red text-white' : 'bg-gray-800/60 text-gray-300 hover:bg-marvel-red/40';
+                filterContainer.innerHTML += `
+                    <button onclick="setCityFilter('${city}')" class="px-3 py-1 text-xs font-mono font-bold rounded transition uppercase tracking-wider ${activeClass}">
+                        ${city}
+                    </button>
+                `;
+            });
+
+            // Populate timeline
+            let lastDayLabel = "";
+            itineraryData.forEach((item, index) => {
+                if (filterCity !== 'ALL' && item.city !== filterCity) return;
+
+                let dateHeader = "";
+                if (item.dayLabel !== lastDayLabel) {
+                    lastDayLabel = item.dayLabel;
+                    dateHeader = `
+                        <div class="relative -left-[31px] flex items-center gap-3 mt-6 mb-4">
+                            <div class="w-4 h-4 bg-marvel-red rounded-full ring-4 ring-black"></div>
+                            <h3 class="text-xs font-black font-mono bg-marvel-red text-white px-3 py-1 rounded tracking-widest uppercase skew-x-12">
+                                ${item.dayLabel}
+                            </h3>
+                        </div>
+                    `;
+                }
+
+                const budgetStr = item.budgetHKD ? `HK$${item.budgetHKD}` : (item.budgetGBP ? `£${item.budgetGBP}` : (item.budgetEUR ? `€${item.budgetEUR}` : "N/A"));
+                const weatherStr = item.weather ? item.weather : "無異常氣象數據";
+
+                // Map styling base on values
+                const html = `
+                    ${dateHeader}
+                    <div class="hud-card rounded-lg p-4 relative group transition-all duration-300 mb-4 ml-2">
+                        <!-- Left indicator edge -->
+                        <div class="absolute left-0 top-0 bottom-0 w-1 bg-marvel-red/40 group-hover:bg-marvel-red transition-all"></div>
+                        
+                        <div class="flex flex-col md:flex-row justify-between items-start gap-2">
+                            <div>
+                                <span class="font-mono text-xs font-bold text-cyan-400 bg-cyan-950/40 border border-cyan-500/40 px-2 py-0.5 rounded mr-2">${item.time}</span>
+                                <h4 class="inline text-sm font-bold tracking-wide">${item.item}</h4>
+                                <p class="text-xs text-gray-400 mt-1 flex items-center gap-1">
+                                    📍 <span>${item.location || '無指定地點'}</span>
+                                    ${item.location ? `
+                                        <button onclick="copyToClipboard('${item.location}')" class="text-cyan-400 hover:text-white transition ml-2 text-[10px] font-mono">[複製地址]</button>
+                                    ` : ''}
+                                </p>
+                            </div>
+                            <div class="text-right flex flex-col items-end gap-1">
+                                <span class="text-xs font-mono font-bold bg-yellow-950/40 text-yellow-500 border border-yellow-500/30 px-2.5 py-0.5 rounded">預算: ${budgetStr}</span>
+                                <span class="text-[10px] text-gray-500 font-mono tracking-wider">${item.city || '未知聯絡站'}</span>
+                            </div>
+                        </div>
+
+                        <!-- Remarks and tactical outfit suggestion -->
+                        <div class="mt-3 pt-3 border-t border-gray-800/40 grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-mono">
+                            <div class="bg-black/20 p-2.5 rounded border border-gray-800/40">
+                                <div class="text-[10px] text-marvel-red font-bold uppercase mb-1">任務日誌 Memo</div>
+                                <p class="text-gray-300 leading-relaxed">${item.remark1 || '無特定情報'}</p>
+                            </div>
+                            <div class="bg-black/20 p-2.5 rounded border border-gray-800/40">
+                                <div class="text-[10px] text-cyan-400 font-bold uppercase mb-1">環境與武裝穿搭</div>
+                                <p class="text-gray-300 leading-relaxed whitespace-pre-line">${item.remark2 || '標準作戰配置'}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += html;
+            });
+
+            if (container.innerHTML === "") {
+                container.innerHTML = `<div class="text-center py-12 text-xs font-mono text-gray-500">該站點目前無作戰指令排程。</div>`;
+            }
+        }
+
+        // Set City Itinerary Filter
+        function setCityFilter(city) {
+            filterCity = city;
+            renderItinerary();
+        }
+
+        // Copy location address helper (Supports Offline & Sandbox environments)
+        function copyToClipboard(text) {
+            const tempInput = document.createElement("input");
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            showToast(`已成功複製情報位置: ${text}`);
+        }
+
+        // Render Agent packing checklist
+        function renderPackingList() {
+            const tbody = document.getElementById("gearTableBody");
+            tbody.innerHTML = "";
+
+            packingData.forEach((item, index) => {
+                const agentData = item[currentActiveAgent] || { pocket: 0, suitcase: 0, checked: false };
+                const isChecked = agentData.checked;
+                const statusIcon = isChecked ? '✅ 已裝箱' : '❌ 未就緒';
+                const statusClass = isChecked ? 'text-green-400 font-bold bg-green-950/20 border-green-500/30' : 'text-red-400 font-bold bg-red-950/20 border-red-500/30';
+                
+                const tr = document.createElement('tr');
+                tr.className = `hover:bg-gray-800/30 transition cursor-pointer ${isChecked ? 'opacity-60' : ''}`;
+                tr.onclick = () => togglePackingCheck(index);
+
+                tr.innerHTML = `
+                    <td class="py-3 font-bold">${item.item}</td>
+                    <td class="py-3 text-center text-[10px] text-gray-400">${item.category}</td>
+                    <td class="py-3 text-center text-sm font-bold text-yellow-500">${agentData.pocket || '-'}</td>
+                    <td class="py-3 text-center text-sm font-bold text-cyan-400">${agentData.suitcase || '-'}</td>
+                    <td class="py-3 text-right">
+                        <span class="text-[10px] border px-2.5 py-1 rounded inline-block ${statusClass}">${statusIcon}</span>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Toggle checkbox status on packing list
+        function togglePackingCheck(itemIndex) {
+            const agentState = packingData[itemIndex][currentActiveAgent];
+            agentState.checked = !agentState.checked;
+            
+            // Save checked states locally
+            const localState = packingData.map(item => ({
+                Eric: item.Eric.checked,
+                Isabel: item.Isabel.checked,
+                Ricky: item.Ricky.checked,
+                Venus: item.Venus.checked
+            }));
+            localStorage.setItem('packingCheckedState', JSON.stringify(localState));
+
+            renderPackingList();
+            
+            const stateMsg = agentState.checked ? '已配備裝箱 🛡️' : '卸載裝備';
+            showToast(`${currentActiveAgent} 的【${packingData[itemIndex].item}】${stateMsg}`);
+        }
+
+        // Add customizable offline expense items
+        function addExpense() {
+            const item = document.getElementById("expItem").value.trim();
+            const cost = parseFloat(document.getElementById("expCost").value);
+            const currency = document.getElementById("expCurrency").value;
+
+            if(!item || isNaN(cost)) {
+                showToast("🔴 請輸入完整的開支名稱與金額！");
+                return;
+            }
+
+            customExpenses.push({ id: Date.now(), item, cost, currency });
+            localStorage.setItem('customExpenses', JSON.stringify(customExpenses));
+
+            // Clean inputs
+            document.getElementById("expItem").value = "";
+            document.getElementById("expCost").value = "";
+
+            renderLedger();
+            showToast(`已追加開支項目：${item}`);
+        }
+
+        // Delete expense item
+        function deleteExpense(id) {
+            customExpenses = customExpenses.filter(e => e.id !== id);
+            localStorage.setItem('customExpenses', JSON.stringify(customExpenses));
+            renderLedger();
+            showToast("開支紀錄已刪除。");
+        }
+
+        // Reset Ledger Data
+        function resetExpenses() {
+            if(confirm("確定要重設您新增的所有自訂開支紀錄嗎？")) {
+                customExpenses = [];
+                localStorage.removeItem('customExpenses');
+                renderLedger();
+                showToast("已重置所有自定義開支數據。");
+            }
+        }
+
+        // Render Expense Ledger & Aggregate overall totals
+        function renderLedger() {
+            const tbody = document.getElementById("ledgerTableBody");
+            tbody.innerHTML = "";
+
+            // Start with base data extracted from Itinerary values
+            let combinedList = [];
+            itineraryData.forEach(item => {
+                if (item.budgetHKD) {
+                    combinedList.push({ item: item.item, cost: item.budgetHKD, currency: 'HKD', source: 'itinerary' });
+                } else if (item.budgetGBP) {
+                    combinedList.push({ item: item.item, cost: item.budgetGBP, currency: 'GBP', source: 'itinerary' });
+                } else if (item.budgetEUR) {
+                    combinedList.push({ item: item.item, cost: item.budgetEUR, currency: 'EUR', source: 'itinerary' });
+                }
+            });
+
+            // Add flight deck prices if applicable
+            combinedList.push({ item: "機票總計費用 (TR905, SQ306, Eurostar)", cost: 31432, currency: 'HKD', source: 'flight' });
+            combinedList.push({ item: "Hilton 倫敦大本營房宿費", cost: 9475, currency: 'HKD', source: 'hotel' });
+
+            // Merge with user extra offline inputs
+            customExpenses.forEach(exp => {
+                combinedList.push({ ...exp, source: 'user' });
+            });
+
+            let totalHKD = 0;
+
+            combinedList.forEach(exp => {
+                let convertedHKD = 0;
+                if (exp.currency === 'HKD') {
+                    convertedHKD = exp.cost;
+                } else if (exp.currency === 'GBP') {
+                    convertedHKD = exp.cost * RATES.GBP_TO_HKD;
+                } else if (exp.currency === 'EUR') {
+                    convertedHKD = exp.cost * RATES.EUR_TO_HKD;
+                }
+
+                totalHKD += convertedHKD;
+
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-gray-800/30 transition";
+
+                tr.innerHTML = `
+                    <td class="py-3 font-bold">${exp.item}</td>
+                    <td class="py-3 text-center text-[10px] font-mono text-gray-400">${exp.currency}</td>
+                    <td class="py-3 text-right font-bold">${exp.currency === 'HKD' ? 'HK$' : (exp.currency === 'GBP' ? '£' : '€')}${exp.cost.toLocaleString()}</td>
+                    <td class="py-3 text-right text-yellow-500 font-bold">HK$ ${Math.round(convertedHKD).toLocaleString()}</td>
+                    <td class="py-3 text-center">
+                        ${exp.source === 'user' ? `
+                            <button onclick="deleteExpense(${exp.id})" class="text-red-500 hover:text-red-700 transition font-black">✕</button>
+                        ` : '<span class="text-gray-600 text-[10px]">鎖定</span>'}
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+            // Set aggregate card panels
+            document.getElementById("totalSpentHKD").innerText = `HK$ ${Math.round(totalHKD).toLocaleString()}`;
+            document.getElementById("totalSpentGBP").innerText = `£ ${Math.round(totalHKD / RATES.GBP_TO_HKD).toLocaleString()}`;
+            document.getElementById("totalSpentEUR").innerText = `€ ${Math.round(totalHKD / RATES.EUR_TO_HKD).toLocaleString()}`;
+        }
+
+        // Custom S.H.I.E.L.D. visual toast
+        function showToast(msg) {
+            const toast = document.getElementById("toast");
+            const toastMsg = document.getElementById("toastMsg");
+            toastMsg.innerText = msg;
+            
+            toast.className = "fixed bottom-6 right-6 z-50 transform translate-y-0 opacity-100 transition-all duration-300 pointer-events-auto";
+            
+            setTimeout(() => {
+                toast.className = "fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none";
+            }, 3000);
+        }
+
+        // PARSE CSV & UPDATE ENTIRE WEBAPP DATABASE DYNAMICALLY!
+        function handleFileSelect(evt) {
+            const files = evt.target.files;
+            if(!files.length) return;
+
+            const logContainer = document.getElementById("fileUploadLogs");
+            logContainer.innerHTML = "";
+
+            Array.from(files).forEach(file => {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const text = e.target.result;
+                    processCSVIntelligence(file.name, text);
+                };
+                reader.readAsText(file);
+            });
+        }
+
+        // Dynamic intelligence parsing based on structure
+        function processCSVIntelligence(fileName, rawText) {
+            const parsedLines = parseCSV(rawText);
+            const logContainer = document.getElementById("fileUploadLogs");
+            
+            if (parsedLines.length < 2) {
+                logContainer.innerHTML += `<div class="text-red-400">⚠️ ${fileName}：無效或空白的 CSV 資料。</div>`;
+                return;
+            }
+
+            const headerRow = parsedLines[0].map(h => h.trim().toLowerCase());
+            
+            // Check 1: Is this Itinerary/Schedule data? (行程)
+            if (headerRow.includes('date') && headerRow.includes('time') && headerRow.includes('item')) {
+                const dateIdx = headerRow.indexOf('date');
+                const timeIdx = headerRow.indexOf('time');
+                const itemIdx = headerRow.indexOf('item');
+                const locIdx = headerRow.indexOf('location');
+                const budgetHkdIdx = headerRow.indexOf('budget(hkd)');
+                const budgetGbpIdx = headerRow.indexOf('budget(gdp)') !== -1 ? headerRow.indexOf('budget(gdp)') : headerRow.indexOf('budget(gbp)');
+                const budgetEurIdx = headerRow.indexOf('budget(eur)');
+                const remarkIdx = headerRow.indexOf('remark');
+                const remark1Idx = headerRow.indexOf('remark1');
+                const remark2Idx = headerRow.indexOf('remark2');
+                const weatherIdx = headerRow.indexOf('weather');
+
+                let newItinerary = [];
+                for(let i=1; i<parsedLines.length; i++) {
+                    const row = parsedLines[i];
+                    if (row.length < 3 || !row[dateIdx] && !row[itemIdx]) continue;
+                    
+                    const cityVal = row[locIdx] && (row[locIdx].includes('München') || row[locIdx].includes('Munich')) ? '慕尼黑分部' : (row[locIdx] && row[locIdx].includes('Singapore') ? '新加坡聯絡站' : '倫敦大本營');
+                    
+                    newItinerary.push({
+                        date: row[dateIdx] || "",
+                        dayLabel: row[dateIdx] || "",
+                        time: row[timeIdx] || "00:00",
+                        item: row[itemIdx] || "",
+                        location: row[locIdx] || "",
+                        budgetHKD: parseFloat(row[budgetHkdIdx]) || "",
+                        budgetGBP: parseFloat(row[budgetGbpIdx]) || "",
+                        budgetEUR: parseFloat(row[budgetEurIdx]) || "",
+                        remark1: row[remark1Idx] !== -1 ? row[remark1Idx] : (row[remarkIdx] || ""),
+                        remark2: row[remark2Idx] !== -1 ? row[remark2Idx] : (row[weatherIdx] || ""),
+                        city: cityVal
+                    });
+                }
+                
+                if (newItinerary.length > 0) {
+                    itineraryData = newItinerary;
+                    renderItinerary();
+                    renderLedger();
+                    logContainer.innerHTML += `<div class="text-green-400">✔️ 已成功解析並置換 ${newItinerary.length} 筆行程作戰日程數據！</div>`;
+                }
+            }
+            
+            // Check 2: Is this Packing lists data? (準備物品)
+            else if (headerRow.includes('eric') || headerRow.includes('isabel') || headerRow.includes('ricky') || headerRow.includes('venus') || parsedLines[0].join(',').includes('物品')) {
+                // Find Columns
+                let itemIdx = -1;
+                let ericCol = -1, isabelCol = -1, rickyCol = -1, venusCol = -1;
+
+                // Simple check headers
+                for(let j=0; j<parsedLines[0].length; j++) {
+                    const cell = parsedLines[0][j].trim().toLowerCase();
+                    if (cell.includes('物品')) itemIdx = j;
+                    if (cell === 'eric') ericCol = j;
+                    if (cell === 'isabel') isabelCol = j;
+                    if (cell === 'ricky') rickyCol = j;
+                    if (cell === 'venus') venusCol = j;
+                }
+
+                if(itemIdx === -1) {
+                    // Fallback to manual indices
+                    itemIdx = 1;
+                    ericCol = 3;
+                    isabelCol = 5;
+                    rickyCol = 7;
+                    venusCol = 9;
+                }
+
+                let newPacking = [];
+                for(let i=2; i<parsedLines.length; i++) {
+                    const row = parsedLines[i];
+                    if(!row[itemIdx]) continue;
+                    
+                    newPacking.push({
+                        item: row[itemIdx],
+                        category: "戰略配備",
+                        Eric: { pocket: parseInt(row[ericCol]) || 0, suitcase: parseInt(row[ericCol+1]) || 0, checked: false },
+                        Isabel: { pocket: parseInt(row[isabelCol]) || 0, suitcase: parseInt(row[isabelCol+1]) || 0, checked: false },
+                        Ricky: { pocket: parseInt(row[rickyCol]) || 0, suitcase: parseInt(row[rickyCol+1]) || 0, checked: false },
+                        Venus: { pocket: parseInt(row[venusCol]) || 0, suitcase: parseInt(row[venusCol+1]) || 0, checked: false }
+                    });
+                }
+
+                if (newPacking.length > 0) {
+                    packingData = newPacking;
+                    renderPackingList();
+                    logContainer.innerHTML += `<div class="text-green-400">✔️ 已重構裝備庫 ${newPacking.length} 筆特工戰略清單！</div>`;
+                }
+            }
+
+            // Fallback default message
+            else {
+                logContainer.innerHTML += `<div class="text-yellow-400">💡 已讀取 ${fileName}。若需更動排程或裝備，請導入正確規格的戰術 CSV 檔。</div>`;
+            }
+        }
+
+        // Vanilla Robust Regex CSV Parser helper
+        function parseCSV(text) {
+            let lines = [];
+            let row = [""];
+            let inQuotes = false;
+            for (let i = 0; i < text.length; i++) {
+                let c = text[i];
+                let next = text[i+1];
+                if (c === '"') {
+                    if (inQuotes && next === '"') { row[row.length - 1] += '"'; i++; }
+                    else { inQuotes = !inQuotes; }
+                } else if (c === ',' && !inQuotes) {
+                    row.push('');
+                } else if ((c === '\r' || c === '\n') && !inQuotes) {
+                    if (c === '\r' && next === '\n') { i++; }
+                    lines.push(row);
+                    row = [''];
+                } else {
+                    row[row.length - 1] += c;
+                }
+            }
+            if (row.length > 1 || row[0] !== '') lines.push(row);
+            return lines;
+        }
+    </script>
+</body>
+</html>
