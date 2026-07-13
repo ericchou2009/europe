@@ -121,6 +121,9 @@
         <button onclick="switchTab('budget-packing')" id="tab-budget-packing" class="tab-btn text-brandDarkBlue hover:bg-white text-sm font-bold py-2 px-5 rounded-md transition duration-200 whitespace-nowrap">
           <i class="fa-solid fa-suitcase mr-1"></i> 行前準備與預算
         </button>
+        <button onclick="switchTab('subway-guide')" id="tab-subway-guide" class="tab-btn text-brandDarkBlue hover:bg-white text-sm font-bold py-2 px-5 rounded-md transition duration-200 whitespace-nowrap">
+          <i class="fa-solid fa-train-subway mr-1"></i> 🚇 地鐵乘車攻略
+        </button>
       </div>
     </div>
   </header>
@@ -2270,6 +2273,133 @@
         </div>
       </div>
 
+    </div>
+
+    <!-- TAB 6: 地鐵乘車攻略 (新頁面) -->
+    <div id="content-subway-guide" class="tab-content hidden">
+      <h2 class="text-2xl font-black text-brandDarkBlue mb-6 flex items-center border-b-2 border-brandOrange pb-2">
+        <span class="bg-brandOrange text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-2"><i class="fa-solid fa-train-subway"></i></span>
+        倫敦・巴黎・慕尼黑地鐵乘車全攻略
+      </h2>
+      
+      <p class="text-sm text-gray-600 mb-8">
+        本趟旅程我們將主要搭乘高效率的城市軌道交通。以下為您整理了三個城市的<b>購票乘車攻略、兒童免票/優惠票規範</b>及特別的<b>現場防盗安全指南</b>，讓全家出行輕鬆、優雅、有備無患。
+      </p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- London Section -->
+        <div class="bg-white rounded-xl shadow-md border-t-4 border-red-600 p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center space-x-3 mb-4">
+              <span class="bg-red-100 text-red-600 w-10 h-10 rounded-full flex items-center justify-center text-lg"><i class="fa-solid fa-subway"></i></span>
+              <div>
+                <h3 class="font-extrabold text-lg text-brandDarkBlue">🇬🇧 倫敦地鐵 (The Tube)</h3>
+                <p class="text-xs text-gray-400">Underground Transit Guide</p>
+              </div>
+            </div>
+            
+            <div class="space-y-4 text-xs leading-relaxed text-gray-600">
+              <div class="bg-red-50 p-3 rounded-lg text-red-800 font-bold mb-2">
+                <i class="fa-solid fa-baby mr-1"></i> 兒童票務福利 (Ricky & Venus)
+                <p class="font-normal text-[11px] mt-1 text-gray-700">倫敦政策極之友好！<b>11歲以下兒童</b>只要由一位買票成人陪同，即可<b>完全免費</b>乘搭地鐵、輕軌 (DLR) 及 Overground（每位成人最多可帶 4 名免票兒童）。Ricky 和 Venus 直接跟爸爸媽媽走免票通道閘口即可！</p>
+              </div>
+
+              <p><strong>💳 購票與支付：</strong><br>
+              不需特意購買實體 Oyster 卡！直接使用<b>感應式信用卡 (Contactless)</b> 或手機 <b>Apple Pay / Google Pay</b> 於閘機黃色感應區過閘即可。全線設有每日和每周乘車扣款上限 (Fare Cap)，達到上限後當天乘車便完全免費。</p>
+              
+              <p><strong>🧭 常用路線：</strong><br>
+              • <b>Piccadilly Line (深藍線)</b>: 直達希斯路機場 (LHR) 及南肯辛頓博物館區。<br>
+              • <b>Central Line (紅線) / Victoria Line (淺藍線)</b>: 貫穿市中心繁華商業街。</p>
+              
+              <p><strong>⚠️ 英倫搭乘小貼士：</strong><br>
+              1. 扶手電梯請<b>靠右站立</b>，左側讓給趕時間的人前行。<br>
+              2. 部分深層地鐵線路歷史悠久，車廂內無網絡訊號，出行前請先在 Google Map 下載好倫敦離線地圖。<br>
+              3. 聽到車門關閉提示音時切勿強行登車，小心「Mind the Gap（留意月台空隙）」。</p>
+            </div>
+          </div>
+          <div class="pt-4 border-t mt-4 flex justify-between items-center text-xs">
+            <span class="text-gray-400 font-semibold">涵蓋 Zone 1-6 景區</span>
+            <a href="https://maps.google.com/?q=London+Underground+Stations" target="_blank" class="text-brandOrange hover:text-orange-600 font-bold flex items-center space-x-1">
+              <i class="fa-solid fa-location-dot"></i> <span>地圖定位</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Paris Section -->
+        <div class="bg-white rounded-xl shadow-md border-t-4 border-green-700 p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center space-x-3 mb-4">
+              <span class="bg-green-100 text-green-700 w-10 h-10 rounded-full flex items-center justify-center text-lg"><i class="fa-solid fa-train"></i></span>
+              <div>
+                <h3 class="font-extrabold text-lg text-brandDarkBlue">🇫🇷 巴黎地鐵 (Métro)</h3>
+                <p class="text-xs text-gray-400">Paris Métro Transit Guide</p>
+              </div>
+            </div>
+            
+            <div class="space-y-4 text-xs leading-relaxed text-gray-600">
+              <div class="bg-green-50 p-3 rounded-lg text-green-800 font-bold mb-2">
+                <i class="fa-solid fa-baby mr-1"></i> 兒童票務規範 (Ricky & Venus)
+                <p class="font-normal text-[11px] mt-1 text-gray-700">4歲以下兒童免費。<b>4至9歲小童</b>可購買半價優惠票 (Tarif Réduit)。於地鐵站自助售票機購買 <b>Navigo Easy</b> 儲值卡或一次性單程卡套票 (Carnet - 10張票) 時，記得選擇「Tarif Réduit」半價小童款。</p>
+              </div>
+
+              <p><strong>💳 購票與支付：</strong><br>
+              建議全家在自助售票機購買一張 <b>Navigo Easy</b> 卡（工本費 2 歐元），並在卡內充值單程票 (Ticket t+)。亦可下載「IDF Mobilités」手機 App 直接用 Apple Pay 嘟手機進閘。</p>
+              
+              <p><strong>🧭 常用路線：</strong><br>
+              • <b>Line 1 (黃線)</b>: 巴黎最安全的全自動化地鐵，直達凱旋門、香榭麗舍大街、杜樂麗花園及羅浮宮。<br>
+              • <b>Line 6 (淺綠線)</b>: 露天高架段，列車行經比爾哈凱姆橋時可隔窗觀賞艾菲爾鐵塔絕美全景。</p>
+              
+              <p><strong>⚠️ 巴黎乘車防盗與安全指南：</strong><br>
+              1. <b>出閘前千萬不要丟掉紙本車票！</b> 巴黎地鐵站內經常有便衣稽查人員（尤其在凱旋門/羅浮宮站），被查到無票或丟棄車票將面臨每人高達 50+ 歐元的即時巨額罰款。<br>
+              2. <b>嚴防扒手小偷：</b> 巴黎地鐵車廂人多擁擠（特別是 1號線、4號線、RER B線及巴黎北站 Gare du Nord），<b>貴重物品及手機切勿插在後口袋</b>。請將背包背在胸前， Ricky 與 Venus 的背包也要由大人時刻看管。</p>
+            </div>
+          </div>
+          <div class="pt-4 border-t mt-4 flex justify-between items-center text-xs">
+            <span class="text-gray-400 font-semibold">行經巴黎 20 區核心景區</span>
+            <a href="https://maps.google.com/?q=Paris+Metro+Stations" target="_blank" class="text-brandOrange hover:text-orange-600 font-bold flex items-center space-x-1">
+              <i class="fa-solid fa-location-dot"></i> <span>地圖定位</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Munich Section -->
+        <div class="bg-white rounded-xl shadow-md border-t-4 border-blue-600 p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center space-x-3 mb-4">
+              <span class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center text-lg"><i class="fa-solid fa-train-subway"></i></span>
+              <div>
+                <h3 class="font-extrabold text-lg text-brandDarkBlue">🇩🇪 慕尼黑地鐵 (U-Bahn / S-Bahn)</h3>
+                <p class="text-xs text-gray-400">Munich MVV Transit Guide</p>
+              </div>
+            </div>
+            
+            <div class="space-y-4 text-xs leading-relaxed text-gray-600">
+              <div class="bg-blue-50 p-3 rounded-lg text-blue-800 font-bold mb-2">
+                <i class="fa-solid fa-people-group mr-1"></i> 全家出行神器：團體日票 (Group Day Ticket)
+                <p class="font-normal text-[11px] mt-1 text-gray-700">慕尼黑地鐵有神級福利：<b>團體日票 (Gruppen-Tageskarte)</b>。一張團體日票可供最多 5 名成人/兒童共同無限次搭乘地鐵、輕軌、電車。全家 4 口僅需購買<b>一張團體票</b>即可，性價比高到極點！市區遊玩買「Zone M」，往返機場買「Zone M-5」。</p>
+              </div>
+
+              <p><strong>💳 系統與購票：</strong><br>
+              分為 <b>U-Bahn (地下鐵)</b> 及 <b>S-Bahn (城市高鐵)</b>，均屬於 MVV 交通網絡。直接在月台售票機或透過 MVG App 購買。兒童（6歲以下）完全免費，6至14歲小童可享受單獨便宜小童票。</p>
+              
+              <p><strong>🧭 常用路線：</strong><br>
+              • <b>S1 / S8</b>: 連接慕尼黑國際機場 (MUC) 與市中心瑪麗恩廣場的主要快速高鐵。<br>
+              • <b>U3 / U6 (藍線)</b>: 直達奧林匹克公園及寶馬世界/BMW博物館。</p>
+              
+              <p><strong>⚠️ 德國搭乘致命禁忌：紙本票必須「打卡戳印」！</strong><br>
+              慕尼黑地鐵月台<b>完全沒有實體收費閘門</b>，屬於自由進出。但進站前，<b>必須在藍色小鐵箱 (Entwerfer) 將紙本車票插進去蓋印打戳（Validate）</b>！如果買了票卻沒有蓋印上戳章，一律被視為「逃票」，被便衣稽查人員抽查到，每人將被罰款 60 歐元！</p>
+            </div>
+          </div>
+          <div class="pt-4 border-t mt-4 flex justify-between items-center text-xs">
+            <span class="text-gray-400 font-semibold">MVV 區域全卡聯通</span>
+            <a href="https://maps.google.com/?q=Munich+U-Bahn+Stations" target="_blank" class="text-brandOrange hover:text-orange-600 font-bold flex items-center space-x-1">
+              <i class="fa-solid fa-location-dot"></i> <span>地圖定位</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
     </div>
 
   </main>
