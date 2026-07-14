@@ -1,1194 +1,1171 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-HK">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AVENGERS INITIATIVE: LONDON 2026</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Montserrat for clean action typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Montserrat', 'Microsoft JhengHei', sans-serif;
-            transition: background-color 0.3s, color 0.3s;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eric 家族專屬 - 歐洲15天深度精選之旅 (15天全程超詳細版)</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandOrange: '#FF5E00',
+            brandDarkBlue: '#002F6C',
+            brandGold: '#FFD700',
+            brandLightBlue: '#E8F1F5',
+          }
         }
-        /* Marvel Red theme color */
-        .marvel-red { background-color: #ED1D24; }
-        .text-marvel-red { color: #ED1D24; }
-        .border-marvel-red { border-color: #ED1D24; }
-        
-        .theme-dark {
-            background-color: #0c0c0e;
-            color: #f3f4f6;
-        }
-        .theme-dark .hud-card {
-            background: rgba(20, 20, 25, 0.8);
-            border: 1px solid rgba(237, 29, 36, 0.3);
-            box-shadow: 0 0 15px rgba(237, 29, 36, 0.1);
-        }
-        .theme-dark .hud-card:hover {
-            border-color: rgba(237, 29, 36, 0.8);
-            box-shadow: 0 0 20px rgba(237, 29, 36, 0.25);
-        }
-        .theme-dark .hud-accent {
-            color: #00D8FF;
-            text-shadow: 0 0 8px rgba(0, 216, 255, 0.5);
-        }
-
-        .theme-light {
-            background-color: #f4f6f9;
-            color: #1f2937;
-        }
-        .theme-light .hud-card {
-            background: #ffffff;
-            border: 1px solid #cbd5e1;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-        }
-        .theme-light .hud-card:hover {
-            border-color: #ED1D24;
-            box-shadow: 0 10px 15px -3px rgba(237, 29, 36, 0.1), 0 4px 6px -2px rgba(237, 29, 36, 0.05);
-        }
-        .theme-light .hud-accent {
-            color: #1e3a8a;
-        }
-
-        /* Dynamic Contrast Classes */
-        .dyn-text-secondary {
-            color: #9ca3af; /* dark mode default secondary */
-        }
-        .theme-light .dyn-text-secondary {
-            color: #4b5563; /* light mode primary-ish gray */
-        }
-        
-        .dyn-text-muted {
-            color: #6b7280;
-        }
-        .theme-light .dyn-text-muted {
-            color: #8892b0;
-        }
-        
-        /* Dynamic Accents */
-        .dyn-cyan { color: #00D8FF; }
-        .theme-light .dyn-cyan { color: #0369a1; } /* Darker Sky blue */
-        
-        .dyn-yellow { color: #F59E0B; }
-        .theme-light .dyn-yellow { color: #b45309; } /* Darker Amber yellow */
-        
-        .dyn-purple { color: #C084FC; }
-        .theme-light .dyn-purple { color: #7e22ce; } /* Darker Purple */
-
-        .dyn-green { color: #34D399; }
-        .theme-light .dyn-green { color: #15803d; } /* Darker Green */
-
-        .dyn-red { color: #EF4444; }
-        .theme-light .dyn-red { color: #b91c1c; } /* Darker Red */
-
-        /* Badges styling */
-        .dyn-cyan-badge {
-            background-color: rgba(0, 216, 255, 0.15);
-            border: 1px solid rgba(0, 216, 255, 0.3);
-            color: #00D8FF;
-        }
-        .theme-light .dyn-cyan-badge {
-            background-color: rgba(3, 105, 161, 0.1);
-            border: 1px solid rgba(3, 105, 161, 0.3);
-            color: #0369a1;
-        }
-
-        .dyn-yellow-badge {
-            background-color: rgba(245, 158, 11, 0.15);
-            border: 1px solid rgba(245, 158, 11, 0.3);
-            color: #F59E0B;
-        }
-        .theme-light .dyn-yellow-badge {
-            background-color: rgba(180, 83, 9, 0.1);
-            border: 1px solid rgba(180, 83, 9, 0.3);
-            color: #b45309;
-        }
-
-        .dyn-green-badge {
-            background-color: rgba(52, 211, 153, 0.15);
-            border: 1px solid rgba(52, 211, 153, 0.3);
-            color: #34D399;
-        }
-        .theme-light .dyn-green-badge {
-            background-color: rgba(21, 128, 61, 0.1);
-            border: 1px solid rgba(21, 128, 61, 0.3);
-            color: #15803d;
-        }
-
-        .dyn-red-badge {
-            background-color: rgba(239, 68, 68, 0.15);
-            border: 1px solid rgba(239, 68, 68, 0.3);
-            color: #EF4444;
-        }
-        .theme-light .dyn-red-badge {
-            background-color: rgba(185, 28, 28, 0.1);
-            border: 1px solid rgba(185, 28, 28, 0.3);
-            color: #b91c1c;
-        }
-
-        /* Subtle background and panels */
-        .dyn-bg-subtle {
-            background-color: rgba(0, 0, 0, 0.4);
-        }
-        .theme-light .dyn-bg-subtle {
-            background-color: #f1f5f9; /* Slate-100 */
-        }
-
-        .dyn-border-subtle {
-            border-color: rgba(255, 255, 255, 0.1);
-        }
-        .theme-light .dyn-border-subtle {
-            border-color: #cbd5e1; /* Slate-300 */
-        }
-
-        /* Cards nested inner dark areas */
-        .dyn-bg-inner {
-            background-color: rgba(0, 0, 0, 0.2);
-        }
-        .theme-light .dyn-bg-inner {
-            background-color: #f8fafc; /* Slate-50 */
-        }
-
-        /* Scrollbar styling */
-        ::-webkit-scrollbar { width: 6px; height: 6px; }
-        ::-webkit-scrollbar-track { background: transparent; }
-        .theme-dark ::-webkit-scrollbar-thumb { background: #ED1D24; border-radius: 3px; }
-        .theme-light ::-webkit-scrollbar-thumb { background: #9ca3af; border-radius: 3px; }
-    </style>
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background-color: #F3F4F6;
+    }
+    .text-shadow-md {
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+    /* 隱藏滾動條 */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
 </head>
-<body class="theme-dark min-h-screen pb-20 md:pb-5">
+<body class="text-gray-800 flex flex-col min-h-screen">
 
-    <!-- TOP HEADER -->
-    <header class="relative overflow-hidden border-b-4 border-marvel-red py-4 px-4 md:px-8 bg-black text-white">
-        <!-- Stark HUD grid background -->
-        <div class="absolute inset-0 opacity-10 pointer-events-none bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-        
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center relative z-10 gap-4">
-            <!-- Marvel Logo Design -->
-            <div class="flex items-center gap-4">
-                <div class="bg-[#ED1D24] text-white font-black text-2xl md:text-4xl px-4 py-1 tracking-tighter uppercase inline-block select-none transform -skew-x-12">
-                    MARVEL
-                </div>
-                <div class="text-left">
-                    <h1 class="text-lg md:text-xl font-bold tracking-widest text-gray-100">LONDON & EUROPE 2026</h1>
-                    <p class="text-xs text-cyan-400 font-mono tracking-wider uppercase">S.H.I.E.L.D. Mission Briefing Hub</p>
-                </div>
-            </div>
-
-            <!-- Mode Selector / Theme Controls -->
-            <div class="flex items-center gap-3">
-                <button onclick="toggleTheme('dark')" id="darkBtn" class="flex items-center gap-2 px-3 py-1.5 rounded-md text-xs font-mono font-bold tracking-wider transition bg-[#ED1D24] text-white ring-2 ring-red-500">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    JARVIS HUD (深色)
-                </button>
-                <button onclick="toggleTheme('light')" id="lightBtn" class="flex items-center gap-2 px-3 py-1.5 rounded-md text-xs font-mono font-bold tracking-wider transition bg-gray-800 text-gray-300 hover:bg-gray-700">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m2.828 9.9a5 5 0 111.06 1.06l2.828-2.829z"></path></svg>
-                    FRIDAY OS (淺色)
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <!-- MAIN CONTENT AREA -->
-    <main class="max-w-7xl mx-auto p-4 md:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
-        
-        <!-- COLUMN LEFT: MISSION RUNTIME & STATS (4 COLS) -->
-        <section class="lg:col-span-4 flex flex-col gap-6">
-            
-            <!-- MISSION COUNTDOWN CARD -->
-            <div class="hud-card rounded-lg p-5 relative overflow-hidden">
-                <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-sm font-bold tracking-wider text-marvel-red uppercase">Mission Launch Countdown</h3>
-                    <span class="text-xs bg-red-900/40 text-red-400 border border-red-500 px-2 py-0.5 rounded font-mono">T-MINUS</span>
-                </div>
-                <div class="grid grid-cols-4 gap-2 text-center" id="countdown">
-                    <div class="p-2 dyn-bg-subtle rounded border dyn-border-subtle">
-                        <div class="text-2xl font-black font-mono text-marvel-red" id="cd-days">00</div>
-                        <div class="text-[10px] dyn-text-secondary uppercase">Days</div>
-                    </div>
-                    <div class="p-2 dyn-bg-subtle rounded border dyn-border-subtle">
-                        <div class="text-2xl font-black font-mono text-marvel-red" id="cd-hours">00</div>
-                        <div class="text-[10px] dyn-text-secondary uppercase">Hrs</div>
-                    </div>
-                    <div class="p-2 dyn-bg-subtle rounded border dyn-border-subtle">
-                        <div class="text-2xl font-black font-mono text-marvel-red" id="cd-mins">00</div>
-                        <div class="text-[10px] dyn-text-secondary uppercase">Mins</div>
-                    </div>
-                    <div class="p-2 dyn-bg-subtle rounded border dyn-border-subtle">
-                        <div class="text-2xl font-black font-mono text-marvel-red" id="cd-secs">00</div>
-                        <div class="text-[10px] dyn-text-secondary uppercase">Secs</div>
-                    </div>
-                </div>
-                <div class="mt-4 text-center text-xs font-mono dyn-text-secondary">
-                    🚀 目標出發：2026/07/24 18:45 (澳門 MFM)
-                </div>
-            </div>
-
-            <!-- ACTIVE AGENTS -->
-            <div class="hud-card rounded-lg p-5">
-                <h3 class="text-sm font-bold tracking-wider text-marvel-red uppercase mb-4">Active S.H.I.E.L.D. Agents</h3>
-                <div class="grid grid-cols-2 gap-3">
-                    <div onclick="selectAgent('Eric')" id="agentCard-Eric" class="cursor-pointer p-3 rounded border border-red-500/30 hover:border-red-500 bg-red-950/10 transition flex items-center gap-3">
-                        <span class="text-xl">🔴</span>
-                        <div>
-                            <div class="font-bold text-sm">Eric</div>
-                            <div class="text-[10px] dyn-red font-mono font-bold">Iron Man / 領隊</div>
-                        </div>
-                    </div>
-                    <div onclick="selectAgent('Isabel')" id="agentCard-Isabel" class="cursor-pointer p-3 rounded border dyn-border-subtle hover:border-red-500 bg-black/10 transition flex items-center gap-3">
-                        <span class="text-xl">🕷️</span>
-                        <div>
-                            <div class="font-bold text-sm">Isabel</div>
-                            <div class="text-[10px] dyn-purple font-mono font-bold">Black Widow / 協調</div>
-                        </div>
-                    </div>
-                    <div onclick="selectAgent('Ricky')" id="agentCard-Ricky" class="cursor-pointer p-3 rounded border dyn-border-subtle hover:border-red-500 bg-black/10 transition flex items-center gap-3">
-                        <span class="text-xl">⚡</span>
-                        <div>
-                            <div class="font-bold text-sm">Ricky</div>
-                            <div class="text-[10px] dyn-cyan font-mono font-bold">Thor / 重裝防禦</div>
-                        </div>
-                    </div>
-                    <div onclick="selectAgent('Venus')" id="agentCard-Venus" class="cursor-pointer p-3 rounded border dyn-border-subtle hover:border-red-500 bg-black/10 transition flex items-center gap-3">
-                        <span class="text-xl">💫</span>
-                        <div>
-                            <div class="font-bold text-sm">Venus</div>
-                            <div class="text-[10px] dyn-yellow font-mono font-bold">Capt. Marvel / 領航</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- INTELLIGENCE HUB (CSV DROPZONE) -->
-            <div class="hud-card rounded-lg p-5">
-                <div class="flex justify-between items-center mb-3">
-                    <h3 class="text-sm font-bold tracking-wider text-marvel-red uppercase">Data Core Intelligence</h3>
-                    <span class="text-[10px] bg-green-900/30 text-green-400 border border-green-500/50 px-2 py-0.5 rounded font-mono">OFFLINE</span>
-                </div>
-                <p class="text-xs dyn-text-secondary mb-4 leading-relaxed">
-                    可隨時在此拖入或上傳您的戰術 CSV 檔案（行程、消費紀錄、機票、準備物品），系統將完全在您的瀏覽器端進行離線解密與渲染。
-                </p>
-                <div class="border-2 border-dashed border-red-500/40 rounded-lg p-4 text-center hover:border-red-500/80 transition cursor-pointer relative" id="dropzone">
-                    <input type="file" id="csvFileInput" multiple accept=".csv" class="absolute inset-0 opacity-0 cursor-pointer" onchange="handleFileSelect(event)" />
-                    <svg class="w-8 h-8 text-marvel-red mx-auto mb-2 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
-                    <span class="text-xs font-mono font-bold dyn-text-secondary">上傳或拖曳戰術 CSV 至此</span>
-                </div>
-                <div id="fileUploadLogs" class="mt-3 text-[10px] font-mono dyn-cyan space-y-1"></div>
-            </div>
-
-            <!-- FLIGHT DECK CARD -->
-            <div class="hud-card rounded-lg p-5">
-                <h3 class="text-sm font-bold tracking-wider text-marvel-red uppercase mb-4">S.H.I.E.L.D. Flight Deck</h3>
-                <div class="space-y-4 text-xs font-mono" id="flightDeckContainer">
-                    <!-- Flights populated by script -->
-                </div>
-            </div>
-
-        </section>
-
-        <!-- COLUMN CENTER/RIGHT: MISSION SCHEDULE & GEAR PREP (8 COLS) -->
-        <section class="lg:col-span-8 flex flex-col gap-6">
-            
-            <!-- TABS FOR LARGE SCREEN / DYNAMIC INTERACTION -->
-            <div class="flex border-b dyn-border-subtle gap-2 overflow-x-auto pb-1">
-                <button onclick="switchTab('schedule')" id="tabBtn-schedule" class="px-5 py-2.5 font-bold tracking-wider uppercase text-sm border-b-2 border-marvel-red text-marvel-red whitespace-nowrap transition">
-                    ⚔️ 戰術日程 Timeline
-                </button>
-                <button onclick="switchTab('gear')" id="tabBtn-gear" class="px-5 py-2.5 font-bold tracking-wider uppercase text-sm dyn-text-secondary hover:text-marvel-red border-b-2 border-transparent whitespace-nowrap transition">
-                    🛡️ 特工裝備庫 Gear
-                </button>
-                <button onclick="switchTab('ledger')" id="tabBtn-ledger" class="px-5 py-2.5 font-bold tracking-wider uppercase text-sm dyn-text-secondary hover:text-marvel-red border-b-2 border-transparent whitespace-nowrap transition">
-                    💰 斯塔克賬目 Ledger
-                </button>
-            </div>
-
-            <!-- TAB 1: SCHEDULE CONTENT -->
-            <div id="tabContent-schedule" class="space-y-6">
-                <!-- City Filter -->
-                <div class="flex flex-wrap items-center gap-2" id="dayFilters">
-                    <!-- JS will populate day/city quick-jump tags here -->
-                </div>
-
-                <!-- Timeline Container -->
-                <div class="relative pl-6 border-l-2 border-marvel-red/40 space-y-8" id="timelineContainer">
-                    <!-- Timeline items will be injected by script -->
-                </div>
-            </div>
-
-            <!-- TAB 2: GEAR CONTENT -->
-            <div id="tabContent-gear" class="hidden hud-card rounded-lg p-6">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
-                    <div>
-                        <h3 class="text-lg font-bold text-marvel-red uppercase tracking-wider">Agent Personal Gear Stockpile</h3>
-                        <p class="text-xs dyn-text-secondary font-mono">裝備儲備與隨身武器/行李箱配置</p>
-                    </div>
-                    <!-- Selected Agent Highlight -->
-                    <div class="bg-marvel-red/20 border border-marvel-red px-4 py-2 rounded text-right">
-                        <div class="text-xs font-mono dyn-text-secondary">目前檢視特工：</div>
-                        <div class="text-sm font-black uppercase text-current" id="gearActiveAgentName">Eric</div>
-                    </div>
-                </div>
-
-                <!-- Checklist Table -->
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left text-xs font-mono">
-                        <thead>
-                            <tr class="border-b dyn-border-subtle pb-2 text-marvel-red">
-                                <th class="py-2">任務物資</th>
-                                <th class="py-2 text-center">類別</th>
-                                <th class="py-2 text-center">隨身攜帶 (Pocket)</th>
-                                <th class="py-2 text-center">行李箱 (Suitcase)</th>
-                                <th class="py-2 text-right">狀態</th>
-                            </tr>
-                        </thead>
-                        <tbody id="gearTableBody" class="divide-y divide-gray-800/30">
-                            <!-- Populated dynamically -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- TAB 3: LEDGER CONTENT -->
-            <div id="tabContent-ledger" class="hidden hud-card rounded-lg p-6">
-                <div class="flex justify-between items-center mb-6">
-                    <div>
-                        <h3 class="text-lg font-bold text-marvel-red uppercase tracking-wider">Stark Industries Financial Ledger</h3>
-                        <p class="text-xs dyn-text-secondary font-mono font-bold">戰略開支實時匯總</p>
-                    </div>
-                    <button onclick="resetExpenses()" class="text-xs bg-red-950/40 hover:bg-red-900 border border-red-500/50 px-3 py-1.5 rounded font-mono text-red-300 transition">
-                        重設數據
-                    </button>
-                </div>
-
-                <!-- Exchange rate info -->
-                <div class="grid grid-cols-3 gap-4 mb-6 text-center font-mono text-xs">
-                    <div class="p-3 dyn-bg-subtle rounded border dyn-border-subtle">
-                        <div class="dyn-text-secondary">總體支出 (HKD)</div>
-                        <div class="text-lg font-bold dyn-yellow mt-1" id="totalSpentHKD">HK$ 0</div>
-                    </div>
-                    <div class="p-3 dyn-bg-subtle rounded border dyn-border-subtle">
-                        <div class="dyn-text-secondary">總體支出 (GBP)</div>
-                        <div class="text-lg font-bold dyn-cyan mt-1" id="totalSpentGBP">£ 0</div>
-                    </div>
-                    <div class="p-3 dyn-bg-subtle rounded border dyn-border-subtle">
-                        <div class="dyn-text-secondary">總體支出 (EUR)</div>
-                        <div class="text-lg font-bold dyn-purple mt-1" id="totalSpentEUR">€ 0</div>
-                    </div>
-                </div>
-
-                <!-- Input form for quick offline expense note -->
-                <div class="dyn-bg-inner p-4 rounded-lg border dyn-border-subtle mb-6">
-                    <h4 class="text-xs font-bold uppercase text-marvel-red mb-3">記錄一筆新戰略開支</h4>
-                    <div class="grid grid-cols-1 md:grid-cols-4 gap-3">
-                        <input id="expItem" type="text" placeholder="項目名稱 (例如: 午餐)" class="bg-black/20 dark:bg-black/50 border dyn-border-subtle rounded px-3 py-2 text-xs focus:ring-1 focus:ring-red-500 outline-none text-current" />
-                        <input id="expCost" type="number" placeholder="金額 (數字)" class="bg-black/20 dark:bg-black/50 border dyn-border-subtle rounded px-3 py-2 text-xs focus:ring-1 focus:ring-red-500 outline-none text-current" />
-                        <select id="expCurrency" class="bg-black/20 dark:bg-black/50 border dyn-border-subtle rounded px-3 py-2 text-xs focus:ring-1 focus:ring-red-500 outline-none text-current">
-                            <option value="HKD">HKD (港幣)</option>
-                            <option value="GBP">GBP (英鎊)</option>
-                            <option value="EUR">EUR (歐元)</option>
-                        </select>
-                        <button onclick="addExpense()" class="bg-marvel-red hover:bg-red-700 text-white text-xs font-bold rounded py-2 transition tracking-wider uppercase">
-                            加入帳目
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Ledger List -->
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left text-xs font-mono">
-                        <thead>
-                            <tr class="border-b dyn-border-subtle pb-2 text-marvel-red">
-                                <th class="py-2">消費項目</th>
-                                <th class="py-2 text-center">貨幣代碼</th>
-                                <th class="py-2 text-right">金額</th>
-                                <th class="py-2 text-right">折合 HKD</th>
-                                <th class="py-2 text-center">操作</th>
-                            </tr>
-                        </thead>
-                        <tbody id="ledgerTableBody" class="divide-y divide-gray-800/30">
-                            <!-- Dinamically loaded -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-        </section>
-    </main>
-
-    <!-- CUSTOM CONFIRMATION MODAL -->
-    <div id="confirmModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 opacity-0 pointer-events-none transition-all duration-300">
-        <div class="hud-card rounded-lg p-6 max-w-sm w-full border-2 border-marvel-red transform scale-95 transition-all duration-300" id="confirmModalContent">
-            <h3 class="text-sm font-bold tracking-wider text-marvel-red uppercase mb-2">🔴 S.H.I.E.L.D. 警告確認</h3>
-            <p class="text-xs dyn-text-secondary mb-6 leading-relaxed" id="confirmModalMsg">確定要執行此操作嗎？此動作將無法復原。</p>
-            <div class="flex justify-end gap-3 font-mono text-xs">
-                <button onclick="closeConfirmModal(false)" class="px-4 py-2 bg-gray-500/20 hover:bg-gray-500/40 text-current rounded transition uppercase">取消</button>
-                <button onclick="closeConfirmModal(true)" class="px-4 py-2 bg-marvel-red hover:bg-red-700 text-white rounded transition uppercase font-bold">確認執行</button>
-            </div>
-        </div>
+  <!-- 頂部 Hero 橫幅 -->
+  <header class="bg-gradient-to-r from-brandDarkBlue to-blue-900 text-white py-8 px-4 text-center relative overflow-hidden shadow-lg">
+    <div class="absolute -right-10 -bottom-10 opacity-10 text-9xl">
+      <i class="fa-solid fa-earth-europe"></i>
     </div>
-
-    <!-- CUSTOM TOAST NOTIFICATION -->
-    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
-        <div class="bg-black border-2 border-marvel-red text-white px-5 py-3 rounded-lg shadow-xl flex items-center gap-3">
-            <span class="text-marvel-red font-black text-sm select-none transform -skew-x-12 bg-red-950 px-2 py-0.5 border border-red-500">S.H.I.E.L.D.</span>
-            <span id="toastMsg" class="text-xs font-mono">系統指令已成功執行。</span>
-        </div>
+    <div class="relative z-10">
+      <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-2 text-shadow-md">Eric 家族專屬 🌍 歐洲15天深度精選之旅</h1>
+      <p class="text-brandGold font-bold text-sm md:text-lg tracking-wider">【倫敦 🇬🇧 • 巴黎 🇫🇷 • 慕尼黑 🇩🇪】15天全程超詳細自主規劃版</p>
+      <div class="mt-4 flex justify-center space-x-2 text-xs md:text-sm">
+        <span class="bg-blue-800 bg-opacity-60 px-3 py-1 rounded-full"><i class="fa-regular fa-calendar mr-1"></i> 2026/07/24 - 2026/08/07</span>
+        <span class="bg-blue-800 bg-opacity-60 px-3 py-1 rounded-full"><i class="fa-solid fa-users mr-1"></i> 2位大人, 2位青少年</span>
+      </div>
     </div>
+  </header>
 
-    <!-- MOBILE BOTTOM NAVIGATION -->
-    <nav class="lg:hidden fixed bottom-0 inset-x-0 bg-black border-t-2 border-marvel-red z-40 flex justify-around py-2 text-[10px] uppercase font-mono tracking-wider">
-        <button onclick="switchTab('schedule')" class="flex flex-col items-center gap-1 text-marvel-red" id="mobTab-schedule">
-            <span>⚔️</span>
-            <span>日程</span>
-        </button>
-        <button onclick="switchTab('gear')" class="flex flex-col items-center gap-1 dyn-text-secondary" id="mobTab-gear">
-            <span>🛡️</span>
-            <span>裝備</span>
-        </button>
-        <button onclick="switchTab('ledger')" class="flex flex-col items-center gap-1 dyn-text-secondary" id="mobTab-ledger">
-            <span>💰</span>
-            <span>賬目</span>
-        </button>
-    </nav>
+  <!-- 導覽列 -->
+  <nav class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between h-16">
+        <div class="flex space-x-8 w-full justify-between items-center">
+          <div class="flex-shrink-0 flex items-center">
+            <span class="text-lg md:text-xl font-black text-brandDarkBlue"><i class="fa-solid fa-plane-departure mr-2 text-brandOrange"></i>Eric 歐洲精遊</span>
+          </div>
+          <!-- 電腦版導覽按鈕 -->
+          <div class="hidden md:flex space-x-2 items-center">
+            <button id="btn-itinerary" onclick="showSection('itinerary')" class="px-3 py-2 rounded-md text-sm font-medium text-white bg-brandDarkBlue transition-all"><i class="fa-solid fa-calendar-days mr-1"></i>行程規劃</button>
+            <button id="btn-budget" onclick="showSection('budget')" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brandDarkBlue transition-all"><i class="fa-solid fa-wallet mr-1"></i>預算明細</button>
+            <button id="btn-transport" onclick="showSection('transport')" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brandDarkBlue transition-all"><i class="fa-solid fa-train-subway mr-1"></i>交通指南</button>
+            <button id="btn-packing" onclick="showSection('packing')" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brandDarkBlue transition-all"><i class="fa-solid fa-suitcase mr-1"></i>行李清單</button>
+            <button id="btn-weather" onclick="showSection('weather')" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-brandDarkBlue transition-all"><i class="fa-solid fa-cloud-sun mr-1"></i>天氣預報</button>
+          </div>
+          <!-- 手機版選單按鈕 -->
+          <div class="md:hidden flex items-center">
+            <button onclick="toggleMobileMenu()" class="text-gray-600 hover:text-brandDarkBlue focus:outline-none">
+              <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 手機版下拉選單 -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 py-2 space-y-1 shadow-inner">
+      <button id="m-btn-itinerary" onclick="showSection('itinerary')" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-white bg-brandDarkBlue"><i class="fa-solid fa-calendar-days mr-2"></i>行程規劃</button>
+      <button id="m-btn-budget" onclick="showSection('budget')" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-brandDarkBlue"><i class="fa-solid fa-wallet mr-2"></i>預算明細</button>
+      <button id="m-btn-transport" onclick="showSection('transport')" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-brandDarkBlue"><i class="fa-solid fa-train-subway mr-2"></i>交通指南</button>
+      <button id="m-btn-packing" onclick="showSection('packing')" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-brandDarkBlue"><i class="fa-solid fa-suitcase mr-2"></i>行李清單</button>
+      <button id="m-btn-weather" onclick="showSection('weather')" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-brandDarkBlue"><i class="fa-solid fa-cloud-sun mr-2"></i>天氣預報</button>
+    </div>
+  </nav>
 
-    <!-- JS MODULE -->
-    <script>
-        // Exchange rates default setting
-        const RATES = { GBP_TO_HKD: 10.2, EUR_TO_HKD: 8.5 };
+  <!-- 主內容區 -->
+  <main class="flex-grow">
 
-        // Preloaded Itinerary (Full 14-day comprehensive mission layout based on spreadsheet logs)
-        let itineraryData = [
-            // Day 1: 07/24 Fri (Macau to Singapore)
-            { date: "2026/07/24", dayLabel: "Day 1 - Fri, 07/24/2026", time: "16:00", item: "出發集合", location: "澳門市區 -> 澳門機場 (MFM)", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "展開復仇者聯盟：歐洲2026戰略行動。清點特攻行李。", remark2: "天氣：27-32°C、體感悶熱。\n穿搭：透氣運動服裝、薄外套、防塵防水鞋。", city: "新加坡聯絡站" },
-            { date: "2026/07/24", dayLabel: "Day 1 - Fri, 07/24/2026", time: "18:45", item: "起飛前進新加坡 (TR905)", location: "澳門國際機場 (MFM)", budgetHKD: 31432, budgetGBP: "", budgetEUR: "", remark1: "搭乘酷航 TR905 航班。預計 22:35 降落樟宜機場。", remark2: "空中航行期間進行個人電子裝備充電及情報預覽。", city: "新加坡聯絡站" },
-            
-            // Day 2: 07/25 Sat (Singapore to London)
-            { date: "2026/07/25", dayLabel: "Day 2 - Sat, 07/25/2026", time: "01:05", item: "跨洋洲航段飛行 (SQ306)", location: "新加坡樟宜機場 (SIN) Terminal 3", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "登上新加坡航空 SQ306，預計航程 13 小時並於 07:40 降落希斯路。", remark2: "機上戰術整備與充分休息，機艙提供長途保濕護理與抗噪耳機。", city: "倫敦大本營" },
-            { date: "2026/07/25", dayLabel: "Day 2 - Sat, 07/25/2026", time: "07:40", item: "抵達倫敦希斯路", location: "希斯路機場 (LHR) Terminal 2", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "入境通關、清點戰術物資大箱，並前往市中心。", remark2: "倫敦實時氣溫：15-22°C、可能偶伴微風。\n穿搭：長袖、防潑水防風外套。", city: "倫敦大本營" },
-            { date: "2026/07/25", dayLabel: "Day 2 - Sat, 07/25/2026", time: "10:00", item: "機場快線轉運", location: "Heathrow Express -> 帕丁頓車站", budgetHKD: "", budgetGBP: 30, budgetEUR: "", remark1: "搭乘機場高鐵 Heathrow Express 直達市區。", remark2: "預訂特務座席，車程約 15 分鐘。", city: "倫敦大本營" },
-            { date: "2026/07/25", dayLabel: "Day 2 - Sat, 07/25/2026", time: "11:00", item: "Hilton London Metropole 登記入住", location: "Hilton London Metropole (225 Edgware Rd)", budgetHKD: 9475, budgetGBP: "", budgetEUR: "", remark1: "建立前線作戰司令部。預訂房型：帶兩張大床的高級間（含早餐）。", remark2: "辦理行李寄放、前線情報對接、更換保暖衣物。", city: "倫敦大本營" },
-            { date: "2026/07/25", dayLabel: "Day 2 - Sat, 07/25/2026", time: "12:00", item: "午餐 (英式經典紅獅炸魚)", location: "The Red Lion (48 Parliament St)", budgetHKD: "", budgetGBP: 80, budgetEUR: "", remark1: "享用傳統英皇紅獅炸魚薯條，為下午徒步作戰補充碳水能。", remark2: "餐廳鄰近大笨鐘，視野開闊，請防備街頭人潮。", city: "倫敦大本營" },
-            { date: "2026/07/25", dayLabel: "Day 2 - Sat, 07/25/2026", time: "14:00", item: "地標巡禮與實地偵察", location: "Big Ben & Westminster Abbey (西敏寺)", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "巡遊大笨鐘、國會大廈與西敏寺，欣賞威嚴哥德式歷史地標。", remark2: "下午泰晤士河畔風力較強，請戴上防風兜帽。", city: "倫敦大本營" },
-            { date: "2026/07/25", dayLabel: "Day 2 - Sat, 07/25/2026", time: "16:00", item: "科芬園物資採購", location: "Covent Garden 廣場", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "實地考察英倫文創集市、欣賞露天藝術表演。", remark2: "注意：科芬園人流密集，請特工嚴格保護個人通訊終端。", city: "倫敦大本營" },
-            { date: "2026/07/25", dayLabel: "Day 2 - Sat, 07/25/2026", time: "19:00", item: "晚餐 (Franco Manca 窯烤披薩)", location: "Franco Manca (39 Maiden Ln)", budgetHKD: "", budgetGBP: 120, budgetEUR: "", remark1: "享用拿坡里酸種手工意式披薩，熱量充足，氣氛休閒。", remark2: "推薦特製橄欖油辣醬調味。", city: "倫敦大本營" },
-            { date: "2026/07/25", dayLabel: "Day 2 - Sat, 07/25/2026", time: "21:00", item: "戰術一日交通總結", location: "倫敦市區交通", budgetHKD: "", budgetGBP: 31.15, budgetEUR: "", remark1: "全日公共地鐵與雙層巴士非接觸刷卡感應費用結算。", remark2: "準備返回 Hilton 總部，重啟裝備充能。", city: "倫敦大本營" },
+    <!-- 1. 行程規劃分頁 -->
+    <section id="itinerary" class="py-6 max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+        <!-- 左側：Day 快速跳轉側欄 -->
+        <div class="lg:col-span-1 bg-white p-4 rounded-xl shadow-md sticky top-20 h-[calc(100vh-120px)] overflow-y-auto no-scrollbar">
+          <h3 class="font-black text-brandDarkBlue mb-3 flex items-center text-sm border-b pb-2">
+            <i class="fa-solid fa-list-ol mr-2 text-brandOrange"></i>每日行程快速導覽
+          </h3>
+          <div class="space-y-1.5" id="day-nav-list">
+            <!-- 由 JS 動態載入 Day 按鈕 -->
+          </div>
+        </div>
+        <!-- 右側：詳細行程內容 -->
+        <div class="lg:col-span-3 space-y-6" id="itinerary-details-container">
+          <!-- 由 JS 動態載入每日精細日程 -->
+        </div>
+      </div>
+    </section>
 
-            // Day 3: 07/26 Sun (London Museums & Parks)
-            { date: "2026/07/26", dayLabel: "Day 3 - Sun, 07/26/2026", time: "08:30", item: "飯店能量大早餐", location: "Hilton London Metropole 餐廳", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "飽嚐經典英式自助冷熱盤、燕麥粥與香濃黑咖啡。", remark2: "高體能徒步日。穿搭：極舒適耐磨健步鞋。", city: "倫敦大本營" },
-            { date: "2026/07/26", dayLabel: "Day 3 - Sun, 07/26/2026", time: "10:00", item: "海德公園晨間探路", location: "Hyde Park & Buckingham Palace", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "漫步皇家海德公園林蔭、考察白金漢宮衛兵交接。", remark2: "防強紫外線，注意高溫防護與隨手補充水分。", city: "倫敦大本營" },
-            { date: "2026/07/26", dayLabel: "Day 3 - Sun, 07/26/2026", time: "13:00", item: "午餐 (南肯辛頓簡餐)", location: "南肯辛頓區特色美食街", budgetHKD: "", budgetGBP: 60, budgetEUR: "", remark1: "在博物館區周邊輕食吧快速就餐，儲備下午探館體力。", remark2: "氣氛悠閒。", city: "倫敦大本營" },
-            { date: "2026/07/26", dayLabel: "Day 3 - Sun, 07/26/2026", time: "14:00", item: "科學與歷史遺物探索", location: "Science Museum & Natural History Museum", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "參觀倫敦科學博物館和享譽世界的自然歷史恐龍標本特展。", remark2: "人流極多，請特工提前亮出免費預約二維碼。", city: "倫敦大本營" },
-            { date: "2026/07/26", dayLabel: "Day 3 - Sun, 07/26/2026", time: "19:00", item: "晚餐 (經典龍蝦餐慶功)", location: "Burger & Lobster Knightsbridge", budgetHKD: "", budgetGBP: 140, budgetEUR: "", remark1: "品嚐大西洋新鮮空運多汁清甜整隻清蒸/烤製龍蝦與金黃脆薯條。", remark2: "地址極近哈洛德百貨 (Harrods)。", city: "倫敦大本營" },
+    <!-- 2. 預算明細分頁 -->
+    <section id="budget" class="py-6 max-w-7xl mx-auto px-4 hidden">
+      <div class="bg-white p-6 rounded-xl shadow-md mb-6">
+        <h2 class="text-xl font-extrabold text-brandDarkBlue mb-4 flex items-center border-b pb-2">
+          <i class="fa-solid fa-chart-pie mr-2 text-brandOrange"></i>費用估算與預算分析 (4人家庭總額)
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <!-- 總預算 -->
+          <div class="bg-blue-50 p-4 rounded-lg text-center border border-blue-100 shadow-sm">
+            <div class="text-xs text-gray-500 font-bold mb-1">估計總花費預算</div>
+            <div class="text-3xl font-black text-brandDarkBlue">HK$ 152,400</div>
+            <div class="text-[10px] text-gray-400 mt-1">含機票、火車、住宿、門票與預訂餐廳</div>
+          </div>
+          <!-- 已預付金額 -->
+          <div class="bg-orange-50 p-4 rounded-lg text-center border border-orange-100 shadow-sm">
+            <div class="text-xs text-gray-500 font-bold mb-1">已預訂/已支付預算</div>
+            <div class="text-3xl font-black text-brandOrange">HK$ 118,500</div>
+            <div class="text-[10px] text-gray-400 mt-1">機票高鐵、各城市飯店、哈利波特等門票</div>
+          </div>
+          <!-- 現場需支付 -->
+          <div class="bg-yellow-50 p-4 rounded-lg text-center border border-yellow-100 shadow-sm">
+            <div class="text-xs text-gray-500 font-bold mb-1">現場預留現金/卡刷卡 (估)</div>
+            <div class="text-3xl font-black text-yellow-600">HK$ 33,900</div>
+            <div class="text-[10px] text-gray-400 mt-1">每日餐飲、市區地鐵交通與臨時開銷</div>
+          </div>
+        </div>
 
-            // Day 4: 07/27 Mon (Harry Potter Studio Tour)
-            { date: "2026/07/27", dayLabel: "Day 4 - Mon, 07/27/2026", time: "08:00", item: "前往哈利波特影城", location: "Euston Station -> Watford Junction", budgetHKD: "", budgetGBP: 25, budgetEUR: "", remark1: "從尤斯頓車站搭乘西海岸通勤快鐵，隨後轉乘接駁雙層大巴。", remark2: "魔法部特訓啟動！請特工帶上個人精緻長袍及道具魔杖。", city: "倫敦大本營" },
-            { date: "2026/07/27", dayLabel: "Day 4 - Mon, 07/27/2026", time: "10:00", item: "華納兄弟哈利波特片場探索", location: "Warner Bros. Studio Tour London", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "瞻仰大禮堂、鄧不利多辦公室、禁忌森林，親身測試綠幕飛天掃帚掃影技術。", remark2: "場景美輪美奐，拍照打卡熱點。", city: "倫敦大本營" },
-            { date: "2026/07/27", dayLabel: "Day 4 - Mon, 07/27/2026", time: "13:00", item: "午餐 (魔法片場限定餐廳)", location: "The Food Hall", budgetHKD: "", budgetGBP: 50, budgetEUR: "", remark1: "品嚐影城魔法限定主題汉堡，並點上一杯經典泡沫醇厚「無酒精奶油啤酒 (Butterbeer)」。", remark2: "奶油啤酒杯可帶回家洗淨作為任務紀念品！", city: "倫敦大本營" },
-            { date: "2026/07/27", dayLabel: "Day 4 - Mon, 07/27/2026", time: "16:30", item: "撤離片場返回倫敦", location: "Watford Junction -> Euston Station", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "搭通勤高鐵班次安全退回市中心尤斯頓樞紐。", remark2: "中途可小憩，為夜間漫步續航。", city: "倫敦大本營" },
-            { date: "2026/07/27", dayLabel: "Day 4 - Mon, 07/27/2026", time: "18:30", item: "晚餐 (香脆咖哩 Roti 烤餅)", location: "Roti King (Euston)", budgetHKD: "", budgetGBP: 60, budgetEUR: "", remark1: "在全倫敦口碑第一的馬來小館享用神級手拋烤餅，佐以微辣濃郁的咖哩雞。", remark2: "排隊名店，座位稍緊，請注意周邊秩序。", city: "倫敦大本營" },
+        <h3 class="font-bold text-gray-800 mb-3 text-base flex items-center"><i class="fa-solid fa-list-check mr-2 text-brandDarkBlue"></i>大額開銷項目清單 (已確認/已支付)</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse text-xs">
+            <thead>
+              <tr class="bg-gray-100 text-gray-700 font-bold border-b">
+                <th class="p-3">項目名稱</th>
+                <th class="p-3">覆蓋內容 / 備註</th>
+                <th class="p-3">幣別/原始金額</th>
+                <th class="p-3 text-right">折合港幣 (HKD)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y text-gray-600">
+              <tr>
+                <td class="p-3 font-bold text-gray-800">機票與長途交通</td>
+                <td class="p-3">酷航(澳門-新加坡-倫敦) + 新航(慕尼黑-新加坡-澳門) 4人票 + 歐洲之星高鐵</td>
+                <td class="p-3">HK$ 32,107 + €1,611 + €675</td>
+                <td class="p-3 text-right font-mono font-bold">HK$ 51,520</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-gray-800">倫敦住宿 (6晚)</td>
+                <td class="p-3">Hilton London Metropole (3晚) + Grange Beauchamp Hotel (3晚)</td>
+                <td class="p-3">£ 1,450 / 雙房連通房</td>
+                <td class="p-3 text-right font-mono font-bold">HK$ 14,500</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-gray-800">巴黎住宿 (3晚)</td>
+                <td class="p-3">Hôtel Régence Etoile (凱旋門旁經典4星，家庭大套房)</td>
+                <td class="p-3">€ 1,180</td>
+                <td class="p-3 text-right font-mono font-bold">HK$ 9,920</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-gray-800">慕尼黑住宿 (4晚)</td>
+                <td class="p-3">Courtyard by Marriott Munich City Center (中央車站旁，家庭兩房)</td>
+                <td class="p-3">€ 1,320</td>
+                <td class="p-3 text-right font-mono font-bold">HK$ 11,100</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-gray-800">預付景點與晚餐</td>
+                <td class="p-3">哈利波特影城 4人 + 塞納河晚餐玻璃船 + 羅浮宮門票 + 新天鵝堡導覽</td>
+                <td class="p-3">綜合門票與餐飲預訂</td>
+                <td class="p-3 text-right font-mono font-bold">HK$ 9,500</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
 
-            // Day 5: 07/28 Tue (Grange Beauchamp & British Museum)
-            { date: "2026/07/28", dayLabel: "Day 5 - Tue, 07/28/2026", time: "10:00", item: "轉移主基地至羅素廣場", location: "Grange Beauchamp Hotel", budgetHKD: 6428, budgetGBP: "", budgetEUR: "", remark1: "辦理 Hilton 退房，轉往溫馨典雅的 Grange Beauchamp (24-27 Bedford Place)。四人房配置。", remark2: "緊鄰大英博物館，極具英式學術與人文氣息。", city: "倫敦大本營" },
-            { date: "2026/07/28", dayLabel: "Day 5 - Tue, 07/28/2026", time: "11:00", item: "午餐 (百年炸魚店朝聖)", location: "Rock and Sole Plaice (Endell St)", budgetHKD: "", budgetGBP: 80, budgetEUR: "", remark1: "在創立於 1871 年的倫敦骨灰級名店，品嚐熱騰騰外脆內嫩的大份煎炸鱈魚。", remark2: "可選在露天長椅上用餐，非常接地氣。", city: "倫敦大本營" },
-            { date: "2026/07/28", dayLabel: "Day 5 - Tue, 07/28/2026", time: "13:00", item: "大英博物館文明探秘", location: "British Museum (Great Russell St)", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "考察古埃及木乃伊、美索不達米亞泥板，瞻仰羅塞塔石碑 Rosetta Stone。", remark2: "預計停留 3-4 小時。館內空調足，可穿長袖防寒。", city: "倫敦大本營" },
-            { date: "2026/07/28", dayLabel: "Day 5 - Tue, 07/28/2026", time: "17:00", item: "托特納姆法院路實地踩點", location: "Tottenham Court Road", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "漫步購物街、考察旗艦家居與電子科技體驗店。", remark2: "為接下來出國做物資與通訊補給。", city: "倫敦大本營" },
-            { date: "2026/07/28", dayLabel: "Day 5 - Tue, 07/28/2026", time: "19:00", item: "晚餐 (Ciao Bella 巨無霸意麵)", location: "Ciao Bella Restaurant (Lamb's Conduit St)", budgetHKD: "", budgetGBP: 120, budgetEUR: "", remark1: "在極具意大利家庭風情的小館，享用招牌黑松露義麵、紙包烤海鮮意麵。", remark2: "份量無敵驚人，常伴隨鋼琴演奏，氛圍極其喧鬧愉快！", city: "倫敦大本營" },
+    <!-- 3. 交通指南分頁 -->
+    <section id="transport" class="py-6 max-w-7xl mx-auto px-4 hidden">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- 倫敦交通 -->
+        <div class="bg-white p-5 rounded-xl shadow-md border-t-4 border-blue-600 hover:shadow-lg transition">
+          <div class="flex items-center space-x-2 mb-3">
+            <span class="text-2xl">🇬🇧</span>
+            <h3 class="font-extrabold text-brandDarkBlue text-base">倫敦交通指南 (London Tube)</h3>
+          </div>
+          <div class="text-xs text-gray-600 space-y-3">
+            <div class="bg-blue-50 p-3 rounded text-blue-900">
+              <span class="font-bold block mb-1">💡 14歲青少年乘車特惠：</span>
+              辦理 <strong>Young Visitor Discount</strong>。在希斯路機場地鐵站或帕丁頓車站，請站務人員在普通 Oyster Card 上設定，即可享受 <strong>50% 折扣 (地鐵及巴士半價)</strong>！成人則直接感應信用卡 (Contactless) 即可。
+            </div>
+            <p><strong>• 希斯路快線 (Heathrow Express)：</strong>從 LHR 機場 15 分鐘直達帕丁頓車站。提前在官網買預售票，最低票價僅需 £10 (成人)。</p>
+            <p><strong>• Oyster Card 每日上限：</strong>Zone 1-2 每日扣款上限為 £8.50，扣滿後當天隨意免費搭乘。搭公車單趟僅 £1.75。</p>
+          </div>
+        </div>
+        <!-- 巴黎交通 -->
+        <div class="bg-white p-5 rounded-xl shadow-md border-t-4 border-red-600 hover:shadow-lg transition">
+          <div class="flex items-center space-x-2 mb-3">
+            <span class="text-2xl">🇫🇷</span>
+            <h3 class="font-extrabold text-brandDarkBlue text-base">巴黎交通指南 (Paris RATP)</h3>
+          </div>
+          <div class="text-xs text-gray-600 space-y-3">
+            <div class="bg-red-50 p-3 rounded text-red-900">
+              <span class="font-bold block mb-1">💡 週票 Navigo Decouverte：</span>
+              我們的旅行跨越週四至週日，非常適合購買 <strong>Navigo 週票</strong> (€30.75 + €5 工本費)。可無限次搭乘 Zone 1-5（含戴高樂機場 RER B、凡爾賽宮、迪士尼）。需自備 2.5x2cm 照片貼在卡上。
+            </div>
+            <p><strong>• 14歲青少年票價：</strong>巴黎大眾運輸對 10 歲以上青少年無常設週票折扣，故全家 4 人均購買成人 Navigo 週票最划算。</p>
+            <p><strong>• 蒙馬特纜車 (Funiculaire)：</strong>前往聖心堂頂部，可直接刷 Navigo 週票免費搭乘，免去爬樓梯體力消耗。</p>
+          </div>
+        </div>
+        <!-- 慕尼黑交通 -->
+        <div class="bg-white p-5 rounded-xl shadow-md border-t-4 border-yellow-500 hover:shadow-lg transition">
+          <div class="flex items-center space-x-2 mb-3">
+            <span class="text-2xl">🇩🇪</span>
+            <h3 class="font-extrabold text-brandDarkBlue text-base">慕尼黑交通指南 (Munich MVV)</h3>
+          </div>
+          <div class="text-xs text-gray-600 space-y-3">
+            <div class="bg-yellow-50 p-3 rounded text-yellow-900">
+              <span class="font-bold block mb-1">💡 4人神卡 - 團體日票 (Group Day Ticket)：</span>
+              慕尼黑團體日票最多允許 5 人共用！我們的 3位成人 + 1位14歲青少年剛好可以使用。<strong>Zone M 團體日票僅需 €19.70</strong>，比每人買單程票省去 60% 預算！
+            </div>
+            <p><strong>• 機場往返 (Zone M-5)：</strong>往返機場需橫跨全區，購買 <strong>Group Day Ticket Zone M-5 (€32.60)</strong>，即可供全家4人全天无限次乘坐 S1/S8 火車至中央車站。</p>
+            <p><strong>• 乘車打票：</strong>紙本車票使用前務必在站台的小藍機進行「蓋章打票 (Entwerten)」，否則會被視為逃票受重罰。手機 APP 購買則免打票。</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            // Day 6: 07/29 Wed (South Bank & Sky Garden Panoramic View)
-            { date: "2026/07/29", dayLabel: "Day 6 - Wed, 07/29/2026", time: "08:30", item: "超平民大英帝國連鎖早餐", location: "The Moon Under Water - JD Wetherspoon", budgetHKD: "", budgetGBP: 40, budgetEUR: "", remark1: "在 Wetherspoon 品嚐性價比極高的經典英式烤吐司、煎培根與番茄豆子。", remark2: "享受最貼近當地平民百姓的晨間步調。", city: "倫敦大本營" },
-            { date: "2026/07/29", dayLabel: "Day 6 - Wed, 07/29/2026", time: "10:00", item: "國家美術館藝術薰陶", location: "National Gallery (Trafalgar Square)", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "瞻仰梵谷《向日葵》、莫內《睡蓮》以及達文西真跡名畫。", remark2: "需提前官網免費訂票，注意館內禁帶自拍桿與大型液體。", city: "倫敦大本營" },
-            { date: "2026/07/29", dayLabel: "Day 6 - Wed, 07/29/2026", time: "12:00", item: "午餐 (博羅百年美食集市)", location: "Borough Market (Southwark)", budgetHKD: "", budgetGBP: 60, budgetEUR: "", remark1: "品嚐爆紅的熱起司松露吐司、蒜香烤生蠔、及西班牙海鮮大鐵鍋飯。", remark2: "人潮摩肩接踵，請注意隨身物品安全。", city: "倫敦大本營" },
-            { date: "2026/07/29", dayLabel: "Day 6 - Wed, 07/29/2026", time: "14:30", item: "倫敦雙塔地標漫步", location: "Tower Bridge & London Bridge", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "沿著泰晤士河南岸悠閒漫步，與壯麗的藍白維多利亞式倫敦塔橋合影。", remark2: "河畔風勢強，風衣不可少。", city: "倫敦大本營" },
-            { date: "2026/07/29", dayLabel: "Day 6 - Wed, 07/29/2026", time: "16:00", item: "空中花園高空 360 度俯瞰", location: "Sky Garden (1 Sky Garden Walk)", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "登上金融區「對講機大樓」頂層室內植物空中花園，一覽大笨鐘、碎片大廈和泰晤士河全貌。", remark2: "必須提早 3 週官網預約免費門票。高空紫外線強烈，可戴墨鏡。", city: "倫敦大本營" },
-            { date: "2026/07/29", dayLabel: "Day 6 - Wed, 07/29/2026", time: "17:30", item: "千禧橋 & 泰特現代美術館", location: "Millennium Bridge & Tate Modern", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "走過電影《哈利波特》中被食死人震毀的流線鋼索橋，參觀舊發電廠改建的現代藝術殿堂。", remark2: "頂樓咖啡廳視野一流。", city: "倫敦大本營" },
-            { date: "2026/07/29", dayLabel: "Day 6 - Wed, 07/29/2026", time: "19:00", item: "晚餐 (Flat Iron 斧頭煎牛排)", location: "Flat Iron Borough (Bankside)", budgetHKD: "", budgetGBP: 120, budgetEUR: "", remark1: "享用招牌切塊羽毛牛排，送特製迷你菜刀造型餐具，飯後贈送美味太妃糖冰淇淋。", remark2: "推薦搭配重蒜味松露薯條、奶油菠菜泥。", city: "倫敦大本營" },
+    <!-- 4. 行李清單分頁 -->
+    <section id="packing" class="py-6 max-w-7xl mx-auto px-4 hidden">
+      <div class="bg-white p-6 rounded-xl shadow-md">
+        <h2 class="text-xl font-extrabold text-brandDarkBlue mb-4 flex items-center border-b pb-2">
+          <i class="fa-solid fa-clipboard-check mr-2 text-brandOrange"></i>Eric 家族專屬行李清單 (4人份)
+        </h2>
+        <!-- 進度條 -->
+        <div class="bg-brandLightBlue p-4 rounded-lg mb-6 flex flex-col md:flex-row items-center justify-between shadow-inner">
+          <div class="text-xs md:text-sm font-bold text-brandDarkBlue mb-2 md:mb-0" id="packing-progress-text">
+            打包進度: 0 / 20 (0%)
+          </div>
+          <div class="w-full md:w-2/3 bg-gray-200 rounded-full h-3.5 overflow-hidden">
+            <div id="packing-progress-bar" class="bg-gradient-to-r from-brandOrange to-yellow-500 h-3.5 rounded-full transition-all duration-300" style="width: 0%"></div>
+          </div>
+        </div>
 
-            // Day 7: 07/30 Thu (London to Paris Eurostar)
-            { date: "2026/07/30", dayLabel: "Day 7 - Thu, 07/30/2026", time: "08:30", item: "大本營撤離退房", location: "Grange Beauchamp Hotel", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "清點所有特工電子與防身武器物資，辦理退房手續。", remark2: "今天即將啟程穿越英吉利海底隧道前往巴黎！", city: "倫敦大本營" },
-            { date: "2026/07/30", dayLabel: "Day 7 - Thu, 07/30/2026", time: "09:30", item: "前往聖潘克拉斯國際火車站", location: "St Pancras International Station", budgetHKD: "", budgetGBP: 15, budgetEUR: "", remark1: "搭乘倫敦地鐵快速通道前往 St Pancras 高鐵始發站。", remark2: "出境安檢與法國邊檢，務必提前 1.5 小時抵達辦理。", city: "巴黎分部" },
-            { date: "2026/07/30", dayLabel: "Day 7 - Thu, 07/30/2026", time: "11:30", item: "搭乘歐洲之星火速挺進 (Eurostar)", location: "倫敦聖潘克拉斯 -> 巴黎北站 (Gare du Nord)", budgetHKD: 2824, budgetGBP: "", budgetEUR: "", remark1: "高鐵班次 Eurostar 9013。在海底隧道進行跨國通訊備份與網絡切換。", remark2: "預計車程 2 小時 15 分鐘，平穩舒適。", city: "巴黎分部" },
-            { date: "2026/07/30", dayLabel: "Day 7 - Thu, 07/30/2026", time: "15:00", item: "抵達巴黎北站 & 酒店登記入住", location: "Hôtel Régence Etoile (24 Av. Carnot)", budgetHKD: 8817, budgetGBP: "", budgetEUR: "", remark1: "建立巴黎戰略分部。精品近凱旋門高檔法式套房，預含全套烘焙早餐。", remark2: "辦理行李寄放或提前入住，稍息整備，熟悉週邊地鐵安全逃生路線。", city: "巴黎分部" },
-            { date: "2026/07/30", dayLabel: "Day 7 - Thu, 07/30/2026", time: "18:30", item: "晚餐 (近凱旋門道地小酒館)", location: "Le Grand Carnot (32 Av. Carnot)", budgetHKD: "", budgetGBP: "", budgetEUR: 120, remark1: "品嚐經典法式油封鴨 (Confit de Canard)、烤蝸牛、搭法式波爾多乾紅葡萄酒。", remark2: "體會優雅慢活的法蘭西之夜，近酒店撤離方便。", city: "巴黎分部" },
-            { date: "2026/07/30", dayLabel: "Day 7 - Thu, 07/30/2026", time: "21:00", item: "巴黎公共交通卡 Navigo 申辦", location: "巴黎市區地鐵人工窗口", budgetHKD: "", budgetGBP: "", budgetEUR: 32.6, remark1: "購買實體或電子 Navigo 週票交通卡，方便未來幾日暢通無阻。", remark2: "地鐵1號線等全線任意換乘。", city: "巴黎分部" },
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- 隨身登機箱/背包 -->
+          <div>
+            <h3 class="font-bold text-sm text-brandDarkBlue mb-3 flex items-center"><i class="fa-solid fa-backpack mr-2 text-blue-500"></i>隨身行李 (證件、貴重與高頻電子產品)</h3>
+            <div class="grid grid-cols-1 gap-2" id="carryon-items-list">
+              <!-- 由 JS 動態加載 -->
+            </div>
+          </div>
+          <!-- 託運大行李箱 -->
+          <div>
+            <h3 class="font-bold text-sm text-brandOrange mb-3 flex items-center"><i class="fa-solid fa-suitcase-rolling mr-2 text-brandOrange"></i>託運行李 (衣物、洗漱與日常備用物資)</h3>
+            <div class="grid grid-cols-1 gap-2" id="checked-items-list">
+              <!-- 由 JS 動態加載 -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            // Day 8: 07/31 Fri (Paris Icons & Seine River Cruise Diner)
-            { date: "2026/07/31", dayLabel: "Day 8 - Fri, 07/31/2026", time: "09:00", item: "優雅法式烘焙早餐", location: "Hôtel Régence Etoile", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "大口咬下酥脆可頌與黃油香氣四溢的丹麥卷，搭配微焦美式與酸甜優格。", remark2: "穿搭：時尚休閒正裝、適合法式街拍、配戴墨鏡。", city: "巴黎分部" },
-            { date: "2026/07/31", dayLabel: "Day 8 - Fri, 07/31/2026", time: "10:00", item: "凱旋門與香榭大道浪漫漫步", location: "Arc de Triomphe & Champs-Élysées", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "登上凱旋門頂層展望放射狀宏偉巴黎天際線，隨後信步購物香街與協和廣場。", remark2: "今日巴黎氣溫較高，注意防曬避暑。", city: "巴黎分部" },
-            { date: "2026/07/31", dayLabel: "Day 8 - Fri, 07/31/2026", time: "12:30", item: "午餐 (法風精緻牛肉漢堡)", location: "Blend Hamburger Madeleine (Rue Duphot)", budgetHKD: "", budgetGBP: "", budgetEUR: 80, remark1: "特工美味推薦：窯烤頂級安格斯芝士牛肉漢堡，配現炸甜紅薯條。", remark2: "多汁且醬汁調味無比驚艷，補充高熱量。", city: "巴黎分部" },
-            { date: "2026/07/31", dayLabel: "Day 8 - Fri, 07/31/2026", time: "14:00", item: "杜樂麗花園放鬆 & 羅浮宮之夜", location: "Jardin des Tuileries & Musée du Louvre", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "在花園水池旁小憩，隨後參觀人類文藝殿堂羅浮宮。瞻仰《蒙娜麗莎》與《薩莫色雷斯的勝利女神》。", remark2: "週五羅浮宮開館至21:45，晚間人潮顯著減少，方便拍照。", city: "巴黎分部" },
-            { date: "2026/07/31", dayLabel: "Day 8 - Fri, 07/31/2026", time: "17:30", item: "精品閃電泡芙下午茶", location: "L'Eclair de Génie (32 Rue Notre Dame)", budgetHKD: "", budgetGBP: "", budgetEUR: 30, remark1: "享用大師級巧克力焦糖、野莓口味的奢華閃電泡芙 (Éclair)。", remark2: "美味至極，短暫休憩。", city: "巴黎分部" },
-            { date: "2026/07/31", dayLabel: "Day 8 - Fri, 07/31/2026", time: "19:30", item: "塞納河高空豪華遊船晚宴 (Paris Seine)", location: "Paris Seine 遊船碼頭", budgetHKD: 4552, budgetGBP: "", budgetEUR: "", remark1: "極致特務享受：一邊遊覽璀璨浪漫塞納河，一邊享用三道式精緻法餐搭香檳，觀看巴黎鐵塔整點星光點點點燈。", remark2: "要求著裝：時尚得體 Smart Casual，嚴禁背心短褲。", city: "巴黎分部" },
+    <!-- 5. 天氣預報分頁 (新增) -->
+    <section id="weather" class="py-6 max-w-7xl mx-auto px-4 hidden">
+      <!-- 天氣大標題與概述 -->
+      <div class="bg-gradient-to-r from-brandDarkBlue to-blue-900 rounded-2xl shadow-xl p-6 md:p-8 text-white mb-8 relative overflow-hidden">
+        <div class="absolute -right-10 -bottom-10 opacity-10 text-9xl">
+          <i class="fa-solid fa-cloud-sun"></i>
+        </div>
+        <div class="relative z-10">
+          <div class="inline-block bg-brandOrange text-white text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider mb-3">Weather guide</div>
+          <h2 class="text-2xl md:text-3xl font-extrabold mb-2">🌦️ 歐洲三國旅行天氣預報 & 穿搭指南</h2>
+          <p class="text-blue-100 text-sm md:text-base max-w-3xl mb-4">
+            專門為 Eric 家族（2位大人、2位青少年）量身定制！根據筆記本中各城市於 7/25 至 8/6 旅行期間的天氣記錄，分析每日氣溫、濕度與降雨趨勢，並提供實用的行李打包與穿搭建議，陪伴您們度過完美的盛夏之旅。
+          </p>
+          <div class="flex flex-wrap gap-4 text-xs text-brandGold font-medium">
+            <span><i class="fa-solid fa-calendar mr-1"></i> 旅行期間：2026/07/25 - 2026/08/06</span>
+            <span><i class="fa-solid fa-cloud-sun-rain mr-1"></i> 橫跨城市：倫敦 🇬🇧 • 巴黎 🇫🇷 • 慕尼黑 🇩🇪</span>
+          </div>
+        </div>
+      </div>
 
-            // Day 9: 08/01 Sat (Tower Photo Shoot & Department Shopping)
-            { date: "2026/08/01", dayLabel: "Day 9 - Sat, 08/01/2026", time: "09:00", item: "活力美式健康早餐", location: "酒店餐廳", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "享用低卡高能量冷餐，熱茶護胃。", remark2: "巴黎天氣：25-28°C、多雲時晴、適合高強度移動。", city: "巴黎分部" },
-            { date: "2026/08/01", dayLabel: "Day 9 - Sat, 08/01/2026", time: "10:00", item: "巴黎鐵塔與折疊橋晨拍", location: "Eiffel Tower & Pont de Bir-Hakeim", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "漫步《全面啟動》重力折疊大橋，拍出極具震撼感的鋼鐵人視角鐵塔肖像。", remark2: "注意：周邊偶爾有遊蕩簽名黨，請冷酷拒絕任何搭訕。", city: "巴黎分部" },
-            { date: "2026/08/01", dayLabel: "Day 9 - Sat, 08/01/2026", time: "11:30", item: "盧森堡公園午後小歇", location: "Jardin du Luxembourg", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "坐在綠色鐵椅上靜享巴黎正午日光浴、看水池帆船模型，體驗正宗法式慢生活。", remark2: "景色秀麗。", city: "巴黎分部" },
-            { date: "2026/08/01", dayLabel: "Day 9 - Sat, 08/01/2026", time: "12:30", item: "午餐 (Kodawari 昭和魚市拉麵)", location: "Kodawari Ramen Yokochō (29 Rue Mazarine)", budgetHKD: "", budgetGBP: "", budgetEUR: 80, remark1: "走入昭和風日本築地魚市場原創佈景概念店，品嚐全法第一黑鱈魚高湯拉麵。", remark2: "極富創意的網紅排隊名店，需提早 20 分鐘抵達現場守候。", city: "巴黎分部" },
-            { date: "2026/08/01", dayLabel: "Day 9 - Sat, 08/01/2026", time: "14:30", item: "聖母院復甦瞻仰 & 蒙馬特聖心堂", location: "Notre-Dame & Sacré-Cœur", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "參觀修復重生的聖母院，隨後坐地鐵前往高地，攀登聖心堂，飽覽巴黎紅瓦屋頂全景。", remark2: "蒙馬特地區注意：小心陌生人套彩色手繩，遇到請微笑並迅速繞道。", city: "巴黎分部" },
-            { date: "2026/08/01", dayLabel: "Day 9 - Sat, 08/01/2026", time: "17:00", item: "老佛爺百貨極致大採買", location: "Galeries Lafayette Haussmann", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "觀看奢華新拜占庭式彩色玻璃穹頂，採購歐洲各大名牌戰略皮件與化妝品。頂層露台免費看日落鐵塔景致。", remark2: "可於商場內快速辦理一站式電子退稅手續，手續費划算。", city: "巴黎分部" },
-            { date: "2026/08/01", dayLabel: "Day 9 - Sat, 08/01/2026", time: "19:00", item: "晚餐 (老佛爺精品美食廣場)", location: "Galeries Lafayette Le Gourmet (Blvd Haussmann)", budgetHKD: "", budgetGBP: "", budgetEUR: 120, remark1: "在老佛爺自營美食區，隨心挑選精品生蠔拼盤、鵝肝吐司、和奢華甜點馬卡龍。", remark2: "味道非凡，價格高貴。", city: "巴黎分部" },
+      <!-- 三城市天氣概況一覽卡片 -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <!-- 倫敦概況卡片 -->
+        <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-blue-500 hover:shadow-lg transition-all duration-300">
+          <div class="flex justify-between items-center mb-4">
+            <span class="text-lg font-black text-brandDarkBlue"><span class="text-2xl mr-1">🇬🇧</span> 倫敦 London</span>
+            <span class="bg-blue-50 text-blue-600 text-xs font-semibold px-2.5 py-1 rounded-full">7/25 - 7/30</span>
+          </div>
+          <div class="flex items-center space-x-4 mb-4">
+            <div class="text-4xl text-blue-500 animate-pulse">
+              <i class="fa-solid fa-cloud-sun-rain"></i>
+            </div>
+            <div>
+              <div class="text-2xl font-extrabold text-gray-800">15°C ~ 28°C</div>
+              <div class="text-xs text-gray-500">晴朗轉不穩定對流雨</div>
+            </div>
+          </div>
+          <div class="bg-blue-50 rounded-lg p-3 text-xs text-blue-800">
+            <p class="font-bold mb-1"><i class="fa-solid fa-circle-exclamation mr-1"></i>出行關鍵提醒：</p>
+            <p>7/25~27 晴朗溫暖體感悶熱；7/28起大西洋低壓逼近，雲量增多且後半段出門務必帶傘防突發雷雨！</p>
+          </div>
+        </div>
 
-            // Day 10: 08/02 Sun (Paris to Munich Flight)
-            { date: "2026/08/02", dayLabel: "Day 10 - Sun, 08/02/2026", time: "08:30", item: "打包行李 & 法國分部退房", location: "Hôtel Régence Etoile", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "退房清點精品箱，今天即將直飛前往德國巴伐利亞首府慕尼黑！", remark2: "打包隨身備用大箱，嚴格防範超重。", city: "慕尼黑分部" },
-            { date: "2026/08/02", dayLabel: "Day 10 - Sun, 08/02/2026", time: "09:30", item: "乘車前往戴高樂機場 (CDG)", location: "巴黎市區 -> CDG CDG Airport", budgetHKD: "", budgetGBP: "", budgetEUR: 50, remark1: "搭乘 RoissyBus 機場專線巴士直達 CDG 航站樓。", remark2: "預留 2 小時起辦理歐洲內部行李托運。", city: "慕尼黑分部" },
-            { date: "2026/08/02", dayLabel: "Day 10 - Sun, 08/02/2026", time: "11:55", item: "飛向慕尼黑 (Lufthansa LH2230)", location: "巴黎戴高樂 (CDG) -> 慕尼黑機場 (MUC)", budgetHKD: 5652, budgetGBP: "", budgetEUR: "", remark1: "漢莎航空 LH2230 班次。空中航行約 1.5 小時，預計 13:30 抵達。", remark2: "安全平穩，高空享用德式烘焙小零嘴與咖啡氣泡水。", city: "慕尼黑分部" },
-            { date: "2026/08/02", dayLabel: "Day 10 - Sun, 08/02/2026", time: "14:30", item: "機場快軌前往市區", location: "MUC 機場 S-Bahn S1/S8 站", budgetHKD: "", budgetGBP: "", budgetEUR: 32.6, remark1: "搭乘巴伐利亞城市鐵路 S-Bahn 快速前進慕尼黑中央總火車站。", remark2: "建議購買極其划算的小組團體一日卡。", city: "慕尼黑分部" },
-            { date: "2026/08/02", dayLabel: "Day 10 - Sun, 08/02/2026", time: "15:30", item: "慕尼黑萬怡酒店登記入住", location: "Courtyard by Marriott Munich City Center", budgetHKD: 9404, budgetGBP: "", budgetEUR: "", remark1: "建立慕尼黑前線基地。地址：Schwanthalerstr. 37。預訂房型：高級雙床房 x2。", remark2: "鄰近中央車站交通樞紐，地理位置與安全系數極佳。", city: "慕尼黑分部" },
-            { date: "2026/08/02", dayLabel: "Day 10 - Sun, 08/02/2026", time: "17:00", item: "瑪麗恩廣場與新市政廳探察", location: "Marienplatz 廣場", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "漫步在老城步行街、觀賞宏偉的新哥德式市政廳與著名的木偶報時鐘琴。", remark2: "氣溫降至 14-25°C、巴伐利亞秋爽感。\n穿搭：長袖衛衣搭配薄棉外套。", city: "慕尼黑分部" },
-            { date: "2026/08/02", dayLabel: "Day 10 - Sun, 08/02/2026", time: "19:00", item: "晚餐 (Ruff's 多汁安格斯漢堡)", location: "Ruff's Burger Marienplatz", budgetHKD: "", budgetGBP: "", budgetEUR: 80, remark1: "享用巴伐利亞第一美譽的手工黑毛牛漢堡、炭火香濃郁、松露白醬脆薯條。", remark2: "大口吃肉補充長途飛行的消耗。", city: "慕尼黑分部" },
+        <!-- 巴黎概況卡片 -->
+        <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-red-500 hover:shadow-lg transition-all duration-300">
+          <div class="flex justify-between items-center mb-4">
+            <span class="text-lg font-black text-brandDarkBlue"><span class="text-2xl mr-1">🇫🇷</span> 巴黎 Paris</span>
+            <span class="bg-red-50 text-red-600 text-xs font-semibold px-2.5 py-1 rounded-full">7/30 - 8/2</span>
+          </div>
+          <div class="flex items-center space-x-4 mb-4">
+            <div class="text-4xl text-amber-500">
+              <i class="fa-solid fa-sun animate-spin" style="animation-duration: 15s;"></i>
+            </div>
+            <div>
+              <div class="text-2xl font-extrabold text-gray-800">18°C ~ 33°C</div>
+              <div class="text-xs text-gray-500">盛夏炎熱 / 陽光猛烈</div>
+            </div>
+          </div>
+          <div class="bg-red-50 rounded-lg p-3 text-xs text-red-800">
+            <p class="font-bold mb-1"><i class="fa-solid fa-circle-exclamation mr-1"></i>出行關鍵提醒：</p>
+            <p>受強大高壓控制，極度晴朗且紫外線極高，中午體感炎熱。傍晚可能有對流熱雷雨。務必做好高係數防曬與防暑補水！</p>
+          </div>
+        </div>
 
-            // Day 11: 08/03 Mon (Viktualienmarkt & Famous Pork Knuckle)
-            { date: "2026/08/03", dayLabel: "Day 11 - Mon, 08/03/2026", time: "09:00", item: "穀物市場露天道地早餐", location: "Viktualienmarkt 穀物市場 (Viktualienmarkt 3)", budgetHKD: "", budgetGBP: "", budgetEUR: 40, remark1: "漫步在百年露天市集，品嚐溫熱巴伐利亞白香腸、椒鹽捲餅 (Pretzel) 與鮮磨黑咖啡。", remark2: "非常接地氣的德式晨間體驗。", city: "慕尼黑分部" },
-            { date: "2026/08/03", dayLabel: "Day 11 - Mon, 08/03/2026", time: "10:30", item: "雙塔聖母教堂 & 老彼得教堂攀登", location: "Frauenkirche & St. Peters Kirche", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "參觀慕尼黑地標洋蔥雙塔，隨後登上老彼得教堂狹窄木梯，俯瞰整座紅屋頂巴伐利亞老城。", remark2: "樓梯較陡，特工請注意腳下安全。", city: "慕尼黑分部" },
-            { date: "2026/08/03", dayLabel: "Day 11 - Mon, 08/03/2026", time: "12:30", item: "午餐 (ONE Nation 市集德意志大香腸)", location: "ONE Nation Munich / Market Food", budgetHKD: "", budgetGBP: "", budgetEUR: 80, remark1: "享用各式烤香腸、德式酸菜與特製芥末醬，充沛能量。", remark2: "美味好味，高飽腹感。", city: "慕尼黑分部" },
-            { date: "2026/08/03", dayLabel: "Day 11 - Mon, 08/03/2026", time: "14:00", item: "德意志科技博物館科學研發", location: "Deutsches Museum (Museumsinsel 1)", budgetHKD: "", budgetGBP: "", budgetEUR: 33, remark1: "特工科技日：考察全世界展區面積最大、展品最多的自然科學與工程技術博物館，欣賞古董飛機、潛水艇與大型高壓電火花演示。", remark2: "館區廣闊無垠，可能需步行 3 小時，請注意調整速度。", city: "慕尼黑分部" },
-            { date: "2026/08/03", dayLabel: "Day 11 - Mon, 08/03/2026", time: "18:00", item: "晚餐 (Wirtshaus 傳奇脆皮烤豬腳)", location: "Wirtshaus in der Au (Lilienstraße 51)", budgetHKD: "", budgetGBP: "", budgetEUR: 120, remark1: "品嚐外皮金黃酥脆到極致的德式脆皮烤豬腳 (Schweinshaxe)、配Q彈大土豆丸與招牌黑啤酒 (Dunkel)。", remark2: "超巨份量，現場音樂氣氛熱烈。建議提前一週官網定位。", city: "慕尼黑分部" },
+        <!-- 慕尼黑概況卡片 -->
+        <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-amber-500 hover:shadow-lg transition-all duration-300">
+          <div class="flex justify-between items-center mb-4">
+            <span class="text-lg font-black text-brandDarkBlue"><span class="text-2xl mr-1">🇩🇪</span> 慕尼黑 Munich</span>
+            <span class="bg-amber-50 text-amber-600 text-xs font-semibold px-2.5 py-1 rounded-full">8/2 - 8/6</span>
+          </div>
+          <div class="flex items-center space-x-4 mb-4">
+            <div class="text-4xl text-amber-500">
+              <i class="fa-solid fa-cloud-sun"></i>
+            </div>
+            <div>
+              <div class="text-2xl font-extrabold text-gray-800">12°C ~ 27°C</div>
+              <div class="text-xs text-gray-500">大陸溫暖 / 早晚涼爽</div>
+            </div>
+          </div>
+          <div class="bg-amber-50 rounded-lg p-3 text-xs text-amber-800">
+            <p class="font-bold mb-1"><i class="fa-solid fa-circle-exclamation mr-1"></i>出行關鍵提醒：</p>
+            <p>白天溫暖舒適，但入夜後低溫驟降至 12°C~14°C，溫差極大。午後受阿爾卑斯氣流影響偶有驟雨，建議採用洋蔥式穿法並隨身備傘！</p>
+          </div>
+        </div>
+      </div>
 
-            // Day 12: 08/04 Tue (Olympic Park & BMW World Tech Showcase)
-            { date: "2026/08/04", dayLabel: "Day 12 - Tue, 08/04/2026", time: "09:00", item: "經典德式大冷盤早餐", location: "萬怡酒店餐廳", budgetHKD: "", budgetGBP: "", budgetEUR: 30, remark1: "享用香煎熏肉、巴伐利亞硬芝士、麥片與水果乳酪。", remark2: "今日主攻德意志鋼鐵現代工業！", city: "慕尼黑分部" },
-            { date: "2026/08/04", dayLabel: "Day 12 - Tue, 08/04/2026", time: "10:00", item: "奧林匹克公園現代綠化大徒步", location: "Olympiapark (Spiridon-Louis-Ring 21)", budgetHKD: "", budgetGBP: "", budgetEUR: 40, remark1: "遊覽1972慕尼黑奧運會原址、流線鋼索編織張拉式天篷設計、登高眺望奧林匹克山景。", remark2: "空氣極佳、視野遼闊、防微風。", city: "慕尼黑分部" },
-            { date: "2026/08/04", dayLabel: "Day 12 - Tue, 08/04/2026", time: "11:00", item: "BMW 博物館鋼鐵科技考察", location: "BMW Museum (Am Olympiapark 2)", budgetHKD: "", budgetGBP: "", budgetEUR: 40, remark1: "Tony Stark 科技靈感庫：深入寶馬全球總部銀色碗狀大樓，瞻仰經典古董老車、流線跑車、及未來無人概念跑車。", remark2: "展館氣勢恢宏，適合拍出高科技感特工作戰照。", city: "慕尼黑分部" },
-            { date: "2026/08/04", dayLabel: "Day 12 - Tue, 08/04/2026", time: "14:00", item: "寧芬堡宮巴洛克皇家花園", location: "Schloß Nymphenburg 1", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "漫步夏日避暑皇宮、欣賞優雅護城河中成群的天鵝與野鴨、以及精緻巴洛克金雕宮殿壁畫。", remark2: "風景秀美，適合午後散步放鬆。", city: "慕尼黑分部" },
-            { date: "2026/08/04", dayLabel: "Day 12 - Tue, 08/04/2026", time: "18:00", item: "晚餐 (精品現做意式披薩)", location: "VAPIANO München Theatiner Straße", budgetHKD: "", budgetGBP: "", budgetEUR: 120, remark1: "享用廚師現場手擀窯烤的松露菌菇薄底披薩、手作海鮮意麵。", remark2: "採用點單卡自助式選餐，乾淨、時尚、高效。", city: "慕尼黑分部" },
-
-            // Day 13: 08/05 Wed (Royal Residenz & Grand Beer Hall Departure)
-            { date: "2026/08/05", dayLabel: "Day 13 - Wed, 08/05/2026", time: "09:00", item: "英國花園河道衝浪朝聖", location: "Englischer Garten (Eisbachwelle)", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "觀摩名滿天下的城市冰河溪流 Eisbachwelle 逆流滑板衝浪奇景，體驗都市與自然的野性融合。", remark2: "喝上一杯香熱咖啡，好不愜意。", city: "慕尼黑分部" },
-            { date: "2026/08/05", dayLabel: "Day 13 - Wed, 08/05/2026", time: "11:00", item: "慕尼黑皇宮極盡奢華探秘", location: "Residenz München (Residenzstraße 1)", budgetHKD: "", budgetGBP: "", budgetEUR: 80, remark1: "參觀巴伐利亞維特爾斯巴赫王朝主皇宮，震撼於長達 66 米的文藝復興式雕像古文物大廳 (Antiquarium) 與富麗堂皇的珍寶館。", remark2: "黃金雕花美輪美奐，絕對是震撼視覺之作。", city: "慕尼黑分部" },
-            { date: "2026/08/05", dayLabel: "Day 13 - Wed, 08/05/2026", time: "13:00", item: "午餐 (中式木造寶塔啤酒花園)", location: "Chinesischer Turm Beer Garden", budgetHKD: "", budgetGBP: "", budgetEUR: 50, remark1: "坐在公園五層巨型中式木結構古寶塔下，大口喝公升杯扎啤、啃烤香雞、品巴伐利亞扭結餅。", remark2: "體會最原汁原味、充滿市井狂歡的德意志戶外啤酒節文化！", city: "慕尼黑分部" },
-            { date: "2026/08/05", dayLabel: "Day 13 - Wed, 08/05/2026", time: "15:00", item: "皇家 HB 大啤酒館終極朝聖", location: "Hofbräuhaus München (Platzl 9)", budgetHKD: "", budgetGBP: "", budgetEUR: 120, remark1: "踏入擁有400年悠久歷史、可容納數千人的巴伐利亞傳奇大廳，在嘹亮的巴伐利亞銅管樂隊伴奏下，吃德式香腸大盤、再喝一杯小麥白啤。", remark2: "氛圍極度熱烈狂歡、人聲鼎沸。", city: "慕尼黑分部" },
-            { date: "2026/08/05", dayLabel: "Day 13 - Wed, 08/05/2026", time: "18:00", item: "開往機場 & 全歐精品海關退稅", location: "MUC 慕尼黑機場 Terminal 2", budgetHKD: "", budgetGBP: "", budgetEUR: 20, remark1: "辦理酒店退房，攜戰利品大箱抵達機場，迅速辦理海關蓋章與全歐精品免稅退稅手續。", remark2: "退稅隊伍多，務必預留至少 1.5 小時處理退稅。", city: "新加坡聯絡站" },
-            { date: "2026/08/05", dayLabel: "Day 13 - Wed, 08/05/2026", time: "22:00", item: "飛返亞洲 (Singapore Airlines SQ327)", location: "慕尼黑 (MUC) -> 新加坡樟宜 (SIN)", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "登機新航旗艦寬體客機 SQ327。在奢華客艙長途夜宿飛行，清點歐洲任務戰略成果。", remark2: "夜航深睡、機艙提供夜間抗噪眼罩與舒適襪套。", city: "新加坡聯絡站" },
-
-            // Day 14: 08/06 Thu (Singapore Transfer to Macau)
-            { date: "2026/08/06", dayLabel: "Day 14 - Thu, 08/06/2026", time: "06:40", item: "安全抵達新加坡轉機", location: "樟宜機場 Terminal 3", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "平穩著陸，前往轉機大廳對接最終航段。", remark2: "感受綠意葱葱的星耀樟宜室內瀑布魅力。", city: "新加坡聯絡站" },
-            { date: "2026/08/06", dayLabel: "Day 14 - Thu, 08/06/2026", time: "08:00", item: "早餐 (南洋風味椰漿飯)", location: "新加坡樟宜機場美食廣場", budgetHKD: 100, budgetGBP: "", budgetEUR: "", remark1: "大快朵頤星洲招牌香辣椰漿飯 (Nasi Lemak)、香甜咖椰吐司配糖心半熟蛋、拉茶。", remark2: "美味南洋早茶，令人食指大動！", city: "新加坡聯絡站" },
-            { date: "2026/08/06", dayLabel: "Day 14 - Thu, 08/06/2026", time: "13:50", item: "最後戰略凱旋航段 (TR904)", location: "新加坡樟宜機場 (SIN) -> 澳門 (MFM)", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "登上酷航 TR904 航班，預計 17:55 降落家園。", remark2: "檢查個人所有戰略伴手禮與照片備份。", city: "新加坡聯絡站" },
-            { date: "2026/08/06", dayLabel: "Day 14 - Thu, 08/06/2026", time: "17:55", item: "任務圓滿凱旋！澳門降落", location: "澳門國際機場 (MFM)", budgetHKD: "", budgetGBP: "", budgetEUR: "", remark1: "降落澳門，安全提取作戰大箱與豐厚歐洲戰利品，聯盟解散！", remark2: "復仇者聯盟 2026 歐洲之行完美落幕。隨時準備下一次緊急集結！", city: "新加坡聯絡站" }
-        ];
-
-        // Preloaded Flights (Comprehensive checklist covering all flight decks)
-        let flightData = [
-            { id: "FL-101", date: "2026/07/24", route: "MFM ✈ SIN", code: "TR905 (Scoot)", time: "18:45 - 22:35", status: "READY" },
-            { id: "FL-102", date: "2026/07/25", route: "SIN ✈ LHR", code: "SQ306 (SIA)", time: "01:05 - 07:40", status: "READY" },
-            { id: "FL-103", date: "2026/07/30", route: "London 🚄 Paris", code: "Eurostar 9013", time: "11:30 - 14:45", status: "READY" },
-            { id: "FL-104", date: "2026/08/02", route: "CDG ✈ MUC", code: "LH2230 (Lufthansa)", time: "11:55 - 13:30", status: "READY" },
-            { id: "FL-105", date: "2026/08/05", route: "MUC ✈ SIN", code: "SQ327 (SIA)", time: "22:00 - 06:40+1", status: "READY" },
-            { id: "FL-106", date: "2026/08/06", route: "SIN ✈ MFM", code: "TR904 (Scoot)", time: "13:50 - 17:55", status: "READY" }
-        ];
-
-        // Preloaded Packing items
-        let packingData = [
-            { item: "上衣", category: "戰鬥服飾", Eric: { pocket: 0, suitcase: 10, checked: false }, Isabel: { pocket: 0, suitcase: 10, checked: false }, Ricky: { pocket: 0, suitcase: 10, checked: false }, Venus: { pocket: 0, suitcase: 10, checked: false } },
-            { item: "長褲", category: "戰鬥服飾", Eric: { pocket: 0, suitcase: 4, checked: false }, Isabel: { pocket: 0, suitcase: 5, checked: false }, Ricky: { pocket: 0, suitcase: 5, checked: false }, Venus: { pocket: 0, suitcase: 5, checked: false } },
-            { item: "內衣褲", category: "戰鬥服飾", Eric: { pocket: 0, suitcase: 10, checked: false }, Isabel: { pocket: 0, suitcase: 10, checked: false }, Ricky: { pocket: 0, suitcase: 10, checked: false }, Venus: { pocket: 0, suitcase: 10, checked: false } },
-            { item: "戰術防風外套", category: "戰鬥服飾", Eric: { pocket: 1, suitcase: 0, checked: false }, Isabel: { pocket: 1, suitcase: 0, checked: false }, Ricky: { pocket: 1, suitcase: 0, checked: false }, Venus: { pocket: 1, suitcase: 0, checked: false } },
-            { item: "牙刷組", category: "野戰洗漱", Eric: { pocket: 0, suitcase: 1, checked: false }, Isabel: { pocket: 0, suitcase: 1, checked: false }, Ricky: { pocket: 0, suitcase: 1, checked: false }, Venus: { pocket: 0, suitcase: 1, checked: false } },
-            { item: "量子能量源 (尿袋)", category: "戰術裝備", Eric: { pocket: 1, suitcase: 0, checked: false }, Isabel: { pocket: 1, suitcase: 0, checked: false }, Ricky: { pocket: 1, suitcase: 0, checked: false }, Venus: { pocket: 1, suitcase: 0, checked: false } },
-            { item: "快充插頭", category: "通訊電力", Eric: { pocket: 1, suitcase: 2, checked: false }, Isabel: { pocket: 0, suitcase: 0, checked: false }, Ricky: { pocket: 0, suitcase: 0, checked: false }, Venus: { pocket: 1, suitcase: 0, checked: false } },
-            { item: "防身折疊傘", category: "日常裝備", Eric: { pocket: 0, suitcase: 0, checked: false }, Isabel: { pocket: 1, suitcase: 0, checked: false }, Ricky: { pocket: 0, suitcase: 0, checked: false }, Venus: { pocket: 1, suitcase: 0, checked: false } },
-            { item: "備用醫療藥盒", category: "戰地補給", Eric: { pocket: 0, suitcase: 1, checked: false }, Isabel: { pocket: 0, suitcase: 1, checked: false }, Ricky: { pocket: 0, suitcase: 1, checked: false }, Venus: { pocket: 0, suitcase: 1, checked: false } }
-        ];
-
-        // Custom extra expenses added by user
-        let customExpenses = [];
-
-        // Global State Variables
-        let currentTheme = 'dark';
-        let currentActiveAgent = 'Eric';
-        let currentActiveTab = 'schedule';
-        let filterCity = 'ALL';
-
-        // Custom Confirm callback store
-        let onConfirmCallback = null;
-
-        window.onload = function() {
-            // Load custom stored elements if any
-            if(localStorage.getItem('customExpenses')) {
-                customExpenses = JSON.parse(localStorage.getItem('customExpenses'));
-            }
-            if(localStorage.getItem('packingCheckedState')) {
-                const checkedState = JSON.parse(localStorage.getItem('packingCheckedState'));
-                // map back to packingData
-                packingData.forEach((item, index) => {
-                    if(checkedState[index] !== undefined) {
-                        item.Eric.checked = checkedState[index].Eric;
-                        item.Isabel.checked = checkedState[index].Isabel;
-                        item.Ricky.checked = checkedState[index].Ricky;
-                        item.Venus.checked = checkedState[index].Venus;
-                    }
-                });
-            }
-
-            startMissionCountdown();
-            renderFlightDeck();
-            renderItinerary();
-            renderPackingList();
-            renderLedger();
-            showToast("JARVIS 戰術系統優化完畢，預備出擊！");
-        };
-
-        // Mission Launch countdown timer (Target: July 24, 2026, 18:45)
-        function startMissionCountdown() {
-            const targetDate = new Date("2026/07/24 18:45:00").getTime();
-            
-            function updateTimer() {
-                const now = new Date().getTime();
-                const difference = targetDate - now;
-
-                if (difference <= 0) {
-                    document.getElementById("countdown").innerHTML = "<div class='col-span-4 text-emerald-400 font-bold uppercase py-2'>MISSION IN PROGRESS 🚀</div>";
-                    return;
-                }
-
-                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-                document.getElementById("cd-days").innerText = String(days).padStart(2, '0');
-                document.getElementById("cd-hours").innerText = String(hours).padStart(2, '0');
-                document.getElementById("cd-mins").innerText = String(minutes).padStart(2, '0');
-                document.getElementById("cd-secs").innerText = String(seconds).padStart(2, '0');
-            }
-            updateTimer();
-            setInterval(updateTimer, 1000);
-        }
-
-        // Switch App Themes
-        function toggleTheme(theme) {
-            currentTheme = theme;
-            const body = document.body;
-            const darkBtn = document.getElementById("darkBtn");
-            const lightBtn = document.getElementById("lightBtn");
-
-            if (theme === 'dark') {
-                body.className = "theme-dark min-h-screen pb-20 md:pb-5";
-                darkBtn.className = "flex items-center gap-2 px-3 py-1.5 rounded-md text-xs font-mono font-bold tracking-wider transition bg-[#ED1D24] text-white ring-2 ring-red-500";
-                lightBtn.className = "flex items-center gap-2 px-3 py-1.5 rounded-md text-xs font-mono font-bold tracking-wider transition bg-gray-800 text-gray-300 hover:bg-gray-700";
-                showToast("賈維斯極黑戰術主題啟動。");
-            } else {
-                body.className = "theme-light min-h-screen pb-20 md:pb-5";
-                lightBtn.className = "flex items-center gap-2 px-3 py-1.5 rounded-md text-xs font-mono font-bold tracking-wider transition bg-[#ED1D24] text-white ring-2 ring-red-500";
-                darkBtn.className = "flex items-center gap-2 px-3 py-1.5 rounded-md text-xs font-mono font-bold tracking-wider transition bg-gray-200 text-gray-700 hover:bg-gray-300";
-                showToast("星期五高反差戰術主題啟動。");
-            }
-            // Re-render components to propagate theme modifications on text colors
-            renderFlightDeck();
-            renderItinerary();
-            renderPackingList();
-            renderLedger();
-        }
-
-        // Switch Core Tabs
-        function switchTab(tabId) {
-            currentActiveTab = tabId;
-            const tabs = ['schedule', 'gear', 'ledger'];
-            tabs.forEach(t => {
-                const content = document.getElementById(`tabContent-${t}`);
-                const btn = document.getElementById(`tabBtn-${t}`);
-                const mobBtn = document.getElementById(`mobTab-${t}`);
+      <!-- 詳細天氣趨勢與穿搭攻略 -->
+      <div class="space-y-8">
+        
+        <!-- 倫敦詳細資訊 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300">
+          <div class="bg-gradient-to-r from-blue-600 to-blue-800 px-6 py-4 text-white flex flex-wrap justify-between items-center">
+            <div class="flex items-center space-x-3">
+              <span class="text-3xl">🇬🇧</span>
+              <div>
+                <h3 class="text-lg font-bold">倫敦天氣深度解析 & 穿搭指南</h3>
+                <p class="text-xs text-blue-100">旅行時間：7月25日 – 7月30日（入住 Hilton London Metropole & Grange Beauchamp）</p>
+              </div>
+            </div>
+            <div class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-xs font-bold">晴朗轉不穩定對流</div>
+          </div>
+          
+          <div class="p-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- 左欄：天氣趨勢 -->
+            <div>
+              <h4 class="text-sm font-extrabold text-brandDarkBlue mb-4 flex items-center">
+                <i class="fa-solid fa-chart-line mr-2 text-blue-500"></i>天氣趨勢 & 氣候變化
+              </h4>
+              
+              <div class="space-y-4">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                  <div class="flex justify-between text-xs text-gray-500 mb-1">
+                    <span>夜間低溫 (最低)</span>
+                    <span>日間高溫 (最高)</span>
+                  </div>
+                  <div class="flex justify-between text-sm font-bold text-gray-800 mb-2">
+                    <span>15°C</span>
+                    <span>28°C</span>
+                  </div>
+                  <div class="h-3 w-full bg-gradient-to-r from-blue-300 via-yellow-200 to-orange-400 rounded-full"></div>
+                  <p class="text-[11px] text-gray-400 mt-2 text-center">7月下旬是倫敦的夏日，白晝很長，溫度在 15~28°C 之間浮動。</p>
+                </div>
                 
-                if (t === tabId) {
-                    content.classList.remove('hidden');
-                    btn.className = "px-5 py-2.5 font-bold tracking-wider uppercase text-sm border-b-2 border-marvel-red text-marvel-red whitespace-nowrap transition";
-                    if (mobBtn) mobBtn.className = "flex flex-col items-center gap-1 text-marvel-red";
-                } else {
-                    content.classList.add('hidden');
-                    btn.className = "px-5 py-2.5 font-bold tracking-wider uppercase text-sm dyn-text-secondary hover:text-marvel-red border-b-2 border-transparent whitespace-nowrap transition";
-                    if (mobBtn) mobBtn.className = "flex flex-col items-center gap-1 dyn-text-secondary";
-                }
-            });
-        }
-
-        // Select Active Agent (S.H.I.E.L.D. Character profiles)
-        function selectAgent(agentName) {
-            currentActiveAgent = agentName;
+                <!-- 時間段拆解 -->
+                <div class="relative pl-6 border-l-2 border-blue-100 space-y-4">
+                  <div class="relative">
+                    <span class="absolute -left-[31px] top-0 bg-blue-500 text-white rounded-full w-4 h-4 flex items-center justify-center text-[8px] font-bold">1</span>
+                    <p class="text-xs font-bold text-gray-800">前期晴熱（7月25日 – 27日）</p>
+                    <p class="text-xs text-gray-600 mt-1">受高壓脊殘餘影響，維持晴朗穩定的好天氣。日間最高氣溫可達 25°C 至 28°C 之間，由於城市熱島效應，市區體感稍顯悶熱，但夜間低溫約 15°C，整體仍算舒適，非常適合大笨鐘、白金漢宮、科學博物館等戶外觀光。</p>
+                  </div>
+                  <div class="relative">
+                    <span class="absolute -left-[31px] top-0 bg-blue-500 text-white rounded-full w-4 h-4 flex items-center justify-center text-[8px] font-bold">2</span>
+                    <p class="text-xs font-bold text-gray-800">後期轉雨（7月28日 – 30日）</p>
+                    <p class="text-xs text-gray-600 mt-1">隨著大西洋低壓系統逼近，高壓瓦解。西南/西風帶來潮濕氣流，雲量變多，日間最高氣溫回落至 22°C – 24°C，但空氣濕度明顯上升。7月28日午後起，局部地區極易出現突發性短時強降雨或對流雷雨，體感轉為濕悶。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
             
-            // Highlight Agent Cards
-            const agents = ['Eric', 'Isabel', 'Ricky', 'Venus'];
-            agents.forEach(a => {
-                const card = document.getElementById(`agentCard-${a}`);
-                if (a === agentName) {
-                    card.className = "cursor-pointer p-3 rounded border border-red-500 bg-red-950/20 transition flex items-center gap-3 shadow-md shadow-red-500/20 scale-105 transform";
-                } else {
-                    card.className = "cursor-pointer p-3 rounded border dyn-border-subtle hover:border-red-500 bg-black/10 transition flex items-center gap-3";
-                }
-            });
+            <!-- 右欄：穿搭與裝備建議 -->
+            <div class="bg-blue-50 bg-opacity-40 p-6 rounded-xl border border-blue-100">
+              <h4 class="text-sm font-extrabold text-brandDarkBlue mb-4 flex items-center">
+                <i class="fa-solid fa-shirt mr-2 text-blue-600"></i>Eric 一家穿搭與打包攻略
+              </h4>
+              
+              <ul class="space-y-3.5 text-xs text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-blue-500 mr-2 mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                  <div>
+                    <strong class="text-gray-900">日常穿衣（7/25 - 7/27）</strong>
+                    <p class="text-gray-600">白天短袖T恤、短褲或長裙等涼快裝扮。因白金漢宮與南肯辛頓博物館群步行量極大，請全家穿著最舒適、避震的運動鞋或休閒鞋。</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-blue-500 mr-2 mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                  <div>
+                    <strong class="text-gray-900">備用外套（防冷氣與低溫）</strong>
+                    <p class="text-gray-600">夜間會降到 15°C，且飛機上、地鐵站及哈利波特影城的冷氣可能較強，請每位家人隨身攜帶 1 件輕便的防風外套或防曬薄衫。</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-blue-500 mr-2 mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                  <div>
+                    <strong class="text-gray-900">雨具與防泼水（7/28 - 7/30）</strong>
+                    <p class="text-gray-600">28日後有高機率午後對流雷雨，請把摺疊傘放入隨身防盜背包。青少年可著防潑水防風外套或連帽雨衣，應對在大英博物館、倫敦塔橋步行時的突發陣雨。</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-            // Update Gear checklist active agent indicator
-            document.getElementById("gearActiveAgentName").innerText = agentName;
-            renderPackingList();
-            showToast(`已鎖定特工：${agentName} 的戰術指引。`);
-        }
-
-        // Render S.H.I.E.L.D. Flight Deck List with semantic dynamic colors
-        function renderFlightDeck() {
-            const container = document.getElementById("flightDeckContainer");
-            container.innerHTML = "";
-
-            flightData.forEach(flight => {
-                const statusColor = flight.status === 'READY' ? 'dyn-green-badge' : 'dyn-yellow-badge';
-                const html = `
-                    <div class="border dyn-border-subtle p-3 rounded dyn-bg-subtle hover:bg-black/20 transition">
-                        <div class="flex justify-between items-center mb-1">
-                            <span class="font-bold text-marvel-red">${flight.route}</span>
-                            <span class="text-[9px] border px-1.5 py-0.5 rounded font-bold ${statusColor}">${flight.status}</span>
-                        </div>
-                        <div class="flex justify-between items-center dyn-text-secondary text-[11px]">
-                            <span>代號: ${flight.code}</span>
-                            <span>時間: ${flight.time}</span>
-                        </div>
-                    </div>
-                `;
-                container.innerHTML += html;
-            });
-        }
-
-        // Render Mission Itinerary Schedule
-        function renderItinerary() {
-            const container = document.getElementById("timelineContainer");
-            const filterContainer = document.getElementById("dayFilters");
-            container.innerHTML = "";
-            filterContainer.innerHTML = "";
-
-            // Collect unique cities
-            const cities = ['ALL', ...new Set(itineraryData.map(item => item.city).filter(Boolean))];
-            cities.forEach(city => {
-                const activeClass = filterCity === city ? 'bg-marvel-red text-white' : 'bg-gray-800/60 dark:bg-gray-800/30 dyn-text-secondary hover:bg-marvel-red/40';
-                filterContainer.innerHTML += `
-                    <button onclick="setCityFilter('${city}')" class="px-3 py-1 text-xs font-mono font-bold rounded transition uppercase tracking-wider ${activeClass}">
-                        ${city}
-                    </button>
-                `;
-            });
-
-            // Populate timeline
-            let lastDayLabel = "";
-            itineraryData.forEach((item, index) => {
-                if (filterCity !== 'ALL' && item.city !== filterCity) return;
-
-                let dateHeader = "";
-                if (item.dayLabel !== lastDayLabel) {
-                    lastDayLabel = item.dayLabel;
-                    dateHeader = `
-                        <div class="relative -left-[31px] flex items-center gap-3 mt-6 mb-4">
-                            <div class="w-4 h-4 bg-marvel-red rounded-full ring-4 ring-black"></div>
-                            <h3 class="text-xs font-black font-mono bg-marvel-red text-white px-3 py-1 rounded tracking-widest uppercase skew-x-12">
-                                ${item.dayLabel}
-                            </h3>
-                        </div>
-                    `;
-                }
-
-                const budgetStr = item.budgetHKD ? `HK$${item.budgetHKD}` : (item.budgetGBP ? `£${item.budgetGBP}` : (item.budgetEUR ? `€${item.budgetEUR}` : "N/A"));
-
-                // Map styling base on values to make sure light/dark modes are completely legible
-                const html = `
-                    ${dateHeader}
-                    <div class="hud-card rounded-lg p-4 relative group transition-all duration-300 mb-4 ml-2">
-                        <!-- Left indicator edge -->
-                        <div class="absolute left-0 top-0 bottom-0 w-1 bg-marvel-red/40 group-hover:bg-marvel-red transition-all"></div>
-                        
-                        <div class="flex flex-col md:flex-row justify-between items-start gap-2">
-                            <div>
-                                <span class="font-mono text-xs font-bold px-2 py-0.5 rounded mr-2 dyn-cyan-badge">${item.time}</span>
-                                <h4 class="inline text-sm font-bold tracking-wide">${item.item}</h4>
-                                <p class="text-xs dyn-text-secondary mt-1 flex items-center gap-1">
-                                    📍 <span>${item.location || '無指定地點'}</span>
-                                    ${item.location ? `
-                                        <button onclick="copyToClipboard('${item.location}')" class="dyn-cyan hover:underline transition ml-2 text-[10px] font-mono">[複製地址]</button>
-                                    ` : ''}
-                                </p>
-                            </div>
-                            <div class="text-right flex flex-col items-end gap-1">
-                                <span class="text-xs font-mono font-bold px-2.5 py-0.5 rounded dyn-yellow-badge">預算: ${budgetStr}</span>
-                                <span class="text-[10px] dyn-text-muted font-mono tracking-wider">${item.city || '未知聯絡站'}</span>
-                            </div>
-                        </div>
-
-                        <!-- Remarks and tactical outfit suggestion -->
-                        <div class="mt-3 pt-3 border-t dyn-border-subtle grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-mono">
-                            <div class="dyn-bg-inner p-2.5 rounded border dyn-border-subtle">
-                                <div class="text-[10px] dyn-red font-bold uppercase mb-1">任務日誌 Memo</div>
-                                <p class="leading-relaxed">${item.remark1 || '無特定情報'}</p>
-                            </div>
-                            <div class="dyn-bg-inner p-2.5 rounded border dyn-border-subtle">
-                                <div class="text-[10px] dyn-cyan font-bold uppercase mb-1">環境與武裝穿搭</div>
-                                <p class="leading-relaxed whitespace-pre-line">${item.remark2 || '標準作戰配置'}</p>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                container.innerHTML += html;
-            });
-
-            if (container.innerHTML === "") {
-                container.innerHTML = `<div class="text-center py-12 text-xs font-mono dyn-text-muted">該站點目前無作戰指令排程。</div>`;
-            }
-        }
-
-        // Set City Itinerary Filter
-        function setCityFilter(city) {
-            filterCity = city;
-            renderItinerary();
-        }
-
-        // Copy location address helper (Supports Offline & Sandbox environments)
-        function copyToClipboard(text) {
-            const tempInput = document.createElement("input");
-            tempInput.value = text;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand("copy");
-            document.body.removeChild(tempInput);
-            showToast(`已成功複製情報位置: ${text}`);
-        }
-
-        // Render Agent packing checklist
-        function renderPackingList() {
-            const tbody = document.getElementById("gearTableBody");
-            tbody.innerHTML = "";
-
-            packingData.forEach((item, index) => {
-                const agentData = item[currentActiveAgent] || { pocket: 0, suitcase: 0, checked: false };
-                const isChecked = agentData.checked;
-                const statusIcon = isChecked ? '✅ 已裝箱' : '❌ 未就緒';
-                const statusClass = isChecked ? 'dyn-green-badge' : 'dyn-red-badge';
+        <!-- 巴黎詳細資訊 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300">
+          <div class="bg-gradient-to-r from-red-600 to-red-800 px-6 py-4 text-white flex flex-wrap justify-between items-center">
+            <div class="flex items-center space-x-3">
+              <span class="text-3xl">🇫🇷</span>
+              <div>
+                <h3 class="text-lg font-bold">巴黎天氣深度解析 & 穿搭指南</h3>
+                <p class="text-xs text-red-100">旅行時間：7月30日 – 8月2日（入住 Hôtel Régence Etoile）</p>
+              </div>
+            </div>
+            <div class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-xs font-bold">盛夏高溫 / 晴朗炎熱</div>
+          </div>
+          
+          <div class="p-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- 左欄：天氣趨勢 -->
+            <div>
+              <h4 class="text-sm font-extrabold text-brandDarkBlue mb-4 flex items-center">
+                <i class="fa-solid fa-chart-line mr-2 text-red-500"></i>天氣趨勢 & 氣候變化
+              </h4>
+              
+              <div class="space-y-4">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                  <div class="flex justify-between text-xs text-gray-500 mb-1">
+                    <span>夜間最低</span>
+                    <span>日間最高</span>
+                  </div>
+                  <div class="flex justify-between text-sm font-bold text-gray-800 mb-2">
+                    <span>18°C</span>
+                    <span>33°C</span>
+                  </div>
+                  <div class="h-3 w-full bg-gradient-to-r from-yellow-100 via-orange-300 to-red-500 rounded-full"></div>
+                  <p class="text-[11px] text-gray-400 mt-2 text-center">巴黎此時正值盛夏，高壓籠罩下晴空萬里，日照強烈，需高度防範高溫。</p>
+                </div>
                 
-                const tr = document.createElement('tr');
-                tr.className = `hover:bg-gray-800/20 transition cursor-pointer ${isChecked ? 'opacity-50' : ''}`;
-                tr.onclick = () => togglePackingCheck(index);
-
-                tr.innerHTML = `
-                    <td class="py-3 font-bold">${item.item}</td>
-                    <td class="py-3 text-center text-[10px] dyn-text-secondary">${item.category}</td>
-                    <td class="py-3 text-center text-sm font-bold dyn-yellow">${agentData.pocket || '-'}</td>
-                    <td class="py-3 text-center text-sm font-bold dyn-cyan">${agentData.suitcase || '-'}</td>
-                    <td class="py-3 text-right">
-                        <span class="text-[10px] border px-2.5 py-1 rounded inline-block font-bold ${statusClass}">${statusIcon}</span>
-                    </td>
-                `;
-                tbody.appendChild(tr);
-            });
-        }
-
-        // Toggle checkbox status on packing list
-        function togglePackingCheck(itemIndex) {
-            const agentState = packingData[itemIndex][currentActiveAgent];
-            agentState.checked = !agentState.checked;
+                <ul class="space-y-3 text-xs text-gray-600">
+                  <li class="flex items-start">
+                    <span class="text-red-500 mr-2 mt-0.5"><i class="fa-solid fa-sun"></i></span>
+                    <span><strong>強烈高壓壟罩：</strong>7/30~8/2 巴黎受強大陸高壓控制，白晝氣溫快速飆升至 29°C 至 33°C。特別在香榭麗舍、凱旋門等無遮陰路段，中午至下午體感非常酷熱。</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-red-500 mr-2 mt-0.5"><i class="fa-solid fa-cloud-sun-rain"></i></span>
+                    <span><strong>傍晚熱雷雨機率：</strong>由於白天地面熱量高度累積，傍晚至入夜前（如8/1逛完拉法葉百貨或艾菲爾鐵塔周邊），局部地區有機會出現短暫的對流雷陣雨，常伴隨狂風，但通常會在1小時內結束。</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-red-500 mr-2 mt-0.5"><i class="fa-solid fa-moon"></i></span>
+                    <span><strong>夜間降溫與塞納河：</strong>夜間氣溫回落至 18°C，雖較白天涼爽，但在塞納河畔或進行晚餐遊船巡航時，因水面風大，體感溫度可能偏低。</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
             
-            // Save checked states locally
-            const localState = packingData.map(item => ({
-                Eric: item.Eric.checked,
-                Isabel: item.Isabel.checked,
-                Ricky: item.Ricky.checked,
-                Venus: item.Venus.checked
-            }));
-            localStorage.setItem('packingCheckedState', JSON.stringify(localState));
+            <!-- 右欄：穿搭與裝備建議 -->
+            <div class="bg-red-50 bg-opacity-40 p-6 rounded-xl border border-red-100">
+              <h4 class="text-sm font-extrabold text-brandDarkBlue mb-4 flex items-center">
+                <i class="fa-solid fa-shirt mr-2 text-red-600"></i>Eric 一家穿搭與打包攻略
+              </h4>
+              
+              <ul class="space-y-3.5 text-xs text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-red-500 mr-2 mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                  <div>
+                    <strong class="text-gray-900">極致防暑夏裝 & 高效防曬</strong>
+                    <p class="text-gray-600">建議準備輕便、透氣度高、吸汗的純棉或棉麻材質短袖衣物。巴黎盛夏紫外線強烈，戶外走羅浮宮與香榭麗舍大街時，遮陽帽、高效防曬乳、防UV太陽眼鏡缺一不可。請攜帶環保保溫瓶隨時在小店或路邊飲水機補水，防止中暑。</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-red-500 mr-2 mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                  <div>
+                    <strong class="text-gray-900">塞納河遊船晚餐穿搭 (Dress Code 警告)</strong>
+                    <p class="text-gray-600">Bateaux Parisiens 遊船晚餐有嚴格的著裝要求：<strong>嚴禁短褲、涼鞋、拖鞋、鴨舌帽及運動服！</strong> 
+                    <br>• 男士（Eric、Ricky）：建議穿著休閒西裝/西裝外套、正裝長襯衫、長褲與皮鞋/休閒皮鞋（不可露趾）。
+                    <br>• 女士（Isabel、Venus）：建議穿著優雅長洋裝或正裝套套裙。
+                    <br>• 備忘：甲板風大且夜間氣溫降至 18°C，請務必為女士與青少年準備 1 件優雅的披肩或針織外套防風保暖。</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-            renderPackingList();
-            
-            const stateMsg = agentState.checked ? '已配備裝箱 🛡️' : '卸載裝備';
-            showToast(`${currentActiveAgent} 的【${packingData[itemIndex].item}】${stateMsg}`);
-        }
-
-        // Add customizable offline expense items
-        function addExpense() {
-            const item = document.getElementById("expItem").value.trim();
-            const cost = parseFloat(document.getElementById("expCost").value);
-            const currency = document.getElementById("expCurrency").value;
-
-            if(!item || isNaN(cost)) {
-                showToast("🔴 請輸入完整的開支名稱與金額！");
-                return;
-            }
-
-            customExpenses.push({ id: Date.now(), item, cost, currency });
-            localStorage.setItem('customExpenses', JSON.stringify(customExpenses));
-
-            // Clean inputs
-            document.getElementById("expItem").value = "";
-            document.getElementById("expCost").value = "";
-
-            renderLedger();
-            showToast(`已追加開支項目：${item}`);
-        }
-
-        // Delete expense item
-        function deleteExpense(id) {
-            customExpenses = customExpenses.filter(e => e.id !== id);
-            localStorage.setItem('customExpenses', JSON.stringify(customExpenses));
-            renderLedger();
-            showToast("開支紀錄已刪除。");
-        }
-
-        // Reset Ledger Data via customized Modal confirm (No alert/confirm bypass)
-        function resetExpenses() {
-            showConfirmModal("確定要重設您新增的所有自訂開支紀錄嗎？此動作將無法還原。", function() {
-                customExpenses = [];
-                localStorage.removeItem('customExpenses');
-                renderLedger();
-                showToast("已重置所有自定義開支數據。");
-            });
-        }
-
-        // S.H.I.E.L.D. Custom Confirm Modal
-        function showConfirmModal(msg, callback) {
-            document.getElementById("confirmModalMsg").innerText = msg;
-            onConfirmCallback = callback;
-            
-            const modal = document.getElementById("confirmModal");
-            const content = document.getElementById("confirmModalContent");
-            
-            modal.classList.remove("opacity-0", "pointer-events-none");
-            content.classList.remove("scale-95");
-            content.classList.add("scale-100");
-        }
-
-        function closeConfirmModal(confirmed) {
-            const modal = document.getElementById("confirmModal");
-            const content = document.getElementById("confirmModalContent");
-            
-            modal.classList.add("opacity-0", "pointer-events-none");
-            content.classList.remove("scale-100");
-            content.classList.add("scale-95");
-            
-            if (confirmed && onConfirmCallback) {
-                onConfirmCallback();
-            }
-            onConfirmCallback = null;
-        }
-
-        // Render Expense Ledger & Aggregate overall totals with exact text visibility
-        function renderLedger() {
-            const tbody = document.getElementById("ledgerTableBody");
-            tbody.innerHTML = "";
-
-            // Start with base data extracted from Itinerary values
-            let combinedList = [];
-            itineraryData.forEach(item => {
-                if (item.budgetHKD) {
-                    combinedList.push({ item: item.item, cost: item.budgetHKD, currency: 'HKD', source: 'itinerary' });
-                } else if (item.budgetGBP) {
-                    combinedList.push({ item: item.item, cost: item.budgetGBP, currency: 'GBP', source: 'itinerary' });
-                } else if (item.budgetEUR) {
-                    combinedList.push({ item: item.item, cost: item.budgetEUR, currency: 'EUR', source: 'itinerary' });
-                }
-            });
-
-            // Add flight deck prices if applicable
-            combinedList.push({ item: "機票總計費用 (TR905, SQ306, Eurostar)", cost: 31432, currency: 'HKD', source: 'flight' });
-            combinedList.push({ item: "Hilton 倫敦大本營房宿費", cost: 9475, currency: 'HKD', source: 'hotel' });
-
-            // Merge with user extra offline inputs
-            customExpenses.forEach(exp => {
-                combinedList.push({ ...exp, source: 'user' });
-            });
-
-            let totalHKD = 0;
-
-            combinedList.forEach(exp => {
-                let convertedHKD = 0;
-                if (exp.currency === 'HKD') {
-                    convertedHKD = exp.cost;
-                } else if (exp.currency === 'GBP') {
-                    convertedHKD = exp.cost * RATES.GBP_TO_HKD;
-                } else if (exp.currency === 'EUR') {
-                    convertedHKD = exp.cost * RATES.EUR_TO_HKD;
-                }
-
-                totalHKD += convertedHKD;
-
-                const tr = document.createElement('tr');
-                tr.className = "hover:bg-gray-800/10 transition";
-
-                tr.innerHTML = `
-                    <td class="py-3 font-bold">${exp.item}</td>
-                    <td class="py-3 text-center text-[10px] font-mono dyn-text-secondary">${exp.currency}</td>
-                    <td class="py-3 text-right font-bold">${exp.currency === 'HKD' ? 'HK$' : (exp.currency === 'GBP' ? '£' : '€')}${exp.cost.toLocaleString()}</td>
-                    <td class="py-3 text-right dyn-yellow font-bold">HK$ ${Math.round(convertedHKD).toLocaleString()}</td>
-                    <td class="py-3 text-center">
-                        ${exp.source === 'user' ? `
-                            <button onclick="deleteExpense(${exp.id})" class="text-red-500 hover:text-red-700 transition font-black">✕</button>
-                        ` : '<span class="dyn-text-muted text-[10px]">鎖定</span>'}
-                    </td>
-                `;
-                tbody.appendChild(tr);
-            });
-
-            // Set aggregate card panels
-            document.getElementById("totalSpentHKD").innerText = `HK$ ${Math.round(totalHKD).toLocaleString()}`;
-            document.getElementById("totalSpentGBP").innerText = `£ ${Math.round(totalHKD / RATES.GBP_TO_HKD).toLocaleString()}`;
-            document.getElementById("totalSpentEUR").innerText = `€ ${Math.round(totalHKD / RATES.EUR_TO_HKD).toLocaleString()}`;
-        }
-
-        // Custom S.H.I.E.L.D. visual toast
-        function showToast(msg) {
-            const toast = document.getElementById("toast");
-            const toastMsg = document.getElementById("toastMsg");
-            toastMsg.innerText = msg;
-            
-            toast.className = "fixed bottom-6 right-6 z-50 transform translate-y-0 opacity-100 transition-all duration-300 pointer-events-auto";
-            
-            setTimeout(() => {
-                toast.className = "fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none";
-            }, 3000);
-        }
-
-        // PARSE CSV & UPDATE ENTIRE WEBAPP DATABASE DYNAMICALLY!
-        function handleFileSelect(evt) {
-            const files = evt.target.files;
-            if(!files.length) return;
-
-            const logContainer = document.getElementById("fileUploadLogs");
-            logContainer.innerHTML = "";
-
-            Array.from(files).forEach(file => {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    const text = e.target.result;
-                    processCSVIntelligence(file.name, text);
-                };
-                reader.readAsText(file);
-            });
-        }
-
-        // Dynamic intelligence parsing based on structure
-        function processCSVIntelligence(fileName, rawText) {
-            const parsedLines = parseCSV(rawText);
-            const logContainer = document.getElementById("fileUploadLogs");
-            
-            if (parsedLines.length < 2) {
-                logContainer.innerHTML += `<div class="text-red-400">⚠️ ${fileName}：無效或空白的 CSV 資料。</div>`;
-                return;
-            }
-
-            const headerRow = parsedLines[0].map(h => h.trim().toLowerCase());
-            
-            // Check 1: Is this Itinerary/Schedule data? (行程)
-            if (headerRow.includes('date') && headerRow.includes('time') && headerRow.includes('item')) {
-                const dateIdx = headerRow.indexOf('date');
-                const timeIdx = headerRow.indexOf('time');
-                const itemIdx = headerRow.indexOf('item');
-                const locIdx = headerRow.indexOf('location');
-                const budgetHkdIdx = headerRow.indexOf('budget(hkd)');
-                const budgetGbpIdx = headerRow.indexOf('budget(gdp)') !== -1 ? headerRow.indexOf('budget(gdp)') : headerRow.indexOf('budget(gbp)');
-                const budgetEurIdx = headerRow.indexOf('budget(eur)');
-                const remarkIdx = headerRow.indexOf('remark');
-                const remark1Idx = headerRow.indexOf('remark1');
-                const remark2Idx = headerRow.indexOf('remark2');
-                const weatherIdx = headerRow.indexOf('weather');
-
-                let newItinerary = [];
-                for(let i=1; i<parsedLines.length; i++) {
-                    const row = parsedLines[i];
-                    if (row.length < 3 || !row[dateIdx] && !row[itemIdx]) continue;
-                    
-                    const cityVal = row[locIdx] && (row[locIdx].includes('München') || row[locIdx].includes('Munich')) ? '慕尼黑分部' : (row[locIdx] && row[locIdx].includes('Singapore') ? '新加坡聯絡站' : '倫敦大本營');
-                    
-                    newItinerary.push({
-                        date: row[dateIdx] || "",
-                        dayLabel: row[dateIdx] || "",
-                        time: row[timeIdx] || "00:00",
-                        item: row[itemIdx] || "",
-                        location: row[locIdx] || "",
-                        budgetHKD: parseFloat(row[budgetHkdIdx]) || "",
-                        budgetGBP: parseFloat(row[budgetGbpIdx]) || "",
-                        budgetEUR: parseFloat(row[budgetEurIdx]) || "",
-                        remark1: row[remark1Idx] !== -1 ? row[remark1Idx] : (row[remarkIdx] || ""),
-                        remark2: row[remark2Idx] !== -1 ? row[remark2Idx] : (row[weatherIdx] || ""),
-                        city: cityVal
-                    });
-                }
+        <!-- 慕尼黑詳細資訊 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300">
+          <div class="bg-gradient-to-r from-amber-600 to-amber-800 px-6 py-4 text-white flex flex-wrap justify-between items-center">
+            <div class="flex items-center space-x-3">
+              <span class="text-3xl">🇩🇪</span>
+              <div>
+                <h3 class="text-lg font-bold">慕尼黑天氣深度解析 & 穿搭指南</h3>
+                <p class="text-xs text-amber-100">旅行時間：8月2日 – 8月6日（入住 Courtyard by Marriott Munich City Center）</p>
+              </div>
+            </div>
+            <div class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-xs font-bold">溫帶大陸性舒適氣候</div>
+          </div>
+          
+          <div class="p-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- 左欄：天氣趨勢 -->
+            <div>
+              <h4 class="text-sm font-extrabold text-brandDarkBlue mb-4 flex items-center">
+                <i class="fa-solid fa-chart-line mr-2 text-amber-500"></i>天氣趨勢 & 氣候變化
+              </h4>
+              
+              <div class="space-y-4">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                  <div class="flex justify-between text-xs text-gray-500 mb-1">
+                    <span>夜間低溫 (最低)</span>
+                    <span>日間高溫 (最高)</span>
+                  </div>
+                  <div class="flex justify-between text-sm font-bold text-gray-800 mb-2">
+                    <span>12°C</span>
+                    <span>27°C</span>
+                  </div>
+                  <div class="h-3 w-full bg-gradient-to-r from-blue-400 via-yellow-100 to-amber-500 rounded-full"></div>
+                  <p class="text-[11px] text-gray-400 mt-2 text-center">慕尼黑海拔較高，白晝溫暖怡人，但入夜後降溫非常明顯，一日如過兩季！</p>
+                </div>
                 
-                if (newItinerary.length > 0) {
-                    itineraryData = newItinerary;
-                    renderItinerary();
-                    renderLedger();
-                    logContainer.innerHTML += `<div class="text-green-400">✔️ 已成功解析並置換 ${newItinerary.length} 筆行程作戰日程數據！</div>`;
-                }
-            }
+                <ul class="space-y-3 text-xs text-gray-600">
+                  <li class="flex items-start">
+                    <span class="text-amber-500 mr-2 mt-0.5"><i class="fa-solid fa-cloud-sun"></i></span>
+                    <span><strong>宜人舒適的白晝：</strong>8/2~8/6 慕尼黑白天陽光燦爛，氣溫大約在 24°C 至 27°C 之間。空氣清爽不潮濕，比起倫敦和巴黎的悶熱，慕尼黑的氣候體感最為舒適，極適合徒步漫遊新天鵝堡、英國花園。</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-amber-500 mr-2 mt-0.5"><i class="fa-solid fa-cloud-rain"></i></span>
+                    <span><strong>阿爾卑斯山地雷雨：</strong>由於慕尼黑緊鄰阿爾卑斯山北麓，受山地氣流影響，午後非常容易形成局部的強對流，常有短暫雷陣雨（下雨時氣溫會瞬間下降 3-5°C），不過通常雨過天晴，彩虹再現。</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-amber-500 mr-2 mt-0.5"><i class="fa-solid fa-temperature-arrow-down"></i></span>
+                    <span><strong>夜間寒冷警報：</strong>夜間和清晨的氣溫會大幅驟降至 12°C 至 14°C，體感偏冷。如果晚上要在露天啤酒花園（如 Hofbräuhaus）或伊薩爾河畔散步，會有明顯的涼意。</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
             
-            // Check 2: Is this Packing lists data? (準備物品)
-            else if (headerRow.includes('eric') || headerRow.includes('isabel') || headerRow.includes('ricky') || headerRow.includes('venus') || parsedLines[0].join(',').includes('物品')) {
-                // Find Columns
-                let itemIdx = -1;
-                let ericCol = -1, isabelCol = -1, rickyCol = -1, venusCol = -1;
+            <!-- 右欄：穿搭與裝備建議 -->
+            <div class="bg-amber-50 bg-opacity-40 p-6 rounded-xl border border-amber-100">
+              <h4 class="text-sm font-extrabold text-brandDarkBlue mb-4 flex items-center">
+                <i class="fa-solid fa-shirt mr-2 text-amber-600"></i>Eric 一家穿搭與打包攻略
+              </h4>
+              
+              <ul class="space-y-3.5 text-xs text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-amber-500 mr-2 mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                  <div>
+                    <strong class="text-gray-900">洋蔥式穿衣法則（必備外套）</strong>
+                    <p class="text-gray-600">這是慕尼黑的穿衣核心！白天出門穿短袖T恤、薄長褲，但包包裡<strong>必須攜帶 1 件保暖的薄夾克、連帽衛衣或防風外套</strong>。特別是早晨出發去新天鵝堡，山上氣溫較低，必須隨時增減衣物。</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-amber-500 mr-2 mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                  <div>
+                    <strong class="text-gray-900">皇家啤酒花園抗寒準備</strong>
+                    <p class="text-gray-600">若計劃在傍晚到露天啤酒廣場享受大杯啤酒和脆皮烤豬腳，由於戶外無暖氣且入夜體感降至 15°C 以下，建議穿著長褲，並搭配長袖衛衣或外套，避免著涼感冒影響後半段行程。</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-amber-500 mr-2 mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                  <div>
+                    <strong class="text-gray-900">隨身防護與雨具</strong>
+                    <p class="text-gray-600">白天的強光仍需墨鏡與遮陽帽。午後陣雨頻繁，全家每人隨身包裡應備有一把輕便摺疊雨傘，以防在新天鵝堡山路或英國花園草地上突遇降雨。</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
-                // Simple check headers
-                for(let j=0; j<parsedLines[0].length; j++) {
-                    const cell = parsedLines[0][j].trim().toLowerCase();
-                    if (cell.includes('物品')) itemIdx = j;
-                    if (cell === 'eric') ericCol = j;
-                    if (cell === 'isabel') isabelCol = j;
-                    if (cell === 'ricky') rickyCol = j;
-                    if (cell === 'venus') venusCol = j;
-                }
+      <!-- 行李打包防雨禦寒清單 -->
+      <div class="bg-gradient-to-r from-orange-500 to-amber-500 rounded-xl p-6 text-white shadow-md mt-8">
+        <h4 class="text-base font-extrabold mb-3 flex items-center">
+          <i class="fa-solid fa-suitcase mr-2"></i>行李清單微調對照：Eric 家族關鍵氣候裝備
+        </h4>
+        <p class="text-xs text-orange-50 mb-4">
+          為了完美應對這三個城市的天氣差異，請在出發前確認以下關鍵防雨、防暑及保暖裝備已放入託運行李或隨身行李中（可點擊「行李清單」分頁進行勾選）：
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          <div class="bg-white bg-opacity-10 rounded-lg p-3">
+            <span class="font-extrabold block text-brandGold mb-1"><i class="fa-solid fa-umbrella mr-1"></i>防雨防風（倫敦/慕尼黑）</span>
+            <ul class="list-disc list-inside space-y-1 text-gray-100">
+              <li>全家隨身摺疊雨傘4把</li>
+              <li>青少年輕便雨衣/防潑水外套</li>
+              <li>防滑運動鞋（防雨天石板路濕滑）</li>
+            </ul>
+          </div>
+          <div class="bg-white bg-opacity-10 rounded-lg p-3">
+            <span class="font-extrabold block text-brandGold mb-1"><i class="fa-solid fa-sun mr-1"></i>防高溫強光（巴黎/倫敦前期）</span>
+            <ul class="list-disc list-inside space-y-1 text-gray-100">
+              <li>高效防曬乳（面部與全身防曬）</li>
+              <li>防UV太陽眼鏡（每人一副保護眼睛）</li>
+              <li>防曬寬沿帽、棒球帽</li>
+              <li>全家隨身保溫水瓶（方便市區補水）</li>
+            </ul>
+          </div>
+          <div class="bg-white bg-opacity-10 rounded-lg p-3">
+            <span class="font-extrabold block text-brandGold mb-1"><i class="fa-solid fa-temperature-arrow-down mr-1"></i>保暖禦寒（慕尼黑/塞納河遊船）</span>
+            <ul class="list-disc list-inside space-y-1 text-gray-100">
+              <li>每人輕便薄外套 1 件（隨身登機）</li>
+              <li>保暖連帽衛衣/夾克外套 1-2 件（託運）</li>
+              <li>遊船晚餐正裝外搭針織外套/西裝外套</li>
+              <li>休閒正裝長褲（用於涼爽夜晚正裝場合）</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                if(itemIdx === -1) {
-                    // Fallback to manual indices
-                    itemIdx = 1;
-                    ericCol = 3;
-                    isabelCol = 5;
-                    rickyCol = 7;
-                    venusCol = 9;
-                }
+  </main>
 
-                let newPacking = [];
-                for(let i=2; i<parsedLines.length; i++) {
-                    const row = parsedLines[i];
-                    if(!row[itemIdx]) continue;
-                    
-                    newPacking.push({
-                        item: row[itemIdx],
-                        category: "戰略配備",
-                        Eric: { pocket: parseInt(row[ericCol]) || 0, suitcase: parseInt(row[ericCol+1]) || 0, checked: false },
-                        Isabel: { pocket: parseInt(row[isabelCol]) || 0, suitcase: parseInt(row[isabelCol+1]) || 0, checked: false },
-                        Ricky: { pocket: parseInt(row[rickyCol]) || 0, suitcase: parseInt(row[rickyCol+1]) || 0, checked: false },
-                        Venus: { pocket: parseInt(row[venusCol]) || 0, suitcase: parseInt(row[venusCol+1]) || 0, checked: false }
-                    });
-                }
+  <!-- 頁尾 -->
+  <footer class="bg-brandDarkBlue text-white py-6 px-4 mt-8">
+    <div class="max-w-7xl mx-auto text-center text-xs md:text-sm space-y-2">
+      <p class="font-bold text-brandGold">Eric 家族專屬 • 歐洲 15 天豪華自主行程指南 🌟</p>
+      <p class="text-gray-400">Copyright © 2026. Designed for the unforgettable European family adventure.</p>
+    </div>
+  </footer>
 
-                if (newPacking.length > 0) {
-                    packingData = newPacking;
-                    renderPackingList();
-                    logContainer.innerHTML += `<div class="text-green-400">✔️ 已重構裝備庫 ${newPacking.length} 筆特工戰略清單！</div>`;
-                }
-            }
+  <!-- 右下角浮動返回頁首及導航 -->
+  <div class="fixed bottom-6 right-6 flex flex-col space-y-2 z-50">
+    <button onclick="scrollToTop()" class="bg-brandOrange text-white p-3 rounded-full shadow-lg hover:bg-orange-600 transition-all focus:outline-none" title="回到頂部">
+      <i class="fa-solid fa-arrow-up text-lg"></i>
+    </button>
+  </div>
 
-            // Fallback default message
-            else {
-                logContainer.innerHTML += `<div class="text-yellow-400">💡 已讀取 ${fileName}。若需更動排程或裝備，請導入正確規格的戰術 CSV 檔。</div>`;
-            }
+  <!-- JavaScript 業務邏輯控制 -->
+  <script>
+    // 每日行程結構數據 (15天全程超詳細版)
+    const dailyItinerary = [
+      {
+        day: 1,
+        date: "07/24 (五)",
+        title: "大冒險啟程：澳門 ➔ 新加坡 ➔ 倫敦",
+        desc: "出發前往澳門國際機場，搭乘酷航出發，經新加坡轉機新航至希斯路機場，準備迎接15天的英法德精彩旅程！",
+        timeline: [
+          { time: "16:00", item: "全家出發", loc: "抵達澳門國際機場 (MFM)", type: "transport" },
+          { time: "18:45", item: "起飛 ✈️ 酷航 TR905", loc: "澳門 ➔ 新加坡樟宜機場", type: "transport" },
+          { time: "22:35", item: "抵達新加坡", loc: "轉機與短暫休憩", type: "sight" }
+        ],
+        food: "餐點自理 / 樟宜機場內美食街",
+        tips: "酷航為廉價航空，建議隨身攜帶空水瓶，入關後裝水登機。轉機時間充足，請全家在新加坡樟宜機場核對好下一程新航 SQ306 登機牌。"
+      },
+      {
+        day: 2,
+        date: "07/25 (六)",
+        title: "倫敦，我們來了！大笨鐘與英式經典初體驗",
+        desc: "清晨飛抵倫敦希斯路機場，搭乘機場快線直達市中心帕丁頓車站。辦理入住後，直奔西敏區，一睹大笨鐘與西敏寺的宏偉風采，傍晚至柯芬園享用人氣牛排！",
+        timeline: [
+          { time: "01:05", item: "起飛 ✈️ 新航 SQ306", loc: "新加坡 ➔ 倫敦希斯路機場 (LHR)", type: "transport" },
+          { time: "07:40", item: "抵達倫敦", loc: "希斯路機場 T2 航廈", type: "transport" },
+          { time: "08:45", item: "希斯路快線", loc: "LHR 機場 ➔ 倫敦帕丁頓車站 (London Paddington)", type: "transport" },
+          { time: "10:00", item: "飯店辦理入住", loc: "Hilton London Metropole (Edgware Road 站旁)", type: "hotel" },
+          { time: "11:30", item: "西敏寺與大笨鐘 🏛️", loc: "Westminster Abbey & Big Ben", type: "sight", map: "https://maps.google.com/?q=Big+Ben+London" },
+          { time: "14:30", item: "倫敦眼眺望 (外觀)", loc: "London Eye / Westminster Bridge 拍照", type: "sight", map: "https://maps.google.com/?q=Westminster+Bridge" },
+          { time: "17:30", item: "晚餐饗宴 🍽️ Flat Iron", loc: "Flat Iron (Covent Garden) - 人氣高CP值平價牛排", type: "food", map: "https://maps.google.com/?q=Flat+Iron+Covent+Garden" },
+          { time: "19:30", item: "柯芬園漫遊 🛍️", loc: "Covent Garden 逛街與街頭藝人表演", type: "sight", map: "https://maps.google.com/?q=Covent+Garden" }
+        ],
+        food: "晚餐特別推薦：Flat Iron 牛排（人均約 £20，必點多汁牛排、配菜松露薯條與免費贈送的巧克力冰淇淋，不可預約，需提前去現場排隊登記手機號碼）。",
+        tips: "帕丁頓地鐵站非常大。出站後請成人直接感應雙幣信用卡 (Contactless) 進站。<strong>14歲的 Ricky 必須在人工櫃檯辦理 Young Visitor Discount 綁定 Oyster Card</strong>，享受地鐵和巴士半價優惠。"
+      },
+      {
+        day: 3,
+        date: "07/26 (日)",
+        title: "皇家衛兵交接儀式與南肯辛頓雙博物館奇妙日",
+        desc: "上午參觀白金漢宮，欣賞震撼的皇家衛兵交接儀式。下午直奔青少年最愛的科學博物館與自然史博物館，晚上品嚐超大隻波士頓龍蝦！",
+        timeline: [
+          { time: "09:30", item: "海德公園散步 🌳", loc: "Hyde Park 散步至白金漢宮", type: "sight" },
+          { time: "10:45", item: "白金漢宮衛兵交接 👑", loc: "Buckingham Palace (上午11:00正式開始，人潮眾多建議提早佔位)", type: "sight", map: "https://maps.google.com/?q=Buckingham+Palace" },
+          { time: "12:30", item: "午餐推薦 🍽️ Burger & Lobster", loc: "Burger & Lobster (Knightsbridge 分店)", type: "food", map: "https://maps.google.com/?q=Burger+and+Lobster+Knightsbridge" },
+          { time: "14:30", item: "南肯辛頓博物館群 🦖", loc: "自然史博物館 Natural History Museum + 科學博物館 Science Museum", type: "sight", map: "https://maps.google.com/?q=Natural+History+Museum+London" },
+          { time: "18:00", item: "哈洛德百貨 🛍️", loc: "Harrods 百貨購買伴手禮 (經典哈洛德熊、茶葉)", type: "sight", map: "https://maps.google.com/?q=Harrods+London" }
+        ],
+        food: "午餐推薦：Burger & Lobster（人均約 £35，必點原隻蒸/烤龍蝦、龍蝦捲 Lobster Roll，配特製檸檬大蒜奶油醬，口感極致彈牙）。",
+        tips: "白金漢宮衛兵交接儀式並非每天舉行，出發前務必上官網核對日程。自然史博物館的恐龍展廳是青少年的最愛，建議提前預約免費入場門票，避免現場大排長龍。"
+      },
+      {
+        day: 4,
+        date: "07/27 (一)",
+        title: "魔幻降臨！華納兄弟哈利波特影城一日遊",
+        desc: "哈利波特迷 Ricky 與 Venus 的圓夢時刻！全天探秘華納兄弟倫敦影城，晚上回到倫敦市區，打卡國王十字車站 9¾ 月台與享受人氣印度料理！",
+        timeline: [
+          { time: "08:30", item: "搭乘火車 🚆", loc: "尤斯頓車站 (Euston) ➔ 沃特福德交匯站 (Watford Junction)", type: "transport" },
+          { time: "09:30", item: "影城接駁巴士 🚌", loc: "搭乘專屬哈利波特雙層穿梭巴士直達影城", type: "transport" },
+          { time: "10:00", item: "哈利波特影城探秘 ⚡", loc: "Warner Bros. Studio Tour London (哈利波特片場、斜角巷、霍格華茲特快車)", type: "sight", map: "https://maps.google.com/?q=Warner+Bros+Studio+Tour+London" },
+          { time: "15:30", item: "返回倫敦市區", loc: "沃特福德交匯站 🚆 尤斯頓車站", type: "transport" },
+          { time: "16:30", item: "九分之三月台 📸", loc: "國王十字車站 (King's Cross Station 9¾ Platform) 拍照留念", type: "sight", map: "https://maps.google.com/?q=Kings+Cross+Station+Platform+9+3/4" },
+          { time: "18:30", item: "晚餐推薦 🍽️ Dishoom", loc: "Dishoom (King's Cross) - 倫敦最火爆的英倫殖民風印度餐廳", type: "food", map: "https://maps.google.com/?q=Dishoom+Kings+Cross" }
+        ],
+        food: "晚餐推薦：Dishoom 印度料理（人均 £25-30，必點招牌黑豆咖哩 Black Daal、蒜香烤餅 Garlic Naan 以及香料烤雞 Tikka，極受本地人推崇，排隊人潮極多，建議提早前往）。",
+        tips: "哈利波特影城門票非常難搶，需提前數月預訂。前往 Watford Junction 的火車票可直接刷 Oyster / Contactless 卡（此站超出 Zone 1-9，但接受 Oyster 支付，成人單程約 £6-£10）。"
+      },
+      {
+        day: 5,
+        date: "07/28 (二)",
+        title: "倫敦地標巡禮：大英博物館與絕美塔橋漫步",
+        desc: "上午探索大英博物館的奇世珍寶，中午去充滿生機的波羅市場品嚐街頭美食，下午漫步倫敦塔與絕美的倫敦塔橋，晚上更換飯店至 Grange Beauchamp。",
+        timeline: [
+          { time: "09:00", item: "更換飯店辦理行李託管", loc: "Hilton Metropole ➔ Grange Beauchamp Hotel (大英博物館旁)", type: "hotel" },
+          { time: "10:00", item: "大英博物館 🏛️", loc: "British Museum (古埃及木乃伊、羅塞塔石碑)", type: "sight", map: "https://maps.google.com/?q=British+Museum" },
+          { time: "13:00", item: "波羅市場街頭美食 🍽️", loc: "Borough Market (生蠔、西班牙海鮮飯、松露蘑菇燉飯)", type: "food", map: "https://maps.google.com/?q=Borough+Market" },
+          { time: "15:00", item: "倫敦塔與倫敦塔橋 🌉", loc: "Tower of London & Tower Bridge 漫步", type: "sight", map: "https://maps.google.com/?q=Tower+Bridge" },
+          { time: "18:30", item: "晚餐推薦 🍽️ Rock & Sole Plaice", loc: "Rock & Sole Plaice (百年傳統老店英式炸魚薯條)", type: "food", map: "https://maps.google.com/?q=Rock+and+Sole+Plaice" }
+        ],
+        food: "午餐波羅市場：生蠔拼盤、熱騰騰的卡拉邁香腸捲與起司通心粉；晚餐推薦：Rock & Sole Plaice（人均 £20，品嚐正宗外酥裡嫩的黑鱈魚炸魚薯條，搭配青豆泥與麥芽醋）。",
+        tips: "大英博物館免費入場，但也需提前網上預約。大英博物館步行到新飯店 Grange Beauchamp Hotel 僅需 5 分鐘，下午拖著行李步行換飯店極度便利。"
+      },
+      {
+        day: 6,
+        date: "07/29 (三)",
+        title: "倫敦潮流購物日：攝政街與蘇活區漫步",
+        desc: "全天深入倫敦的核心繁華地帶。上午漫步攝政街與牛津街，探訪全英最大玩具店 Hamleys；下午漫步 Soho 區，晚餐預訂美味的波士頓龍蝦卷，享受愜意的英式午後。",
+        timeline: [
+          { time: "10:00", item: "攝政街與牛津街 🛍️", loc: "Regent Street & Oxford Street (打卡英式紅色雙層巴士與古老街道)", type: "sight", map: "https://maps.google.com/?q=Regent+Street+London" },
+          { time: "11:30", item: "Hamleys 玩具旗艦店 🧸", loc: "Hamleys Toy Shop (七層樓的玩具天堂，青少年流連忘返)", type: "sight", map: "https://maps.google.com/?q=Hamleys" },
+          { time: "13:30", item: "午餐推薦 🍽️ Burger & Lobster", loc: "Burger & Lobster (Bond Street 分店)", type: "food", map: "https://maps.google.com/?q=Burger+and+Lobster+Bond+Street" },
+          { time: "15:30", item: "蘇活區 & 中國城 🏮", loc: "Soho Area & London Chinatown 漫步與下午茶", type: "sight", map: "https://maps.google.com/?q=London+Chinatown" },
+          { time: "18:30", item: "晚餐推薦 🍽️ Dishoom Carnaby", loc: "Dishoom Carnaby 享用精緻新派北印美饌", type: "food" }
+        ],
+        food: "午餐推薦：Burger & Lobster（人均 £35）；晚餐：Dishoom 蘇活分店，體驗極具 1960 年代孟買搖滾風格的用餐環境。",
+        tips: "攝政街是倫敦買高品質紀念品與茶葉（如 Fortnum & Mason 皇家茶）的絕佳地點。今日行程步行較多，可靈活搭乘倫敦經典的紅色雙層巴士，既能休息又能欣賞街景。"
+      },
+      {
+        day: 7,
+        date: "07/30 (四)",
+        title: "再見倫敦，歐洲之星高鐵穿梭巴黎凱旋門",
+        desc: "清晨從聖潘克拉斯車站搭乘「歐洲之星」海底高鐵，僅需 2.5 小時即可跨國抵達時尚之都巴黎！辦理入住後，午後登上雄偉的凱旋門俯瞰巴黎香榭大道！",
+        timeline: [
+          { time: "08:00", item: "搭乘地鐵前往聖潘克拉斯", loc: "St Pancras International 火車站", type: "transport" },
+          { time: "10:24", item: "高鐵 🚄 Eurostar 9018", loc: "倫敦聖潘克拉斯 ➔ 巴黎北站 (Paris Gare du Nord)", type: "transport" },
+          { time: "13:47", item: "抵達巴黎並辦理入住", loc: "Hôtel Régence Etoile (凱旋門旁 Carnot 大道)", type: "hotel" },
+          { time: "15:30", item: "登上凱旋門 🏛️", loc: "Arc de Triomphe (俯瞰十二條大道放射狀美景，極度震撼)", type: "sight", map: "https://maps.google.com/?q=Arc+de+Triomphe" },
+          { time: "18:30", item: "晚餐推薦 🍽️ Le Relais de l'Entrecôte", loc: "Le Relais de l'Entrecôte (香榭大道旁，傳奇排隊法式秘製牛排館)", type: "food", map: "https://maps.google.com/?q=Le+Relais+de+l+Entrecote+Paris" }
+        ],
+        food: "晚餐推薦：Le Relais de l'Entrecôte（人均 €35，只賣一款牛排配無限量金黃脆薯。他們的綠色秘製香草牛油醬汁味道無比驚艷，無法預約，建議 18:00 前往排隊）。",
+        tips: "搭乘歐洲之星需辦理出英法邊境手續，<strong>務必提前 90 分鐘到達聖潘克拉斯車站</strong>辦理出境與安檢。抵達巴黎北站後，在自動售票機為全家購買 Navigo 週票。"
+      },
+      {
+        day: 8,
+        date: "07/31 (五)",
+        title: "羅浮宮尋寶與塞納河超浪漫玻璃船晚餐",
+        desc: "上午參觀世界最大的藝術殿堂「羅浮宮」，下午穿過杜樂麗花園漫步，夜晚迎來本趟旅程的高光：登上塞納河全玻璃觀光船，享用三道式法式大餐與現場音樂！",
+        timeline: [
+          { time: "09:00", item: "羅浮宮尋寶 🎨", loc: "Musée du Louvre (打卡蒙娜麗莎、維納斯、勝利女神)", type: "sight", map: "https://maps.google.com/?q=Louvre+Museum" },
+          { time: "13:00", item: "杜樂麗花園午餐 🍽️", loc: "Jardin des Tuileries 散步，並在園內咖啡廳享用法式三明治", type: "food", map: "https://maps.google.com/?q=Jardin+des+Tuileries" },
+          { time: "15:00", item: "香榭麗舍大街購物 🛍️", loc: "Champs-Élysées 散步與購物", type: "sight" },
+          { time: "19:45", item: "登船準備 🚢", loc: "Bateaux Parisiens 碼頭 (艾菲爾鐵塔腳下 Port de la Bourdonnais)", type: "transport" },
+          { time: "20:30", item: "塞納河晚餐遊船巡航 🍽️✨", loc: "Bateaux Parisiens (20:30場次，著正式裝飾，欣賞巴黎夜景)", type: "food", map: "https://maps.google.com/?q=Bateaux+Parisiens" }
+        ],
+        food: "晚餐特別包含：Bateaux Parisiens 豪華塞納河遊船晚餐（預算已包含，三道式經典法餐 + 精選法國葡萄酒 + 现场歌手演奏 + 塞納河兩岸打燈古蹟環繞，一生必體驗一次）。",
+        tips: "<strong>塞納河晚餐遊船有嚴格 Dress Code：嚴禁運動服、短褲、拖鞋、涼鞋與棒球帽！</strong>Eric 與 Ricky 請穿襯衫、長褲與皮鞋/休閒皮鞋；Isabel 與 Venus 請著優雅裙裝。羅浮宮門票必須嚴格提前預約指定時間段入場。"
+      },
+      {
+        day: 9,
+        date: "08/01 (六)",
+        title: "艾菲爾鐵塔鋼鐵浪漫與拉法葉百貨購物狂歡",
+        desc: "上午在比爾哈凱姆橋與戰神廣場打卡艾菲爾鐵塔的最佳拍照點。下午前往奧斯曼大道的巴黎拉法葉百貨，開啟購物狂喜之旅，晚上享用浪漫義式晚餐！",
+        timeline: [
+          { time: "09:30", item: "比爾哈凱姆橋 🌉", loc: "Pont de Bir-Hakeim (盜夢空間取景地，拍攝巴黎鐵塔最美角度)", type: "sight", map: "https://maps.google.com/?q=Pont+de+Bir-Hakeim" },
+          { time: "11:00", item: "戰神廣場草坪 🌳", loc: "Champ de Mars 漫步，近距離仰望艾菲爾鐵塔", type: "sight", map: "https://maps.google.com/?q=Eiffel+Tower" },
+          { time: "13:00", item: "午餐推薦 🍽️ Mosugo", loc: "Mosugo by Mory Sacko (拉法葉百貨美食館，米其林主廚開的炸雞堡)", type: "food" },
+          { time: "14:30", item: "拉法葉百貨購物 🛍️", loc: "Galeries Lafayette Haussmann (欣賞絕美玻璃穹頂，採購名牌與伴手禮)", type: "sight", map: "https://maps.google.com/?q=Galeries+Lafayette+Paris" },
+          { time: "18:30", item: "晚餐推薦 🍽️ Pink Mamma", loc: "Pink Mamma (四層樓歐式復古玻璃屋，網紅松露披薩)", type: "food", map: "https://maps.google.com/?q=Pink+Mamma+Paris" }
+        ],
+        food: "午餐推薦：Mosugo（人均 €18，招牌日式唐揚炸雞堡配地瓜條，青少年極愛）；晚餐推薦：Pink Mamma（人均 €35，必點極致香濃的松露意麵與佛羅倫斯牛排，頂樓玻璃屋裝潢驚艷，需提前在官網預約）。",
+        tips: "拉法葉百貨可提供中文退稅服務，購物時請隨身攜帶護照原件。在拉法葉百貨 1 樓服務台即可直接辦理信用卡或現金退稅手續，手續單要在機場離境時在 PABLO 自助機上刷條碼確認。"
+      },
+      {
+        day: 10,
+        date: "08/02 (日)",
+        title: "蒙馬特聖心堂神聖眺望 ➔ 飛往巴伐利亞慕尼黑",
+        desc: "上午搭乘蒙馬特纜車直達聖心堂，眺望全巴黎美景。中午前往戴高樂機場，搭乘漢莎航空橫跨歐陸抵達德國慕尼黑，入住中央車站旁的家庭飯店！",
+        timeline: [
+          { time: "09:00", item: "聖心堂 & 蒙馬特 ⛪", loc: "Sacré-Cœur & Montmarte (搭乘纜車登山，打卡畫家廣場與愛牆)", type: "sight", map: "https://maps.google.com/?q=Sacre-Coeur+Paris" },
+          { time: "11:30", item: "戴高樂機場出發 ✈️", loc: "搭乘 RER B 線從市區直達巴黎 CDG 機場", type: "transport" },
+          { time: "15:20", item: "起飛 ✈️ 漢莎 LH2233", loc: "巴黎戴高樂 (CDG) ➔ 德國慕尼黑機場 (MUC)", type: "transport" },
+          { time: "16:45", item: "抵達慕尼黑 🇩🇪", loc: "慕尼黑機場航站 (MUC)", type: "transport" },
+          { time: "17:45", item: "機場快軌 S-Bahn", loc: "搭乘 S8 直達慕尼黑中央車站，步行至飯店", type: "transport" },
+          { time: "18:30", item: "飯店辦理入住", loc: "Courtyard by Marriott Munich City Center (中央車站旁，極為便利)", type: "hotel" },
+          { time: "19:30", item: "晚餐推薦 🍽️ Ruff's Burger", loc: "Ruff's Burger (慕尼黑人氣最高、肉汁滿溢的手工美式漢堡店)", type: "food", map: "https://maps.google.com/?q=Ruffs+Burger+Munich" }
+        ],
+        food: "晚餐推薦：Ruff's Burger（人均 €15，以炭火烤多汁安格斯牛肉漢堡聞名，特製 Ruff's 醬汁配手切粗薯條，給轉機奔波的一天注入充沛能量）。",
+        tips: "蒙馬特地區治安較為複雜，上下聖心堂建議直接搭乘纜車（可刷 Navigo 週票），在畫家廣場與愛牆拍照時，注意防範兜售紅繩的小販，財物不離手。"
+      },
+      {
+        day: 11,
+        date: "08/03 (一)",
+        title: "慕尼黑舊城大漫步與皇家啤酒屋烤豬腳慶典",
+        desc: "上午參觀瑪麗恩廣場與壯觀的市政廳木偶鐘表演。隨後前往穀物市場品嚐當地小吃，下午遊覽宏偉的巴伐利亞國立歌劇院，晚上在最著名的皇家啤酒屋暢飲！",
+        timeline: [
+          { time: "10:00", item: "瑪麗恩廣場 🏛️", loc: "Marienplatz (欣賞 11:00 正式響起的新市政廳木偶壁鐘表演)", type: "sight", map: "https://maps.google.com/?q=Marienplatz+Munich" },
+          { time: "11:30", item: "穀物市場大飽口福 🍽️", loc: "Viktualienmarkt (慕尼黑最古老露天市場，品嚐巴伐利亞白香腸)", type: "food", map: "https://maps.google.com/?q=Viktualienmarkt" },
+          { time: "14:30", item: "聖母教堂與歌劇院 ⛪", loc: "Frauenkirche & National Theatre 舊城歷史散步", type: "sight", map: "https://maps.google.com/?q=Frauenkirche+Munich" },
+          { time: "18:00", item: "晚餐大餐 🍽️ Hofbräuhaus", loc: "Hofbräuhaus München (百年歷史皇家啤酒屋，品嚐烤豬腳)", type: "food", map: "https://maps.google.com/?q=Hofbrauhaus+Munich" }
+        ],
+        food: "午餐穀物市場：巴伐利亞白香腸配甜芥末醬、椒鹽卷餅(Pretzel)；晚餐大推：Hofbräuhaus 皇家啤酒屋（人均 €25-30，必點外皮極脆、肉質多汁的招牌脆皮烤豬腳 Schweinshaxe、巴伐利亞白啤 1L 大鋼杯，現場有高亢的巴伐利亞銅管樂隊伴奏，氣氛極度熱烈！）。",
+        tips: "皇家啤酒屋一樓大廳不可預訂，全部為現場拼桌，看到空位直接坐下即可。如果覺得一樓太吵，可前往二樓，通常比較安靜且有服務員點餐。"
+      },
+      {
+        day: 12,
+        date: "08/04 (二)",
+        title: "德意志科技奇蹟與英國花園衝浪奇觀",
+        desc: "上午參觀世界最大科技博物館「德意志博物館」，青少年 Ricky 絕對大呼過癮！下午在英國花園草坪散步，觀賞令人驚嘆的冰冷運河「急流衝浪」！",
+        timeline: [
+          { time: "09:30", item: "德意志博物館 ⚙️", loc: "Deutsches Museum (涵蓋航空、航天、電力、計算機的科技殿堂)", type: "sight", map: "https://maps.google.com/?q=Deutsches+Museum+Munich" },
+          { time: "13:30", item: "午餐推薦 🍽️ Wirtshaus Au", loc: "Wirtshaus Au (博物館附近的溫馨道地巴伐利亞餐館)", type: "food" },
+          { time: "15:30", item: "英國花園運河衝浪 🏄", loc: "English Garden (Eisbachwelle 冰溪急流衝浪，極為震撼刺激)", type: "sight", map: "https://maps.google.com/?q=Eisbachwelle" },
+          { time: "18:30", item: "晚餐推薦 🍽️ VAPIANO", loc: "VAPIANO München Theatiner Straße (高 CP 值現做義大利麵、現烤披薩)", type: "food", map: "https://maps.google.com/?q=Vapiano+Munich" }
+        ],
+        food: "午餐推薦：Wirtshaus Au（人均 €20，美味的牛肉湯配馬鈴薯丸子）；晚餐推薦：Vapiano（人均 €15，採用開放式廚房，大廚在面前現炒意麵，可自選麵條種類與起司，深受青少年喜愛）。",
+        tips: "德意志博物館面積巨大，走馬看花也需3小時，館內提供全中文導覽手冊，建議重點參觀地下採礦模擬區、航空航天館。今日在慕尼黑市區移動，出門前在手機買好 Zone M 團體日票。"
+      },
+      {
+        day: 13,
+        date: "08/05 (三)",
+        title: "童話城堡奇境：新天鵝堡與高天鵝堡一日遊",
+        desc: "全家前往阿爾卑斯山腳下的迪士尼城堡原型：新天鵝堡！穿行於瑪麗恩鐵橋，拍攝最明信片般的震撼全景，度過極致夢幻的巴伐利亞童話一日。",
+        timeline: [
+          { time: "07:30", item: "搭乘火車 🚆 BRB RB68", loc: "慕尼黑中央車站 ➔ 福森車站 (Füssen Station)", type: "transport" },
+          { time: "09:45", item: "轉乘公車 🚌 Line 73/78", loc: "福森車站 ➔ 新天鵝堡山腳下高天鵝堡村 (Hohenschwangau)", type: "transport" },
+          { time: "10:30", item: "登山與瑪麗恩鐵橋 🌉", loc: "Marienbrücke (懸掛在山谷間的鐵橋，新天鵝堡全景絕佳拍攝點)", type: "sight", map: "https://maps.google.com/?q=Marienbrucke" },
+          { time: "11:30", item: "新天鵝堡導覽 🏰", loc: "Neuschwanstein Castle (進入內部參觀國王路德維希二世的夢幻世界)", type: "sight", map: "https://maps.google.com/?q=Neuschwanstein+Castle" },
+          { time: "14:30", item: "阿爾卑斯湖 🏞️", loc: "Alpsee 湖畔散步，餵天鵝並享用冰淇淋與熱狗", type: "sight", map: "https://maps.google.com/?q=Alpsee" },
+          { time: "16:30", item: "返回慕尼黑 🚆", loc: "福森車站搭乘火車返回慕尼黑中央車站", type: "transport" },
+          { time: "19:00", item: "晚餐推薦 🍽️ Block House", loc: "Block House (慕尼黑中央車站旁優質連鎖牛排館，牛排多汁柔嫩)", type: "food" }
+        ],
+        food: "午餐：在新天鵝堡山腳下買簡餐或巴伐利亞椒鹽餅；晚餐推薦：Block House Steakhouse（人均 €25，鮮嫩多汁的肋眼牛排配招牌烤馬鈴薯與大蒜麵包）。",
+        tips: "<strong>新天鵝堡內部參觀門票必須提前數週在官網預訂！</strong>參觀當天需在預訂時間前 1 小時到山腳下的 Ticket Center 取票，遲到會被取消入場，且山上氣溫比市區低，建議多帶一件保暖長袖外套。"
+      },
+      {
+        day: 14,
+        date: "08/06 (四)",
+        title: "寧芬堡宮天鵝湖 ➔ 新加坡 ➔ 澳門 (踏上歸途)",
+        desc: "上午參觀極盡奢華的巴伐利亞夏宮「寧芬堡宮」，在後花園天鵝湖畔悠閒散步。午後前往慕尼黑機場辦理退稅手續，搭乘新加坡航空，經新加坡飛回溫暖的家！",
+        timeline: [
+          { time: "09:00", item: "寧芬堡宮 🏰", loc: "Schloss Nymphenburg (巴伐利亞選帝侯夏宮，天鵝湖綠意盎然)", type: "sight", map: "https://maps.google.com/?q=Nymphenburg+Palace" },
+          { time: "12:00", item: "更換飯店拿行李", loc: "返回中央車站 Courtyard 拿取行李", type: "hotel" },
+          { time: "12:30", item: "機場快軌 🚆 S8", loc: "中央車站 ➔ 慕尼黑國際機場 (MUC)", type: "transport" },
+          { time: "13:30", item: "機場辦理退稅 💰", loc: "慕尼黑機場海關蓋章與 Global Blue 領取退稅款", type: "transport" },
+          { time: "16:10", item: "登機啟程 ✈️ 新航 SQ327", loc: "慕尼黑機場起飛 ➔ 新加坡樟宜機場", type: "transport" }
+        ],
+        food: "早餐：飯店享用；午餐：慕尼黑中央車站內外帶熟食麵包；晚餐：新航精緻飛機餐。",
+        tips: "前往機場全家只需購買一張 <strong>Group Day Ticket Zone M-5 (€32.60)</strong> 即可共用。德國退稅需要在機場海關 (Zoll) 出示商品與護照蓋章，然後再去退稅櫃台拿錢，建議預留充足時間。"
+      },
+      {
+        day: 15,
+        date: "08/07 (五)",
+        title: "溫暖的家：新加坡 ➔ 澳門",
+        desc: "經新加坡轉機，傍晚飛抵澳門。這趟充滿歡樂、美景、美食與家庭溫馨的15天英法德歐洲壯遊完美落幕！",
+        timeline: [
+          { time: "06:40", item: "抵達新加坡", loc: "樟宜機場轉機", type: "transport" },
+          { time: "13:50", item: "起飛 ✈️ 酷航 TR904", loc: "新加坡樟宜機場 ➔ 澳門國際機場", type: "transport" },
+          { time: "17:55", item: "順利返家 🏡", loc: "返抵澳門，回到溫暖的家", type: "sight" }
+        ],
+        food: "全天飛機餐與轉機餐自理。",
+        tips: "全家回到澳門後，好好休息整理相機和手機中的數千張照片，這趟橫跨三國、英法德高光家庭大冒險將成為一家人一生珍藏的金色回憶！"
+      }
+    ];
+
+    // 行李清單數據 (4人份)
+    const packingList = {
+      carryon: [
+        { name: "護照、身份證、英法德電子ETA簽證", qty: "4人份" },
+        { name: "機票確認單、酒店預訂確認書", qty: "紙本+電子備份" },
+        { name: "歐元、英鎊現金 (以小額鈔票為主)", qty: "適量" },
+        { name: "雙幣信用卡、ATM提款卡", qty: "成人每人2張" },
+        { name: "手機、相機、平板、Apple AirTags", qty: "貴重物品" },
+        { name: "萬國轉接插頭、英規/歐規轉接頭", qty: "各2個" },
+        { name: "個人必備常備藥品、感冒藥、暈車藥", qty: "家庭急救包" },
+        { name: "保暖薄外套 (飛機/火車強冷氣防冷)", qty: "每人隨身1件" },
+        { name: "防扒貼身防盜腰包", qty: "每成人1個" },
+        { name: "隨身保溫水瓶 (100ml以下或空瓶過關)", qty: "每人1個" }
+      ],
+      checked: [
+        { name: "換洗衣物 (盛夏吸汗短袖上衣、長短褲)", qty: "每人5-6套" },
+        { name: "保暖長袖衛衣、針織衫 (防早晚與山上低溫)", qty: "每人2件" },
+        { name: "正裝皮鞋/洋裝裙 (塞納河晚餐玻璃船專用)", qty: "4人份" },
+        { name: "耐磨避震防滑運動鞋 (每日2萬步剛需)", qty: "每人1-2雙" },
+        { name: "摺疊雨傘、高溫防曬雨兩用傘", qty: "每人1把" },
+        { name: "高係數防曬乳、防UV太陽眼鏡、遮陽帽", qty: "防曬必備" },
+        { name: "牙刷、牙膏、木梳子 (歐洲絕大多數飯店不提供)", qty: "個人衛生" },
+        { name: "旅行裝洗沐組、女士保養品保濕乳液", qty: "護膚防乾燥" },
+        { name: "行李密碼鎖、防行李箱爆開綁帶", qty: "託運安全" },
+        { name: "折疊環保購物袋 (歐洲購物袋均需收費)", qty: "日常備用" }
+      ]
+    };
+
+    // 載入行程總表導航按鈕與詳情
+    function loadItinerary() {
+      const navList = document.getElementById('day-nav-list');
+      const detailsContainer = document.getElementById('itinerary-details-container');
+      if (!navList || !detailsContainer) return;
+
+      navList.innerHTML = '';
+      detailsContainer.innerHTML = '';
+
+      dailyItinerary.forEach((dayData) => {
+        // 生成左欄 Day 切換按鈕
+        const btnHtml = `
+          <button id="nav-day-${dayData.day}" onclick="jumpToDay(${dayData.day})" 
+            class="w-full text-left px-3 py-2.5 rounded-lg text-xs font-bold transition-all border flex items-center justify-between shadow-sm bg-white border-gray-100 hover:border-brandDarkBlue hover:bg-blue-50 text-gray-700">
+            <span class="truncate">Day ${dayData.day} - ${dayData.date}</span>
+            <i class="fa-solid fa-chevron-right text-[10px] text-gray-400"></i>
+          </button>
+        `;
+        navList.innerHTML += btnHtml;
+
+        // 生成右欄每日日程卡片
+        let timelineHtml = '';
+        dayData.timeline.forEach((item) => {
+          let icon = 'fa-circle-dot';
+          let color = 'text-gray-400';
+          if (item.type === 'transport') { icon = 'fa-train'; color = 'text-brandOrange'; }
+          else if (item.type === 'sight') { icon = 'fa-camera'; color = 'text-blue-500'; }
+          else if (item.type === 'hotel') { icon = 'fa-hotel'; color = 'text-brandDarkBlue'; }
+          else if (item.type === 'food') { icon = 'fa-bowl-food'; color = 'text-amber-500'; }
+
+          timelineHtml += `
+            <div class="flex items-start space-x-3 text-xs md:text-sm pl-4 border-l-2 border-dashed border-blue-200 relative pb-4 last:pb-0">
+              <span class="absolute -left-[9px] top-1.5 bg-white rounded-full p-0.5"><i class="fa-solid ${icon} ${color} text-[11px]"></i></span>
+              <span class="font-mono text-gray-400 w-12 shrink-0 pt-0.5">${item.time}</span>
+              <div class="flex-grow">
+                <span class="font-bold text-gray-800">${item.item}</span>
+                <span class="text-gray-500 text-xs ml-1">(${item.loc})</span>
+                ${item.map ? `<a href="${item.map}" target="_blank" class="inline-block text-[10px] bg-blue-100 text-brandDarkBlue px-1.5 py-0.5 rounded ml-2 font-bold hover:bg-brandDarkBlue hover:text-white transition-all"><i class="fa-solid fa-map-location-dot mr-0.5"></i>導航</a>` : ''}
+              </div>
+            </div>
+          `;
+        });
+
+        const cardHtml = `
+          <div id="day-card-${dayData.day}" class="bg-white rounded-xl shadow-md p-6 border border-gray-100 transition-all scroll-mt-24">
+            <div class="flex flex-col md:flex-row md:items-center justify-between border-b pb-3 mb-4 gap-2">
+              <div>
+                <span class="bg-brandDarkBlue text-white text-xs font-black px-2.5 py-1 rounded-full mr-2">DAY ${dayData.day}</span>
+                <span class="text-xs font-bold text-gray-400 font-mono">${dayData.date}</span>
+                <h3 class="text-lg font-black text-brandDarkBlue mt-1.5">${dayData.title}</h3>
+              </div>
+              <div class="text-xs font-bold text-brandOrange bg-orange-50 px-3 py-1.5 rounded-lg border border-orange-100">
+                <i class="fa-solid fa-utensils mr-1"></i>今日美食：${dayData.food.substring(0, 10)}...
+              </div>
+            </div>
+            
+            <p class="text-xs text-gray-600 mb-5 leading-relaxed bg-brandLightBlue bg-opacity-40 p-3 rounded-lg border-l-4 border-brandDarkBlue">${dayData.desc}</p>
+            
+            <div class="space-y-4 mb-5">
+              <h4 class="font-bold text-xs text-brandDarkBlue flex items-center mb-2"><i class="fa-regular fa-clock mr-1.5"></i>時程安排：</h4>
+              ${timelineHtml}
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 border-t pt-4 text-xs mt-4">
+              <div class="bg-amber-50 p-3.5 rounded-lg border border-amber-100">
+                <h5 class="font-black text-amber-800 mb-1 flex items-center"><i class="fa-solid fa-utensils mr-1"></i>今日美食指南與必點理由：</h5>
+                <p class="text-gray-700 leading-relaxed">${dayData.food}</p>
+              </div>
+              <div class="bg-blue-50 p-3.5 rounded-lg border border-blue-100">
+                <h5 class="font-black text-blue-800 mb-1 flex items-center"><i class="fa-solid fa-circle-info mr-1"></i>親子遊達人貼心小提示：</h5>
+                <p class="text-gray-700 leading-relaxed">${dayData.tips}</p>
+              </div>
+            </div>
+          </div>
+        `;
+        detailsContainer.innerHTML += cardHtml;
+      });
+
+      // 初始化激活 Day 1
+      setActiveDay(1);
+    }
+
+    // 行程跳轉控制
+    function jumpToDay(dayNum) {
+      const targetCard = document.getElementById(`day-card-${dayNum}`);
+      if (targetCard) {
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setActiveDay(dayNum);
+      }
+    }
+
+    // 設置激活側邊按鈕樣式
+    function setActiveDay(dayNum) {
+      for (let d = 1; d <= 15; d++) {
+        const btn = document.getElementById(`nav-day-${d}`);
+        if (btn) {
+          btn.classList.remove('bg-brandDarkBlue', 'border-brandDarkBlue', 'text-white', 'hover:bg-blue-50');
+          btn.classList.add('bg-white', 'border-gray-100', 'text-gray-700');
         }
+      }
+      const activeBtn = document.getElementById(`nav-day-${dayNum}`);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-white', 'border-gray-100', 'text-gray-700');
+        activeBtn.classList.add('bg-brandDarkBlue', 'border-brandDarkBlue', 'text-white');
+      }
+    }
 
-        // Vanilla Robust Regex CSV Parser helper
-        function parseCSV(text) {
-            let lines = [];
-            let row = [""];
-            let inQuotes = false;
-            for (let i = 0; i < text.length; i++) {
-                let c = text[i];
-                let next = text[i+1];
-                if (c === '"') {
-                    if (inQuotes && next === '"') { row[row.length - 1] += '"'; i++; }
-                    else { inQuotes = !inQuotes; }
-                } else if (c === ',' && !inQuotes) {
-                    row.push('');
-                } else if ((c === '\r' || c === '\n') && !inQuotes) {
-                    if (c === '\r' && next === '\n') { i++; }
-                    lines.push(row);
-                    row = [''];
-                } else {
-                    row[row.length - 1] += c;
-                }
-            }
-            if (row.length > 1 || row[0] !== '') lines.push(row);
-            return lines;
+    // 載入行李清單
+    function loadPackingList() {
+      const carryonBox = document.getElementById('carryon-items-list');
+      const checkedBox = document.getElementById('checked-items-list');
+      if (!carryonBox || !checkedBox) return;
+
+      carryonBox.innerHTML = '';
+      checkedBox.innerHTML = '';
+
+      // 載入隨身行李
+      packingList.carryon.forEach((item) => {
+        const itemHtml = `
+          <label class="flex items-center space-x-3 bg-white p-3 rounded shadow-sm border border-blue-100 cursor-pointer hover:bg-blue-50 transition">
+            <input type="checkbox" onchange="updatePackingProgress()" class="form-checkbox text-brandDarkBlue h-5 w-5 rounded focus:ring-0 focus:outline-none">
+            <div class="text-xs text-gray-700">
+              <span class="font-bold">${item.name}</span>
+              <span class="text-gray-400 font-mono text-[10px] ml-1">(${item.qty})</span>
+            </div>
+          </label>
+        `;
+        carryonBox.innerHTML += itemHtml;
+      });
+
+      // 載入託運行李
+      packingList.checked.forEach((item) => {
+        const itemHtml = `
+          <label class="flex items-center space-x-3 bg-white p-3 rounded shadow-sm border border-orange-100 cursor-pointer hover:bg-orange-50 transition">
+            <input type="checkbox" onchange="updatePackingProgress()" class="form-checkbox text-brandOrange h-5 w-5 rounded focus:ring-0 focus:outline-none">
+            <div class="text-xs text-gray-700">
+              <span class="font-bold">${item.name}</span>
+              <span class="text-gray-400 font-mono text-[10px] ml-1">(${item.qty})</span>
+            </div>
+          </label>
+        `;
+        checkedBox.innerHTML += itemHtml;
+      });
+
+      updatePackingProgress();
+    }
+
+    // 更新行李打包進度條
+    function updatePackingProgress() {
+      const checkboxes = document.querySelectorAll('#packing input[type="checkbox"]');
+      const total = checkboxes.length;
+      let checkedCount = 0;
+      checkboxes.forEach(cb => {
+        if (cb.checked) checkedCount++;
+      });
+      const percent = total > 0 ? Math.round((checkedCount / total) * 100) : 0;
+      
+      const progressBar = document.getElementById('packing-progress-bar');
+      const progressText = document.getElementById('packing-progress-text');
+      
+      if (progressBar) progressBar.style.width = percent + '%';
+      if (progressText) progressText.innerText = `打包進度: ${checkedCount} / ${total} (${percent}%)`;
+    }
+
+    // 控制分頁切換 (新增 weather 分頁)
+    function showSection(sectionId) {
+      const sections = ['itinerary', 'budget', 'transport', 'packing', 'weather'];
+      sections.forEach(s => {
+        const el = document.getElementById(s);
+        if (el) el.classList.add('hidden');
+
+        // 更新頂部按鈕樣式
+        const btn = document.getElementById('btn-' + s);
+        const mBtn = document.getElementById('m-btn-' + s);
+        if (btn) {
+          btn.classList.remove('bg-brandDarkBlue', 'text-white');
+          btn.classList.add('text-gray-600', 'hover:text-brandDarkBlue');
         }
-    </script>
+        if (mBtn) {
+          mBtn.classList.remove('bg-brandDarkBlue', 'text-white');
+          mBtn.classList.add('text-gray-600', 'hover:text-brandDarkBlue');
+        }
+      });
+
+      // 顯示目標分頁
+      const targetEl = document.getElementById(sectionId);
+      if (targetEl) targetEl.classList.remove('hidden');
+
+      const activeBtn = document.getElementById('btn-' + sectionId);
+      const activeMBtn = document.getElementById('m-btn-' + sectionId);
+      if (activeBtn) {
+        activeBtn.classList.add('bg-brandDarkBlue', 'text-white');
+        activeBtn.classList.remove('text-gray-600', 'hover:text-brandDarkBlue');
+      }
+      if (activeMBtn) {
+        activeMBtn.classList.add('bg-brandDarkBlue', 'text-white');
+        activeMBtn.classList.remove('text-gray-600', 'hover:text-brandDarkBlue');
+      }
+
+      // 自動關閉手機選單
+      document.getElementById('mobile-menu').classList.add('hidden');
+    }
+
+    // 控制手機版下拉選單
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    // 滾動回到頂部
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 監聽滾動以控制 Day 快速導航與滾動定位 active 狀態
+    window.addEventListener('scroll', () => {
+      if (document.getElementById('itinerary').classList.contains('hidden')) return;
+      
+      const scrollPos = window.scrollY + 120; // 偏移量，對應 sticky 元素
+      dailyItinerary.forEach((dayData) => {
+        const card = document.getElementById(`day-card-${dayData.day}`);
+        if (card) {
+          const top = card.offsetTop;
+          const height = card.offsetHeight;
+          if (scrollPos >= top && scrollPos < top + height) {
+            setActiveDay(dayData.day);
+          }
+        }
+      });
+    });
+
+    // 頁面初始化
+    window.onload = function() {
+      loadItinerary();
+      loadPackingList();
+    };
+  </script>
 </body>
 </html>
