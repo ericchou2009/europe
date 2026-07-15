@@ -1,0 +1,1913 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【EGL 家族尊享】2026 倫敦、巴黎、慕尼黑 14 天家庭深度自導遊</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+HK:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        eglBlue: '#004B87',      // 東瀛遊經典深藍
+                        eglSky: '#00A3E0',       // 亮麗天藍
+                        eglGold: '#FFB81C',      // 尊貴金黃
+                        eglOrange: '#FF6A13',    // 活力橙
+                        eglGray: '#F4F6F9',      // 背景淺灰
+                        eglRed: '#D0021B',       // 警示紅/已預約紅
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans HK', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans HK', sans-serif;
+            background-color: #F8FAFC;
+        }
+        .bg-egl-gradient {
+            background: linear-gradient(135deg, #004B87 0%, #002D54 100%);
+        }
+        .badge-egl {
+            background-color: #FFB81C;
+            color: #004B87;
+            font-weight: 700;
+        }
+        /* 美化滾動條 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #004B87;
+            border-radius: 4px;
+        }
+        /* 列印優化樣式：當點擊列印時，呈現完美的實體單張排版 */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                background: white;
+                color: black;
+                font-size: 12px;
+            }
+            .print-page-break {
+                page-break-after: always;
+            }
+            .print-card {
+                border: 1px solid #ddd !important;
+                box-shadow: none !important;
+                margin-bottom: 20px !important;
+            }
+        }
+    </style>
+</head>
+<body class="text-slate-800 leading-relaxed">
+
+    <!-- Top Contact Bar (模仿旅行社官網頂部) -->
+    <div class="bg-slate-900 text-white text-xs py-2 px-4 no-print">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center space-x-4">
+                <span><i class="fa-solid fa-phone text-eglGold mr-1"></i> 家庭專線：<strong>3692 0888</strong></span>
+                <span class="hidden md:inline">|</span>
+                <span><i class="fa-brands fa-whatsapp text-green-400 mr-1"></i> WhatsApp 群組：<strong>6688 0312</strong></span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span class="bg-eglRed px-2 py-0.5 rounded text-[10px] font-bold animate-pulse">2026年尊享版</span>
+                <span>單張代號: <strong>EWEG14-FMLY</strong></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50 no-print">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo area designed to feel like EGL but specialized for family -->
+            <div class="flex items-center space-x-3">
+                <div class="bg-eglBlue text-white p-2 rounded-lg font-black text-xl tracking-wider shadow-md">
+                    EGL <span class="text-eglGold">FAMILY</span>
+                </div>
+                <div>
+                    <h1 class="text-xs text-slate-500 font-bold tracking-widest uppercase">東瀛家族自組團系列</h1>
+                    <p class="text-sm font-extrabold text-eglBlue">2026 歐洲三國自導遊電子單張</p>
+                </div>
+            </div>
+            <!-- Quick action buttons -->
+            <div class="flex items-center space-x-2">
+                <button onclick="window.print()" class="bg-eglOrange hover:bg-orange-600 text-white px-3 py-2 rounded-lg text-sm font-bold shadow-md transition duration-200 flex items-center">
+                    <i class="fa-solid fa-print mr-1.5"></i> 列印實體單張
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Brochure Banner (東瀛遊標誌性宣傳大圖與特色) -->
+    <section class="bg-egl-gradient text-white relative overflow-hidden py-12 px-4 sm:px-6">
+        <!-- Background decorative elements -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-eglSky opacity-10 rounded-full blur-3xl -mr-20 -mt-20"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-eglGold opacity-10 rounded-full blur-3xl -ml-20 -mb-20"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-8 space-y-4">
+                    <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-3 py-1 rounded-full text-xs text-eglGold font-semibold border border-white/20">
+                        <i class="fa-solid fa-star"></i> <span>2026年度家庭旅行重頭戲</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
+                        英法德 14 天<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-eglGold to-orange-400">極致奢華深度探索之旅</span>
+                    </h2>
+                    <p class="text-slate-300 text-sm sm:text-base max-w-2xl font-light">
+                        暢遊英國（倫敦）、法國（巴黎）、德國（慕尼黑），跨越英法海底隧道，盡覽三大名城之最。精心規劃家庭最愛行程：哈利波特影城、大英博物館、羅浮宮、凡爾賽宮及德意志博物館。
+                    </p>
+                    
+                    <!-- Highlight Tag list like dynamic travel brochure -->
+                    <div class="flex flex-wrap gap-2 pt-2 text-xs">
+                        <span class="bg-eglGold text-slate-900 px-2.5 py-1 rounded font-bold"><i class="fa-solid fa-train mr-1"></i>歐洲之星</span>
+                        <span class="bg-white/20 text-white px-2.5 py-1 rounded font-semibold"><i class="fa-solid fa-ticket mr-1"></i>哈利波特已預留</span>
+                        <span class="bg-white/20 text-white px-2.5 py-1 rounded font-semibold"><i class="fa-solid fa-ship mr-1"></i>塞納河晚宴船河</span>
+                        <span class="bg-white/20 text-white px-2.5 py-1 rounded font-semibold"><i class="fa-solid fa-hotel mr-1"></i>希爾頓/萬怡優選住宿</span>
+                    </div>
+                </div>
+
+                <!-- Right Side Fast Facts Box -->
+                <div class="lg:col-span-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 shadow-2xl">
+                    <h3 class="text-eglGold font-bold text-lg mb-3 border-b border-white/20 pb-2"><i class="fa-solid fa-circle-info mr-2"></i>自駕/自遊團資料</h3>
+                    <ul class="space-y-3.5 text-xs text-slate-200">
+                        <li class="flex justify-between"><span>出發日期：</span><strong class="text-white text-sm">2026年 暑期黃金檔期</strong></li>
+                        <li class="flex justify-between"><span>旅遊天數：</span><strong class="text-white text-sm">14天 13晚</strong></li>
+                        <li class="flex justify-between"><span>目的地：</span><strong class="text-white text-sm">倫敦 ➔ 巴黎 ➔ 慕尼黑</strong></li>
+                        <li class="flex justify-between"><span>長途交通：</span><strong class="text-white text-sm">新航/法航/歐洲之星</strong></li>
+                        <li class="flex justify-between"><span>預算級別：</span><strong class="text-eglGold text-sm font-black">尊貴奢華級 (連早餐/門票)</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nav Tabs Section (行程, 預算, 長途交通, 行前準備) -->
+    <section class="bg-white border-b border-slate-200 sticky top-[68px] sm:top-[74px] z-40 shadow-sm no-print">
+        <div class="max-w-7xl mx-auto px-4">
+            <nav class="flex space-x-1 sm:space-x-4 overflow-x-auto py-3" aria-label="Tabs">
+                <button onclick="switchTab('itinerary-tab', this)" class="tab-btn active-tab px-4 py-2 text-sm font-bold rounded-lg bg-eglBlue text-white shadow-md transition duration-200 whitespace-nowrap">
+                    <i class="fa-solid fa-calendar-days mr-1.5"></i> 每日詳細行程
+                </button>
+                <button onclick="switchTab('transit-tab', this)" class="tab-btn px-4 py-2 text-sm font-medium text-slate-600 rounded-lg hover:bg-slate-100 transition duration-200 whitespace-nowrap">
+                    <i class="fa-solid fa-plane-departure mr-1.5"></i> 長途大交通安排
+                </button>
+                <button onclick="switchTab('budget-tab', this)" class="tab-btn px-4 py-2 text-sm font-medium text-slate-600 rounded-lg hover:bg-slate-100 transition duration-200 whitespace-nowrap">
+                    <i class="fa-solid fa-wallet mr-1.5"></i> 預算分析與管理
+                </button>
+                <button onclick="switchTab('prep-tab', this)" class="tab-btn px-4 py-2 text-sm font-medium text-slate-600 rounded-lg hover:bg-slate-100 transition duration-200 whitespace-nowrap">
+                    <i class="fa-solid fa-suitcase-rolling mr-1.5"></i> 行前準備及當地交通指南
+                </button>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Main Content Grid -->
+    <main class="max-w-7xl mx-auto px-4 py-8">
+
+        <!-- ================== TAB: 每日詳細行程 ================== -->
+        <div id="itinerary-tab" class="tab-content space-y-8">
+            <!-- Itinerary Control Bar -->
+            <div class="bg-white rounded-xl p-4 shadow-sm border border-slate-100 flex flex-wrap justify-between items-center gap-3 no-print">
+                <div class="flex items-center space-x-2">
+                    <span class="text-sm font-semibold text-slate-500">快速跳轉天數：</span>
+                    <select onchange="scrollToDay(this.value)" class="bg-slate-100 border border-slate-200 rounded-lg text-sm px-3 py-1.5 font-bold focus:outline-none focus:ring-2 focus:ring-eglBlue">
+                        <option value="">-- 選擇天數 --</option>
+                        <option value="day1">Day 1 - 澳門 ✈️ 新加坡</option>
+                        <option value="day2">Day 2 - 新加坡 ✈️ 倫敦精華遊</option>
+                        <option value="day3">Day 3 - 倫敦博物館與公園</option>
+                        <option value="day4">Day 4 - 哈利波特影城夢幻行</option>
+                        <option value="day5">Day 5 - 大英博物館探秘</option>
+                        <option value="day6">Day 6 - 倫敦橋與市集美食</option>
+                        <option value="day7">Day 7 - 歐洲之星 ➔ 浪漫巴黎</option>
+                        <option value="day8">Day 8 - 羅浮宮與塞納河遊船</option>
+                        <option value="day9">Day 9 - 巴黎鐵塔與藝術之旅</option>
+                        <option value="day10">Day 10 - 巴黎 ✈️ 慕尼黑初探</option>
+                        <option value="day11">Day 11 - 德意志博物館深度行</option>
+                        <option value="day12">Day 12 - 奧林匹克與寧芬堡宮</option>
+                        <option value="day13">Day 13 - 英國花園與巴伐利亞風味</option>
+                        <option value="day14">Day 14 - 慕尼黑 ✈️ 新加坡 ➔ 澳門</option>
+                    </select>
+                </div>
+                <div class="text-xs text-slate-400">
+                    * 點擊行程表中的地名可直接打開 Google Map 導航 *
+                </div>
+            </div>
+
+            <!-- Detailed Day Cards (Day 1 - 14) -->
+            <div class="space-y-12">
+                
+                <!-- Day 1 -->
+                <div id="day1" class="print-card bg-white rounded-2xl border border-slate-100 shadow-md overflow-hidden scroll-mt-24 transition duration-300 hover:shadow-lg">
+                    <div class="bg-eglBlue text-white p-4 flex flex-wrap justify-between items-center gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-eglGold text-eglBlue px-3 py-1 rounded-lg text-lg font-black shadow">D1</span>
+                            <div>
+                                <h3 class="text-lg font-bold">澳門 ➔ 新加坡 (轉機起程)</h3>
+                                <p class="text-xs text-slate-200">2026/07/20 星期一 | 飛行日</p>
+                            </div>
+                        </div>
+                        <div class="text-sm bg-white/15 px-3 py-1 rounded font-semibold"><i class="fa-solid fa-plane mr-1"></i> 新加坡航空</div>
+                    </div>
+                    <!-- Weather Box -->
+                    <div class="bg-sky-50 border-b border-sky-100 p-4 grid grid-cols-2 sm:grid-cols-6 gap-3 text-xs">
+                        <div><span class="text-slate-500">今日天氣：</span><strong class="block text-sm text-sky-800">☀️ 晴朗炎熱</strong></div>
+                        <div><span class="text-slate-500">溫度 / 體感：</span><strong class="block text-sm text-sky-800">26°C - 33°C (體感36°C)</strong></div>
+                        <div><span class="text-slate-500">濕度：</span><strong class="block text-sm text-sky-800">82%</strong></div>
+                        <div><span class="text-slate-500">落雨量：</span><strong class="block text-sm text-sky-800">10% (降水機率)</strong></div>
+                        <div><span class="text-slate-500">紫外線級別：</span><strong class="block text-sm text-red-600">⚠️ 非常高 (9)</strong></div>
+                        <div class="col-span-2 sm:col-span-1"><span class="text-slate-500">家庭穿搭建議：</span><strong class="block text-sm text-slate-700">夏日清涼、帽、防曬衣物</strong></div>
+                    </div>
+                    <!-- Timeline details -->
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">16:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800"><span class="text-lg">🏡</span> 澳門出發</h4>
+                                <p class="text-xs text-slate-500 mt-1">執拾好最後行李，全家準時出發。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">16:30</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">✈️</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Macau+International+Airport" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        澳門國際機場 <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">抵達澳門機場辦理新加坡航空登機及行李直寄手續。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">18:45</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800"><span class="text-lg">🛫</span> SQ806 起飛 ➔ 新加坡</h4>
+                                <p class="text-xs text-slate-500 mt-1">享用機上餐食與娛樂系統（航程約3小時50分）。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">22:35</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🛬</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Singapore+Changi+Airport" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        新加坡樟宜機場 <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">安全抵達，樟宜機場轉機。建議可以參觀著名的星耀樟宜室內瀑布。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 2 -->
+                <div id="day2" class="print-card bg-white rounded-2xl border border-slate-100 shadow-md overflow-hidden scroll-mt-24 transition duration-300 hover:shadow-lg">
+                    <div class="bg-eglBlue text-white p-4 flex flex-wrap justify-between items-center gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-eglGold text-eglBlue px-3 py-1 rounded-lg text-lg font-black shadow">D2</span>
+                            <div>
+                                <h3 class="text-lg font-bold">新加坡 ✈️ 倫敦希斯路 ➔ 倫敦精華地標一日遊</h3>
+                                <p class="text-xs text-slate-200">2026/07/21 星期二 | 英倫第一天</p>
+                            </div>
+                        </div>
+                        <div class="text-sm bg-white/15 px-3 py-1 rounded font-semibold"><i class="fa-solid fa-hotel mr-1"></i> 住宿：Hilton London Metropole</div>
+                    </div>
+                    <!-- Weather Box -->
+                    <div class="bg-sky-50 border-b border-sky-100 p-4 grid grid-cols-2 sm:grid-cols-6 gap-3 text-xs">
+                        <div><span class="text-slate-500">今日天氣：</span><strong class="block text-sm text-sky-800">🌤️ 晴時多雲</strong></div>
+                        <div><span class="text-slate-500">溫度 / 體感：</span><strong class="block text-sm text-sky-800">14°C - 21°C (體感18°C)</strong></div>
+                        <div><span class="text-slate-500">濕度：</span><strong class="block text-sm text-sky-800">65%</strong></div>
+                        <div><span class="text-slate-500">落雨量：</span><strong class="block text-sm text-sky-800">15%</strong></div>
+                        <div><span class="text-slate-500">紫外線級別：</span><strong class="block text-sm text-yellow-600">中等 (4)</strong></div>
+                        <div class="col-span-2 sm:col-span-1"><span class="text-slate-500">家庭穿搭建議：</span><strong class="block text-sm text-slate-700">洋蔥式穿法、薄外套備用</strong></div>
+                    </div>
+                    <!-- Timeline details -->
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">06:40</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800"><span class="text-lg">🛫</span> 航班起飛 ➔ 倫敦希斯路</h4>
+                                <p class="text-xs text-slate-500 mt-1">SQ306 啟程飛往倫敦，機上提供精緻早餐。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">15:00</div>
+                            <div class="flex-1 flex flex-wrap justify-between items-start gap-2">
+                                <div>
+                                    <h4 class="font-bold text-slate-800">
+                                        <span class="text-lg">🇬🇧</span> 
+                                        <a href="https://www.google.com/maps/search/?api=1&query=Heathrow+Airport+London" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                            抵達倫敦希斯路機場 (LHR) <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                        </a>
+                                    </h4>
+                                    <p class="text-xs text-slate-500 mt-1">辦理入境，乘搭 🚆 <strong>Heathrow Express (機場快線)</strong> 前往帕丁頓車站。</p>
+                                    <p class="text-xs text-eglBlue font-semibold mt-1">🚇 交通：希斯路機場 ➔ 帕丁頓地鐵站 (轉乘 Circle 或 District Line 直達 Edgeware Road 站)</p>
+                                </div>
+                                <span class="bg-eglRed text-white text-[10px] px-2 py-0.5 rounded font-bold">已預訂快線車票</span>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">16:30</div>
+                            <div class="flex-1 flex flex-wrap justify-between items-start gap-2">
+                                <div>
+                                    <h4 class="font-bold text-slate-800">
+                                        <span class="text-lg">🏨</span> 
+                                        <a href="https://www.google.com/maps/search/?api=1&query=Hilton+London+Metropole" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                            酒店 Check-in: Hilton London Metropole <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                        </a>
+                                    </h4>
+                                    <p class="text-xs text-slate-500 mt-1">地址：225 Edgware Rd, London W2 1JU, United Kingdom。全家入住安頓，放下行李。</p>
+                                </div>
+                                <span class="bg-eglRed text-white text-[10px] px-2 py-0.5 rounded font-bold">已預訂豪華雙大床房</span>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">17:30</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🏛️</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Big+Ben+London" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        大笨鐘 (Big Ben) & 西敏寺 (Westminster Abbey) <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">倫敦最經典地標，傍晚時分拍照格外迷人。散步經過國會大樓。</p>
+                                <p class="text-xs text-eglBlue font-semibold mt-1">🚇 交通：從 Edgware Road 站乘搭 <strong>District Line</strong> 直達 <strong>Westminster 站</strong>。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">19:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🛍️</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Covent+Garden+London" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        高雲花園 (Covent Garden) 散步 <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">充滿街頭藝人與英倫風情店鋪的市集，非常適合家庭漫步。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">19:30</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🍽️</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Franco+Manca+Covent+Garden" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        晚餐：Franco Manca Covent Garden <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">享用倫敦非常知名的柴燒手工披薩，CP值極高，深受家庭喜愛。（預算：120 HKD/人）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 3 -->
+                <div id="day3" class="print-card bg-white rounded-2xl border border-slate-100 shadow-md overflow-hidden scroll-mt-24 transition duration-300 hover:shadow-lg">
+                    <div class="bg-eglBlue text-white p-4 flex flex-wrap justify-between items-center gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-eglGold text-eglBlue px-3 py-1 rounded-lg text-lg font-black shadow">D3</span>
+                            <div>
+                                <h3 class="text-lg font-bold">皇家公園與三大頂級博物館巡禮</h3>
+                                <p class="text-xs text-slate-200">2026/07/22 星期三 | 自然美景與科學探索</p>
+                            </div>
+                        </div>
+                        <div class="text-sm bg-white/15 px-3 py-1 rounded font-semibold"><i class="fa-solid fa-children mr-1"></i> 科學/自然歷史館</div>
+                    </div>
+                    <!-- Weather Box -->
+                    <div class="bg-sky-50 border-b border-sky-100 p-4 grid grid-cols-2 sm:grid-cols-6 gap-3 text-xs">
+                        <div><span class="text-slate-500">今日天氣：</span><strong class="block text-sm text-sky-800">☁️ 多雲陰天</strong></div>
+                        <div><span class="text-slate-500">溫度 / 體感：</span><strong class="block text-sm text-sky-800">13°C - 19°C (體感16°C)</strong></div>
+                        <div><span class="text-slate-500">濕度：</span><strong class="block text-sm text-sky-800">70%</strong></div>
+                        <div><span class="text-slate-500">落雨量：</span><strong class="block text-sm text-sky-800">30% (帶雨傘)</strong></div>
+                        <div><span class="text-slate-500">紫外線級別：</span><strong class="block text-sm text-yellow-600">低 (2)</strong></div>
+                        <div class="col-span-2 sm:col-span-1"><span class="text-slate-500">家庭穿搭建議：</span><strong class="block text-sm text-slate-700">帶件輕便防風防水外套</strong></div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">08:30</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800"><span class="text-lg">🥐</span> 早餐於酒店</h4>
+                                <p class="text-xs text-slate-500 mt-1">享用 Hilton 自助英式早餐，能量滿滿！</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">09:30</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🌳</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Hyde+Park+London" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        海德公園 (Hyde Park) 晨間散步 <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">倫敦最大的皇家公園，湖畔散步逗松鼠，空氣清新。</p>
+                                <p class="text-xs text-eglBlue font-semibold mt-1">🚇 交通：從酒店步行 10 分鐘或坐地鐵到達 <strong>Hyde Park Corner 站</strong>。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">10:30</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">👑</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Buckingham+Palace+London" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        白金漢宮 (Buckingham Palace) <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">參觀英王辦公地。運氣好可觀看皇家衛兵交接儀式（早上11:00）。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">12:30</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800"><span class="text-lg">🍽️</span> 肯辛頓區家庭午餐</h4>
+                                <p class="text-xs text-slate-500 mt-1">自理午餐，推薦在南肯辛頓博物館區附近的地道輕食茶餐廳。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">14:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🔬</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Science+Museum+London" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        科學博物館 (Science Museum) <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">互動式科學展覽，超級適合家庭與小朋友，免入場費（需預留免費入場票）。</p>
+                                <p class="text-xs text-eglBlue font-semibold mt-1">🚇 交通：地鐵 <strong>South Kensington 站</strong> 通過行人專用隧道直達。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">15:30</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🦕</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Natural+History+Museum+London" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        自然歷史博物館 (Natural History Museum) <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">與宏偉的藍鯨骨骼及無數恐龍化石見面！令人震撼的哥德式建築。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">18:30</div>
+                            <div class="flex-1 flex flex-wrap justify-between items-start gap-2">
+                                <div>
+                                    <h4 class="font-bold text-slate-800">
+                                        <span class="text-lg">🍽️</span> 
+                                        <a href="https://www.google.com/maps/search/?api=1&query=Burger+and+Lobster+Knightsbridge+London" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                            晚餐：Burger & Lobster Knightsbridge <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                        </a>
+                                    </h4>
+                                    <p class="text-xs text-slate-500 mt-1">品嚐倫敦招牌新鮮波士頓龍蝦及美味多汁的漢堡套餐。極度滿足！（已預訂18:30）</p>
+                                </div>
+                                <span class="bg-eglRed text-white text-[10px] px-2 py-0.5 rounded font-bold">已預約座位</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 4 -->
+                <div id="day4" class="print-card bg-white rounded-2xl border border-slate-100 shadow-md overflow-hidden scroll-mt-24 transition duration-300 hover:shadow-lg">
+                    <div class="bg-eglBlue text-white p-4 flex flex-wrap justify-between items-center gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-eglGold text-eglBlue px-3 py-1 rounded-lg text-lg font-black shadow">D4</span>
+                            <div>
+                                <h3 class="text-lg font-bold">哈利波特華納兄弟影城魔法之夜</h3>
+                                <p class="text-xs text-slate-200">2026/07/23 星期四 | 魔法夢幻之旅</p>
+                            </div>
+                        </div>
+                        <span class="text-sm bg-eglGold text-slate-900 px-3 py-1 rounded font-bold"><i class="fa-solid fa-wand-magic-sparkles mr-1"></i> 重本安排</span>
+                    </div>
+                    <!-- Weather Box -->
+                    <div class="bg-sky-50 border-b border-sky-100 p-4 grid grid-cols-2 sm:grid-cols-6 gap-3 text-xs">
+                        <div><span class="text-slate-500">今日天氣：</span><strong class="block text-sm text-sky-800">⛅ 晴天</strong></div>
+                        <div><span class="text-slate-500">溫度 / 體感：</span><strong class="block text-sm text-sky-800">15°C - 22°C (體感20°C)</strong></div>
+                        <div><span class="text-slate-500">濕度：</span><strong class="block text-sm text-sky-800">60%</strong></div>
+                        <div><span class="text-slate-500">落雨量：</span><strong class="block text-sm text-sky-800">10%</strong></div>
+                        <div><span class="text-slate-500">紫外線級別：</span><strong class="block text-sm text-yellow-600">中等 (5)</strong></div>
+                        <div class="col-span-2 sm:col-span-1"><span class="text-slate-500">家庭穿搭建議：</span><strong class="block text-sm text-slate-700">拍照亮色系、適合步行的波鞋</strong></div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">08:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800"><span class="text-lg">🍳</span> 酒店早餐</h4>
+                                <p class="text-xs text-slate-500 mt-1">享用酒店早餐，準備魔法之旅。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">09:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🚉</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Euston+Station+London" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        Euston 尤斯頓車站 ➔ Watford Junction <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">從 Euston 乘坐西海岸火車，約20分鐘直達 Watford Junction。出站後乘坐影城官方接駁巴士。</p>
+                                <p class="text-xs text-eglBlue font-semibold mt-1">🚇 交通：從 Edgware Road 站乘坐 Circle Line 直達 <strong>Euston Square 站</strong>，步行 5 分鐘至 Euston 車站。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">11:00</div>
+                            <div class="flex-1 flex flex-wrap justify-between items-start gap-2">
+                                <div>
+                                    <h4 class="font-bold text-slate-800">
+                                        <span class="text-lg">🧙‍♂️</span> 
+                                        <a href="https://www.google.com/maps/search/?api=1&query=Warner+Bros+Studio+Tour+London" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                            哈利波特華納兄弟影城 (Warner Bros. Studio Tour) <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                        </a>
+                                    </h4>
+                                    <p class="text-xs text-slate-500 mt-1">親身體驗斜角巷、九分之三月台、霍格華茲大禮堂及品嚐經典「奶油啤酒」！</p>
+                                </div>
+                                <span class="bg-eglRed text-white text-[10px] px-2 py-0.5 rounded font-bold">11:30 門票已預訂</span>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">13:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800"><span class="text-lg">🍔</span> 午餐：The Food Hall (影城內)</h4>
+                                <p class="text-xs text-slate-500 mt-1">在影城餐廳內享用豐富美式家庭快餐、霍格華茲特色便當。（預算：80 HKD/人）</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">17:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800"><span class="text-lg">🚌</span> 離場並乘接駁巴士返回 Watford Junction ➔ Euston</h4>
+                                <p class="text-xs text-slate-500 mt-1">魔法之旅圓滿結束，收穫滿滿紀念品。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">18:30</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🍽️</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Roti+King+Euston+London" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        晚餐：Roti King (Euston) <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">倫敦最著名的南洋風味薄餅，咖哩極其地道美味。家庭推薦！（預算：100 HKD/人）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 5 -->
+                <div id="day5" class="print-card bg-white rounded-2xl border border-slate-100 shadow-md overflow-hidden scroll-mt-24 transition duration-300 hover:shadow-lg">
+                    <div class="bg-eglBlue text-white p-4 flex flex-wrap justify-between items-center gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-eglGold text-eglBlue px-3 py-1 rounded-lg text-lg font-black shadow">D5</span>
+                            <div>
+                                <h3 class="text-lg font-bold">轉酒店 ➔ 大英博物館深度解密一日遊</h3>
+                                <p class="text-xs text-slate-200">2026/07/24 星期五 | 歷史與文化薰陶</p>
+                            </div>
+                        </div>
+                        <div class="text-sm bg-white/15 px-3 py-1 rounded font-semibold"><i class="fa-solid fa-hotel mr-1"></i> 住宿：Grange Beauchamp Hotel</div>
+                    </div>
+                    <!-- Weather Box -->
+                    <div class="bg-sky-50 border-b border-sky-100 p-4 grid grid-cols-2 sm:grid-cols-6 gap-3 text-xs">
+                        <div><span class="text-slate-500">今日天氣：</span><strong class="block text-sm text-sky-800">🌦️ 短暫陣雨</strong></div>
+                        <div><span class="text-slate-500">溫度 / 體感：</span><strong class="block text-sm text-sky-800">14°C - 20°C (體感18°C)</strong></div>
+                        <div><span class="text-slate-500">濕度：</span><strong class="block text-sm text-sky-800">75%</strong></div>
+                        <div><span class="text-slate-500">落雨量：</span><strong class="block text-sm text-sky-800">40%</strong></div>
+                        <div><span class="text-slate-500">紫外線級別 spur：</span><strong class="block text-sm text-yellow-600">中等 (3)</strong></div>
+                        <div class="col-span-2 sm:col-span-1"><span class="text-slate-500">家庭穿搭建議：</span><strong class="block text-sm text-slate-700">防風大衣、連帽衛衣、摺傘</strong></div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">10:00</div>
+                            <div class="flex-1 flex flex-wrap justify-between items-start gap-2">
+                                <div>
+                                    <h4 class="font-bold text-slate-800">
+                                        <span class="text-lg">🏨</span> 
+                                        <a href="https://www.google.com/maps/search/?api=1&query=Grange+Beauchamp+Hotel+London" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                            轉往新酒店：Grange Beauchamp Hotel <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                        </a>
+                                    </h4>
+                                    <p class="text-xs text-slate-500 mt-1">地址：24-25 Bedford Pl, London WC1B 5JH。辦理 Check-in 寄存行李，鄰近大英博物館。</p>
+                                    <p class="text-xs text-eglBlue font-semibold mt-1">🚇 交通：Edgware Road 站乘搭 <strong>Central Line</strong> 直達 <strong>Holborn 站</strong>，步行 5 分鐘即抵。</p>
+                                </div>
+                                <span class="bg-eglRed text-white text-[10px] px-2 py-0.5 rounded font-bold">已預約客房</span>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">11:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🍽️</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=The+Rock+and+Sole+Plaice+London" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        午餐：Rock and Sole Plaice <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">創立於1871年，倫敦歷史最悠久的正宗「英式炸魚薯條」老店。外皮酥脆魚肉鮮嫩！（預算：80 HKD/人）</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">13:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🏛️</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=British+Museum+London" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        大英博物館 (British Museum) <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">世界三大博物館之一。觀賞羅塞塔石碑、埃及木乃伊及希臘雕像。家庭必看！（免費預約）</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">17:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🛍️</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Tottenham+Court+Road+London" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        熱鬧購物區散步 (Tottenham Court Road) <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">繁華商業街，多間大型家居與電器名店，非常適合家庭逛街。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">19:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🍽️</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Ciao+Bella+Restaurant+London" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        晚餐：Ciao Bella Restaurant 或 Burger & Lobster Bond Street <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">特別安排：人氣爆棚的經典意式家庭餐廳 Ciao Bella，意大利粉巨無霸，氛圍溫馨快樂。（預算：120-140 HKD/人）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 6 -->
+                <div id="day6" class="print-card bg-white rounded-2xl border border-slate-100 shadow-md overflow-hidden scroll-mt-24 transition duration-300 hover:shadow-lg">
+                    <div class="bg-eglBlue text-white p-4 flex flex-wrap justify-between items-center gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-eglGold text-eglBlue px-3 py-1 rounded-lg text-lg font-black shadow">D6</span>
+                            <div>
+                                <h3 class="text-lg font-bold">泰晤士河畔、經典鐵橋與高空花園一日遊</h3>
+                                <p class="text-xs text-slate-200">2026/07/25 星期六 | 漫步泰晤士河</p>
+                            </div>
+                        </div>
+                        <div class="text-sm bg-white/15 px-3 py-1 rounded font-semibold"><i class="fa-solid fa-camera mr-1"></i> 網紅打卡景點</div>
+                    </div>
+                    <!-- Weather Box -->
+                    <div class="bg-sky-50 border-b border-sky-100 p-4 grid grid-cols-2 sm:grid-cols-6 gap-3 text-xs">
+                        <div><span class="text-slate-500">今日天氣：</span><strong class="block text-sm text-sky-800">⛅ 晴天</strong></div>
+                        <div><span class="text-slate-500">溫度 / 體感：</span><strong class="block text-sm text-sky-800">14°C - 21°C (體感19°C)</strong></div>
+                        <div><span class="text-slate-500">濕度：</span><strong class="block text-sm text-sky-800">62%</strong></div>
+                        <div><span class="text-slate-500">落雨量：</span><strong class="block text-sm text-sky-800">10%</strong></div>
+                        <div><span class="text-slate-500">紫外線級別：</span><strong class="block text-sm text-yellow-600">中等 (4)</strong></div>
+                        <div class="col-span-2 sm:col-span-1"><span class="text-slate-500">家庭穿搭建議：</span><strong class="block text-sm text-slate-700">墨鏡、薄外套、步履鞋</strong></div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">08:30</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🥐</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=The+Moon+Under+Water+London" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        早餐：The Moon Under Water (JD Wetherspoon) <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">享用英國家喻戶曉的傳統英式早餐 Full English Breakfast。平價又大份！（預算：40 HKD/人）</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">09:30</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🎨</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=National+Gallery+London" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        國家美術館 (National Gallery) <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">座落特拉法加廣場旁。親睹梵高《向日葵》、莫奈《睡蓮》等巨作。（免費預約入場）</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">12:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🍇</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Borough+Market+London" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        午餐：波羅市集 (Borough Market) 美食巡禮 <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">倫敦最古老、最著名的美食大市集。必吃海鮮飯、生蠔、芝士蘑菇堡。（預算：80 HKD/人）</p>
+                                <p class="text-xs text-eglBlue font-semibold mt-1">🚇 交通：乘搭地鐵 <strong>Northern Line</strong> 直達 <strong>London Bridge 站</strong>。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">14:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🌉</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Tower+Bridge+London" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        倫敦塔橋 (Tower Bridge) & 倫敦橋 <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">沿著河畔步道漫步，拍照留影這座最美地標鐵橋。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">16:00</div>
+                            <div class="flex-1 flex flex-wrap justify-between items-start gap-2">
+                                <div>
+                                    <h4 class="font-bold text-slate-800">
+                                        <span class="text-lg">🌇</span> 
+                                        <a href="https://www.google.com/maps/search/?api=1&query=Sky+Garden+London" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                            空中花園 (Sky Garden) 俯瞰景緻 <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                        </a>
+                                    </h4>
+                                    <p class="text-xs text-slate-500 mt-1">倫敦全高空綠化觀景台，360度俯瞰全市壯麗景觀。（門票已預留）</p>
+                                </div>
+                                <span class="bg-eglRed text-white text-[10px] px-2 py-0.5 rounded font-bold">預約 16:30 登頂</span>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">18:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🏛️</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Tate+Modern+London" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        千禧橋 (Millennium Bridge) & 泰特現代美術館 <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">走過千禧橋（《哈利波特》電影取景地），順道參觀現代藝術先鋒地泰特美術館。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">19:30</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🥩</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Flat+Iron+Borough+London" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        晚餐：Flat Iron Borough <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">倫敦超高人氣平價牛扒店！肉質鮮美，還會贈送好玩的迷你小鐵鏟紀念品和餐後免費冰淇淋！（預算：150 HKD/人）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 7 -->
+                <div id="day7" class="print-card bg-white rounded-2xl border border-slate-100 shadow-md overflow-hidden scroll-mt-24 transition duration-300 hover:shadow-lg">
+                    <div class="bg-eglBlue text-white p-4 flex flex-wrap justify-between items-center gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-eglGold text-eglBlue px-3 py-1 rounded-lg text-lg font-black shadow">D7</span>
+                            <div>
+                                <h3 class="text-lg font-bold">乘搭「歐洲之星」跨國鐵路 ➔ 浪漫巴黎之旅</h3>
+                                <p class="text-xs text-slate-200">2026/07/26 星期日 | 英法大遷徙</p>
+                            </div>
+                        </div>
+                        <span class="text-sm bg-eglGold text-slate-900 px-3 py-1 rounded font-bold"><i class="fa-solid fa-train mr-1"></i> 歐洲之星跨國</span>
+                    </div>
+                    <!-- Weather Box -->
+                    <div class="bg-sky-50 border-b border-sky-100 p-4 grid grid-cols-2 sm:grid-cols-6 gap-3 text-xs">
+                        <div><span class="text-slate-500">今日天氣：</span><strong class="block text-sm text-sky-800">☀️ 巴黎晴朗</strong></div>
+                        <div><span class="text-slate-500">溫度 / 體感：</span><strong class="block text-sm text-sky-800">17°C - 26°C (體感27°C)</strong></div>
+                        <div><span class="text-slate-500">濕度：</span><strong class="block text-sm text-sky-800">55%</strong></div>
+                        <div><span class="text-slate-500">落雨量：</span><strong class="block text-sm text-sky-800">5%</strong></div>
+                        <div><span class="text-slate-500">紫外線級別：</span><strong class="block text-sm text-orange-600">高 (6)</strong></div>
+                        <div class="col-span-2 sm:col-span-1"><span class="text-slate-500">家庭穿搭建議：</span><strong class="block text-sm text-slate-700">夏日清涼、太陽眼鏡必備</strong></div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">08:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🥐</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Caffe+Tropea+London" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        早餐：Caffè Tropea (Russell Square) <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">英式浪漫公園內的精緻早餐店，品味出色的意式咖啡和三明治。（預算：40 HKD/人）</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">09:30</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800"><span class="text-lg">🏨</span> 辦理退房 ➔ 聖潘克拉斯國際車站 (St Pancras)</h4>
+                                <p class="text-xs text-slate-500 mt-1">攜行李前往車站，提前 90 分鐘辦理歐洲之星入閘及跨國海關查驗手續。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">11:30</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🍽️</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Lina+Stores+King+Cross+London" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        午餐：Lina Stores King's Cross <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">薄荷綠裝修的超美經典意式手工意粉，味道與高顏值並存。（預算：80 HKD/人）</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">12:30</div>
+                            <div class="flex-1 flex flex-wrap justify-between items-start gap-2">
+                                <div>
+                                    <h4 class="font-bold text-slate-800"><span class="text-lg">🚆</span> 歐洲之星 (Eurostar) 啟程前往巴黎</h4>
+                                    <p class="text-xs text-slate-500 mt-1">安坐跨國動車（票價約 2824.26 HKD 已全包），越過英吉利海峽海底隧道，享受流暢舒適體驗。</p>
+                                </div>
+                                <span class="bg-eglRed text-white text-[10px] px-2 py-0.5 rounded font-bold">已預約一等座</span>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">15:45</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🇫🇷</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Gare+de+Paris-Nord" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        抵達巴黎北站 (Paris Gare du Nord) <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">安全順利抵達法國巴黎北站，轉乘專車或地鐵直往巴黎市中心酒店。</p>
+                                <p class="text-xs text-eglBlue font-semibold mt-1">🚇 交通：可乘坐地鐵 <strong>Line 4 / Line 2</strong> 快速到達凱旋門區。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">16:30</div>
+                            <div class="flex-1 flex flex-wrap justify-between items-start gap-2">
+                                <div>
+                                    <h4 class="font-bold text-slate-800">
+                                        <span class="text-lg">🏨</span> 
+                                        <a href="https://www.google.com/maps/search/?api=1&query=Hotel+Regence+Etoile+Paris" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                            入住酒店：Hôtel Régence Etoile <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                        </a>
+                                    </h4>
+                                    <p class="text-xs text-slate-500 mt-1">地址：24 Av. Carnot, 75017 Paris, France。距離凱旋門僅幾步之遙，地段無與倫比！（費用 8817.71 HKD 已全付）</p>
+                                </div>
+                                <span class="bg-eglRed text-white text-[10px] px-2 py-0.5 rounded font-bold">已預約包早餐經典客房</span>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">19:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🍽️</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Le+Grand+Carnot+Paris" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        晚餐：Le Grand Carnot <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">酒店隔壁的地道法式街頭小酒館，享用招牌油封鴨和精緻甜點。（預算：120 HKD/人）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 8 -->
+                <div id="day8" class="print-card bg-white rounded-2xl border border-slate-100 shadow-md overflow-hidden scroll-mt-24 transition duration-300 hover:shadow-lg">
+                    <div class="bg-eglBlue text-white p-4 flex flex-wrap justify-between items-center gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-eglGold text-eglBlue px-3 py-1 rounded-lg text-lg font-black shadow">D8</span>
+                            <div>
+                                <h3 class="text-lg font-bold">巴黎三大地標 ➔ 羅浮宮 ➔ 塞納河奢華遊船晚餐</h3>
+                                <p class="text-xs text-slate-200">2026/07/27 星期一 | 巴黎夢幻大片</p>
+                            </div>
+                        </div>
+                        <span class="text-sm bg-eglOrange text-white px-3 py-1 rounded font-bold"><i class="fa-solid fa-ship mr-1"></i> 頂級體驗</span>
+                    </div>
+                    <!-- Weather Box -->
+                    <div class="bg-sky-50 border-b border-sky-100 p-4 grid grid-cols-2 sm:grid-cols-6 gap-3 text-xs">
+                        <div><span class="text-slate-500">今日天氣：</span><strong class="block text-sm text-sky-800">☀️ 晴朗微風</strong></div>
+                        <div><span class="text-slate-500">溫度 / 體感：</span><strong class="block text-sm text-sky-800">16°C - 25°C (體感26°C)</strong></div>
+                        <div><span class="text-slate-500">濕度：</span><strong class="block text-sm text-sky-800">58%</strong></div>
+                        <div><span class="text-slate-500">落雨量：</span><strong class="block text-sm text-sky-800">5%</strong></div>
+                        <div><span class="text-slate-500">紫外線級別：</span><strong class="block text-sm text-orange-600">高 (6)</strong></div>
+                        <div class="col-span-2 sm:col-span-1"><span class="text-slate-500">家庭穿搭建議：</span><strong class="block text-sm text-slate-700">時尚法式穿搭、晚餐穿著需得體</strong></div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">09:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🏛️</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Arc+de+Triomphe+Paris" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        凱旋門 & 香榭麗舍大街 & 杜樂麗花園 <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">從宏偉的凱旋門出發，漫步於香榭麗舍大街，最後抵達詩情畫意的杜樂麗花園享受法式浪漫。</p>
+                                <p class="text-xs text-eglBlue font-semibold mt-1">🚇 交通：從酒店步行出發即達凱旋門，或坐地鐵 <strong>Line 1</strong> 直達 <strong>Tuileries 站</strong>。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">12:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🍔</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Blend+Hamburger+Madeleine+Paris" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        午餐：Blend Hamburger Madeleine 或 Creperie Parisienne <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">精緻的法式頂級小肉排漢堡或法式可麗餅，外焦裏嫩，美味滿分。（預算：80 HKD/人）</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">13:30</div>
+                            <div class="flex-1 flex flex-wrap justify-between items-start gap-2">
+                                <div>
+                                    <h4 class="font-bold text-slate-800">
+                                        <span class="text-lg">🏛️</span> 
+                                        <a href="https://www.google.com/maps/search/?api=1&query=Louvre+Museum+Paris" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                            羅浮宮博物館深度導覽 (Louvre Museum) <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                        </a>
+                                    </h4>
+                                    <p class="text-xs text-slate-500 mt-1">重本包含門票！親眼目睹羅浮宮三寶：蒙娜麗莎、維納斯雕像及勝利女神像。絕不容錯過！</p>
+                                </div>
+                                <span class="bg-eglRed text-white text-[10px] px-2 py-0.5 rounded font-bold">14:00 門票已預留</span>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">17:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🧁</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=L’Eclair+de+Genie+Paris" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        精緻下午茶：L’Eclair de Génie <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">品嚐巴黎最出名、極致精美誘人的閃電泡芙，體驗真正的法式精緻甜點藝術。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">19:30</div>
+                            <div class="flex-1 flex flex-wrap justify-between items-start gap-2">
+                                <div>
+                                    <h4 class="font-bold text-slate-800">
+                                        <span class="text-lg">🚢</span> 
+                                        <a href="https://www.google.com/maps/search/?api=1&query=Paris+Seine+River+Cruise" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                            重本安排：巴黎塞納河全景奢華晚餐遊船 <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                        </a>
+                                    </h4>
+                                    <p class="text-xs text-slate-500 mt-1">Paris Seine 頂級遊船玻璃全景艙，一邊享用三道式法式珍饈美酒，一邊欣賞黃昏日落時分的埃菲爾鐵塔和巴黎聖母院，一生必試的家庭極致奢華回憶（全包團體票價 4552 HKD 已全額預付）。</p>
+                                </div>
+                                <span class="bg-eglRed text-white text-[10px] px-2 py-0.5 rounded font-bold">20:00 晚宴已預留</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 9 -->
+                <div id="day9" class="print-card bg-white rounded-2xl border border-slate-100 shadow-md overflow-hidden scroll-mt-24 transition duration-300 hover:shadow-lg">
+                    <div class="bg-eglBlue text-white p-4 flex flex-wrap justify-between items-center gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-eglGold text-eglBlue px-3 py-1 rounded-lg text-lg font-black shadow">D9</span>
+                            <div>
+                                <h3 class="text-lg font-bold">埃菲爾鐵塔 ➔ 蒙馬特聖心堂 ➔ 老佛爺百貨購物</h3>
+                                <p class="text-xs text-slate-200">2026/07/28 星期二 | 巴黎全日探索</p>
+                            </div>
+                        </div>
+                        <div class="text-sm bg-white/15 px-3 py-1 rounded font-semibold"><i class="fa-solid fa-bag-shopping mr-1"></i> 尊享購物與地標</div>
+                    </div>
+                    <!-- Weather Box -->
+                    <div class="bg-sky-50 border-b border-sky-100 p-4 grid grid-cols-2 sm:grid-cols-6 gap-3 text-xs">
+                        <div><span class="text-slate-500">今日天氣：</span><strong class="block text-sm text-sky-800">🌤️ 晴時多雲</strong></div>
+                        <div><span class="text-slate-500">溫度 / 體感：</span><strong class="block text-sm text-sky-800">15°C - 24°C (體感23°C)</strong></div>
+                        <div><span class="text-slate-500">濕度：</span><strong class="block text-sm text-sky-800">60%</strong></div>
+                        <div><span class="text-slate-500">落雨量：</span><strong class="block text-sm text-sky-800">10%</strong></div>
+                        <div><span class="text-slate-500">紫外線級別：</span><strong class="block text-sm text-yellow-600">中等 (5)</strong></div>
+                        <div class="col-span-2 sm:col-span-1"><span class="text-slate-500">家庭穿搭建議：</span><strong class="block text-sm text-slate-700">輕便出遊服、防曬、小巧隨身包</strong></div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">09:30</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🗼</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Eiffel+Tower+Paris" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        埃菲爾鐵塔 (Eiffel Tower) & 比爾哈凱姆橋 <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">走上經典的比爾哈凱姆橋（《潛行凶間》取景地）拍攝與鐵塔最美合照。</p>
+                                <p class="text-xs text-eglBlue font-semibold mt-1">🚇 交通：地鐵 <strong>Line 6</strong> 直達 <strong>Bir-Hakeim 站</strong>，步行 3 分鐘。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">11:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🌳</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Jardin+du+Luxembourg+Paris" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        盧森堡公園 (Jardin du Luxembourg) <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">巴黎最受當地家庭喜愛的名園，綠草茵茵，有小水池可出租遙控木帆船給小朋友玩樂。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">12:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🍜</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Kodawari+Ramen+Yokocho+Paris" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        午餐：Kodawari Ramen (Yokochō) <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">巴黎超有人氣的日式橫丁拉麵館！100%還原日本昭和街頭場景，味道極鮮美，是家庭暖胃的首選推薦。（預算：120 HKD/人）</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">14:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">⛪</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Cathedrale+Notre-Dame+de+Paris" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        巴黎聖母院 (Cathedrale Notre-Dame) <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">一睹修復後的宏偉哥德式尖塔與西立面雙塔，極具歷史紀念價值。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">15:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">⛪</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Sacre-Coeur+Paris" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        聖心堂 (Sacré-Cœur) 俯瞰巴黎 <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">矗立於蒙馬特高地的白色宏偉教堂。登上石階可全景鳥瞰巴黎市區。</p>
+                                <p class="text-xs text-eglBlue font-semibold mt-1">🚇 交通：乘坐地鐵 <strong>Line 12</strong> 至 <strong>Abbesses 站</strong>，再坐地面小纜車上山。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">17:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🛍️</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Galeries+Lafayette+Haussmann+Paris" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        奧斯曼老佛爺百貨 (Galeries Lafayette) <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">著名的百年拜占庭式彩色玻璃穹頂，享受家庭奢華免稅購物及登上頂樓平台拍夜景。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">18:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🍽️</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Galeries+Lafayette+Le+Gourmet+Paris" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        晚餐：老佛爺美食大廳 Le Gourmet <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">老佛爺美食街匯聚巴黎各大名廚美食，全家可自由挑選生蠔、牛排或高級甜點。（預算：120 HKD/人）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 10 -->
+                <div id="day10" class="print-card bg-white rounded-2xl border border-slate-100 shadow-md overflow-hidden scroll-mt-24 transition duration-300 hover:shadow-lg">
+                    <div class="bg-eglBlue text-white p-4 flex flex-wrap justify-between items-center gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-eglGold text-eglBlue px-3 py-1 rounded-lg text-lg font-black shadow">D10</span>
+                            <div>
+                                <h3 class="text-lg font-bold">巴黎 ✈️ 慕尼黑 ➔ 瑪麗恩廣場與德式漢堡</h3>
+                                <p class="text-xs text-slate-200">2026/07/29 星期三 | 飛向巴伐利亞</p>
+                            </div>
+                        </div>
+                        <div class="text-sm bg-white/15 px-3 py-1 rounded font-semibold"><i class="fa-solid fa-hotel mr-1"></i> 住宿：Courtyard Munich City Center</div>
+                    </div>
+                    <!-- Weather Box -->
+                    <div class="bg-sky-50 border-b border-sky-100 p-4 grid grid-cols-2 sm:grid-cols-6 gap-3 text-xs">
+                        <div><span class="text-slate-500">今日天氣：</span><strong class="block text-sm text-sky-800">☀️ 慕尼黑蔚藍晴天</strong></div>
+                        <div><span class="text-slate-500">溫度 / 體感：</span><strong class="block text-sm text-sky-800">14°C - 23°C (體感22°C)</strong></div>
+                        <div><span class="text-slate-500">濕度：</span><strong class="block text-sm text-sky-800">50%</strong></div>
+                        <div><span class="text-slate-500">落雨量：</span><strong class="block text-sm text-sky-800">5%</strong></div>
+                        <div><span class="text-slate-500">紫外線級別：</span><strong class="block text-sm text-orange-600">高 (6)</strong></div>
+                        <div class="col-span-2 sm:col-span-1"><span class="text-slate-500">家庭穿搭建議：</span><strong class="block text-sm text-slate-700">清爽夏裝、外套（備用晚間防風）</strong></div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">08:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800"><span class="text-lg">🥐</span> 酒店早餐及辦理退房</h4>
+                                <p class="text-xs text-slate-500 mt-1">享用精緻早餐，攜帶行李，準時出發前往巴黎戴高樂機場（CDG）。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">10:30</div>
+                            <div class="flex-1 flex flex-wrap justify-between items-start gap-2">
+                                <div>
+                                    <h4 class="font-bold text-slate-800"><span class="text-lg">🛫</span> 航班起飛 ➔ 慕尼黑 (MUC)</h4>
+                                    <p class="text-xs text-slate-500 mt-1">法航（LH/AF）直飛慕尼黑，航程約1.5小時（機票總價 5652.64 HKD 已預付全包）。</p>
+                                </div>
+                                <span class="bg-eglRed text-white text-[10px] px-2 py-0.5 rounded font-bold">已預約登機</span>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">14:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🇩🇪</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Munich+Airport" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        抵達慕尼黑機場 ➔ 乘 S-Bahn 直達市區 <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">入境後，全家購買 MVV 團體一日票，乘搭輕軌 <strong>S1 或 S8 線</strong>，40分鐘即可直達市中心。</p>
+                                <p class="text-xs text-eglBlue font-semibold mt-1">🚇 交通：慕尼黑機場站 ➔ Hauptbahnhof (中央車站) 站。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">15:30</div>
+                            <div class="flex-1 flex flex-wrap justify-between items-start gap-2">
+                                <div>
+                                    <h4 class="font-bold text-slate-800">
+                                        <span class="text-lg">🏨</span> 
+                                        <a href="https://www.google.com/maps/search/?api=1&query=Courtyard+by+Marriott+Munich+City+Center" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                            入住酒店：Courtyard by Marriott Munich City Center <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                        </a>
+                                    </h4>
+                                    <p class="text-xs text-slate-500 mt-1">地址：Schwanthalerstraße 37, 80336 München。鄰近中央車站，交通超凡便利！（費用 9404 HKD 已全款支付）</p>
+                                </div>
+                                <span class="bg-eglRed text-white text-[10px] px-2 py-0.5 rounded font-bold">已預約連續4晚</span>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">17:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🏛️</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Marienplatz+Munich" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        瑪麗恩廣場 (Marienplatz) 鐘樓秀 <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">慕尼黑的核心。宏偉的新市政廳，拍照極具視覺震撼，可觀賞木偶自彈自跳大鐘樓秀。</p>
+                                <p class="text-xs text-eglBlue font-semibold mt-1">🚇 交通：從中央車站乘 <strong>S1-S8 線</strong> 1站即到 <strong>Marienplatz 站</strong>。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">18:30</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🍔</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Ruffs+Burger+Munich" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        晚餐：Ruffs Burger <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">慕尼黑本地最著名的極致多汁手工漢堡，搭配酥脆紅薯薯條，味道一絕！（預算：100 HKD/人）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 11 -->
+                <div id="day11" class="print-card bg-white rounded-2xl border border-slate-100 shadow-md overflow-hidden scroll-mt-24 transition duration-300 hover:shadow-lg">
+                    <div class="bg-eglBlue text-white p-4 flex flex-wrap justify-between items-center gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-eglGold text-eglBlue px-3 py-1 rounded-lg text-lg font-black shadow">D11</span>
+                            <div>
+                                <h3 class="text-lg font-bold">老彼得教堂 ➔ 德意志博物館 ➔ 巴伐利亞家庭晚宴</h3>
+                                <p class="text-xs text-slate-200">2026/07/30 星期四 | 科學與經典地道風情</p>
+                            </div>
+                        </div>
+                        <div class="text-sm bg-white/15 px-3 py-1 rounded font-semibold"><i class="fa-solid fa-gear mr-1"></i> 科技探索</div>
+                    </div>
+                    <!-- Weather Box -->
+                    <div class="bg-sky-50 border-b border-sky-100 p-4 grid grid-cols-2 sm:grid-cols-6 gap-3 text-xs">
+                        <div><span class="text-slate-500">今日天氣：</span><strong class="block text-sm text-sky-800">⛅ 多雲轉晴</strong></div>
+                        <div><span class="text-slate-500">溫度 / 體感：</span><strong class="block text-sm text-sky-800">12°C - 22°C (體感20°C)</strong></div>
+                        <div><span class="text-slate-500">濕度：</span><strong class="block text-sm text-sky-800">55%</strong></div>
+                        <div><span class="text-slate-500">落雨量：</span><strong class="block text-sm text-sky-800">15%</strong></div>
+                        <div><span class="text-slate-500">紫外線級別：</span><strong class="block text-sm text-yellow-600">中等 (4)</strong></div>
+                        <div class="col-span-2 sm:col-span-1"><span class="text-slate-500">家庭穿搭建議：</span><strong class="block text-sm text-slate-700">休閒運動裝、步履鞋（博物館非常大）</strong></div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">09:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🥖</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Viktualienmarkt+Munich" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        穀物市場 & 老彼得教堂 & 聖母教堂 <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">清晨探訪熱鬧非凡的穀物市場 (Viktualienmarkt)，享受新鮮水果與香腸。隨後漫步參觀標誌性的綠洋蔥頂聖母教堂，及登上老彼得教堂俯瞰全市。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">12:00</div>
+                            <div class="flex-1 flex flex-wrap justify-between items-start gap-2">
+                                <div>
+                                    <h4 class="font-bold text-slate-800">
+                                        <span class="text-lg">🍽️</span> 
+                                        <a href="https://www.google.com/maps/search/?api=1&query=ONE+Nation+Munich" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                            午餐：ONE Nation Munich <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                        </a>
+                                    </h4>
+                                    <p class="text-xs text-slate-500 mt-1">現代簡約的西式簡餐，香噴噴的手工薄餅和新鮮果汁非常適合帶小孩的家庭。（預算：80 HKD/人）</p>
+                                </div>
+                                <span class="bg-eglRed text-white text-[10px] px-2 py-0.5 rounded font-bold">已預定位置</span>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">13:30</div>
+                            <div class="flex-1 flex flex-wrap justify-between items-start gap-2">
+                                <div>
+                                    <h4 class="font-bold text-slate-800">
+                                        <span class="text-lg">⚙️</span> 
+                                        <a href="https://www.google.com/maps/search/?api=1&query=Deutsches+Museum+Munich" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                            重本安排：德意志科學技術博物館 (Deutsches Museum) <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                        </a>
+                                    </h4>
+                                    <p class="text-xs text-slate-500 mt-1">世界最大自然科學技術博物館。內置大量極其精彩的物理、電力、航空航海真實大模型互動展示（成人/小童門票已包）。</p>
+                                    <p class="text-xs text-eglBlue font-semibold mt-1">🚇 交通：從 Marienplatz 步行 12 分鐘或乘坐 <strong>S-Bahn</strong> 至 <strong>Isartor 站</strong>。</p>
+                                </div>
+                                <span class="bg-eglRed text-white text-[10px] px-2 py-0.5 rounded font-bold">14:00 門票已預留</span>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">18:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🍽️</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Wirtshaus+in+der+Au+Munich" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        晚餐：Wirtshaus in der Au <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">經典温馨的慕尼黑老牌巴伐利亞餐廳。在這裡品嚐地道德式烤豬肘和巨型大麵包圈（已預訂，預算：120 HKD/人）。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 12 -->
+                <div id="day12" class="print-card bg-white rounded-2xl border border-slate-100 shadow-md overflow-hidden scroll-mt-24 transition duration-300 hover:shadow-lg">
+                    <div class="bg-eglBlue text-white p-4 flex flex-wrap justify-between items-center gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-eglGold text-eglBlue px-3 py-1 rounded-lg text-lg font-black shadow">D12</span>
+                            <div>
+                                <h3 class="text-lg font-bold">奧林匹克公園 ➔ BMW 博物館 ➔ 寧芬堡宮</h3>
+                                <p class="text-xs text-slate-200">2026/07/31 星期五 | 汽車狂熱與夏宮美景</p>
+                            </div>
+                        </div>
+                        <div class="text-sm bg-white/15 px-3 py-1 rounded font-semibold"><i class="fa-solid fa-car mr-1"></i> 速度與自然</div>
+                    </div>
+                    <!-- Weather Box -->
+                    <div class="bg-sky-50 border-b border-sky-100 p-4 grid grid-cols-2 sm:grid-cols-6 gap-3 text-xs">
+                        <div><span class="text-slate-500">今日天氣：</span><strong class="block text-sm text-sky-800">☀️ 陽光普照</strong></div>
+                        <div><span class="text-slate-500">溫度 / 體感：</span><strong class="block text-sm text-sky-800">14°C - 24°C (體感23°C)</strong></div>
+                        <div><span class="text-slate-500">濕度：</span><strong class="block text-sm text-sky-800">48%</strong></div>
+                        <div><span class="text-slate-500">落雨量：</span><strong class="block text-sm text-sky-800">5%</strong></div>
+                        <div><span class="text-slate-500">紫外線級別：</span><strong class="block text-sm text-orange-600">高 (6)</strong></div>
+                        <div class="col-span-2 sm:col-span-1"><span class="text-slate-500">家庭穿搭建議：</span><strong class="block text-sm text-slate-700">墨鏡、亮麗夏裝、帽子</strong></div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">09:30</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🌳</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Olympiapark+Munich" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        奧林匹克公園 (Olympiapark) <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">1972年奧運遺址，以超現代波浪式帳篷屋頂聞名。全家可以登上奧林匹克高塔鳥瞰市景。</p>
+                                <p class="text-xs text-eglBlue font-semibold mt-1">🚇 交通：從中央車站坐地鐵 <strong>U3 線</strong> 直達 <strong>Olympiazentrum 站</strong>。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">11:00</div>
+                            <div class="flex-1 flex flex-wrap justify-between items-start gap-2">
+                                <div>
+                                    <h4 class="font-bold text-slate-800">
+                                        <span class="text-lg">🏎️</span> 
+                                        <a href="https://www.google.com/maps/search/?api=1&query=BMW+Museum+Munich" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                            BMW 寶馬博物館 (BMW Museum) <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                        </a>
+                                    </h4>
+                                    <p class="text-xs text-slate-500 mt-1">科技感十足。展示無數經典古董老爺車、概念超跑和電單車。汽車愛好者的聖地！（門票已付）</p>
+                                </div>
+                                <span class="bg-eglRed text-white text-[10px] px-2 py-0.5 rounded font-bold">已預約11:15場次</span>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">12:30</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800"><span class="text-lg">🍽️</span> 午餐於 BMW 世界（BMW Welt）</h4>
+                                <p class="text-xs text-slate-500 mt-1">自理午餐，在極致未來派建築 BMW Welt 展廳餐廳內享用高雅簡餐與咖啡。（預算：80 HKD/人）</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">14:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🏰</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Nymphenburg+Palace+Munich" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        寧芬堡宮 (Schloss Nymphenburg) <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">巴伐利亞王侯的避暑夏宮。擁有華麗富麗天花壁畫的宮殿和天鵝成群的精美大護城河，家庭遊園極致之選。</p>
+                                <p class="text-xs text-eglBlue font-semibold mt-1">🚇 交通：從奧林匹克公園乘坐 <strong>Tram 12</strong> 直達宮殿正門。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 13 -->
+                <div id="day13" class="print-card bg-white rounded-2xl border border-slate-100 shadow-md overflow-hidden scroll-mt-24 transition duration-300 hover:shadow-lg">
+                    <div class="bg-eglBlue text-white p-4 flex flex-wrap justify-between items-center gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-eglGold text-eglBlue px-3 py-1 rounded-lg text-lg font-black shadow">D13</span>
+                            <div>
+                                <h3 class="text-lg font-bold">英國花園 ➔ 慕尼黑王宮 ➔ 宮廷啤酒屋狂歡</h3>
+                                <p class="text-xs text-slate-200">2026/08/01 星期六 | 慕尼黑最後狂歡</p>
+                            </div>
+                        </div>
+                        <span class="text-sm bg-eglOrange text-white px-3 py-1 rounded font-bold"><i class="fa-solid fa-beer-mug-empty mr-1"></i> 傳統德風</span>
+                    </div>
+                    <!-- Weather Box -->
+                    <div class="bg-sky-50 border-b border-sky-100 p-4 grid grid-cols-2 sm:grid-cols-6 gap-3 text-xs">
+                        <div><span class="text-slate-500">今日天氣：</span><strong class="block text-sm text-sky-800">🌤️ 晴天舒適</strong></div>
+                        <div><span class="text-slate-500">溫度 / 體感：</span><strong class="block text-sm text-sky-800">14°C - 23°C (體感22°C)</strong></div>
+                        <div><span class="text-slate-500">濕度：</span><strong class="block text-sm text-sky-800">52%</strong></div>
+                        <div><span class="text-slate-500">落雨量：</span><strong class="block text-sm text-sky-800">10%</strong></div>
+                        <div><span class="text-slate-500">紫外線級別：</span><strong class="block text-sm text-yellow-600">中等 (5)</strong></div>
+                        <div class="col-span-2 sm:col-span-1"><span class="text-slate-500">家庭穿搭建議：</span><strong class="block text-sm text-slate-700">休閒亮麗裝、相機必備</strong></div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">09:30</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🌳</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Englischer+Garten+Munich" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        英國花園 (Englischer Garten) & 中式寶塔 <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">全歐最大城市公園之一。去河道觀賞大開眼界的內陸衝浪，隨後散步至著名的中式寶塔地標。</p>
+                                <p class="text-xs text-eglBlue font-semibold mt-1">🚇 交通：從中央車站乘坐地鐵 <strong>U3/U6</strong> 至 <strong>Giselastraße 站</strong>。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">12:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🍺</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Chinesischer+Turm+Beer+Garden+Munich" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        午餐：Chinesischer Turm 寶塔啤酒花園 <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">在全德著名寶塔大啤酒花園中。家庭露天野餐，享用地道白香腸、大椒鹽卷餅與美味無酒精蘋果啤。（預算：80 HKD/人）</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">14:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🏛️</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Munich+Residenz" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        慕尼黑王宮 (Munich Residenz) <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">德國最大的市內宮殿。極具視覺奇觀的巨型貝殼庭院與長達數十米金碧輝煌的王室珍寶展，極度震撼！（門票已付）</p>
+                                <p class="text-xs text-eglBlue font-semibold mt-1">🚇 交通：步行即可到達 <strong>Odeonsplatz 地鐵站</strong> 旁。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">18:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800">
+                                    <span class="text-lg">🍺</span> 
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Hofbrauhaus+Munchen" target="_blank" class="text-eglBlue hover:underline inline-flex items-center">
+                                        晚餐：皇家宮廷啤酒屋 (Hofbräuhaus München) <i class="fa-solid fa-map-location-dot text-xs ml-1"></i>
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-slate-500 mt-1">最享譽盛名的巴伐利亞啤酒大廳，伴隨高昂地道的管弦吹奏，全家舉杯歡慶旅途圓滿完成！（已預約，預算：120 HKD/人）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 14 -->
+                <div id="day14" class="print-card bg-white rounded-2xl border border-slate-100 shadow-md overflow-hidden scroll-mt-24 transition duration-300 hover:shadow-lg">
+                    <div class="bg-eglBlue text-white p-4 flex flex-wrap justify-between items-center gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-eglGold text-eglBlue px-3 py-1 rounded-lg text-lg font-black shadow">D14</span>
+                            <div>
+                                <h3 class="text-lg font-bold">慕尼黑 ✈️ 新加坡 ➔ 澳門 (圓滿回程)</h3>
+                                <p class="text-xs text-slate-200">2026/08/02 星期日 | 溫馨回家路</p>
+                            </div>
+                        </div>
+                        <div class="text-sm bg-white/15 px-3 py-1 rounded font-semibold"><i class="fa-solid fa-heart mr-1"></i> 平安歸港</div>
+                    </div>
+                    <!-- Weather Box -->
+                    <div class="bg-sky-50 border-b border-sky-100 p-4 grid grid-cols-2 sm:grid-cols-6 gap-3 text-xs">
+                        <div><span class="text-slate-500">今日天氣：</span><strong class="block text-sm text-sky-800">☀️ 澳門多雲晴朗</strong></div>
+                        <div><span class="text-slate-500">溫度 / 體感：</span><strong class="block text-sm text-sky-800">27°C - 33°C (體感36°C)</strong></div>
+                        <div><span class="text-slate-500">濕度：</span><strong class="block text-sm text-sky-800">80%</strong></div>
+                        <div><span class="text-slate-500">落雨量：</span><strong class="block text-sm text-sky-800">20%</strong></div>
+                        <div><span class="text-slate-500">紫外線級別：</span><strong class="block text-sm text-red-600">非常高 (8)</strong></div>
+                        <div class="col-span-2 sm:col-span-1"><span class="text-slate-500">家庭穿搭建議：</span><strong class="block text-sm text-slate-700">清涼長袖衣、遮陽帽、短袖</strong></div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">08:00</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800"><span class="text-lg">🥐</span> 酒店退房 ➔ 慕尼黑機場</h4>
+                                <p class="text-xs text-slate-500 mt-1">享用早餐後，收拾所有行李退房。攜帶行李提早前往慕尼黑機場辦理登機和退稅手續。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">12:30</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800"><span class="text-lg">🛫</span> 航班起飛 ➔ 轉機新加坡</h4>
+                                <p class="text-xs text-slate-500 mt-1">乘坐新加坡航空 SQ327 航班回程，機上提供豐富的午晚餐與貼心空乘服務。</p>
+                            </div>
+                        </div>
+                        <hr class="border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="text-sm font-bold text-slate-400 w-12 pt-1 text-right">17:55</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-slate-800"><span class="text-lg">🎉</span> 平安抵達 ➔ 澳門機場</h4>
+                                <p class="text-xs text-slate-500 mt-1">新加坡轉機後飛抵澳門。平安回港，為14天精彩非凡的歐洲三國奢華自導遊畫上圓滿句號！</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ================== TAB: 長途大交通安排 ================== -->
+        <div id="transit-tab" class="tab-content hidden space-y-8">
+            <div class="bg-white rounded-2xl border border-slate-100 shadow-md p-6">
+                <div class="border-b border-slate-100 pb-4 mb-6">
+                    <h3 class="text-xl font-bold text-eglBlue"><i class="fa-solid fa-plane-up mr-2"></i>跨國長途交通一覽表</h3>
+                    <p class="text-xs text-slate-500 mt-1">本團悉心甄選最優質航班及歐洲之星跨國鐵路，確保家庭旅途快捷舒適，老少無憂。</p>
+                </div>
+
+                <!-- Flight details table -->
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse text-sm">
+                        <thead>
+                            <tr class="bg-eglBlue text-white">
+                                <th class="p-3 rounded-l-lg">天數/路段</th>
+                                <th class="p-3">交通工具</th>
+                                <th class="p-3">班次 / 航班號</th>
+                                <th class="p-3">出發地 ➔ 目的地</th>
+                                <th class="p-3">時間安排</th>
+                                <th class="p-3 rounded-r-lg">狀態 / 備註</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            <tr>
+                                <td class="p-3 font-semibold">Day 1</td>
+                                <td class="p-3">✈️ 飛機</td>
+                                <td class="p-3">SQ 806 (新航)</td>
+                                <td class="p-3">澳門 (MFM) ➔ 新加坡 (SIN)</td>
+                                <td class="p-3">18:45 ➔ 22:35</td>
+                                <td class="p-3"><span class="bg-red-50 text-eglRed text-xs font-bold px-2.5 py-1 rounded">✅ 已預訂機位</span></td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold">Day 2</td>
+                                <td class="p-3">✈️ 飛機</td>
+                                <td class="p-3">SQ 306 (新航)</td>
+                                <td class="p-3">新加坡 (SIN) ➔ 倫敦希斯路 (LHR)</td>
+                                <td class="p-3">06:40 ➔ 15:00</td>
+                                <td class="p-3"><span class="bg-red-50 text-eglRed text-xs font-bold px-2.5 py-1 rounded">✅ 已預訂機位</span></td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold">Day 2</td>
+                                <td class="p-3">🚆 機場鐵路</td>
+                                <td class="p-3">Heathrow Express</td>
+                                <td class="p-3">希斯路機場 ➔ 倫敦帕丁頓車站</td>
+                                <td class="p-3">每15分鐘一班</td>
+                                <td class="p-3"><span class="bg-red-50 text-eglRed text-xs font-bold px-2.5 py-1 rounded">✅ 已購團體票</span></td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold">Day 4</td>
+                                <td class="p-3">🚆 火車</td>
+                                <td class="p-3">West Coast Rail</td>
+                                <td class="p-3">Euston 尤斯頓 ➔ Watford Junction</td>
+                                <td class="p-3">10:00 ➔ 10:25</td>
+                                <td class="p-3"><span class="bg-yellow-50 text-yellow-700 text-xs font-bold px-2.5 py-1 rounded">⚠️ 用 Oyster/感應卡</span></td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold">Day 7</td>
+                                <td class="p-3">🚆 跨國高鐵</td>
+                                <td class="p-3">Eurostar (歐洲之星)</td>
+                                <td class="p-3">倫敦 (St Pancras) ➔ 巴黎北站 (Nord)</td>
+                                <td class="p-3">12:30 ➔ 15:45</td>
+                                <td class="p-3"><span class="bg-red-50 text-eglRed text-xs font-bold px-2.5 py-1 rounded">✅ 一等座已預定</span></td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold">Day 10</td>
+                                <td class="p-3">✈️ 飛機</td>
+                                <td class="p-3">LH / AF 航空</td>
+                                <td class="p-3">巴黎戴高樂 (CDG) ➔ 慕尼黑 (MUC)</td>
+                                <td class="p-3">10:30 ➔ 12:00</td>
+                                <td class="p-3"><span class="bg-red-50 text-eglRed text-xs font-bold px-2.5 py-1 rounded">✅ 機位已預訂</span></td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold">Day 14</td>
+                                <td class="p-3">✈️ 飛機</td>
+                                <td class="p-3">SQ 327 (新航)</td>
+                                <td class="p-3">慕尼黑 (MUC) ➔ 新加坡 (SIN)</td>
+                                <td class="p-3">12:30 ➔ 06:10+1</td>
+                                <td class="p-3"><span class="bg-red-50 text-eglRed text-xs font-bold px-2.5 py-1 rounded">✅ 機位已訂</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Luggage advice based on brochure limits -->
+                <div class="mt-6 bg-slate-50 border border-slate-100 rounded-xl p-4">
+                    <h4 class="font-bold text-slate-800 text-sm mb-2"><i class="fa-solid fa-suitcase mr-2 text-eglBlue"></i>家庭行李托運及攜帶限制：</h4>
+                    <ul class="text-xs text-slate-600 space-y-1.5 list-disc pl-5">
+                        <li><strong>新航托運限制：</strong>每人限1件托運行李（最大30kg）。手提行李限1件（不超7kg）。</li>
+                        <li><strong>歐洲之星限制：</strong>每位成人限攜帶最多2件大型行李（長邊不超85cm）加1件手提行李，不限重但須能自行提起。</li>
+                        <li><strong>外置充電器（Power Bank）提示：</strong>必須隨身攜帶，嚴禁放進托運行李。每人限帶最多2個（每個最大不超100Wh / 20,000mAh）。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================== TAB: 預算分析與管理 ================== -->
+        <div id="budget-tab" class="tab-content hidden space-y-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Left Column: Budget Summary Cards -->
+                <div class="lg:col-span-1 space-y-6">
+                    <div class="bg-white rounded-2xl border border-slate-100 shadow-md p-6">
+                        <h3 class="text-lg font-bold text-slate-800 border-b border-slate-100 pb-3 mb-4"><i class="fa-solid fa-coins mr-2 text-eglGold"></i>家庭旅遊預算總結</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <span class="text-xs text-slate-500 block">預估家庭總預算 (4人家庭)</span>
+                                <span class="text-3xl font-black text-eglBlue">HK$ 116,259.54</span>
+                            </div>
+                            <hr class="border-slate-100">
+                            <div class="grid grid-cols-2 gap-4 text-xs">
+                                <div>
+                                    <span class="text-slate-500 block">英鎊等值 (GBP)</span>
+                                    <strong class="text-sm font-bold text-slate-700">£ 11,858.50</strong>
+                                </div>
+                                <div>
+                                    <span class="text-slate-500 block">歐元等值 (EUR)</span>
+                                    <strong class="text-sm font-bold text-slate-700">€ 13,757.60</strong>
+                                </div>
+                            </div>
+                            <div class="bg-eglBlue/5 rounded-xl p-3 text-[11px] text-eglBlue border border-eglBlue/10">
+                                <strong>💡 系統備註：</strong> 匯率以 1 GBP ≈ 9.8 HKD, 1 EUR ≈ 8.45 HKD 的基準進行靜態預估，不含當地個人自由購物。
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl border border-slate-100 shadow-md p-6">
+                        <h3 class="text-lg font-bold text-slate-800 mb-3"><i class="fa-solid fa-chart-pie mr-2 text-eglSky"></i>開支分類分析</h3>
+                        <!-- Tailwind-based visual bar chart to substitute canvas for robust offline support -->
+                        <div class="space-y-3.5 pt-2">
+                            <div>
+                                <div class="flex justify-between text-xs mb-1">
+                                    <span>🏨 三國酒店住宿 (Hilton, Marriott等)</span>
+                                    <span class="font-bold">29.1%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-2">
+                                    <div class="bg-eglBlue h-2 rounded-full" style="width: 29.1%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs mb-1">
+                                    <span>✈️ 機票 / 高鐵 (新航, 歐洲之星)</span>
+                                    <span class="font-bold font-semibold">27.6%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-2">
+                                    <div class="bg-eglSky h-2 rounded-full" style="width: 27.6%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs mb-1">
+                                    <span>🎟️ 特色景點 / 門票 (哈利波特, 塞納河遊船)</span>
+                                    <span class="font-bold font-semibold">16.8%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-2">
+                                    <div class="bg-eglGold h-2 rounded-full" style="width: 16.8%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs mb-1">
+                                    <span>🍽️ 餐飲開支 (Burger & Lobster, 地道大餐)</span>
+                                    <span class="font-bold font-semibold">18.5%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-2">
+                                    <div class="bg-eglOrange h-2 rounded-full" style="width: 18.5%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs mb-1">
+                                    <span>🚇 當地交通費 (地鐵, Oyster卡)</span>
+                                    <span class="font-bold font-semibold">8.0%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-2">
+                                    <div class="bg-emerald-500 h-2 rounded-full" style="width: 8.0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Pre-paid item breakdown -->
+                <div class="lg:col-span-2">
+                    <div class="bg-white rounded-2xl border border-slate-100 shadow-md p-6">
+                        <div class="border-b border-slate-100 pb-4 mb-4">
+                            <h3 class="text-xl font-bold text-slate-800"><i class="fa-solid fa-receipt mr-2 text-eglBlue"></i>主要已預訂大額預算項目明細</h3>
+                            <p class="text-xs text-slate-500 mt-1">此部分款項在出發前已通過線上完成支付及預約，確保現場流程極致絲滑。</p>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-xs">
+                                <thead>
+                                    <tr class="bg-slate-50 text-slate-600 font-bold border-b border-slate-100">
+                                        <th class="p-3">項目名稱</th>
+                                        <th class="p-3">所屬國家 / 城市</th>
+                                        <th class="p-3 text-right">費用 (HKD)</th>
+                                        <th class="p-3">狀態 / 憑證備註</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-100">
+                                    <tr>
+                                        <td class="p-3 font-semibold text-slate-700">🏨 Hilton London Metropole</td>
+                                        <td class="p-3">🇬🇧 倫敦 (5晚含早餐)</td>
+                                        <td class="p-3 text-right font-bold text-slate-800">9,475.00</td>
+                                        <td class="p-3"><span class="bg-green-50 text-green-700 px-2 py-0.5 rounded font-bold">已全付 / Trip.com</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 font-semibold text-slate-700">🏨 Grange Beauchamp Hotel</td>
+                                        <td class="p-3">🇬🇧 倫敦 (2晚)</td>
+                                        <td class="p-3 text-right font-bold text-slate-800">6,428.00</td>
+                                        <td class="p-3"><span class="bg-green-50 text-green-700 px-2 py-0.5 rounded font-bold">已全付 / Trip.com</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 font-semibold text-slate-700">🚆 歐洲之星 (Eurostar) 跨國高鐵</td>
+                                        <td class="p-3">🇬🇧 ➔ 🇫🇷 跨國 (4人一等座)</td>
+                                        <td class="p-3 text-right font-bold text-slate-800">2,824.26</td>
+                                        <td class="p-3"><span class="bg-green-50 text-green-700 px-2 py-0.5 rounded font-bold">已預約電子票</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 font-semibold text-slate-700">🏨 Hôtel Régence Etoile</td>
+                                        <td class="p-3">🇫🇷 巴黎 (3晚含早餐)</td>
+                                        <td class="p-3 text-right font-bold text-slate-800">8,817.71</td>
+                                        <td class="p-3"><span class="bg-green-50 text-green-700 px-2 py-0.5 rounded font-bold">已全付 / 可取消經典房</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 font-semibold text-slate-700">🚢 Paris Seine 塞納河全景晚宴船河</td>
+                                        <td class="p-3">🇫🇷 巴黎 (4人團體票)</td>
+                                        <td class="p-3 text-right font-bold text-slate-800">4,552.00</td>
+                                        <td class="p-3"><span class="bg-green-50 text-green-700 px-2 py-0.5 rounded font-bold">已確認 20:00 晚宴</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 font-semibold text-slate-700">✈️ 巴黎 ✈️ 慕尼黑 跨國航班機票</td>
+                                        <td class="p-3">🇫🇷 ➔ 🇩🇪 跨國 (4人全包)</td>
+                                        <td class="p-3 text-right font-bold text-slate-800">5,652.64</td>
+                                        <td class="p-3"><span class="bg-green-50 text-green-700 px-2 py-0.5 rounded font-bold">機位已出票</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 font-semibold text-slate-700">🏨 Courtyard by Marriott Munich</td>
+                                        <td class="p-3">🇩🇪 慕尼黑 (4晚)</td>
+                                        <td class="p-3 text-right font-bold text-slate-800">9,404.00</td>
+                                        <td class="p-3"><span class="bg-green-50 text-green-700 px-2 py-0.5 rounded font-bold">已全付 / Marriott官網</span></td>
+                                    </tr>
+                                    <tr class="bg-slate-50 font-bold text-sm">
+                                        <td class="p-3 text-slate-800">出發前預付項目總計</td>
+                                        <td class="p-3"></td>
+                                        <td class="p-3 text-right text-eglBlue">HK$ 47,153.61</td>
+                                        <td class="p-3">已在整體預算中預扣</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ================== TAB: 行前準備及當地交通指南 ================== -->
+        <div id="prep-tab" class="tab-content hidden space-y-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Pre-trip checklists -->
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-md p-6 space-y-6">
+                    <h3 class="text-xl font-bold text-slate-800 border-b border-slate-100 pb-3"><i class="fa-solid fa-list-check mr-2 text-eglBlue"></i>家庭出發前準備清單</h3>
+                    
+                    <div class="space-y-4 text-sm">
+                        <div class="flex items-start space-x-3">
+                            <input type="checkbox" checked class="mt-1 h-4 w-4 rounded border-gray-300 text-eglBlue focus:ring-eglBlue">
+                            <div>
+                                <strong class="text-slate-800 block">1. 證件與簽證 (重要)</strong>
+                                <span class="text-xs text-slate-500">確保特區護照/BNO護照有效期在6個月以上。免簽進入英法德，但需攜帶來回機票憑證與酒店訂單列印本。</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <input type="checkbox" checked class="mt-1 h-4 w-4 rounded border-gray-300 text-eglBlue focus:ring-eglBlue">
+                            <div>
+                                <strong class="text-slate-800 block">2. 電源適配插頭與外置充電器限制</strong>
+                                <span class="text-xs text-slate-500">英國使用「英規三腳插頭」；法德使用「歐規雙圓腳插頭」。外置充電器（Power bank）嚴禁放進托運行李，必須隨身攜帶。</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <input type="checkbox" class="mt-1 h-4 w-4 rounded border-gray-300 text-eglBlue focus:ring-eglBlue">
+                            <div>
+                                <strong class="text-slate-800 block">3. 網路漫遊 e-SIM / 上網卡</strong>
+                                <span class="text-xs text-slate-500">建議購買全歐多國通用上網卡，覆蓋英國、法國、德國，14天每天至少2GB高速流量。</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <input type="checkbox" class="mt-1 h-4 w-4 rounded border-gray-300 text-eglBlue focus:ring-eglBlue">
+                            <div>
+                                <strong class="text-slate-800 block">4. 信用卡與少量歐元/英鎊現金</strong>
+                                <span class="text-xs text-slate-500">英法德大部分地鐵與商店均支持 Visa/MasterCard 感應式支付及 Apple Pay。每人備用約 150 英鎊和 200 歐元現金即可。</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Local Metro Tips -->
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-md p-6 space-y-6">
+                    <h3 class="text-xl font-bold text-slate-800 border-b border-slate-100 pb-3"><i class="fa-solid fa-train-subway mr-2 text-eglSky"></i>當地地鐵 & 交通購票指南</h3>
+                    
+                    <div class="space-y-5 text-xs text-slate-600">
+                        <div class="bg-sky-50 rounded-xl p-4 border border-sky-100">
+                            <h4 class="font-bold text-sm text-sky-950 mb-1.5"><i class="fa-solid fa-circle mr-1.5 text-red-500"></i>倫敦地鐵 (London Underground / Tube)</h4>
+                            <p class="mb-1"><strong>購票建議：</strong>不需要購買實體 Oyster Card。全家可直接使用港元信用卡/Apple Pay 刷手機進出站（Daily Cap 封頂一日無限次，極之方便）。</p>
+                            <p><strong>家庭提示：</strong>11歲以下兒童在有購票成人陪同下，可免費乘搭倫敦地鐵。</p>
+                        </div>
+
+                        <div class="bg-yellow-50 rounded-xl p-4 border border-yellow-100">
+                            <h4 class="font-bold text-sm text-yellow-950 mb-1.5"><i class="fa-solid fa-circle mr-1.5 text-blue-500"></i>巴黎地鐵 (Paris Métro)</h4>
+                            <p class="mb-1"><strong>購票建議：</strong>建議在手機下載「Bonjour RATP」App 購買 <strong>Navigo Easy 卡</strong>，並充值 10次單程票 (Carnet t+)。</p>
+                            <p><strong>安全警示：</strong>巴黎地鐵車廂較老舊，上落時務必照看好全家包袋，提防扒手，拒絕陌生人協助買票。</p>
+                        </div>
+
+                        <div class="bg-emerald-50 rounded-xl p-4 border border-emerald-100">
+                            <h4 class="font-bold text-sm text-emerald-950 mb-1.5"><i class="fa-solid fa-circle mr-1.5 text-emerald-500"></i>慕尼黑地鐵與輕軌 (MVV / S-Bahn / U-Bahn)</h4>
+                            <p class="mb-1"><strong>購票建議：</strong>推薦在自動售票機購買 <strong>MVV Group Day Ticket (團體一日票)</strong>，可供最多5位成人全日無限次搭乘所有地鐵、輕軌與電車，極高性價比！</p>
+                            <p><strong>搭乘提示：</strong>慕尼黑地鐵無閘機，但購票後上車前必須在藍色打票機打票，否則視為無票乘車，重罰 60 歐元。</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer styled in dynamic travel brochure style -->
+    <footer class="bg-slate-900 text-slate-400 text-xs py-12 px-4 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto space-y-6">
+            <div class="flex flex-wrap justify-between items-center gap-4 border-b border-slate-800 pb-6">
+                <div class="flex items-center space-x-2">
+                    <div class="bg-eglBlue text-white p-1.5 rounded font-black text-sm">EGL</div>
+                    <span class="text-white font-bold text-sm">東瀛家族自組團 2026 尊享策劃</span>
+                </div>
+                <div class="text-slate-500">
+                    *本電子行程單張專為家庭自導遊設計，不設任何商業用途。*
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-slate-500">
+                <div>
+                    <h5 class="text-slate-300 font-bold mb-2">💡 特別注意事項：</h5>
+                    <p class="leading-relaxed">根據最新民航規定，攜帶外置充電器限制詳情請參閱登機提示。行程表上有關符號：🏛️ 入場參觀、🌳 公園地標、🍽️ 推薦美食。自備來回機票之家庭成員注意：如遇天氣、罷工、戰爭等不可抗力，調動或取消部分行程需自行協調。</p>
+                </div>
+                <div>
+                    <h5 class="text-slate-300 font-bold mb-2">📜 責任條款與保障：</h5>
+                    <p class="leading-relaxed">建議出發前購買家庭旅遊綜合保險（如 EGL 至尊全球旅遊保）。因交通延誤、天氣或政府法令更改行程而增加的額外費用，本行程設計為離線參考，不負責任何因現場變動引起的個人經濟損失。</p>
+                </div>
+                <div>
+                    <h5 class="text-slate-300 font-bold mb-2">🗺️ 地圖與離線支持：</h5>
+                    <p class="leading-relaxed">本網頁為離線友好單網頁設計，建議保存於手機瀏覽器。在國外時點擊行程中的地名即可調用 Google Maps 行程導航（需聯網）。祝全家歐洲旅途愉快，收穫最溫馨的回憶！</p>
+                </div>
+            </div>
+            
+            <div class="text-center text-slate-600 text-[11px] pt-6">
+                EGL Tours Co., Ltd. 東瀛遊旅行社有限公司 牌照號碼：350805 | 網頁代碼：EWEG14-012_20260720
+            </div>
+        </div>
+    </footer>
+
+    <!-- Tab Switching and scrolling logic JS -->
+    <script>
+        function switchTab(tabId, btn) {
+            // Hide all tab contents
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.add('hidden'));
+
+            // Show current tab content
+            document.getElementById(tabId).classList.remove('hidden');
+
+            // Reset all tab button styles
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(button => {
+                button.classList.remove('bg-eglBlue', 'text-white', 'shadow-md', 'active-tab');
+                button.classList.add('text-slate-600', 'hover:bg-slate-100');
+                button.classList.remove('font-bold');
+                button.classList.add('font-medium');
+            });
+
+            // Activate current tab button style
+            btn.classList.add('bg-eglBlue', 'text-white', 'shadow-md', 'active-tab');
+            btn.classList.remove('text-slate-600', 'hover:bg-slate-100');
+            btn.classList.remove('font-medium');
+            btn.classList.add('font-bold');
+        }
+
+        function scrollToDay(dayId) {
+            if (!dayId) return;
+            
+            // If the user selects a day, automatically switch to the itinerary tab first
+            const itineraryTabBtn = document.querySelector('.tab-btn');
+            if (!itineraryTabBtn.classList.contains('active-tab')) {
+                switchTab('itinerary-tab', itineraryTabBtn);
+            }
+
+            // Smooth scroll to the target card
+            const element = document.getElementById(dayId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
